@@ -1,0 +1,40 @@
+:original_name: waf_01_1082.html
+
+.. _waf_01_1082:
+
+Why Does My Certificate Not Match the Key?
+==========================================
+
+After an HTTPS certificate is uploaded to the AAD or WAF console, a message is displayed indicating that the certificate and key do not match.
+
+Solution
+--------
+
++-------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Possible Cause                                                    | How to Fix                                                                                                                                                                                                                                                                         |
++===================================================================+====================================================================================================================================================================================================================================================================================+
+| The uploaded certificate does not match the uploaded private key. | #. Run the following commands to check the MD5 hash values of the certificate and private key file:                                                                                                                                                                                |
+|                                                                   |                                                                                                                                                                                                                                                                                    |
+|                                                                   |    .. code-block::                                                                                                                                                                                                                                                                 |
+|                                                                   |                                                                                                                                                                                                                                                                                    |
+|                                                                   |       openssl x509 -noout -modulus -in <certificate file>|openssl md5                                                                                                                                                                                                              |
+|                                                                   |       openssl rsa -noout -modulus -in <private key file>|openssl md5                                                                                                                                                                                                               |
+|                                                                   |                                                                                                                                                                                                                                                                                    |
+|                                                                   | #. Check whether the MD5 values of the certificate and private key file are the same. If they are different, the certificate file and private key file are associated with different domain names, and the content of the certificate does not match that of the private key file. |
+|                                                                   |                                                                                                                                                                                                                                                                                    |
+|                                                                   | #. If the certificate does not match the private key file, upload the correct certificate and private key file.                                                                                                                                                                    |
++-------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Incorrect RSA private key format                                  | #. Run the following command to generate a new private key:                                                                                                                                                                                                                        |
+|                                                                   |                                                                                                                                                                                                                                                                                    |
+|                                                                   |    .. code-block::                                                                                                                                                                                                                                                                 |
+|                                                                   |                                                                                                                                                                                                                                                                                    |
+|                                                                   |       openssl rsa -in <private key file> -out <New private key file>                                                                                                                                                                                                               |
+|                                                                   |                                                                                                                                                                                                                                                                                    |
+|                                                                   | #. Upload the private key again.                                                                                                                                                                                                                                                   |
++-------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Other Operations
+----------------
+
+-  :ref:`How Do I Fix an Incomplete Certificate Chain? <waf_01_0082>`
+-  :ref:`Why Are HTTPS Requests Denied on Some Mobile Phones? <waf_01_0093>`
