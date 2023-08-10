@@ -30,9 +30,9 @@ otcdocs_repo_name = 'opentelekomcloud-docs/web-application-firewall-dedicated'
 
 # Those variables are needed for indexing into OpenSearch
 otcdocs_doc_environment = 'public'
-otcdocs_doc_link = '/web-application-firewall-dedicated/umn/'
-otcdocs_doc_title = 'User Guide'
-otcdocs_doc_type = 'umn'
+otcdocs_doc_link = '/web-application-firewall-dedicated/best-practice/'
+otcdocs_doc_title = 'Best Practice'
+otcdocs_doc_type = 'best-practice'
 otcdocs_service_category = 'security-services'
 otcdocs_service_title = 'Dedicated Web Application Firewall'
 otcdocs_service_type = 'wafd'
@@ -92,7 +92,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 
-html_title = "Dedicated Web Application Firewall - User Guide"
+html_title = "Dedicated Web Application Firewall - Best Practice"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -106,7 +106,7 @@ html_copy_source = False
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
     ('index',
-     'wafd-umn.tex',
-     u'Dedicated Web Application Firewall - User Guide',
+     'wafd-best-practice.tex',
+     u'Dedicated Web Application Firewall - Best Practice',
      u'OpenTelekomCloud', 'manual'),
 ]
