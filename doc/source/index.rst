@@ -8,7 +8,6 @@ Web Application Firewall (WAF) keeps web services stable and secure. It examines
    :class: container-sbv
 
    .. service_card::
-      :environment: internal
       :service_type: wafd
       :umn: This document helps you know about the Web Application Firewall (Dedicated) and guide you on how to use the service.
       :api-ref: This document describes application programming interfaces (APIs) of the Web Application Firewall (Dedicated) and provides API parameter description and example values.
