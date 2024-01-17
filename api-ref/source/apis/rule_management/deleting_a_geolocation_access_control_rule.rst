@@ -88,7 +88,9 @@ Response Parameters
    |                       |                       |                                                                                                                                  |
    |                       |                       | -  Israel: Israel                                                                                                                |
    |                       |                       |                                                                                                                                  |
-   |                       |                       | -  Iraq: Afghanistan                                                                                                             |
+   |                       |                       | -  Iraq: Iraq                                                                                                                    |
+   |                       |                       |                                                                                                                                  |
+   |                       |                       | -  Afghanistan: Afghanistan                                                                                                      |
    |                       |                       |                                                                                                                                  |
    |                       |                       | -  Libya: Libya                                                                                                                  |
    |                       |                       |                                                                                                                                  |
@@ -163,7 +165,7 @@ Example Requests
 
 .. code-block:: text
 
-   DELETE https://{Endpoint}/v1/{project_id}/waf/policy/{policy_id}/geoip/{rule_id}?enterprise_project_id=0
+   DELETE https://{Endpoint}/v1/{project_id}/waf/policy/{policy_id}/geoip/{rule_id}?
 
 Example Responses
 -----------------

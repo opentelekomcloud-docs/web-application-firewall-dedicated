@@ -68,8 +68,6 @@ Response Parameters
    +-----------------------+-----------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
    | protect_status        | Integer                                                   | WAF status of the protected domain name. The value can be:                                                                 |
    |                       |                                                           |                                                                                                                            |
-   |                       |                                                           | -  -1: Bypassed. Requests are directly sent to the backend servers without passing through WAF.                            |
-   |                       |                                                           |                                                                                                                            |
    |                       |                                                           | -  0: Suspended. WAF only forwards requests for the domain name but does not detect attacks.                               |
    |                       |                                                           |                                                                                                                            |
    |                       |                                                           | -  1: Enabled. WAF detects attacks based on the configured policy.                                                         |
