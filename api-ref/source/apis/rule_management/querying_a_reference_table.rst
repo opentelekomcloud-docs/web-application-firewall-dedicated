@@ -2,28 +2,28 @@
 
 .. _ShowValueList:
 
-Querying a Reference Table by ID
-================================
+Querying a Reference Table
+==========================
 
 Function
 --------
 
-This API is used to query a reference table by ID.
+This API is used to query a reference table.
 
 URI
 ---
 
-GET /v1/{project_id}/waf/valuelist/{table_id}
+GET /v1/{project_id}/waf/valuelist/{valuelist_id}
 
 .. table:: **Table 1** Path Parameters
 
-   +------------+-----------+--------+---------------------------------------------------------------------------------------------+
-   | Parameter  | Mandatory | Type   | Description                                                                                 |
-   +============+===========+========+=============================================================================================+
-   | project_id | Yes       | String | Project ID                                                                                  |
-   +------------+-----------+--------+---------------------------------------------------------------------------------------------+
-   | table_id   | Yes       | String | Reference table ID. It can be obtained by calling the API Querying the Reference Table List |
-   +------------+-----------+--------+---------------------------------------------------------------------------------------------+
+   +--------------+-----------+--------+---------------------------------------------------------------------------------------+
+   | Parameter    | Mandatory | Type   | Description                                                                           |
+   +==============+===========+========+=======================================================================================+
+   | project_id   | Yes       | String | Project ID                                                                            |
+   +--------------+-----------+--------+---------------------------------------------------------------------------------------+
+   | valuelist_id | Yes       | String | Valuelist ID. It can be obtained by calling the API Querying the Reference Table List |
+   +--------------+-----------+--------+---------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------

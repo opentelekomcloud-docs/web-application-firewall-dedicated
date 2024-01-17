@@ -58,7 +58,7 @@ Rule Management
 -  :ref:`Deleting a Geolocation Access Control Rule <deletegeoiprule>`
 -  :ref:`Querying the Reference Table List <listvaluelist>`
 -  :ref:`Creating a Reference Table <createvaluelist>`
--  :ref:`Querying a Reference Table by ID <showvaluelist>`
+-  :ref:`Querying a Reference Table <showvaluelist>`
 -  :ref:`Modifying a Reference Table <updatevaluelist>`
 -  :ref:`Deleting a Reference Table <deletevaluelist>`
 
@@ -119,6 +119,6 @@ Rule Management
    deleting_a_geolocation_access_control_rule
    querying_the_reference_table_list
    creating_a_reference_table
-   querying_a_reference_table_by_id
+   querying_a_reference_table
    modifying_a_reference_table
    deleting_a_reference_table

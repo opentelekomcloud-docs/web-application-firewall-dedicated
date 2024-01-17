@@ -37,7 +37,7 @@ Request Parameters
    +=================+=================+=================+============================================+
    | X-Auth-Token    | Yes             | String          | User token                                 |
    +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Content-Type    | Yes             | String          | Content type                               |
+   | Content-Type    | No              | String          | Content type                               |
    |                 |                 |                 |                                            |
    |                 |                 |                 | Default: **application/json;charset=utf8** |
    +-----------------+-----------------+-----------------+--------------------------------------------+
@@ -88,7 +88,9 @@ Response Parameters
    |                       |                       |                                                                                                                                  |
    |                       |                       | -  Israel: Israel                                                                                                                |
    |                       |                       |                                                                                                                                  |
-   |                       |                       | -  Iraq: Afghanistan                                                                                                             |
+   |                       |                       | -  Iraq: Iraq                                                                                                                    |
+   |                       |                       |                                                                                                                                  |
+   |                       |                       | -  Afghanistan: Afghanistan                                                                                                      |
    |                       |                       |                                                                                                                                  |
    |                       |                       | -  Libya: Libya                                                                                                                  |
    |                       |                       |                                                                                                                                  |

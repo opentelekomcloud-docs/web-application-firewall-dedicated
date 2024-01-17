@@ -112,7 +112,9 @@ Response Parameters
    |                       |                       |                                                                                                                                  |
    |                       |                       | -  Israel: Israel                                                                                                                |
    |                       |                       |                                                                                                                                  |
-   |                       |                       | -  Iraq: Afghanistan                                                                                                             |
+   |                       |                       | -  Iraq: Iraq                                                                                                                    |
+   |                       |                       |                                                                                                                                  |
+   |                       |                       | -  Afghanistan: Afghanistan                                                                                                      |
    |                       |                       |                                                                                                                                  |
    |                       |                       | -  Libya: Libya                                                                                                                  |
    |                       |                       |                                                                                                                                  |
