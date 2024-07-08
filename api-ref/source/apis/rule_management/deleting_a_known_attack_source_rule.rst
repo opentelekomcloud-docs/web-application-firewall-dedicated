@@ -8,7 +8,7 @@ Deleting a Known Attack Source Rule
 Function
 --------
 
-This API is used to delete a known attack source rule.
+Deleting a Known Attack Source Rule
 
 URI
 ---
@@ -49,35 +49,35 @@ Response Parameters
 
 .. table:: **Table 3** Response body parameters
 
-   +-----------------------+-----------------------+--------------------------------------+
-   | Parameter             | Type                  | Description                          |
-   +=======================+=======================+======================================+
-   | id                    | String                | Rule ID                              |
-   +-----------------------+-----------------------+--------------------------------------+
-   | policyid              | String                | Policy ID                            |
-   +-----------------------+-----------------------+--------------------------------------+
-   | block_time            | Integer               | Block duration.                      |
-   +-----------------------+-----------------------+--------------------------------------+
-   | category              | String                | Type of the know attack source rule. |
-   |                       |                       |                                      |
-   |                       |                       | Enumeration values:                  |
-   |                       |                       |                                      |
-   |                       |                       | -  **long_ip_block**                 |
-   |                       |                       |                                      |
-   |                       |                       | -  **long_cookie_block**             |
-   |                       |                       |                                      |
-   |                       |                       | -  **long_params_block**             |
-   |                       |                       |                                      |
-   |                       |                       | -  **short_ip_block**                |
-   |                       |                       |                                      |
-   |                       |                       | -  **short_cookie_block**            |
-   |                       |                       |                                      |
-   |                       |                       | -  **short_params_block**            |
-   +-----------------------+-----------------------+--------------------------------------+
-   | description           | String                | Description                          |
-   +-----------------------+-----------------------+--------------------------------------+
-   | timestamp             | Long                  | Timestamp the rule is created.       |
-   +-----------------------+-----------------------+--------------------------------------+
+   +-----------------------+-----------------------+---------------------------------------+
+   | Parameter             | Type                  | Description                           |
+   +=======================+=======================+=======================================+
+   | id                    | String                | Rule ID.                              |
+   +-----------------------+-----------------------+---------------------------------------+
+   | policyid              | String                | Policy ID.                            |
+   +-----------------------+-----------------------+---------------------------------------+
+   | block_time            | Integer               | Block duration.                       |
+   +-----------------------+-----------------------+---------------------------------------+
+   | category              | String                | Type of the known attack source rule. |
+   |                       |                       |                                       |
+   |                       |                       | Enumeration values:                   |
+   |                       |                       |                                       |
+   |                       |                       | -  **long_ip_block**                  |
+   |                       |                       |                                       |
+   |                       |                       | -  **long_cookie_block**              |
+   |                       |                       |                                       |
+   |                       |                       | -  **long_params_block**              |
+   |                       |                       |                                       |
+   |                       |                       | -  **short_ip_block**                 |
+   |                       |                       |                                       |
+   |                       |                       | -  **short_cookie_block**             |
+   |                       |                       |                                       |
+   |                       |                       | -  **short_params_block**             |
+   +-----------------------+-----------------------+---------------------------------------+
+   | description           | String                | Rule description.                     |
+   +-----------------------+-----------------------+---------------------------------------+
+   | timestamp             | Long                  | Timestamp the rule was created.       |
+   +-----------------------+-----------------------+---------------------------------------+
 
 **Status code: 400**
 

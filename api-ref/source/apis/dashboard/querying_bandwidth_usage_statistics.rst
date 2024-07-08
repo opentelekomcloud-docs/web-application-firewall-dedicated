@@ -25,27 +25,27 @@ GET /v1/{project_id}/waf/overviews/bandwidth/timeline
 
 .. table:: **Table 2** Query Parameters
 
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                                                                          |
-   +=================+=================+=================+======================================================================================================================================================+
-   | from            | Yes             | Long            | Start time (13-digit timestamp in millisecond). This parameter must be used together with to.                                                        |
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | to              | Yes             | Long            | End time (13-digit timestamp in millisecond). This parameter must be used together with from.                                                        |
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | hosts           | No              | String          | List of domain names to query, which can be obtained by calling the ListHost API                                                                     |
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | instances       | No              | String          | This parameter is used to query the bandwidth of the protected domain name protected by a specific dedicated WAF engine instance.                    |
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | group_by        | No              | String          | Data aggregation interval. If this parameter is not specified, data is displayed by a time range calculated based on parameters **from** and **to**. |
-   |                 |                 |                 |                                                                                                                                                      |
-   |                 |                 |                 | -  If the time range between **from** and **to** is fewer than or equal to 1 day, the interval is one minute.                                        |
-   |                 |                 |                 |                                                                                                                                                      |
-   |                 |                 |                 | -  If the time range between **from** and **to** is greater than 1 day but fewer than or equal to 3 days, the interval is 5 minutes.                 |
-   |                 |                 |                 |                                                                                                                                                      |
-   |                 |                 |                 | -  If the time range between **from** and **to** is greater than 3 days but fewer than or equal 7 days, the interval is 10 minutes.                  |
-   |                 |                 |                 |                                                                                                                                                      |
-   |                 |                 |                 | -  If the time range between **from** and **to** is greater than 7 days but fewer than or equal to 30 days, the interval is 1 hour.                  |
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                                                |
+   +=================+=================+=================+============================================================================================================================================================================================================================================+
+   | from            | Yes             | Long            | Start time (13-digit timestamp in millisecond). This parameter must be used together with to.                                                                                                                                              |
+   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | to              | Yes             | Long            | End time (13-digit timestamp in millisecond). This parameter must be used together with from.                                                                                                                                              |
+   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | hosts           | No              | String          | List of domain names to query, which can be obtained by calling the ListHost API                                                                                                                                                           |
+   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | instances       | No              | String          | This parameter is used to query the bandwidth of the protected domain name protected by a specific dedicated WAF engine instance.                                                                                                          |
+   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | group_by        | No              | String          | Data aggregation interval. Data display time range. For example, If the value is **DAY**, data is displayed by the day. If this parameter is not specified, data is displayed by a time range specified by parameters **from** and **to**. |
+   |                 |                 |                 |                                                                                                                                                                                                                                            |
+   |                 |                 |                 | -  If the time range between **from** and **to** is fewer than or equal to 1 day, the interval is one minute.                                                                                                                              |
+   |                 |                 |                 |                                                                                                                                                                                                                                            |
+   |                 |                 |                 | -  If the time range between **from** and **to** is greater than 1 day but fewer than or equal to 3 days, the interval is 5 minutes.                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                                                                            |
+   |                 |                 |                 | -  If the time range between **from** and **to** is greater than 3 days but fewer than or equal to 7 days, the interval is 10 minutes.                                                                                                     |
+   |                 |                 |                 |                                                                                                                                                                                                                                            |
+   |                 |                 |                 | -  If the time range between **from** and **to** is greater than 7 days but fewer than or equal to 30 days, the interval is 1 hour.                                                                                                        |
+   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -97,12 +97,13 @@ Response Parameters
 
 .. table:: **Table 6** TimeLineItem
 
-   ========= ======= ======================================
-   Parameter Type    Description
-   ========= ======= ======================================
-   time      Long    Time-point
-   num       Integer Quantity. Aggregated data is returned.
-   ========= ======= ======================================
+   +-----------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter | Type    | Description                                                                                                                                      |
+   +===========+=========+==================================================================================================================================================+
+   | time      | Long    | Time-point                                                                                                                                       |
+   +-----------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+   | num       | Integer | Quantity. Aggregated data is returned. The **num** field indicates the statistical value between the **time** point and the previous time point. |
+   +-----------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 **Status code: 400**
 

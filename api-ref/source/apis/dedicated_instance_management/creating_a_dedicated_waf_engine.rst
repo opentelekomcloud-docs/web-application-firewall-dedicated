@@ -55,7 +55,7 @@ Request Parameters
    |                 |                 |                  |                                                                                                                                                                                                              |
    |                 |                 |                  | -  **waf.instance.professional**: WI-100. Performance: 100 Mbit/s of throughput and 2,000 QPS.                                                                                                               |
    |                 |                 |                  |                                                                                                                                                                                                              |
-   |                 |                 |                  | -  **waf.instance.enterprise**: WI-100. Performance: 500 Mbit/s of throughput and 10,000 QPS.                                                                                                                |
+   |                 |                 |                  | -  **waf.instance.enterprise**: WI-500. Performance: 500 Mbit/s of throughput and 10,000 QPS.                                                                                                                |
    |                 |                 |                  |                                                                                                                                                                                                              |
    |                 |                 |                  | Enumeration values:                                                                                                                                                                                          |
    |                 |                 |                  |                                                                                                                                                                                                              |
@@ -63,7 +63,7 @@ Request Parameters
    |                 |                 |                  |                                                                                                                                                                                                              |
    |                 |                 |                  | -  **waf.instance.enterprise**                                                                                                                                                                               |
    +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | cpu_flavor      | Yes             | String           | ID of the specifications of the ECS hosting the dedicated engine. You can go to the management console and confirm supported specifications.                                                                 |
+   | cpu_flavor      | Yes             | String           | ECS specifications and the dedicated WAF instance specifications. You can view details about the supported specifications on the WAF console.                                                                |
    +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | vpc_id          | Yes             | String           | ID of the VPC where the dedicated engine is located. It can be obtained by calling the ListVpcs API.                                                                                                         |
    +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -73,13 +73,15 @@ Request Parameters
    +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | count           | Yes             | Integer          | Number of dedicated engines to be provisioned                                                                                                                                                                |
    +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | res_tenant      | Yes             | Boolean          | Whether to create a dedicated engine instance of the network interface type. Its value has to be true.                                                                                                       |
+   | res_tenant      | Yes             | Boolean          | Whether the dedicated WAF instance is network interface type. The value is fixed at **Network Interface**.                                                                                                   |
    |                 |                 |                  |                                                                                                                                                                                                              |
    |                 |                 |                  | -  **Network Interface**: Your WAF instance will be connected to your network via a VPC. (If ELB is used, only dedicated load balancers can be used.)                                                        |
    |                 |                 |                  |                                                                                                                                                                                                              |
    |                 |                 |                  | Enumeration values:                                                                                                                                                                                          |
    |                 |                 |                  |                                                                                                                                                                                                              |
    |                 |                 |                  | -  **true**                                                                                                                                                                                                  |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ipv6_enable     | No              | Boolean          | Use of IPv6 addresses. If IPv6 address is enabled, the system assigns an IPv6 address to the dedicated instance.                                                                                             |
    +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Response Parameters
@@ -99,12 +101,12 @@ Response Parameters
 
 .. table:: **Table 5** instanceInfo
 
-   ========= ====== ===========
+   ========= ====== ==================================
    Parameter Type   Description
-   ========= ====== ===========
-   id        String id
-   name      String Name
-   ========= ====== ===========
+   ========= ====== ==================================
+   id        String the id of dedicated WAF engines.
+   name      String the name of dedicated WAF engines.
+   ========= ====== ==================================
 
 **Status code: 400**
 
@@ -151,13 +153,14 @@ Example Requests
      "available_zone" : "region-01-4a",
      "arch" : "x86",
      "instancename" : "demo",
-     "specification\"" : "waf.instance.enterprise",
+     "specification" : "waf.instance.enterprise",
      "cpu_flavor" : "c3ne.2xlarge.2",
      "vpc_id" : "d7b6a5ff-6c53-4cd4-9d57-f20ee8753056",
      "subnet_id" : "e59ccd18-7e15-4588-b689-04b856f4e78b",
      "security_group" : [ "09b156a2-f0f0-41fd-9891-60e594601cfd" ],
      "count" : 1,
-     "res_tenant" : true
+     "res_tenant" : true,
+     "ipv6_enable" : false
    }
 
 Example Responses
