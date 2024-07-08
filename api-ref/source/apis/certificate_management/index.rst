@@ -8,6 +8,7 @@ Certificate Management
 -  :ref:`Querying the Certificate List <listcertificates>`
 -  :ref:`Creating a Certificate <createcertificate>`
 -  :ref:`Querying a Certificate <showcertificate>`
+-  :ref:`Modifying a Certificate <updatecertificate>`
 -  :ref:`Deleting a Certificate <deletecertificate>`
 
 .. toctree::
@@ -17,4 +18,5 @@ Certificate Management
    querying_the_certificate_list
    creating_a_certificate
    querying_a_certificate
+   modifying_a_certificate
    deleting_a_certificate

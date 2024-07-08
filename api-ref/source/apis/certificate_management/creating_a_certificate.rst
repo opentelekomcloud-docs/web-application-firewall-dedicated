@@ -43,7 +43,7 @@ Request Parameters
    +-----------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter | Mandatory | Type   | Description                                                                                                                                                      |
    +===========+===========+========+==================================================================================================================================================================+
-   | name      | Yes       | String | Certificate name. The value can contain a maximum of 64 characters. Only digits, letters, hyphens (-), underscores (_), and periods (.) are allowed.             |
+   | name      | Yes       | String | Certificate name. Only digits, letters, hyphens (-), underscores (_), and periods (.) are allowed. The value can contain a maximum of 256 characters.            |
    +-----------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | content   | Yes       | String | Certificate file. Only certificates and private key files in PEM format are supported, and the newline characters in the file must be replaced with \\n.         |
    +-----------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -57,14 +57,19 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   =========== ====== ==========================================
-   Parameter   Type   Description
-   =========== ====== ==========================================
-   id          String Certificate ID
-   name        String Certificate name
-   expire_time Long   Timestamp when the certificate expires
-   timestamp   Long   Timestamp when the certificate is uploaded
-   =========== ====== ==========================================
+   +-------------+--------+-------------------------------------------------------------------+
+   | Parameter   | Type   | Description                                                       |
+   +=============+========+===================================================================+
+   | id          | String | Certificate ID                                                    |
+   +-------------+--------+-------------------------------------------------------------------+
+   | name        | String | Certificate name                                                  |
+   +-------------+--------+-------------------------------------------------------------------+
+   | expire_time | Long   | Timestamp when the certificate expires (unit: ms).                |
+   +-------------+--------+-------------------------------------------------------------------+
+   | timestamp   | Long   | Timestamp when the certificate is uploaded                        |
+   +-------------+--------+-------------------------------------------------------------------+
+   | cert_type   | String | Certificate type. This parameter is redundant and can be ignored. |
+   +-------------+--------+-------------------------------------------------------------------+
 
 **Status code: 400**
 

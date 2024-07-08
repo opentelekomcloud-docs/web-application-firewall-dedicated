@@ -5,19 +5,19 @@
 Rule Management
 ===============
 
--  :ref:`Changing the Status of a Policy Rule <updatepolicyrulestatus>`
+-  :ref:`Modifying the Status of a Rule <updatepolicyrulestatus>`
 -  :ref:`Querying the Blacklist and Whitelist Rule List <listwhiteblackiprules>`
 -  :ref:`Creating a Blacklist or Whitelist Rule <createwhiteblackiprule>`
--  :ref:`Querying a Blacklist Or Whitelist Rule by ID <showwhiteblackiprule>`
+-  :ref:`Querying a Blacklist or Whitelist Rule by ID <showwhiteblackiprule>`
 -  :ref:`Updating a Blacklist or Whitelist Rule <updatewhiteblackiprule>`
 -  :ref:`Deleting a Blacklist or Whitelist Rule <deletewhiteblackiprule>`
--  :ref:`Querying CC Attack Protection Rules <listccrules>`
+-  :ref:`Query the List of CC Attack Protection Rules <listccrules>`
 -  :ref:`Creating a CC Attack Protection Rule <createccrule>`
 -  :ref:`Querying a CC Attack Protection Rule by ID <showccrule>`
 -  :ref:`Updating a CC Attack Protection Rule <updateccrule>`
 -  :ref:`Deleting a CC Attack Protection Rule <deleteccrule>`
--  :ref:`Querying Precise Protection Rules <listcustomrules>`
--  :ref:`Creating a Precise Protection Rule <createcustomrules>`
+-  :ref:`Querying the List of Precise Protection Rules <listcustomrules>`
+-  :ref:`Adding a Precise Protection Rule <createcustomrules>`
 -  :ref:`Querying a Precise Protection Rule by ID <showcustomrule>`
 -  :ref:`Updating a Precise Protection Rule <updatecustomrule>`
 -  :ref:`Deleting a Precise Protection Rule <deletecustomrule>`
@@ -42,7 +42,7 @@ Rule Management
 -  :ref:`Deleting a Web Tamper Protection Rule <deleteantitamperrule>`
 -  :ref:`Updating the Cache for a Web Tamper Protection Rule <updateantitamperrulerefresh>`
 -  :ref:`Querying the List of Information Leakage Prevention Rules <listantileakagerules>`
--  :ref:`Creating an Information Leakage Protection Rule <createantileakagerules>`
+-  :ref:`Creating an Information Leakage Prevention Rule <createantileakagerules>`
 -  :ref:`Querying an Information Leakage Prevention Rule by ID <showantileakagerule>`
 -  :ref:`Updating an Information Leakage Prevention Rule <updateantileakagerule>`
 -  :ref:`Deleting an Information Leakage Prevention Rule <deleteantileakagerule>`
@@ -58,7 +58,7 @@ Rule Management
 -  :ref:`Deleting a Geolocation Access Control Rule <deletegeoiprule>`
 -  :ref:`Querying the Reference Table List <listvaluelist>`
 -  :ref:`Creating a Reference Table <createvaluelist>`
--  :ref:`Querying a Reference Table <showvaluelist>`
+-  :ref:`Querying a Reference Table by ID <showvaluelist>`
 -  :ref:`Modifying a Reference Table <updatevaluelist>`
 -  :ref:`Deleting a Reference Table <deletevaluelist>`
 
@@ -66,19 +66,19 @@ Rule Management
    :maxdepth: 1
    :hidden: 
 
-   changing_the_status_of_a_policy_rule
+   modifying_the_status_of_a_rule
    querying_the_blacklist_and_whitelist_rule_list
    creating_a_blacklist_or_whitelist_rule
    querying_a_blacklist_or_whitelist_rule_by_id
    updating_a_blacklist_or_whitelist_rule
    deleting_a_blacklist_or_whitelist_rule
-   querying_cc_attack_protection_rules
+   query_the_list_of_cc_attack_protection_rules
    creating_a_cc_attack_protection_rule
    querying_a_cc_attack_protection_rule_by_id
    updating_a_cc_attack_protection_rule
    deleting_a_cc_attack_protection_rule
-   querying_precise_protection_rules
-   creating_a_precise_protection_rule
+   querying_the_list_of_precise_protection_rules
+   adding_a_precise_protection_rule
    querying_a_precise_protection_rule_by_id
    updating_a_precise_protection_rule
    deleting_a_precise_protection_rule
@@ -103,7 +103,7 @@ Rule Management
    deleting_a_web_tamper_protection_rule
    updating_the_cache_for_a_web_tamper_protection_rule
    querying_the_list_of_information_leakage_prevention_rules
-   creating_an_information_leakage_protection_rule
+   creating_an_information_leakage_prevention_rule
    querying_an_information_leakage_prevention_rule_by_id
    updating_an_information_leakage_prevention_rule
    deleting_an_information_leakage_prevention_rule
@@ -119,6 +119,6 @@ Rule Management
    deleting_a_geolocation_access_control_rule
    querying_the_reference_table_list
    creating_a_reference_table
-   querying_a_reference_table
+   querying_a_reference_table_by_id
    modifying_a_reference_table
    deleting_a_reference_table

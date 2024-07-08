@@ -2,7 +2,7 @@
 
 .. _ShowWhiteblackipRule:
 
-Querying a Blacklist Or Whitelist Rule by ID
+Querying a Blacklist or Whitelist Rule by ID
 ============================================
 
 Function

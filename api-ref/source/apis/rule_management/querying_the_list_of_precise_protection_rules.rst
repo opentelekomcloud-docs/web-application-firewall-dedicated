@@ -2,8 +2,8 @@
 
 .. _ListCustomRules:
 
-Querying Precise Protection Rules
-=================================
+Querying the List of Precise Protection Rules
+=============================================
 
 Function
 --------
@@ -114,7 +114,7 @@ Response Parameters
    +=======================+=======================+=================================================================================================================================================================================================+
    | category              | String                | Field type. The options are **url**, **user-agent**, **ip**, **params**, **cookie**, **referer**, **header**, **request_line**, **method**, and **request**.                                    |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | index                 | String                | Subfield                                                                                                                                                                                        |
+   | index                 | String                | Subfield:                                                                                                                                                                                       |
    |                       |                       |                                                                                                                                                                                                 |
    |                       |                       | -  When the field type is **url**, **user-agent**, **ip**, **refer**, **request_line**, **method**, or **request**, **index** is not required.                                                  |
    |                       |                       |                                                                                                                                                                                                 |

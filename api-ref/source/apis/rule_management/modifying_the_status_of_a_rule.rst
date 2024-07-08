@@ -2,13 +2,13 @@
 
 .. _UpdatePolicyRuleStatus:
 
-Changing the Status of a Policy Rule
-====================================
+Modifying the Status of a Rule
+==============================
 
 Function
 --------
 
-This API is used to change the status of a policy rule.
+This API is used to modify the status of a rule.
 
 URI
 ---

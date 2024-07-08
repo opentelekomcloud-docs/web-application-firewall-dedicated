@@ -1,51 +1,41 @@
-:original_name: ListValueList.html
+:original_name: ShowValueList.html
 
-.. _ListValueList:
+.. _ShowValueList:
 
-Querying the Reference Table List
-=================================
+Querying a Reference Table by ID
+================================
 
 Function
 --------
 
-This API is used to query the reference table list. A reference table can be referenced by CC attack protection rules and precise protection rules. For details about how to use reference tables, see "Adding a Reference Table" under "Rule Configurations" in Web Application Firewall User Guide.
+This API is used to query a reference table by ID.
 
 URI
 ---
 
-GET /v1/{project_id}/waf/valuelist
+GET /v1/{project_id}/waf/valuelist/{valuelist_id}
 
 .. table:: **Table 1** Path Parameters
 
-   ========== ========= ====== ===========
-   Parameter  Mandatory Type   Description
-   ========== ========= ====== ===========
-   project_id Yes       String Project ID
-   ========== ========= ====== ===========
-
-.. table:: **Table 2** Query Parameters
-
-   +-----------+-----------+---------+------------------------------------------------------------------+
-   | Parameter | Mandatory | Type    | Description                                                      |
-   +===========+===========+=========+==================================================================+
-   | page      | No        | Integer | Page                                                             |
-   +-----------+-----------+---------+------------------------------------------------------------------+
-   | pagesize  | No        | Integer | Number of records on each page. The maximum value is 2147483647. |
-   +-----------+-----------+---------+------------------------------------------------------------------+
-   | name      | No        | String  | Reference table name, Fuzzy search is supported.                 |
-   +-----------+-----------+---------+------------------------------------------------------------------+
+   +--------------+-----------+--------+---------------------------------------------------------------------------------------+
+   | Parameter    | Mandatory | Type   | Description                                                                           |
+   +==============+===========+========+=======================================================================================+
+   | project_id   | Yes       | String | Project ID                                                                            |
+   +--------------+-----------+--------+---------------------------------------------------------------------------------------+
+   | valuelist_id | Yes       | String | Valuelist ID. It can be obtained by calling the API Querying the Reference Table List |
+   +--------------+-----------+--------+---------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
 
-.. table:: **Table 3** Request header parameters
+.. table:: **Table 2** Request header parameters
 
    +-----------------+-----------------+-----------------+--------------------------------------------+
    | Parameter       | Mandatory       | Type            | Description                                |
    +=================+=================+=================+============================================+
    | X-Auth-Token    | Yes             | String          | User token                                 |
    +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Content-Type    | No              | String          | Content type.                              |
+   | Content-Type    | No              | String          | Content type                               |
    |                 |                 |                 |                                            |
    |                 |                 |                 | Default: **application/json;charset=utf8** |
    +-----------------+-----------------+-----------------+--------------------------------------------+
@@ -55,25 +45,7 @@ Response Parameters
 
 **Status code: 200**
 
-.. table:: **Table 4** Response body parameters
-
-   +-----------------------+-----------------------------------------------------------------------+----------------------------+
-   | Parameter             | Type                                                                  | Description                |
-   +=======================+=======================================================================+============================+
-   | total                 | Integer                                                               | Number of reference tables |
-   |                       |                                                                       |                            |
-   |                       |                                                                       | Minimum: **0**             |
-   |                       |                                                                       |                            |
-   |                       |                                                                       | Maximum: **500**           |
-   +-----------------------+-----------------------------------------------------------------------+----------------------------+
-   | items                 | Array of :ref:`ValueList <listvaluelist__response_valuelist>` objects | Reference table list       |
-   |                       |                                                                       |                            |
-   |                       |                                                                       | Array Length: **0 - 10**   |
-   +-----------------------+-----------------------------------------------------------------------+----------------------------+
-
-.. _listvaluelist__response_valuelist:
-
-.. table:: **Table 5** ValueList
+.. table:: **Table 3** Response body parameters
 
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
    | Parameter             | Type                  | Description                                                                                                    |
@@ -108,6 +80,8 @@ Response Parameters
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
    | values                | Array of strings      | The contents of condition matching of the rules, such as CC Attack Protection Rule or Precise Protection Rule. |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
+   | description           | String                | Reference table description.                                                                                   |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
    | producer              | Integer               | This parameter is reserved and can be ignored currently.                                                       |
    |                       |                       |                                                                                                                |
    |                       |                       | Enumeration values:                                                                                            |
@@ -117,7 +91,7 @@ Response Parameters
 
 **Status code: 400**
 
-.. table:: **Table 6** Response body parameters
+.. table:: **Table 4** Response body parameters
 
    ========== ====== =============
    Parameter  Type   Description
@@ -128,7 +102,7 @@ Response Parameters
 
 **Status code: 401**
 
-.. table:: **Table 7** Response body parameters
+.. table:: **Table 5** Response body parameters
 
    ========== ====== =============
    Parameter  Type   Description
@@ -139,7 +113,7 @@ Response Parameters
 
 **Status code: 500**
 
-.. table:: **Table 8** Response body parameters
+.. table:: **Table 6** Response body parameters
 
    ========== ====== =============
    Parameter  Type   Description
@@ -153,7 +127,7 @@ Example Requests
 
 .. code-block:: text
 
-   GET https://{Endpoint}/v1/{project_id}/waf/valuelist?
+   GET https://{Endpoint}/v1/{project_id}/waf/valuelist/{table_id}?
 
 Example Responses
 -----------------
@@ -165,16 +139,13 @@ Request succeeded.
 .. code-block::
 
    {
-     "total" : 1,
-     "items" : [ {
-       "id" : "3978ca9403844a62bbd24bb5b8d16d4e",
-       "name" : "demo",
-       "type" : "url",
-       "values" : [ "/demo" ],
-       "timestamp" : 1656495488880,
-       "description" : "",
-       "producer" : 1
-     } ]
+     "id" : "3978ca9403844a62bbd24bb5b8d16d4e",
+     "name" : "demo2",
+     "type" : "url",
+     "values" : [ "/demo" ],
+     "timestamp" : 1656495488880,
+     "description" : "",
+     "producer" : 1
    }
 
 Status Codes

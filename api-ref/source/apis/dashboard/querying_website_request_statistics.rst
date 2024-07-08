@@ -69,25 +69,25 @@ Response Parameters
 
 .. table:: **Table 5** ListStatisticsItem
 
-   +-----------------------+-----------------------+--------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                  |
-   +=======================+=======================+==============================================================+
-   | key                   | String                | The following statistics can be included:                    |
-   |                       |                       |                                                              |
-   |                       |                       | -  ACCESS: The number of requests                            |
-   |                       |                       |                                                              |
-   |                       |                       | -  CRAWLER: Crawler attacks identified                       |
-   |                       |                       |                                                              |
-   |                       |                       | -  CC: CC attacks identified                                 |
-   |                       |                       |                                                              |
-   |                       |                       | -  WEB_ATTACK: Attacks blocked against basic web protection  |
-   |                       |                       |                                                              |
-   |                       |                       | -  PRECISE: Attacks blocked against precise protection rules |
-   |                       |                       |                                                              |
-   |                       |                       | -  TOTAL_ATTACK: Total number of attacks                     |
-   +-----------------------+-----------------------+--------------------------------------------------------------+
-   | num                   | Integer               | Quantity                                                     |
-   +-----------------------+-----------------------+--------------------------------------------------------------+
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                       |
+   +=======================+=======================+===================================================================================+
+   | key                   | String                | The following statistics can be included:                                         |
+   |                       |                       |                                                                                   |
+   |                       |                       | -  ACCESS: The number of requests                                                 |
+   |                       |                       |                                                                                   |
+   |                       |                       | -  CRAWLER: Crawler attacks identified                                            |
+   |                       |                       |                                                                                   |
+   |                       |                       | -  CC: CC attacks identified                                                      |
+   |                       |                       |                                                                                   |
+   |                       |                       | -  WEB_ATTACK: Attacks blocked against basic web protection                       |
+   |                       |                       |                                                                                   |
+   |                       |                       | -  PRECISE: Attacks blocked against precise protection rules                      |
+   |                       |                       |                                                                                   |
+   |                       |                       | -  ATTACK: Total number of attacks                                                |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------+
+   | num                   | Integer               | The value of the statistical data corresponding to the key in the query interval. |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------+
 
 **Status code: 400**
 

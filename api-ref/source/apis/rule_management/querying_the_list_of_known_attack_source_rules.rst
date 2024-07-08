@@ -69,16 +69,16 @@ Response Parameters
 
 .. table:: **Table 5** PunishmentInfo
 
-   =========== ======= ====================================
+   =========== ======= =====================================
    Parameter   Type    Description
-   =========== ======= ====================================
-   id          String  Rule ID
-   policyid    String  Policy ID
+   =========== ======= =====================================
+   id          String  Rule ID.
+   policyid    String  Policy ID.
    block_time  Integer Block duration, in seconds.
-   category    String  Type of the know attack source rule.
-   description String  Description
-   timestamp   Long    Timestamp the rule is created.
-   =========== ======= ====================================
+   category    String  Type of the known attack source rule.
+   description String  Rule description.
+   timestamp   Long    Timestamp the rule was created.
+   =========== ======= =====================================
 
 **Status code: 400**
 

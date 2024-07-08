@@ -8,7 +8,7 @@ Updating the Cache for a Web Tamper Protection Rule
 Function
 --------
 
-This API is used to updating the cache for a web tamper protection Rule.
+This API is used to update the cache for a web tamper protection rule
 
 URI
 ---

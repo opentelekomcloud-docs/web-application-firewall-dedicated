@@ -8,7 +8,7 @@ Deleting a Certificate
 Function
 --------
 
-This API is used to delete a certificate.
+This API is used to delete a certificate. Note: The certificate in use cannot be deleted.
 
 URI
 ---
@@ -47,14 +47,19 @@ Response Parameters
 
 .. table:: **Table 3** Response body parameters
 
-   =========== ====== ==========================================
-   Parameter   Type   Description
-   =========== ====== ==========================================
-   id          String Certificate ID
-   name        String Certificate name
-   expire_time Long   Timestamp when the certificate expires
-   timestamp   Long   Timestamp when the certificate is uploaded
-   =========== ====== ==========================================
+   +-------------+--------+-------------------------------------------------------------------+
+   | Parameter   | Type   | Description                                                       |
+   +=============+========+===================================================================+
+   | id          | String | Certificate ID                                                    |
+   +-------------+--------+-------------------------------------------------------------------+
+   | name        | String | Certificate name                                                  |
+   +-------------+--------+-------------------------------------------------------------------+
+   | expire_time | Long   | Timestamp when the certificate expires (unit: ms).                |
+   +-------------+--------+-------------------------------------------------------------------+
+   | timestamp   | Long   | Timestamp when the certificate is uploaded                        |
+   +-------------+--------+-------------------------------------------------------------------+
+   | cert_type   | String | Certificate type. This parameter is redundant and can be ignored. |
+   +-------------+--------+-------------------------------------------------------------------+
 
 **Status code: 400**
 
