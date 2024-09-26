@@ -5,7 +5,7 @@
 Service Overview
 ================
 
--  :ref:`What Is Web Application Firewall? <waf_01_0045>`
+-  :ref:`What Is WAF? <waf_01_0045>`
 -  :ref:`Product Specifications <waf_01_0272>`
 -  :ref:`Functions <waf_01_0094>`
 -  :ref:`Product Advantages <waf_01_0065>`
@@ -19,7 +19,7 @@ Service Overview
    :maxdepth: 1
    :hidden: 
 
-   what_is_web_application_firewall
+   what_is_waf
    product_specifications
    functions
    product_advantages

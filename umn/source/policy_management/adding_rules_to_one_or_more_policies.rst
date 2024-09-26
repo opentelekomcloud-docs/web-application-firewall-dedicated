@@ -11,13 +11,9 @@ This topic describes how to add rules to one or more policies.
 
    If you have enabled enterprise projects, ensure that you have all operation permissions for the project where your WAF instance locates. Then, you can select the project from the **Enterprise Project** drop-down list and configure protection policies for the domain names in batches.
 
-Prerequisites
--------------
 
-A website has been added to WAF.
-
-Procedure
----------
+Adding Rules to One or More Policies
+------------------------------------
 
 #. Log in to the management console.
 
@@ -27,7 +23,7 @@ Procedure
 
 #. In the navigation pane on the left, choose **Policies**.
 
-#. In the upper left corner of the page, click **All Rules**.
+#. In the upper left corner of the policy list, click **View All My Rules**.
 
 
    .. figure:: /_static/images/en-us_image_0000001286529486.png
@@ -35,7 +31,7 @@ Procedure
 
       **Figure 1** View Rules
 
-#. In the upper left corner above a rule to be added, click **Add Rule**.
+#. In the upper left corner above a list of a type of rule, click **Add Rule**.
 
 
    .. figure:: /_static/images/en-us_image_0000001344977541.png
@@ -45,9 +41,15 @@ Procedure
 
 #. Select one or more policies from the **Policy Name** drop-down list.
 
+
+   .. figure:: /_static/images/en-us_image_0000001732213921.png
+      :alt: **Figure 3** Adding a rule to one or more policies
+
+      **Figure 3** Adding a rule to one or more policies
+
 #. Set other parameters.
 
-   -  To add a CC attack protection rule, see :ref:`Table 1 <waf_01_1209__table1173915209149>`.
+   -  To add a CC attack protection rule, see :ref:`Table 1 <waf_01_0009__table480817611214>`.
    -  To add a precise protection rule, see :ref:`Table 1 <waf_01_0010__table2299936310457>`.
    -  To add a blacklist or whitelist rule, see :ref:`Table 1 <waf_01_0012__table147241231818>`.
    -  To add a geolocation access control rule, see :ref:`Table 1 <waf_01_0013__table157961352154713>`.
@@ -56,14 +58,7 @@ Procedure
    -  To add a global protection whitelist rule, see :ref:`Table 1 <waf_01_0016__table1623195815237>`.
    -  To add a data masking rule, see :ref:`Table 1 <waf_01_0017__table4696626918715>`.
 
-#. Click **OK**.
-
-Other Operations
-----------------
-
--  After a rule is added, the rule is **Enabled** by default. To disable it, click **Disable** in the **Operation** column of the target rule. You can also select multiple rules and click **Disable** above the rule list to disable them all together.
--  To modify a rule, locate the row that contains the rule and click **Modify** in the **Operation** column. You can also select multiple rules and click **Modify** above the list to modify them all together.
--  To delete a rule, locate the row that contains the rule and click **Delete** in the **Operation** column. You can also select multiple rules and click **Delete** above the list to delete them all together.
+#. Click **Confirm**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001544453213.jpg
 .. |image2| image:: /_static/images/en-us_image_0000001340586225.png

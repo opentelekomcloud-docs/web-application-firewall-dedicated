@@ -10,74 +10,14 @@ This topic describes WAF and other cloud services.
 CTS
 ---
 
-.. table:: **Table 1** WAF operations that can be recorded by CTS
-
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Operation                                                                                     | Resource Type | Trace Name          |
-   +===============================================================================================+===============+=====================+
-   | Creating a WAF instance                                                                       | instance      | createInstance      |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Deleting a WAF instance                                                                       | instance      | deleteInstance      |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Modifying a WAF instance                                                                      | instance      | alterInstanceName   |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Modifying the protection status of a WAF instance                                             | instance      | modifyProtectStatus |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Modifying the connection status of a WAF instance                                             | instance      | modifyAccessStatus  |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Creating a WAF policy                                                                         | policy        | createPolicy        |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Applying a WAF policy                                                                         | policy        | applyToHost         |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Modifying a policy                                                                            | policy        | modifyPolicy        |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Deleting a WAF policy                                                                         | policy        | deletePolicy        |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Uploading a certificate                                                                       | certificate   | createCertificate   |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Changing the name of a certificate                                                            | certificate   | modifyCertificate   |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Deleting a certificate                                                                        | certificate   | deleteCertificate   |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Adding a CC attack protection rule                                                            | policy        | createCc            |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Modifying a CC attack protection rule                                                         | policy        | modifyCc            |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Deleting a CC attack protection rule                                                          | policy        | deleteCc            |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Adding a precise protection rule                                                              | policy        | createCustom        |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Modifying a precise protection rule                                                           | policy        | modifyCustom        |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Deleting a precise protection rule                                                            | policy        | deleteCustom        |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Adding an IP address blacklist or whitelist rule                                              | policy        | createWhiteblackip  |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Modifying an IP address blacklist or whitelist rule                                           | policy        | modifyWhiteblackip  |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Deleting an IP address blacklist or whitelist rule                                            | policy        | deleteWhiteblackip  |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Creating/updating a web tamper protection rule                                                | policy        | createAntitamper    |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Deleting a web tamper protection rule                                                         | policy        | deleteAntitamper    |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Creating a global protection whitelist (formerly false alarm masking) rule                    | policy        | createIgnore        |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Deleting a false alarm maskingglobal protection whitelist (formerly false alarm masking) rule | policy        | deleteIgnore        |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Adding a data masking rule                                                                    | policy        | createPrivacy       |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Modifying a data masking rule                                                                 | policy        | modifyPrivacy       |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
-   | Deleting a data masking rule                                                                  | policy        | deletePrivacy       |
-   +-----------------------------------------------------------------------------------------------+---------------+---------------------+
+Cloud Trace Service (CTS) records all WAF operations for you to query, audit, and backtrack.
 
 Cloud Eye
 ---------
 
 Cloud Eye monitors the indicators of the dedicated WAF, so that you can understand the protection status of the dedicated WAF in a timely manner, and set protection policies accordingly. For details, see the *Cloud Eye User Guide*.
 
-For details about WAF monitored metrics, see :ref:`WAF Monitored Metrics <waf_01_1372>`.
+For details about monitored WAF metrics, see :ref:`WAF Monitored Metrics <waf_01_1372>`.
 
 ELB
 ---
@@ -106,7 +46,7 @@ TMS
 
 Tag Management Service (TMS) is a visualized service for fast and unified tag management that enables you to label and manage WAF instances by tags.
 
-.. table:: **Table 2** WAF operations supported by TMS
+.. table:: **Table 1** WAF operations supported by TMS
 
    =========================== ============= =================
    Operation                   Resource Type Trace Name

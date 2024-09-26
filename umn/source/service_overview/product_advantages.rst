@@ -13,11 +13,6 @@ Precisely and Efficiently Identify Threats
 -  WAF uses rule and AI dual engines and integrates our latest security rules and best practices.
 -  You can configure enterprise-grade policies to protect your website more precisely, including custom alarm pages, combining multiple conditions in a CC attack protection rule, and blacklisting or whitelisting a large number of IP addresses.
 
-Zero-Day Vulnerabilities Patched Fast
--------------------------------------
-
-A specialized security team provides 24/7 service support to fix zero-day vulnerabilities within 2 hours.
-
 Strong Protection for User Data Privacy
 ---------------------------------------
 
