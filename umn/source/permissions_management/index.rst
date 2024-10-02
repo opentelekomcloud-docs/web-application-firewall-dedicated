@@ -1,16 +1,16 @@
-:original_name: waf_01_0096.html
+:original_name: waf_01_3278.html
 
-.. _waf_01_0096:
+.. _waf_01_3278:
 
 Permissions Management
 ======================
 
--  :ref:`WAF Custom Policies <waf_01_0243>`
--  :ref:`WAF Permissions and Supported Actions <waf_01_0244>`
+-  :ref:`Authorizing and Associating an Enterprise Project <waf_01_0317>`
+-  :ref:`IAM Permissions Management <waf_01_0096>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   waf_custom_policies
-   waf_permissions_and_supported_actions
+   authorizing_and_associating_an_enterprise_project
+   iam_permissions_management/index

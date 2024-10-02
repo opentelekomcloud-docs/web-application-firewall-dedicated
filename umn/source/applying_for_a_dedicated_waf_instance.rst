@@ -32,7 +32,7 @@ Procedure
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the upper right corner of the page, click **Apply for Dedicated Engine**.
+#. In the upper right corner, click **Create WAF**.
 
 #. (Optional): Select an enterprise project from the **Enterprise Project** drop-down list.
 
@@ -46,7 +46,7 @@ Procedure
 
    .. _waf_01_1072__en-us_topic_0000001337142545_en-us_topic_0110861189_fig5029231715163:
 
-   .. figure:: /_static/images/en-us_image_0000001388712885.png
+   .. figure:: /_static/images/en-us_image_0000001907528589.png
       :alt: **Figure 1** Configuring a dedicated WAF instance
 
       **Figure 1** Configuring a dedicated WAF instance
@@ -75,6 +75,9 @@ Procedure
       | CPU Architecture                  | Select CPU architecture for your instance.                                                                                                                                                                                                              |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | ECS Specifications                | Select ECS specifications for your instance.                                                                                                                                                                                                            |
+      |                                   |                                                                                                                                                                                                                                                         |
+      |                                   | -  If you select **WI-500** for **Specifications**, ECS flavor **s2.2xlarge.2** is used by default.                                                                                                                                                     |
+      |                                   | -  If you select **WI-100** for **Specifications**, ECS flavor **s2.large.2** is used by default.                                                                                                                                                       |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | VPC                               | Select the VPC to which the origin server belongs.                                                                                                                                                                                                      |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -99,6 +102,10 @@ Procedure
       |                                   |    -  If your dedicated WAF instance and origin server are not in the same VPC, enable communications between the instance and the subnet of the origin server in the security group.                                                                   |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Tag                               | It is recommended that you use TMS's predefined tag function to add the same tag to different cloud resources.                                                                                                                                          |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Authorization                     | Select "I agree to assign permissions of the following roles to WAF: Tenant Guest, Server Administrator, VPC Administrator, and ELB Administrator."                                                                                                     |
+      |                                   |                                                                                                                                                                                                                                                         |
+      |                                   | After you agree the authorization, WAF will create agencies in IAM for you.                                                                                                                                                                             |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 #. In the lower right corner of the page, click **Create Now**.

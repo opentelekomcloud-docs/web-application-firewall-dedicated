@@ -1,0 +1,228 @@
+:original_name: waf_01_0010.html
+
+.. _waf_01_0010:
+
+Configuring Custom Precise Protection Rules
+===========================================
+
+You can combine common HTTP fields, such as **IP**, **Path**, **Referer**, **User Agent**, and **Params** in a protection rule to let WAF allow, block, or only log the requests that match the combined conditions.
+
+A reference table can be added to a precise protection rule. The reference table takes effect for all protected domain names.
+
+.. note::
+
+   If you have enabled enterprise projects, ensure that you have all operation permissions for the project where your WAF instance locates. Then, you can select the project from the **Enterprise Project** drop-down list and configure protection policies for the domain names in the project.
+
+Prerequisites
+-------------
+
+A website has been added to WAF.
+
+Constraints
+-----------
+
+-  If you configure **Protective Action** to **Block** for a precise protection rule, you can configure a known attack source rule by referring to :ref:`Configuring a Known Attack Source Rule to Block Specific Visitors for a Specified Duration <waf_01_0271>`. WAF will block requests matching the configured IP address, Cookie, or Params for a length of time configured as part of the rule.
+-  The path content cannot contain the following special characters: (<>*)
+-  It takes several minutes for a new rule to take effect. After the rule takes effect, protection events triggered by the rule will be displayed on the **Events** page.
+
+Application Scenarios
+---------------------
+
+Precise protection rules are used for anti-leeching and website management background protection.
+
+Configuring a Precise Protection Rule
+-------------------------------------
+
+#. Log in to the management console.
+
+#. Click |image1| in the upper left corner of the management console and select a region or project.
+
+#. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
+
+#. In the navigation pane on the left, choose **Policies**.
+
+#. Click the name of the target policy to go to the protection configuration page.
+
+#. In the **Precise Protection** configuration area, change **Status** as needed and click **Customize Rule** to go to the **Precise Protection** page.
+
+
+   .. figure:: /_static/images/en-us_image_0000001337808105.png
+      :alt: **Figure 1** Precise Protection configuration area
+
+      **Figure 1** Precise Protection configuration area
+
+#. On the **Precise Protection** page, set **Detection Mode**.
+
+   Two detection modes are available:
+
+   -  **Instant detection**: If a request matches a configured precise protection rule, WAF immediately ends threat detection and blocks the request.
+   -  **Full detection**: If a request matches a configured precise protection rule, WAF finishes its scan first and then blocks all requests that match the configured precise protection rule.
+
+#. In the upper left corner above the **Precise Protection** rule list, click **Add Rule**.
+
+#. In the displayed dialog box, add a rule by referring to :ref:`Table 1 <waf_01_0010__table2299936310457>`.
+
+   The settings shown in :ref:`Figure 2 <waf_01_0010__fig39459217174738>` are used as an example. If a visitor tries to access a URL containing **/admin**, WAF will block the request.
+
+   .. important::
+
+      To ensure that WAF blocks only attack requests, configure **Protective Action** to **Log only** first and check whether normal requests are blocked on the **Events** page. If no normal requests are blocked, configure **Protective Action** to **Block**.
+
+   .. _waf_01_0010__fig39459217174738:
+
+   .. figure:: /_static/images/en-us_image_0000001731887045.png
+      :alt: **Figure 2** Add Precise Protection Rule
+
+      **Figure 2** Add Precise Protection Rule
+
+   .. _waf_01_0010__table2299936310457:
+
+   .. table:: **Table 1** Rule parameters
+
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
+      | Parameter             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Example Value                     |
+      +=======================+==============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================+===================================+
+      | Rule Description      | A brief description of the rule. This parameter is optional.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | None                              |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
+      | Condition List        | Click **Add** to add conditions. At least one condition needs to be added. You can add up to 30 conditions to a protection rule. If more than one condition is added, all of the conditions must be met for the rule to be applied. A condition includes the following parameters:                                                                                                                                                                                                                                                                                                                                                                                                           | **Path** **Include** **/admin**   |
+      |                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                   |
+      |                       | Parameters for configuring a condition are described as follows:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                   |
+      |                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                   |
+      |                       | -  **Field**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |                                   |
+      |                       | -  **Subfield**: Configure this field only when **Params**, **Cookie**, or **Header** is selected for **Field**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                   |
+      |                       | -  **Logic**: Select a logical relationship from the drop-down list.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |                                   |
+      |                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                   |
+      |                       |    .. note::                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |                                   |
+      |                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                   |
+      |                       |       -  If **Include any value**, **Exclude any value**, **Equal to any value**, **Not equal to any value**, **Prefix is any value**, **Prefix is not any of them**, **Suffix is any value**, or **Suffix is not any of them** is selected, select an existing reference table in the **Content** drop-down list. For details, see :ref:`Creating a Reference Table to Configure Protection Metrics In Batches <waf_01_0081>`.                                                                                                                                                                                                                                                              |                                   |
+      |                       |       -  **Exclude any value**, **Not equal to any value**, **Prefix is not any of them**, and **Suffix is not any of them** indicates, respectively, that WAF performs the protection action (block, allow, or log only) when the field in the access request does not contain, is not equal to, or the prefix or suffix is not any value set in the reference table. For example, assume that **Path** field is set to **Exclude any value** and the **test** reference table is selected. If *test1*, *test2*, and *test3* are set in the **test** reference table, WAF performs the protection action when the path of the access request does not contain *test1*, *test2*, or *test3*. |                                   |
+      |                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                   |
+      |                       | -  **Content**: Enter or select the content of condition matching.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |                                   |
+      |                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                   |
+      |                       | .. note::                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                   |
+      |                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                   |
+      |                       |    For more details about the configurations in general, see :ref:`Table 1 <waf_01_3271__table13543174312394>`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                   |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
+      | Protective Action     | -  **Block**: The request that hit the rule will be blocked and a block response page is returned to the client that initiates the request. By default, WAF uses a unified block response page. You can also customize this page.                                                                                                                                                                                                                                                                                                                                                                                                                                                            | **Block**                         |
+      |                       | -  **Allow**: Requests that hit the rule are forwarded to backend servers.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                   |
+      |                       | -  **Log only**: Requests that hit the rule are not blocked, but will be logged. You can use WAF logs to query requests that hit the current rule and analyze the protection results of the rule. For example, check whether there are requests that are blocked mistakenly.                                                                                                                                                                                                                                                                                                                                                                                                                 |                                   |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
+      | Known Attack Source   | If you set **Protective Action** to **Block**, you can select a blocking type for a known attack source rule. Then, WAF blocks requests matching the configured **IP**, **Cookie**, or **Params** for a length of time that depends on the selected blocking type.                                                                                                                                                                                                                                                                                                                                                                                                                           | **Long-term IP address blocking** |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
+      | Priority              | Rule priority. If you have added multiple rules, rules are matched by priority. The smaller the value you set, the higher the priority.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | **5**                             |
+      |                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                   |
+      |                       | .. important::                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |                                   |
+      |                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                   |
+      |                       |    NOTICE:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                   |
+      |                       |    If multiple precise access control rules have the same priority, WAF matches the rules in the sequence of time the rules are added.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |                                   |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
+      | Application Schedule  | Select **Immediate** to enable the rule immediately, or select **Custom** to configure when you wish the rule to be enabled.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | **Immediate**                     |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
+
+#. Click **Confirm**. You can then view the added precise protection rule in the protection rule list.
+
+   -  To disable a rule, click **Disable** in the **Operation** column of the rule. The default **Rule Status** is **Enabled**.
+   -  To modify a rule, click **Modify** in the row containing the rule.
+   -  To delete a rule, click **Delete** in the row containing the rule.
+
+Protection Effect
+-----------------
+
+To verify WAF is protecting your website (**www.example.com**) against the rule as shown in :ref:`Figure 2 <waf_01_0010__fig39459217174738>`:
+
+#. Clear the browser cache and enter the domain name in the address bar to check whether the website is accessible.
+
+   -  If the website is inaccessible, connect the website domain name to WAF by following the instructions in :ref:`Step 1: Add a Website to WAF <waf_01_0326>`.
+   -  If the website is accessible, go to :ref:`Step 2 <waf_01_0010__li1160182620213>`.
+
+#. .. _waf_01_0010__li1160182620213:
+
+   Clear the browser cache and enter **http://www.example.com/admin** (or any page containing **/admin**) in the address bar. Normally, WAF blocks the requests that meet the conditions and returns the block page.
+
+#. Return to the WAF console. In the navigation pane, choose **Events**. On the displayed page, view the event log.
+
+Configuration Example - Blocking a Certain Type of Attack Requests
+------------------------------------------------------------------
+
+Analysis of a specific type of WordPress pingback attack shows that the **User Agent** field contains WordPress.
+
+
+.. figure:: /_static/images/en-us_image_0168632822.png
+   :alt: **Figure 3** WordPress pingback attack
+
+   **Figure 3** WordPress pingback attack
+
+A precise rule as shown in the figure can block this type of attack.
+
+
+.. figure:: /_static/images/en-us_image_0000001378030725.png
+   :alt: **Figure 4** User Agent configuration
+
+   **Figure 4** User Agent configuration
+
+Configuration Example - Blocking Requests to a Certain URL
+----------------------------------------------------------
+
+If a large number of IP addresses are accessing a URL that does not exist, configure the following protection rule to block such requests to reduce resource usage on the origin server.
+
+
+.. figure:: /_static/images/en-us_image_0000001731889333.png
+   :alt: **Figure 5** Blocking requests to a specific URL
+
+   **Figure 5** Blocking requests to a specific URL
+
+Configuration Example - Blocking Requests with null Fields
+----------------------------------------------------------
+
+You can configure precise protection rules to block requests having null fields.
+
+
+.. figure:: /_static/images/en-us_image_0000001732014393.png
+   :alt: **Figure 6** Blocking requests with empty Referer
+
+   **Figure 6** Blocking requests with empty Referer
+
+Configuration Example - Blocking Specified File Types (ZIP, TAR, and DOCX)
+--------------------------------------------------------------------------
+
+You can configure file types that match the path field to block specific files of certain types. For example, if you want to block .zip files, you can configure a precise protection rule as shown in :ref:`Figure 7 <waf_01_0010__fig1599818616112>` to block access requests of .zip files.
+
+.. _waf_01_0010__fig1599818616112:
+
+.. figure:: /_static/images/en-us_image_0000001499416648.png
+   :alt: **Figure 7** Blocking requests of specific file types
+
+   **Figure 7** Blocking requests of specific file types
+
+Configuration Example - Allowing a Specified IP Address to Access Your Website
+------------------------------------------------------------------------------
+
+You can configure two precise protection rules, one to block all requests, as shown in :ref:`Figure 8 <waf_01_0010__fig11661145013158>`, but then another one to allow the access from a specific IP address, as shown in :ref:`Figure 9 <waf_01_0010__fig866195019151>`.
+
+.. _waf_01_0010__fig11661145013158:
+
+.. figure:: /_static/images/en-us_image_0000001732020137.png
+   :alt: **Figure 8** Blocking all requests
+
+   **Figure 8** Blocking all requests
+
+.. _waf_01_0010__fig866195019151:
+
+.. figure:: /_static/images/en-us_image_0000001857974760.png
+   :alt: **Figure 9** Allowing the access of a specified IP address
+
+   **Figure 9** Allowing the access of a specified IP address
+
+Configuration Example - Allowing a Specific IP Address to Access a Certain URL
+------------------------------------------------------------------------------
+
+You can configure multiple conditions in the **Condition List** field. If an access request meets the conditions in the list, WAF will allow the request from a specific IP address to access a specified URL.
+
+
+.. figure:: /_static/images/en-us_image_0000001904363429.png
+   :alt: **Figure 10** Allowing specific IP addresses to access specified URLs
+
+   **Figure 10** Allowing specific IP addresses to access specified URLs
+
+.. |image1| image:: /_static/images/en-us_image_0000001532904513.jpg
+.. |image2| image:: /_static/images/en-us_image_0000001340585569.png

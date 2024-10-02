@@ -6,20 +6,18 @@ Dedicated Web Application Firewall - User Guide
    :maxdepth: 1
 
    service_overview/index
-   overview
+   waf_operation_guide
    applying_for_a_dedicated_waf_instance
-   enabling_waf_protection/index
-   website_domain_name_management/index
-   certificate_management/index
-   rule_configuration/index
-   dashboard
-   event_management/index
-   enabling_lts_for_waf_logging
+   creating_a_user_group_and_granting_permissions
+   connecting_a_website_to_waf/index
+   viewing_protection_events/index
+   configuring_protection_policies/index
+   viewing_the_dashboard_page
+   website_settings/index
    policy_management/index
-   dedicated_waf_engine_management
-   managing_projects_and_enterprise_projects
+   object_management/index
+   system_management/index
    permissions_management/index
-   key_operations_recorded_by_cts/index
-   monitored_metrics
+   monitoring_and_auditing/index
    faqs/index
    change_history

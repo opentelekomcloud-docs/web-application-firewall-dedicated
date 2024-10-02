@@ -5,16 +5,11 @@
 Creating a Protection Policy
 ============================
 
-A policy is a combination of rules, such as basic web protection, blacklist, whitelist, and precise protection rules. A policy can be applied to multiple domain names, but only one policy can be used for a domain name. This topic describes how to add a policy to your WAF instance.
+A policy is a combination of rules, such as basic web protection, blacklist, whitelist, and precise protection rules. A policy can be applied to multiple domain names, but only one policy can be used for a domain name. This topic describes how to add a policy for your WAF instance.
 
 .. note::
 
    If you have enabled enterprise projects, you can select your enterprise project from the **Enterprise Project** drop-down list and add protection policies in the project.
-
-Prerequisites
--------------
-
-A website has been added to WAF.
 
 Constraints
 -----------
@@ -50,8 +45,8 @@ Procedure
 
 #. In the **Policy Name** column, click the policy name. On the displayed page, add rules to the policy by referring to :ref:`Rule Configurations <waf_01_0007>`.
 
-Other Operations
-----------------
+Related Operations
+------------------
 
 -  To modify a policy name, click |image3| next to the policy name. In the dialog box displayed, enter a new policy name.
 -  To delete a rule, locate the row containing the rule. In the **Operation** column, click **Delete**.
