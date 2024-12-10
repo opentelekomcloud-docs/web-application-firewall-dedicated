@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'wafd-api-ref.tex',
-     u'Dedicated Web Application Firewall - API Reference',
+    u'Dedicated Web Application Firewall - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 

@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'wafd-best-practice.tex',
-     u'Dedicated Web Application Firewall - Best Practice',
+    u'Dedicated Web Application Firewall - Best Practice',
      u'OpenTelekomCloud', 'manual'),
 ]
 
