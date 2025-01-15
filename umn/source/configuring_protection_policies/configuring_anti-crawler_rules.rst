@@ -14,7 +14,7 @@ You can configure website anti-crawler protection rules to protect against searc
 Prerequisites
 -------------
 
-A website has been added to WAF.
+You have added the website you want to protect to WAF.
 
 Constraints
 -----------
@@ -75,15 +75,12 @@ Configuring an Anti-Crawler Rule
 
 #. Click the name of the target policy to go to the protection configuration page.
 
-#. .. _waf_01_0015__li11722104461314:
+#. .. _waf_01_0015__li862654012419:
 
-   In the **Anti-Crawler** configuration area, toggle on the function if needed. Then, click **Configure Anti-Crawler**.
+   Click the **Anti-Crawler** configuration area and toggle it on or off if needed.
 
-
-   .. figure:: /_static/images/en-us_image_0000001395732753.png
-      :alt: **Figure 3** Anti-Crawler configuration area
-
-      **Figure 3** Anti-Crawler configuration area
+   -  |image3|: enabled.
+   -  |image4|: disabled.
 
 #. Select the **Feature Library** tab and enable the protection by referring to :ref:`Table 1 <waf_01_0015__table173611272418>`.
 
@@ -108,9 +105,9 @@ Configuring an Anti-Crawler Rule
 
 
    .. figure:: /_static/images/en-us_image_0000001285803110.png
-      :alt: **Figure 4** Feature Library
+      :alt: **Figure 3** Feature Library
 
-      **Figure 4** Feature Library
+      **Figure 3** Feature Library
 
    .. _waf_01_0015__table173611272418:
 
@@ -142,13 +139,13 @@ Configuring an Anti-Crawler Rule
 
 #. Select the **JavaScript** tab and change **Status** if needed.
 
-   **JavaScript** anti-crawler is disabled by default. To enable it, click |image3| and then click **OK** in the displayed dialog box to toggle on |image4|.
+   **JavaScript** anti-crawler is disabled by default. To enable it, click |image5| and then click **OK** in the displayed dialog box to toggle on |image6|.
 
 
    .. figure:: /_static/images/en-us_image_0000001684111682.png
-      :alt: **Figure 5** JavaScript
+      :alt: **Figure 4** JavaScript
 
-      **Figure 5** JavaScript
+      **Figure 4** JavaScript
 
    .. important::
 
@@ -168,9 +165,9 @@ Configuring an Anti-Crawler Rule
 
 
       .. figure:: /_static/images/en-us_image_0000001732183425.png
-         :alt: **Figure 6** Exclude Rule
+         :alt: **Figure 5** Exclude Rule
 
-         **Figure 6** Exclude Rule
+         **Figure 5** Exclude Rule
 
    -  To protect a specified path only
 
@@ -178,9 +175,9 @@ Configuring an Anti-Crawler Rule
 
 
       .. figure:: /_static/images/en-us_image_0000001732186817.png
-         :alt: **Figure 7** Add Rule
+         :alt: **Figure 6** Add Rule
 
-         **Figure 7** Add Rule
+         **Figure 6** Add Rule
 
    .. _waf_01_0015__table888894565019:
 
@@ -229,17 +226,17 @@ To verify that WAF is protecting domain name **www.example.com** against an anti
 
 
    .. figure:: /_static/images/en-us_image_0000001285811290.png
-      :alt: **Figure 8** Enabling Script Tool
+      :alt: **Figure 7** Enabling Script Tool
 
-      **Figure 8** Enabling Script Tool
+      **Figure 7** Enabling Script Tool
 
 #. Enable anti-crawler protection.
 
 
-   .. figure:: /_static/images/en-us_image_0000001395732753.png
-      :alt: **Figure 9** Anti-Crawler configuration area
+   .. figure:: /_static/images/en-us_image_0000002054803168.png
+      :alt: **Figure 8** Anti-Crawler configuration area
 
-      **Figure 9** Anti-Crawler configuration area
+      **Figure 8** Anti-Crawler configuration area
 
 #. In the navigation pane on the left, choose **Events** to go to the **Events** page.
 
@@ -250,18 +247,20 @@ Configuration Example - Search Engine
 
 To allow the search engine of Baidu or Google and block the POST request of Baidu:
 
-#. Set **Status** of **Search Engine** to |image5| by referring to the instructions in :ref:`Step 6 <waf_01_0015__li11722104461314>`.
+#. Set **Status** of **Search Engine** to |image7| by referring to :ref:`Step 6 <waf_01_0015__li862654012419>`.
 
 #. Configure a precise protection rule by referring to :ref:`Configuring Custom Precise Protection Rules <waf_01_0010>`.
 
 
    .. figure:: /_static/images/en-us_image_0000001338332661.png
-      :alt: **Figure 10** Blocking POST requests
+      :alt: **Figure 9** Blocking POST requests
 
-      **Figure 10** Blocking POST requests
+      **Figure 9** Blocking POST requests
 
 .. |image1| image:: /_static/images/en-us_image_0000001532628161.jpg
 .. |image2| image:: /_static/images/en-us_image_0000001340426097.png
-.. |image3| image:: /_static/images/en-us_image_0234013368.png
-.. |image4| image:: /_static/images/en-us_image_0000001285643550.png
-.. |image5| image:: /_static/images/en-us_image_0000001227094315.png
+.. |image3| image:: /_static/images/en-us_image_0000002054495070.png
+.. |image4| image:: /_static/images/en-us_image_0000001761857181.png
+.. |image5| image:: /_static/images/en-us_image_0234013368.png
+.. |image6| image:: /_static/images/en-us_image_0000001285643550.png
+.. |image7| image:: /_static/images/en-us_image_0000001746598250.png

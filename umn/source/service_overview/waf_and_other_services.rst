@@ -15,7 +15,7 @@ Cloud Trace Service (CTS) records all WAF operations for you to query, audit, an
 Cloud Eye
 ---------
 
-Cloud Eye monitors the indicators of the dedicated WAF, so that you can understand the protection status of the dedicated WAF in a timely manner, and set protection policies accordingly. For details, see the *Cloud Eye User Guide*.
+Cloud Eye monitors the indicators of the dedicated WAF, so that you can learn of the protection status of the dedicated WAF in a timely manner, and set protection policies accordingly. For details, see the *Cloud Eye User Guide*.
 
 For details about monitored WAF metrics, see :ref:`WAF Monitored Metrics <waf_01_1372>`.
 

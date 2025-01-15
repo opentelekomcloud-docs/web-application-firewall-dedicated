@@ -49,4 +49,4 @@ To unbind a certificate from a website domain name, perform the following steps:
 
 .. |image1| image:: /_static/images/en-us_image_0000001317947942.jpg
 .. |image2| image:: /_static/images/en-us_image_0000001340305633.png
-.. |image3| image:: /_static/images/en-us_image_0210924454.jpg
+.. |image3| image:: /_static/images/en-us_image_0000002055861409.png

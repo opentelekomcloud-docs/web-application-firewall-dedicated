@@ -2,7 +2,7 @@
 
 .. _waf_01_0081:
 
-Creating a Reference Table to Configure Protection Metrics In Batches
+Creating a Reference Table to Configure Protection Metrics in Batches
 =====================================================================
 
 This topic describes how to create a reference table to batch configure protection metrics of a single type, such as **Path**, **User Agent**, **IP**, **Params**, **Cookie**, **Referer**, and **Header**. A reference table can be referenced by CC attack protection rules and precise protection rules.
@@ -16,7 +16,7 @@ When you configure a CC attack protection rule or precise protection rule, if th
 Prerequisites
 -------------
 
-A website has been added to WAF.
+You have added the website you want to protect to WAF.
 
 Application Scenarios
 ---------------------
@@ -36,7 +36,7 @@ Creating a Reference Table
 
 #. Click the name of the target policy to go to the protection configuration page.
 
-#. In the **CC Attack Protection** or **Precise Protection** area, click **Customize Rule**.
+#. Click the **CC Attack Protection** or **Precise Protection** configuration area.
 
 #. Click **Reference Table Management** in the upper left corner of the list.
 
@@ -92,6 +92,8 @@ Creating a Reference Table
       |                       | .. note::                                                                                                                                                                   |                       |
       |                       |                                                                                                                                                                             |                       |
       |                       |    Click **Add** to add more than one value.                                                                                                                                |                       |
+      +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | Rule Description      | Description of the rule.                                                                                                                                                    | ``-``                 |
       +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
 
 #. Click **Confirm**. You can then view the added reference table in the reference table list.

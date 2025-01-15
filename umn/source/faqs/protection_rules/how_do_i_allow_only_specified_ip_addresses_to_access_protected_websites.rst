@@ -16,35 +16,27 @@ Configuring IP Address Blacklist and Whitelist Rules to Block All Source IP Addr
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. Click |image3| in the upper left corner of the page and choose **Security** > **Web Application Firewall**.
-
 #. In the navigation pane on the left, choose **Policies**.
 
 #. Click the name of the target policy to go to the protection configuration page.
 
 #. In the **Blacklist and Whitelist** configuration area, enable the protection.
 
-
-   .. figure:: /_static/images/en-us_image_0000001338300589.png
-      :alt: **Figure 1** Blacklist and Whitelist configuration area
-
-      **Figure 1** Blacklist and Whitelist configuration area
-
-#. Click **Customize Rule**. On the displayed page, click **Add Rule** in the upper left corner.
+#. In the upper left corner of the **Blacklist and Whitelist** page, click **Add Rule**.
 
 #. In the **Add Blacklist or Whitelist Rule** dialog box, add two blacklist rules to block all source IP addresses.
 
 
    .. figure:: /_static/images/en-us_image_0000001684030226.png
-      :alt: **Figure 2** Blocking IP address range 1.0.0.0/1
+      :alt: **Figure 1** Blocking IP address range 1.0.0.0/1
 
-      **Figure 2** Blocking IP address range 1.0.0.0/1
+      **Figure 1** Blocking IP address range 1.0.0.0/1
 
 
    .. figure:: /_static/images/en-us_image_0000001732030241.png
-      :alt: **Figure 3** Blocking IP address range 128.0.0.0/1
+      :alt: **Figure 2** Blocking IP address range 128.0.0.0/1
 
-      **Figure 3** Blocking IP address range 128.0.0.0/1
+      **Figure 2** Blocking IP address range 128.0.0.0/1
 
 #. Click **Add Rule**. In the displayed **Add Blacklist or Whitelist Rule** dialog box, add a rule for the specified IP address or IP address range.
 
@@ -53,9 +45,9 @@ Configuring a Precise Protection Rule to Block All Source IP Addresses Except th
 
 #. Log in to the management console.
 
-#. Click |image4| in the upper left corner of the management console and select a region or project.
+#. Click |image3| in the upper left corner of the management console and select a region or project.
 
-#. Click |image5| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
+#. Click |image4| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
 #. In the navigation pane on the left, choose **Policies**.
 
@@ -64,16 +56,16 @@ Configuring a Precise Protection Rule to Block All Source IP Addresses Except th
 #. In the **Precise Protection** configuration area, enable the protection.
 
 
-   .. figure:: /_static/images/en-us_image_0000001337808105.png
-      :alt: **Figure 4** Precise Protection configuration area
+   .. figure:: /_static/images/en-us_image_0000002055860514.png
+      :alt: **Figure 3** Precise Protection configuration area
 
-      **Figure 4** Precise Protection configuration area
+      **Figure 3** Precise Protection configuration area
 
 #. Click **Customize Rule**. In the upper left corner of the displayed page, click **Add Rule**.
 
 #. .. _waf_01_0312__li123452332541:
 
-   In the displayed **Add Precise Protection Rule** dialog box, add a protection rule as shown in :ref:`Figure 5 <waf_01_0312__fig163451833195414>` to block all requests.
+   In the displayed **Add Precise Protection Rule** dialog box, add a protection rule as shown in :ref:`Figure 4 <waf_01_0312__fig163451833195414>` to block all requests.
 
    .. caution::
 
@@ -82,15 +74,15 @@ Configuring a Precise Protection Rule to Block All Source IP Addresses Except th
    .. _waf_01_0312__fig163451833195414:
 
    .. figure:: /_static/images/en-us_image_0000001732020137.png
-      :alt: **Figure 5** Blocking all requests
+      :alt: **Figure 4** Blocking all requests
 
-      **Figure 5** Blocking all requests
+      **Figure 4** Blocking all requests
 
 #. .. _waf_01_0312__li15907173419260:
 
    Click **Add Rule**. In the displayed **Add Precise Protection Rule** dialog box, add a rule for the specified IP address.
 
-   For example, if you want to allow 192.168.2.3 to access the website, add a protection rule as shown in :ref:`Figure 6 <waf_01_0312__fig18908103413269>`.
+   For example, if you want to allow 192.168.2.3 to access the website, add a protection rule as shown in :ref:`Figure 5 <waf_01_0312__fig18908103413269>`.
 
    .. caution::
 
@@ -99,12 +91,11 @@ Configuring a Precise Protection Rule to Block All Source IP Addresses Except th
    .. _waf_01_0312__fig18908103413269:
 
    .. figure:: /_static/images/en-us_image_0000001857974760.png
-      :alt: **Figure 6** Allowing the access of a specified IP address
+      :alt: **Figure 5** Allowing the access of a specified IP address
 
-      **Figure 6** Allowing the access of a specified IP address
+      **Figure 5** Allowing the access of a specified IP address
 
 .. |image1| image:: /_static/images/en-us_image_0000001483011470.jpg
 .. |image2| image:: /_static/images/en-us_image_0000001572891172.png
-.. |image3| image:: /_static/images/en-us_image_0000001730827877.png
-.. |image4| image:: /_static/images/en-us_image_0000001482832030.jpg
-.. |image5| image:: /_static/images/en-us_image_0000001573330978.png
+.. |image3| image:: /_static/images/en-us_image_0000001482832030.jpg
+.. |image4| image:: /_static/images/en-us_image_0000001573330978.png

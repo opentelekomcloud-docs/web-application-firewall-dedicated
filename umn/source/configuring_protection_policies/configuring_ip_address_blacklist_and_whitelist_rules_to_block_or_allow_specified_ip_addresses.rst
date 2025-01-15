@@ -14,11 +14,12 @@ You can configure blacklist and whitelist rules to block, log only, or allow acc
 Prerequisites
 -------------
 
-A website has been added to WAF.
+You have added the website you want to protect to WAF.
 
 Constraints
 -----------
 
+-  When you add a website through **Cloud Mode - Load balancer** and set **Frontend Protocol** of the listener of your ELB load balancer to **TCP**, **UDP**, or **QUIC**, this type of rule does not take effect.
 -  WAF does not support batch import of blacklists or whitelists. To configure multiple IP address or IP address range rules, add blacklist and whitelist rules one by one to allow or block specified IP addresses or IP address ranges.
 -  The address 0.0.0.0/0 cannot be added to a WAF IP address blacklist or whitelist, and if a whitelist conflicts with a blacklist, the whitelist rule takes priority. If you want to allow only a specific IP address within a range of blocked addresses, add a blacklist rule to block the range and then add a whitelist rule to allow the individual address you wish to allow.
 -  If you set **Protective Action** to **Block** for a blacklist or whitelist rule, you can :ref:`set a known attack source <waf_01_0271>` to block the visitor for a certain period of time; however, the known attack source with **Long-term IP address blocking** or **Short-term IP address blocking** configured cannot be set for a blacklist or whitelist rule. WAF will block requests matching the configured Cookie or Params for a block duration you specify.
@@ -44,13 +45,10 @@ Configuring an IP Address Blacklist or Whitelist Rule
 
 #. Click the name of the target policy to go to the protection configuration page.
 
-#. In the **Blacklist and Whitelist** configuration area, change **Status** as needed and click **Customize Rule**.
+#. Click the **Blacklist and Whitelist** configuration area and toggle it on or off if needed.
 
-
-   .. figure:: /_static/images/en-us_image_0000001338300589.png
-      :alt: **Figure 1** Blacklist and Whitelist configuration area
-
-      **Figure 1** Blacklist and Whitelist configuration area
+   -  |image3|: enabled.
+   -  |image4|: disabled.
 
 #. In the upper left corner above the **Blacklist and Whitelist** list, click **Add Rule**.
 
@@ -63,36 +61,36 @@ Configuring an IP Address Blacklist or Whitelist Rule
 
 
    .. figure:: /_static/images/en-us_image_0000001377910101.png
-      :alt: **Figure 2** Adding a blacklist or whitelist rule
+      :alt: **Figure 1** Adding a blacklist or whitelist rule
 
-      **Figure 2** Adding a blacklist or whitelist rule
+      **Figure 1** Adding a blacklist or whitelist rule
 
    .. _waf_01_0012__table147241231818:
 
    .. table:: **Table 1** Rule parameters
 
-      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
-      | Parameter             | Description                                                                                                                                                                                                                                  | Example Value                 |
-      +=======================+==============================================================================================================================================================================================================================================+===============================+
-      | Rule Name             | Rule name you entered.                                                                                                                                                                                                                       | WAF                           |
-      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
-      | IP Address/Range      | IP addresses or IP address ranges are supported.                                                                                                                                                                                             | XXX.XXX.2.3                   |
-      |                       |                                                                                                                                                                                                                                              |                               |
-      |                       | -  IP address: IP address to be added to the blacklist or whitelist                                                                                                                                                                          |                               |
-      |                       | -  IP address range: IP address and subnet mask defining a network segment                                                                                                                                                                   |                               |
-      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
-      | Protective Action     | -  **Block**: Select **Block** if you want to blacklist an IP address or IP address range.                                                                                                                                                   | Block                         |
-      |                       | -  **Allow**: Select **Allow** if you want to whitelist an IP address or IP address range.                                                                                                                                                   |                               |
-      |                       | -  **Log only**: Select **Log only** if you want to observe an IP address or IP address range. Then, WAF determines whether the IP address or IP address range are blacklisted or whitelisted based on the :ref:`events data <waf_01_0077>`. |                               |
-      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
-      | Known Attack Source   | If you select **Block** for **Protective Action**, you can select a blocking type of a known attack source rule. WAF will block requests matching the configured Cookie or Params for a length of time configured as part of the rule.       | **Long-term Cookie blocking** |
-      |                       |                                                                                                                                                                                                                                              |                               |
-      |                       | .. note::                                                                                                                                                                                                                                    |                               |
-      |                       |                                                                                                                                                                                                                                              |                               |
-      |                       |    Do not select the **Long-term IP address blocking** for a long time or **Short-term IP address blocking** for **Blocking Type**.                                                                                                          |                               |
-      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
-      | Rule Description      | A brief description of the rule. This parameter is optional.                                                                                                                                                                                 | None                          |
-      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
+      | Parameter             | Description                                                                                                                                                                                                                            | Example Value                 |
+      +=======================+========================================================================================================================================================================================================================================+===============================+
+      | Rule Name             | Rule name you entered.                                                                                                                                                                                                                 | WAF                           |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
+      | IP Address/Range      | IP addresses or IP address ranges are supported.                                                                                                                                                                                       | XXX.XXX.2.3                   |
+      |                       |                                                                                                                                                                                                                                        |                               |
+      |                       | -  IP address: IP address to be added to the blacklist or whitelist                                                                                                                                                                    |                               |
+      |                       | -  IP address range: IP address and subnet mask defining a network segment                                                                                                                                                             |                               |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
+      | Protective Action     | -  **Block**: Select **Block** if you want to blacklist an IP address or IP address range.                                                                                                                                             | Block                         |
+      |                       | -  **Allow**: Select **Allow** if you want to whitelist an IP address or IP address range.                                                                                                                                             |                               |
+      |                       | -  **Log only**: Select **Log only** if you want to observe an IP address or IP address range. Then, WAF determines whether the IP address or IP address range are blacklisted or whitelisted based on the events data.                |                               |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
+      | Known Attack Source   | If you select **Block** for **Protective Action**, you can select a blocking type of a known attack source rule. WAF will block requests matching the configured Cookie or Params for a length of time configured as part of the rule. | **Long-term Cookie blocking** |
+      |                       |                                                                                                                                                                                                                                        |                               |
+      |                       | .. note::                                                                                                                                                                                                                              |                               |
+      |                       |                                                                                                                                                                                                                                        |                               |
+      |                       |    Do not select the **Long-term IP address blocking** for a long time or **Short-term IP address blocking** for **Blocking Type**.                                                                                                    |                               |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
+      | Rule Description      | A brief description of the rule. This parameter is optional.                                                                                                                                                                           | None                          |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
 
 #. Click **Confirm**. You can then view the added rule in the list of blacklist and whitelist rules.
 
@@ -107,7 +105,7 @@ To verify WAF is protecting your website (**www.example.com**) against a rule:
 
 #. Clear the browser cache and enter the domain name in the address bar to check whether the website is accessible.
 
-   -  If the website is inaccessible, connect the website domain name to WAF by following the instructions in :ref:`Step 1: Add a Website to WAF <waf_01_0326>`.
+   -  If the website is inaccessible, connect the website domain name to WAF by following the instructions in :ref:`Step 1: Add Your Website to WAF <waf_01_0326>`.
    -  If the website is accessible, go to :ref:`Step 2 <waf_01_0012__li885731953512>`.
 
 #. .. _waf_01_0012__li885731953512:
@@ -123,43 +121,51 @@ Example Configuration - Allowing a Specified IP Addresses
 
 If domain name *www.example.com* has been connected to WAF, you can perform the following steps to verify the rule takes effect:
 
-#. Add the following two blacklist and whitelist rules to block all IP addresses:
+#. Add a rule to block all source IP addresses.
 
+   -  **Method 1**: Add the following two blacklist rules to block all source IP addresses, as shown in :ref:`Figure 2 <waf_01_0012__fig134723543536>` and :ref:`Figure 3 <waf_01_0012__fig13996155195418>`.
 
-   .. figure:: /_static/images/en-us_image_0000001684030226.png
-      :alt: **Figure 3** Blocking IP address range 1.0.0.0/1
+      .. _waf_01_0012__fig134723543536:
 
-      **Figure 3** Blocking IP address range 1.0.0.0/1
+      .. figure:: /_static/images/en-us_image_0000001684030226.png
+         :alt: **Figure 2** Blocking IP address range 1.0.0.0/1
 
+         **Figure 2** Blocking IP address range 1.0.0.0/1
 
-   .. figure:: /_static/images/en-us_image_0000001732030241.png
-      :alt: **Figure 4** Blocking IP address range 128.0.0.0/1
+      .. _waf_01_0012__fig13996155195418:
 
-      **Figure 4** Blocking IP address range 128.0.0.0/1
+      .. figure:: /_static/images/en-us_image_0000001732030241.png
+         :alt: **Figure 3** Blocking IP address range 128.0.0.0/1
 
-   You can also add a precise protection rule to block all access requests, as shown in :ref:`Figure 5 <waf_01_0012__fig489116305597>`.
+         **Figure 3** Blocking IP address range 128.0.0.0/1
 
-   .. _waf_01_0012__fig489116305597:
+   -  **Method 2**: Add a precise protection rule to block all access requests, as shown in :ref:`Figure 4 <waf_01_0012__fig489116305597>`.
 
-   .. figure:: /_static/images/en-us_image_0000001684033930.png
-      :alt: **Figure 5** Blocking all access requests
+      .. _waf_01_0012__fig489116305597:
 
-      **Figure 5** Blocking all access requests
+      .. figure:: /_static/images/en-us_image_0000002057944613.png
+         :alt: **Figure 4** Blocking all access requests
 
-   For details, see :ref:`Configuring Custom Precise Protection Rules <waf_01_0010>`.
+         **Figure 4** Blocking all access requests
 
 #. .. _waf_01_0012__li839632265215:
 
-   Refer to :ref:`Figure 6 <waf_01_0012__fig5519155016115>` and add a whitelist rule to allow a specified IP address, for example, *XXX.XXX.2.3*.
+   Refer to :ref:`Figure 5 <waf_01_0012__fig5519155016115>` and add a whitelist rule to allow a specified IP address, for example, *XXX.XXX.2.3*.
 
    .. _waf_01_0012__fig5519155016115:
 
    .. figure:: /_static/images/en-us_image_0000001732035733.png
-      :alt: **Figure 6** Allowing the access of a specified IP address
+      :alt: **Figure 5** Allowing the access of a specified IP address
 
-      **Figure 6** Allowing the access of a specified IP address
+      **Figure 5** Allowing the access of a specified IP address
 
 #. Enable the white and blacklist protection.
+
+
+   .. figure:: /_static/images/en-us_image_0000002091891973.png
+      :alt: **Figure 6** Blacklist and Whitelist configuration area
+
+      **Figure 6** Blacklist and Whitelist configuration area
 
 #. Clear the browser cache and access http://www.example.com.
 
@@ -176,3 +182,5 @@ If domain name *www.example.com* has been connected to WAF, you can perform the 
 
 .. |image1| image:: /_static/images/en-us_image_0000001532867165.jpg
 .. |image2| image:: /_static/images/en-us_image_0000001288106282.png
+.. |image3| image:: /_static/images/en-us_image_0000002054495070.png
+.. |image4| image:: /_static/images/en-us_image_0000001761857181.png

@@ -121,29 +121,6 @@ Only dedicated WAF instances in the **Running** status can be upgraded to the la
 
    Click **View Details** to view details of all dedicated WAF instance versions.
 
-Rolling Back a Dedicated WAF Instance
--------------------------------------
-
-The version can be rolled back only to the original version.
-
-#. Log in to the management console.
-
-#. Click |image7| in the upper left corner of the management console and select a region or project.
-
-#. Click |image8| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
-
-#. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine** to go to the dedicated WAF instance page.
-
-#. In the row of the instance, click **More** > **Roll Back** in the **Operation** column.
-
-#. In the dialog box displayed, confirm that the following conditions are met and select the following three conditions. Then, click **Confirm**.
-
-   An instance can be rolled back only when the following conditions are met:
-
-   -  Multiple active instances are available or no services are connected to the instance.
-   -  ELB HTTP/HTTPS health check has been enabled.
-   -  ELB sticky session has been disabled.
-
 Change Security Group for a Dedicated WAF Instance
 --------------------------------------------------
 
@@ -151,9 +128,9 @@ If you select **Network Interface** for **Instance Type**, you can change the se
 
 #. Log in to the management console.
 
-#. Click |image9| in the upper left corner of the management console and select a region or project.
+#. Click |image7| in the upper left corner of the management console and select a region or project.
 
-#. Click |image10| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
+#. Click |image8| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
 #. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine** to go to the dedicated WAF instance page.
 
@@ -178,9 +155,9 @@ You can delete a dedicated WAF instance anytime. A deleted dedicated WAF instanc
 
 #. Log in to the management console.
 
-#. Click |image11| in the upper left corner of the management console and select a region or project.
+#. Click |image9| in the upper left corner of the management console and select a region or project.
 
-#. Click |image12| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
+#. Click |image10| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
 #. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine** to go to the dedicated WAF instance page.
 
@@ -206,9 +183,7 @@ You can delete a dedicated WAF instance anytime. A deleted dedicated WAF instanc
 .. |image4| image:: /_static/images/en-us_image_0000001340308129.png
 .. |image5| image:: /_static/images/en-us_image_0000001081906323.jpg
 .. |image6| image:: /_static/images/en-us_image_0000001340427973.png
-.. |image7| image:: /_static/images/en-us_image_0000001890474616.jpg
-.. |image8| image:: /_static/images/en-us_image_0000001890474628.png
-.. |image9| image:: /_static/images/en-us_image_0000001240865319.jpg
-.. |image10| image:: /_static/images/en-us_image_0000001340667861.png
-.. |image11| image:: /_static/images/en-us_image_0000001081671555.jpg
-.. |image12| image:: /_static/images/en-us_image_0000001288427746.png
+.. |image7| image:: /_static/images/en-us_image_0000001240865319.jpg
+.. |image8| image:: /_static/images/en-us_image_0000001340667861.png
+.. |image9| image:: /_static/images/en-us_image_0000001081671555.jpg
+.. |image10| image:: /_static/images/en-us_image_0000001288427746.png

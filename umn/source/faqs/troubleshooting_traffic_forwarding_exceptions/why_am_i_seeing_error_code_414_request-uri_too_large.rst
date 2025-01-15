@@ -37,25 +37,19 @@ Handling Suggestions
 Disable the JavaScript anti-crawler protection by performing the following steps:
 
 #. Log in to the management console.
-
 #. Click |image1| in the upper left corner of the management console and select a region or project.
-
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
-
 #. In the navigation pane on the left, choose **Policies**.
-
 #. Click the name of the target policy to go to the protection configuration page.
+#. Click the **Anti-Crawler** configuration area and toggle it on or off if needed.
 
-#. In the **Anti-Crawler** configuration area, click **Configure Anti-Crawler**.
+   -  |image3|: enabled.
+   -  |image4|: disabled.
 
-
-   .. figure:: /_static/images/en-us_image_0000001395732753.png
-      :alt: **Figure 3** Anti-Crawler configuration area
-
-      **Figure 3** Anti-Crawler configuration area
-
-#. Click the **JavaScript** tab and disable the JavaScript anti-crawler protection. Its status changes to |image3|.
+#. Click the **JavaScript** tab and disable the JavaScript anti-crawler protection. Its status changes to |image5|.
 
 .. |image1| image:: /_static/images/en-us_image_0000001533330749.jpg
 .. |image2| image:: /_static/images/en-us_image_0000001677145090.png
-.. |image3| image:: /_static/images/en-us_image_0000001074633189.png
+.. |image3| image:: /_static/images/en-us_image_0000002054495070.png
+.. |image4| image:: /_static/images/en-us_image_0000001761857181.png
+.. |image5| image:: /_static/images/en-us_image_0000001074633189.png

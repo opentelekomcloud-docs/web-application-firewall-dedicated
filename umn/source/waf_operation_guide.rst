@@ -5,7 +5,32 @@
 WAF Operation Guide
 ===================
 
-After you enable the WAF service, you need to connect your website domain name to WAF so that all access requests are forwarded to WAF for protection.
+To use Web Application Firewall (WAF) to protect your web services, the services must be connected to WAF. WAF provides two access modes for you to connect web services to WAF: ELB load balancer access and dedicated access modes. You can select the access mode that best fits your web services.
+
+Application scenarios
+---------------------
+
+WAF provides the following access modes for you to connect websites to WAF.
+
+-  ELB load balancer access mode:
+
+   -  Service servers are deployed on the cloud.
+
+      This mode is suitable for large enterprise websites having high security requirements on service stability.
+
+   -  Protected object: domain names and IP addresses (public or private IP addresses)
+
+   -  Access method: :ref:`Connecting a Website to WAF (Cloud - ELB Load Balancer Access Mode) <waf_01_0287>`
+
+-  Dedicated mode
+
+   -  Service servers are deployed on the cloud.
+
+      This mode is suitable for large enterprise websites that have a large service scale and have customized security requirements.
+
+   -  Protected object: domain names and IP addresses (public or private IP addresses)
+
+   -  Access method: :ref:`Connecting a Website to WAF (Dedicated Mode) <waf_01_0249>`
 
 .. _waf_01_1283__section47661922219:
 
@@ -17,9 +42,9 @@ Procedure for Using WAF
 .. _waf_01_1283__fig107710194117:
 
 .. figure:: /_static/images/en-us_image_0000001677232290.png
-   :alt: **Figure 1** Procedure for using WAF
+   :alt: **Figure 1** Process of using WAF
 
-   **Figure 1** Procedure for using WAF
+   **Figure 1** Process of using WAF
 
 .. _waf_01_1283__table19118111420519:
 
@@ -32,8 +57,8 @@ Procedure for Using WAF
    +-----------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Add a website to WAF <waf_01_1108>`.          | Add websites you want to protect to your WAF instance.                                                                                                                                                                     |
    |                                                     |                                                                                                                                                                                                                            |
-   |                                                     | -  ELB access: For details, see :ref:`Connecting a Website to WAF (ELB Access Mode) <waf_01_0287>`.                                                                                                                        |
-   |                                                     | -  Dedicated mode: See :ref:`Step 1: Add a Website to WAF <waf_01_0326>`.                                                                                                                                                  |
+   |                                                     | -  ELB access: For details, see :ref:`Connecting Your Website to WAF (ELB Access Mode) <waf_01_0287>`.                                                                                                                     |
+   |                                                     | -  Dedicated mode: See :ref:`Step 1: Add Your Website to WAF <waf_01_0326>`.                                                                                                                                               |
    |                                                     |                                                                                                                                                                                                                            |
    |                                                     | .. note::                                                                                                                                                                                                                  |
    |                                                     |                                                                                                                                                                                                                            |

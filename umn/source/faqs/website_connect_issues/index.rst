@@ -6,7 +6,6 @@ Website Connect Issues
 ======================
 
 -  :ref:`How Does a Dedicated WAF Instance Protect Non-Standard Ports That Are Not Supported by the Dedicated Instance? <waf_01_0318>`
--  :ref:`How Do I Configure Domain Names to Be Protected When Adding Domain Names? <waf_01_0105>`
 -  :ref:`Do I Have to Configure the Same Port as That of the Origin Server When Adding a Website to WAF? <waf_01_0279>`
 -  :ref:`What Are the Precautions for Configuring Multiple Server Addresses for Backend Servers? <waf_01_0104>`
 -  :ref:`Does WAF Support Wildcard Domain Names? <waf_01_0190>`
@@ -19,7 +18,6 @@ Website Connect Issues
    :hidden: 
 
    how_does_a_dedicated_waf_instance_protect_non-standard_ports_that_are_not_supported_by_the_dedicated_instance
-   how_do_i_configure_domain_names_to_be_protected_when_adding_domain_names
    do_i_have_to_configure_the_same_port_as_that_of_the_origin_server_when_adding_a_website_to_waf
    what_are_the_precautions_for_configuring_multiple_server_addresses_for_backend_servers
    does_waf_support_wildcard_domain_names

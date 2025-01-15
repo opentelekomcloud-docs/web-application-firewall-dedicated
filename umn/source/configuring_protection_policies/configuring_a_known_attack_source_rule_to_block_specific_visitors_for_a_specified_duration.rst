@@ -16,7 +16,7 @@ Known attack source rules can be used by basic web protection, precise protectio
 Prerequisites
 -------------
 
-A website has been added to WAF.
+You have added the website you want to protect to WAF.
 
 Constraints
 -----------
@@ -49,13 +49,10 @@ Configuring a Known Attack Source Rule
 
 #. Click the name of the target policy to go to the protection configuration page.
 
-#. In the **Known Attack Source** configuration area, change **Status** if needed and click **Customize Rule** to go to the **Known Attack Source** page.
+#. Enable **Known Attack Source** if needed.
 
-
-   .. figure:: /_static/images/en-us_image_0000001338230701.png
-      :alt: **Figure 1** Known Attack Source configuration
-
-      **Figure 1** Known Attack Source configuration
+   -  |image3|: enabled.
+   -  |image4|: disabled.
 
 #. In the upper left corner above the known attack source rules, click **Add Known Attack Source Rule**.
 
@@ -63,9 +60,9 @@ Configuring a Known Attack Source Rule
 
 
    .. figure:: /_static/images/en-us_image_0000001285992940.png
-      :alt: **Figure 2** Add Known Attack Source Rule
+      :alt: **Figure 1** Add Known Attack Source Rule
 
-      **Figure 2** Add Known Attack Source Rule
+      **Figure 1** Add Known Attack Source Rule
 
    .. _waf_01_0271__table147241231818:
 
@@ -96,7 +93,7 @@ Configuring a Known Attack Source Rule
       | Rule Description      | A brief description of the rule. This parameter is optional.                                                                                                            | None                              |
       +-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
 
-#. Click **Confirm** . You can then view the added known attack source rule in the list.
+#. Click **Confirm**. You can then view the added known attack source rule in the list.
 
 Related Operations
 ------------------
@@ -115,33 +112,33 @@ Assume that domain name *www.example.com* has been connected to WAF and a visito
 
 
    .. figure:: /_static/images/en-us_image_0000001284861820.png
-      :alt: **Figure 3** Traffic Identifier
+      :alt: **Figure 2** Traffic Identifier
 
-      **Figure 3** Traffic Identifier
+      **Figure 2** Traffic Identifier
 
 #. Add a known attack source, select **Long-term Cookie blocking** for **Blocking Type**, and set block duration to 600 seconds.
 
 
    .. figure:: /_static/images/en-us_image_0000001287754972.png
-      :alt: **Figure 4** Adding a Cookie-based known attack source rule
+      :alt: **Figure 3** Adding a Cookie-based known attack source rule
 
-      **Figure 4** Adding a Cookie-based known attack source rule
+      **Figure 3** Adding a Cookie-based known attack source rule
 
 #. Enable the known attack source protection.
 
 
-   .. figure:: /_static/images/en-us_image_0000001338230701.png
-      :alt: **Figure 5** Known Attack Source configuration
+   .. figure:: /_static/images/en-us_image_0000002054974066.png
+      :alt: **Figure 4** Known Attack Source configuration area
 
-      **Figure 5** Known Attack Source configuration
+      **Figure 4** Known Attack Source configuration area
 
 #. Add a blacklist and whitelist rule to block *XXX.XXX.248.195*. Select **Long-term Cookie blocking** for **Known Attack Source**.
 
 
    .. figure:: /_static/images/en-us_image_0000001683894232.png
-      :alt: **Figure 6** Specifying a known attack source rule
+      :alt: **Figure 5** Specifying a known attack source rule
 
-      **Figure 6** Specifying a known attack source rule
+      **Figure 5** Specifying a known attack source rule
 
 #. Clear the browser cache and access http://www.example.com.
 
@@ -149,11 +146,13 @@ Assume that domain name *www.example.com* has been connected to WAF and a visito
 
 
    .. figure:: /_static/images/en-us_image_0000001286879252.png
-      :alt: **Figure 7** Block page
+      :alt: **Figure 6** Block page
 
-      **Figure 7** Block page
+      **Figure 6** Block page
 
 #. Go to the WAF console. In the navigation pane on the left, choose **Events**. View the event on the **Events** page.
 
 .. |image1| image:: /_static/images/en-us_image_0000001482067792.jpg
 .. |image2| image:: /_static/images/en-us_image_0000001340665981.png
+.. |image3| image:: /_static/images/en-us_image_0000002054495070.png
+.. |image4| image:: /_static/images/en-us_image_0000001761857181.png

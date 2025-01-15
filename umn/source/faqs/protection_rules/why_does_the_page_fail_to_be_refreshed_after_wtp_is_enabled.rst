@@ -17,7 +17,7 @@ Web Tamper Protection (WTP) supports only caching of static web pages. Perform t
 
 #. Click the name of the target policy to go to the protection configuration page.
 
-#. In the **Web Tamper Protection** configuration area, check whether this function is enabled.
+#. Click the **Web Tamper Protection** configuration area and check whether this function is enabled.
 
    -  If this function is enabled (|image3|), go to :ref:`Step 7 <waf_01_0355__li56301354192511>`.
    -  If this function is disabled (|image4|), click |image5| to enable the function. Refresh the page several minutes later.
@@ -42,6 +42,6 @@ Web Tamper Protection (WTP) supports only caching of static web pages. Perform t
 
 .. |image1| image:: /_static/images/en-us_image_0000001482063812.jpg
 .. |image2| image:: /_static/images/en-us_image_0000001548562913.png
-.. |image3| image:: /_static/images/en-us_image_0000001166615726.png
-.. |image4| image:: /_static/images/en-us_image_0000001166455750.png
-.. |image5| image:: /_static/images/en-us_image_0000001212095651.png
+.. |image3| image:: /_static/images/en-us_image_0000002094324173.png
+.. |image4| image:: /_static/images/en-us_image_0000001716118726.png
+.. |image5| image:: /_static/images/en-us_image_0000001831751069.png
