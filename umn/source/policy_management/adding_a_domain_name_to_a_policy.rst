@@ -11,11 +11,6 @@ You can add a domain name to a new policy you think applicable. Then, the origin
 
    If you have enabled enterprise projects, ensure that you have all operation permissions for the project where your WAF instance locates. Then, you can select the project from the **Enterprise Project** drop-down list and configure protection policies for the domain names in batches.
 
-Prerequisites
--------------
-
-:ref:`The website you want to protect has been connected to WAF. <waf_01_1108>`
-
 
 Adding a Domain Name to a Policy
 --------------------------------
@@ -28,7 +23,7 @@ Adding a Domain Name to a Policy
 
 #. In the navigation pane on the left, choose **Policies**.
 
-#. In the row containing the policy you want to apply to a website, click **Add Domain Name** in the **Operation** column.
+#. In the row containing the target policy, click **Add Domain Name** in the **Operation** column.
 
 
    .. figure:: /_static/images/en-us_image_0000001286051354.png

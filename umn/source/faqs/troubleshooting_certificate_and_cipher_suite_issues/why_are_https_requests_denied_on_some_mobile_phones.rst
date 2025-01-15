@@ -25,4 +25,4 @@ The uploaded certificate chain is incomplete.
 Solution
 --------
 
-For details, see :ref:`How Do I Fix an Incomplete Certificate Chain? <waf_01_0082>`.
+Fix the issue by referring to :ref:`How Do I Fix an Incomplete Certificate Chain? <waf_01_0082>`

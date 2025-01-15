@@ -5,7 +5,7 @@
 Uploading a Certificate to WAF
 ==============================
 
-If you select **Dedicated** for **Protection** and set **Client Protocol** to **HTTPS**, a certificate is required for your website.
+If you select **Dedicated Mode** as the access mode and set **Client Protocol** to **HTTPS**, a certificate is required for your website.
 
 If you upload a certificate to WAF, you can directly select the certificate when adding a website to WAF.
 

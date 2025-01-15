@@ -14,7 +14,7 @@ This topic describes how to download events (logged and blocked events) data for
 Prerequisites
 -------------
 
--  :ref:`The website you want to protect has been connected to WAF. <waf_01_1108>`
+-  :ref:`You have connected the website you want to protect to WAF. <waf_01_1108>`
 -  An event file has been generated.
 
 Specification Limitations

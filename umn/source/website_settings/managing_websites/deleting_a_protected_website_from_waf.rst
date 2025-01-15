@@ -10,7 +10,7 @@ This topic describes how to remove a website from WAF if you no longer need to p
 Prerequisites
 -------------
 
-:ref:`The website you want to protect has been connected to WAF. <waf_01_1108>`
+:ref:`You have connected the website you want to protect to WAF. <waf_01_1108>`
 
 Impact on the System
 --------------------

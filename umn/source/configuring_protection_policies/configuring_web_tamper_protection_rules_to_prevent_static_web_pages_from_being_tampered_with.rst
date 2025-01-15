@@ -58,13 +58,10 @@ Configuring a Web Tamper Protection Rule
 
 #. Click the name of the target policy to go to the protection configuration page.
 
-#. In the **Web Tamper Protection** configuration area, change **Status** if needed and click **Customize Rule** to go to the **Web Tamper Protection** page.
+#. Click the **Web Tamper Protection** configuration area and toggle it on or off if needed.
 
-
-   .. figure:: /_static/images/en-us_image_0000001338155669.png
-      :alt: **Figure 1** Web Tamper Protection configuration area
-
-      **Figure 1** Web Tamper Protection configuration area
+   -  |image3|: enabled.
+   -  |image4|: disabled.
 
 #. In the upper left corner above the **Web Tamper Protection** rule list, click **Add Rule**.
 
@@ -72,9 +69,9 @@ Configuring a Web Tamper Protection Rule
 
 
    .. figure:: /_static/images/en-us_image_0000001285636510.png
-      :alt: **Figure 2** Adding a web tamper protection rule
+      :alt: **Figure 1** Adding a web tamper protection rule
 
-      **Figure 2** Adding a web tamper protection rule
+      **Figure 1** Adding a web tamper protection rule
 
    .. _waf_01_0014__table2046816299203:
 
@@ -119,17 +116,11 @@ To verify WAF is protecting a static page **/admin** on your website **www.examp
 
 
    .. figure:: /_static/images/en-us_image_0000001285636510.png
-      :alt: **Figure 3** Adding a web tamper protection rule
+      :alt: **Figure 2** Adding a web tamper protection rule
 
-      **Figure 3** Adding a web tamper protection rule
+      **Figure 2** Adding a web tamper protection rule
 
 #. Enable WTP.
-
-
-   .. figure:: /_static/images/en-us_image_0000001338155669.png
-      :alt: **Figure 4** Web Tamper Protection configuration area
-
-      **Figure 4** Web Tamper Protection configuration area
 
 #. Simulate the attack to tamper with the **http://www.example.com/admin** web page.
 
@@ -141,3 +132,5 @@ To verify WAF is protecting a static page **/admin** on your website **www.examp
 
 .. |image1| image:: /_static/images/en-us_image_0000001481908820.jpg
 .. |image2| image:: /_static/images/en-us_image_0000001288425878.png
+.. |image3| image:: /_static/images/en-us_image_0000002054495070.png
+.. |image4| image:: /_static/images/en-us_image_0000001761857181.png

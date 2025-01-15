@@ -12,7 +12,7 @@ If a request goes through WAF over four times, WAF will block the request and re
 Cause 1: A website is connected to more than four WAF instances.
 ----------------------------------------------------------------
 
-Error code 523 will return if a website has been connected to different types of WAF instances more than 4 times.
+Error code 523 will return if a website has been connected to different types of WAF instances more than four times.
 
 **Solution**
 
@@ -28,7 +28,7 @@ Route website traffic to bypass redundant WAF instances.
 
    Cloud mode: Go to your DNS provider and resolve your domain name to the IP address of the origin server. Otherwise, the traffic to your domain name cannot be routed to the origin server.
 
-   **Dedicated mode**: Remove redundant WAF instances from the backend server group of the load balancer so that no requests are forwarding to those WAF instances. .
+   **Dedicated mode**: Remove redundant WAF instances from the backend server group of the load balancer so that no requests are forwarding to those WAF instances.
 
 Cause 2: A Third-party Interface That Uses WAF Was Called
 ---------------------------------------------------------

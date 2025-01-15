@@ -11,18 +11,33 @@ If you allow only IP addresses in a region to access the protected domain name, 
 
    Geolocation access control rules have higher priority than built-in WAF rules. If you configure a geolocation access control rule to allow IP addresses from a certain location, WAF then forwards traffic from those IP addresses without performing basic web protection checks.
 
+#. Log in to the management console.
+
+#. Click |image1| in the upper left corner of the management console and select a region or project.
+
+#. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
+
+#. In the navigation pane on the left, choose **Policies**.
+
+#. Click the name of the target policy to go to the protection configuration page.
+
+#. In the upper left corner above the **Geolocation Access Control** list, click **Add Rule**.
+
 #. Add a geolocation access control rule: Select **Australia** for **Geolocation** and select **Allow** for **Protective Action**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001732089213.png
+   .. figure:: /_static/images/en-us_image_0000002094785580.png
       :alt: **Figure 1** Selecting Allow for Protective Action
 
       **Figure 1** Selecting Allow for Protective Action
 
-#. Configure a precise protection rule to block all requests.
+#. In the upper left corner above the **Precise Protection** rule list, click **Add Rule**. Configure a precise protection rule to block all requests.
 
 
-   .. figure:: /_static/images/en-us_image_0000001684033930.png
+   .. figure:: /_static/images/en-us_image_0000002057944613.png
       :alt: **Figure 2** Blocking all access requests
 
       **Figure 2** Blocking all access requests
+
+.. |image1| image:: /_static/images/en-us_image_0000002094605794.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002130244925.png

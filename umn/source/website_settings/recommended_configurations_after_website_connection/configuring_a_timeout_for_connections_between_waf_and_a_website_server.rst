@@ -28,12 +28,12 @@ If you want to set a timeout duration for each request between your WAF instance
 Prerequisites
 -------------
 
-:ref:`The website you want to protect has been connected to WAF. <waf_01_1108>`
+:ref:`You have connected the website you want to protect to WAF. <waf_01_1108>`
 
 Constraints
 -----------
 
--  You have selected **Dedicated** for protection when adding the website to WAF.
+-  You have selected **Dedicated Mode** when adding the website to WAF.
 -  The timeout duration for connections between a browser and WAF cannot be modified. Only timeout duration for connections between WAF and your origin server can be modified.
 -  This function cannot be disabled once it is enabled.
 
@@ -46,7 +46,7 @@ Configuring a Timeout for Connections Between WAF and a Website Server
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 #. In the navigation pane, choose **Website Settings**.
 #. In the **Domain Name** column, click the website domain name to go to the basic information page.
-#. In the **Timeout Settings** row, toggle |image3| on it if needed.
+#. In the **Timeout Settings** row, toggle |image3| on if needed.
 #. Click |image4|, specify **WAF-to-Server connection timeout (s)**, **Read timeout (s)**, and **Write timeout (s)**, and click |image5| to save settings.
 
 .. |image1| image:: /_static/images/en-us_image_0000001845908085.jpg

@@ -5,9 +5,9 @@
 Which Protection Levels Can Be Set for Basic Web Protection?
 ============================================================
 
-WAF provides three basic web protection levels: **Low**, **Medium**, and **High**. The default option is **Medium**. For details, see :ref:`Table 1 <waf_01_0204__table197844312280>`.
+Basic Web Protection has three protection levels. The default protection level is **Medium**. For details, see :ref:`Table 1 <waf_01_0204__table165460226291>`.
 
-.. _waf_01_0204__table197844312280:
+.. _waf_01_0204__table165460226291:
 
 .. table:: **Table 1** Protection levels
 

@@ -5,7 +5,7 @@
 Updating the Certificate Used for a Website
 ===========================================
 
-If you select **Dedicated** for **Protection** and set **Client Protocol** to **HTTPS**, a certificate is required for your website.
+If you select **Dedicated Mode** as the access mode and set **Client Protocol** to **HTTPS**, a certificate is required for your website.
 
 -  If your website certificate is about to expire, purchase a new certificate before the expiration date and update the certificate associated with the website in WAF.
 -  If you plan to update the certificate associated with the website, associate a new certificate with your website on the WAF console.

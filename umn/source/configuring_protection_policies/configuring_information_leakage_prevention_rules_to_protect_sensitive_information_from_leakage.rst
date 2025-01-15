@@ -37,13 +37,10 @@ Configuring an Information Leakage Prevention Rule
 
 #. Click the name of the target policy to go to the protection configuration page.
 
-#. In the **Information Leakage Prevention** configuration area, change **Status** if needed and click **Customize Rule**.
+#. Click the **Information Leakage Prevention** configuration area and toggle it on or off if needed.
 
-
-   .. figure:: /_static/images/en-us_image_0000001338214477.png
-      :alt: **Figure 1** Information Leakage Prevention configuration area
-
-      **Figure 1** Information Leakage Prevention configuration area
+   -  |image3|: enabled.
+   -  |image4|: disabled.
 
 #. In the upper left corner above the **Information Leakage Prevention** rule list, click **Add Rule**.
 
@@ -55,17 +52,17 @@ Configuring an Information Leakage Prevention Rule
 
 
    .. figure:: /_static/images/en-us_image_0000001285815180.png
-      :alt: **Figure 2** Sensitive information leakage
+      :alt: **Figure 1** Sensitive information leakage
 
-      **Figure 2** Sensitive information leakage
+      **Figure 1** Sensitive information leakage
 
    **Response code interception**: An error page of a specific HTTP response code may contain sensitive information. You can configure rules to block such error pages to prevent such information from being leaked out. For example, you can set the following rule to block error pages of specified HTTP response codes 404, 502, and 503.
 
 
    .. figure:: /_static/images/en-us_image_0000001285975220.png
-      :alt: **Figure 3** Blocking response codes
+      :alt: **Figure 2** Blocking response codes
 
-      **Figure 3** Blocking response codes
+      **Figure 2** Blocking response codes
 
    .. _waf_01_0054__table242612276178:
 
@@ -94,6 +91,8 @@ Configuring an Information Leakage Prevention Rule
       +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------+
       | Content               | Information to be protected. Options are **Identification card**, **Phone number**, and **Email**.                                                                                   | **Identification card**             |
       +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------+
+      | Protective Action     | Action the rule takes. You can select **Filter** or **Log only**.                                                                                                                    | Filter                              |
+      +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------+
       | Rule Description      | A brief description of the rule. This parameter is optional.                                                                                                                         | None                                |
       +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------+
 
@@ -115,17 +114,17 @@ To verify that WAF is protecting your domain name *www.example.com* against an i
 
 
    .. figure:: /_static/images/en-us_image_0000001285815180.png
-      :alt: **Figure 4** Sensitive information leakage
+      :alt: **Figure 3** Sensitive information leakage
 
-      **Figure 4** Sensitive information leakage
+      **Figure 3** Sensitive information leakage
 
 #. Enable information leakage prevention.
 
 
-   .. figure:: /_static/images/en-us_image_0000001338214477.png
-      :alt: **Figure 5** Information Leakage Prevention configuration area
+   .. figure:: /_static/images/en-us_image_0000002090805301.png
+      :alt: **Figure 4** Information Leakage Prevention configuration area
 
-      **Figure 5** Information Leakage Prevention configuration area
+      **Figure 4** Information Leakage Prevention configuration area
 
 #. Clear the browser cache and access http://www.example.com/admin/.
 
@@ -133,3 +132,5 @@ To verify that WAF is protecting your domain name *www.example.com* against an i
 
 .. |image1| image:: /_static/images/en-us_image_0000001532748653.jpg
 .. |image2| image:: /_static/images/en-us_image_0000001340585565.png
+.. |image3| image:: /_static/images/en-us_image_0000002054495070.png
+.. |image4| image:: /_static/images/en-us_image_0000001761857181.png
