@@ -8,7 +8,7 @@ Viewing CTS Traces in the Trace List
 Scenarios
 ---------
 
-After you enable CTS and the management tracker is created, CTS starts recording operations on cloud resources. After a data tracker is created, the system starts recording operations on data in Object Storage Service (OBS) buckets. Cloud Trace Service (CTS) stores operation records (traces) generated in the last seven days.
+After you enable CTS and the management tracker is created, CTS starts recording operations on cloud resources. Cloud Trace Service (CTS) stores operation records (traces) generated in the last seven days.
 
 .. note::
 
@@ -55,18 +55,15 @@ Viewing Real-Time Traces
 
    |image5|
 
-   |image6|
-
 #. Click **View Trace** in the **Operation** column. The trace details are displayed.
 
-   |image7|
+   |image6|
 
 #. For details about key fields in the trace structure, see section "Trace References" > "Trace Structure" and section "Trace References" > "Example Traces" in the *CTS User Guide*.
 
 .. |image1| image:: /_static/images/en-us_image_0000001696838310.png
 .. |image2| image:: /_static/images/en-us_image_0000001696678850.png
 .. |image3| image:: /_static/images/en-us_image_0000001744678489.jpg
-.. |image4| image:: /_static/images/en-us_image_0000001710860016.png
-.. |image5| image:: /_static/images/en-us_image_0000001942942816.png
-.. |image6| image:: /_static/images/en-us_image_0000001942777100.png
-.. |image7| image:: /_static/images/en-us_image_0000001758618249.png
+.. |image4| image:: /_static/images/en-us_image_0000001942942816.png
+.. |image5| image:: /_static/images/en-us_image_0000001942777100.png
+.. |image6| image:: /_static/images/en-us_image_0000001758618249.png

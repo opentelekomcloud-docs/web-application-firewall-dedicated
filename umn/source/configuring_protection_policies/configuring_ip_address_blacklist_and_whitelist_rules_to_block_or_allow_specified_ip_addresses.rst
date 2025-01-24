@@ -150,7 +150,7 @@ If domain name *www.example.com* has been connected to WAF, you can perform the 
 
 #. .. _waf_01_0012__li839632265215:
 
-   Refer to :ref:`Figure 5 <waf_01_0012__fig5519155016115>` and add a whitelist rule to allow a specified IP address, for example, *XXX.XXX.2.3*.
+   Refer to :ref:`Figure 5 <waf_01_0012__fig5519155016115>` and add a whitelist rule to allow a specified IP address, for example, *192.168.2.3*.
 
    .. _waf_01_0012__fig5519155016115:
 

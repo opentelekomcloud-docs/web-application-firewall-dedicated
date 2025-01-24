@@ -13,7 +13,7 @@ Prerequisites
 -------------
 
 -  You have applied for your WAF.
--  :ref:`The website you want to protect has been connected to WAF. <waf_01_1108>`
+-  :ref:`You have connected the website you want to protect to WAF. <waf_01_1108>`
 
 Impact on the System
 --------------------

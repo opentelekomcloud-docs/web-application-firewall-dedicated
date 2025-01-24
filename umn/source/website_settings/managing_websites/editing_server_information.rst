@@ -32,9 +32,8 @@ Impact on the System
 
 Modifying the server configuration does not affect services.
 
-
-Editing Server Information
---------------------------
+Modifying Server Information of One Website
+-------------------------------------------
 
 #. Log in to the management console.
 #. Click |image1| in the upper left corner of the management console and select a region or project.

@@ -61,7 +61,7 @@ Configuring a Precise Protection Rule to Block All Source IP Addresses Except th
 
       **Figure 3** Precise Protection configuration area
 
-#. Click **Customize Rule**. In the upper left corner of the displayed page, click **Add Rule**.
+#. In the upper left corner of the displayed page, click **Add Rule**.
 
 #. .. _waf_01_0312__li123452332541:
 

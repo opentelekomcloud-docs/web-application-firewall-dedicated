@@ -20,7 +20,7 @@ WAF is a project-level service deployed and accessed in specific physical region
 
 You can grant users permissions by using roles and policies.
 
--  Roles: A type of coarse-grained authorization mechanism that defines permissions related to users responsibilities. Only a limited number of service-level roles for authorization are available. You need to also assign other dependent roles for the permission control to take effect. Roles are not ideal for fine-grained authorization and secure access control.
+-  Roles: A type of coarse-grained authorization mechanism that defines permissions related to user responsibilities. Only a limited number of service-level roles for authorization are available. You need to also assign other dependent roles for the permission control to take effect. Roles are not ideal for fine-grained authorization and secure access control.
 -  Policies: A fine-grained authorization mechanism that defines permissions required to perform operations on specific cloud resources under certain conditions. This mechanism allows for more flexible policy-based authorization and meets secure access control requirements. For example, you can grant WAF users only the permissions for managing a certain type of resources. Most policies define permissions based on APIs. For the API actions supported by WAF, see :ref:`WAF Permissions and Supported Actions <waf_01_0244>`.
 
 :ref:`Table 1 <waf_01_0052__table1409182914134>` lists all the system roles supported by WAF.

@@ -31,7 +31,7 @@ Editing Response Page for Blocked Requests
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 #. In the navigation pane on the left, choose **Website Settings**.
 #. In the **Domain Name** column, click the domain name of the website to go to the basic information page.
-#. Click the edit icon next to the page template name in the row where **Alarm Page** is located. In the displayed **Alarm Page** dialog box, specify **Page Template**.
+#. Click |image3| next to the page template name in the row of **Alarm Page**. In the displayed **Alarm Page** dialog box, specify **Page Template**.
 
    -  To use the built-in page, select **Default**. An HTTP code 418 is returned.
 
@@ -68,3 +68,4 @@ Editing Response Page for Blocked Requests
 
 .. |image1| image:: /_static/images/en-us_image_0000001481693004.jpg
 .. |image2| image:: /_static/images/en-us_image_0000001340583529.png
+.. |image3| image:: /_static/images/en-us_image_0000002129833584.png

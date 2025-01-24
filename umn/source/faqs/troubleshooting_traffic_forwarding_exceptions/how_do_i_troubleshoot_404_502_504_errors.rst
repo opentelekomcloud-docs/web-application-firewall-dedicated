@@ -169,4 +169,4 @@ The possible causes are as follows:
    **Solution**: Enable the security group ports, such as ports 80 and 443, and configure a network ACL to allow access from the origin server subnet.
 
 .. |image1| image:: /_static/images/en-us_image_0167644254.jpg
-.. |image2| image:: /_static/images/en-us_image_0167644254.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002098463152.jpg
