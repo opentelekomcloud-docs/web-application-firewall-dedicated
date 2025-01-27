@@ -125,7 +125,7 @@ Configuring a CC Attack Protection Rule
       | Block Page            | The page displayed if the request limit has been reached. This parameter is configured only when **Protective Action** is set to **Block**.                                                                                                                                                                                                                                                         | Custom                                                                                      |
       |                       |                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                             |
       |                       | -  If you select **Default settings**, the default block page is displayed.                                                                                                                                                                                                                                                                                                                         |                                                                                             |
-      |                       | -  If you select **Custom**, a custom error message is displayed.                                                                                                                                                                                                                                                                                                                                   |                                                                                             |
+      |                       | -  If you select **Custom**, you can write a custom error message, so that WAF will return this message to website visitors when their requests are blocked.                                                                                                                                                                                                                                        |                                                                                             |
       +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
       | Block Page Type       | If you select **Custom** for **Block Page**, select a type of the block page among options **application/json**, **text/html**, and **text/xml**.                                                                                                                                                                                                                                                   | text/html                                                                                   |
       +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
@@ -158,7 +158,11 @@ If you have configured a CC attack protection rule like :ref:`Figure 1 <waf_01_0
 
    If you select **Verification code** for protective action, a verification code is required for visitors to continue the access if they exceed the configured rate limit.
 
-   |image5|
+
+   .. figure:: /_static/images/en-us_image_0000002126107914.png
+      :alt: **Figure 2** Verification code
+
+      **Figure 2** Verification code
 
 #. Return to the WAF console. In the navigation pane, click **Events**. On the displayed page, view the event log.
 
@@ -171,23 +175,27 @@ If domain name **www.example.com** has been connected to WAF, perform the follow
 
 
    .. figure:: /_static/images/en-us_image_0000002019512640.png
-      :alt: **Figure 2** Verification code
+      :alt: **Figure 3** Verification code
 
-      **Figure 2** Verification code
+      **Figure 3** Verification code
 
 #. Enable CC attack protection.
 
 
    .. figure:: /_static/images/en-us_image_0000002090587337.png
-      :alt: **Figure 3** Enabling CC Attack Protection
+      :alt: **Figure 4** Enabling CC Attack Protection
 
-      **Figure 3** Enabling CC Attack Protection
+      **Figure 4** Enabling CC Attack Protection
 
 #. Clear the browser cache and access http://www.example.com/admin/.
 
    If you access the page 10 times within 60 seconds, a verification code is required when you attempt to access the page for the eleventh time. You need to enter the verification code to continue the access.
 
-   |image6|
+
+   .. figure:: /_static/images/en-us_image_0000002126107914.png
+      :alt: **Figure 5** Verification code
+
+      **Figure 5** Verification code
 
 #. Go to the WAF console. In the navigation pane on the left, choose **Events**. View the event on the **Events** page.
 
@@ -195,5 +203,3 @@ If domain name **www.example.com** has been connected to WAF, perform the follow
 .. |image2| image:: /_static/images/en-us_image_0000001658761758.png
 .. |image3| image:: /_static/images/en-us_image_0000002054495070.png
 .. |image4| image:: /_static/images/en-us_image_0000001761857181.png
-.. |image5| image:: /_static/images/en-us_image_0000001695522016.jpg
-.. |image6| image:: /_static/images/en-us_image_0000001481923368.jpg

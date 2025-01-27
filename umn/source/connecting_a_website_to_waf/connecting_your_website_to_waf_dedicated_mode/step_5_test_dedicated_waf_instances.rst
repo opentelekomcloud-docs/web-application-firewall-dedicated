@@ -39,7 +39,11 @@ You have performed operations in :ref:`Step 1: Add Your Website to WAF <waf_01_0
 
       a. Ensure that the block mode for basic web protection has been enabled in the policy used for the protected website.
 
-         |image1|
+
+         .. figure:: /_static/images/en-us_image_0000001732411573.png
+            :alt: **Figure 1** Enabling Basic Web Protection
+
+            **Figure 1** Enabling Basic Web Protection
 
       b. Run the following command:
 
@@ -85,7 +89,11 @@ Testing the Dedicated WAF Instance and Dedicated ELB Load Balancer
 
    #. Ensure that the block mode for basic web protection has been enabled in the policy used for the protected website.
 
-      |image2|
+
+      .. figure:: /_static/images/en-us_image_0000001732411573.png
+         :alt: **Figure 2** Enabling Basic Web Protection
+
+         **Figure 2** Enabling Basic Web Protection
 
    #. Run the following command:
 
@@ -107,6 +115,3 @@ Testing the Dedicated WAF Instance and Dedicated ELB Load Balancer
          curl -kv -H "Host: a.example.com" http:// 100.10.X.X --data "id=1 and 1='1"
 
       If the response code is 418, the request has been blocked, indicating that both dedicated WAF instance and ELB load balancer work properly.
-
-.. |image1| image:: /_static/images/en-us_image_0000001732411573.png
-.. |image2| image:: /_static/images/en-us_image_0000001732411573.png

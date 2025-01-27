@@ -47,7 +47,7 @@ Adding Rules to One or More Policies
 
       **Figure 3** Adding a rule to one or more policies
 
-#. Set other parameters.
+#. Set other parameters in addition to **Policy Name**.
 
    -  To add a CC attack protection rule, see :ref:`Table 1 <waf_01_0009__table480817611214>`.
    -  To add a precise protection rule, see :ref:`Table 1 <waf_01_0010__table2299936310457>`.

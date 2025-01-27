@@ -16,7 +16,7 @@ Prerequisites
 Specification Limitations
 -------------------------
 
-On the **Dashboard** page, protection data of up to 30 days can be viewed.
+You can view the protection data of a maximum of 30 days.
 
 .. _waf_01_0021__section1588682602717:
 

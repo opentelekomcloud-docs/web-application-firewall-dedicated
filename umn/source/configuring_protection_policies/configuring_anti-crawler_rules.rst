@@ -25,7 +25,7 @@ Constraints
 
    CDN caching may impact JS anti-crawler performance and page accessibility.
 
--  JS anti-crawler protection is not supported if you use the ELB access mode.
+-  JS anti-crawler protection is not supported when you select **ELB access** for website deployment.
 
 -  WAF only logs JavaScript challenge and JavaScript authentication events. No other protective actions can be configured for JavaScript challenge and authentication.
 
@@ -49,7 +49,7 @@ If JavaScript anti-crawler is enabled when a client sends a request, WAF returns
 -  If the client is a crawler, it cannot be triggered by the received JavaScript code and will not send a request to WAF again. The client fails JavaScript authentication.
 -  If a client crawler fabricates a WAF authentication request and sends the request to WAF, the WAF will block the request. The client fails JavaScript authentication.
 
-By collecting statistics on the number of JavaScript challenges and authentication responses, the system calculates how many requests the JavaScript anti-crawler defends. In :ref:`Figure 2 <waf_01_0015__fig10806185634312>`, the JavaScript anti-crawler has logged 18 events, 16 of which are JavaScript challenge responses, and 2 of which are JavaScript authentication responses. **Others** indicates the number of WAF authentication requests fabricated by the crawler.
+By collecting statistics on the number of JavaScript challenges and authentication responses, the system calculates how many requests the JavaScript anti-crawler defends. In :ref:`Figure 2 <waf_01_0015__fig10806185634312>`, the JavaScript anti-crawler has logged 18 events, 16 of which are JavaScript challenge responses, and 2 of which are JavaScript authentication responses. **Other** indicates the number of WAF authentication requests fabricated by the crawler.
 
 .. _waf_01_0015__fig10806185634312:
 

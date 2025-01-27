@@ -17,6 +17,29 @@ Prerequisites
 -  You have applied for a dedicated WAF instance.
 -  Your login account has the **IAM ReadOnly** permission.
 
+Dedicated Engine Version Iteration
+----------------------------------
+
+You can view the WAF instance version in the **Version** column of the dedicated WAF instance list.
+
+.. table:: **Table 1** Dedicated WAF versions
+
+   +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Engine Version                    | Feature                                                                                                                                                          |
+   +===================================+==================================================================================================================================================================+
+   | 202312                            | -  A global protection whitelist rule can be set to **ignore invalid requests**.                                                                                 |
+   |                                   | -  JavaScript-based anti-crawler rules support more protective actions, including **Block**, **Log only**, and **Verification code**.                            |
+   +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | 202308                            | -  The **$remote_addr** field is added to the IP identifier, which can be directly set to the IP address of the TCP connection.                                  |
+   |                                   | -  IP addresses used in TCP connections can be identified by CC, precise protection, blacklist, and whitelist rules.                                             |
+   |                                   | -  A block duration can be set if **Protective Action** is set to **Verification code** in a CC attack protection rule.                                          |
+   +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | 202305                            | -  HTTP2 is enabled globally by default. There is no need to enable it manually.                                                                                 |
+   |                                   | -  By default, a request can pass through WAF four times before it goes to the origin server. Error code 523 will be returned if the request exceeds this limit. |
+   |                                   | -  Strict multipart format verification is supported.                                                                                                            |
+   |                                   | -  Dedicated ELB network load balancers are supported. (In earlier versions, only shared load balancers and dedicated application load balancers are supported.) |
+   +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
 Viewing Information About a Dedicated WAF Instance
 --------------------------------------------------
 
@@ -34,11 +57,11 @@ Viewing Information About a Dedicated WAF Instance
 
       **Figure 1** Dedicated engine list
 
-#. View information about a dedicated WAF instance. :ref:`Table 1 <waf_01_0253__table8106945160>` describes parameters.
+#. View information about a dedicated WAF instance. :ref:`Table 2 <waf_01_0253__table8106945160>` describes parameters.
 
    .. _waf_01_0253__table8106945160:
 
-   .. table:: **Table 1** Key parameters of dedicated WAF instances
+   .. table:: **Table 2** Key parameters of dedicated WAF instances
 
       +-------------------+-------------------------------------------------------------------------+-------------------------------+
       | Parameter         | Description                                                             | Example Value                 |
