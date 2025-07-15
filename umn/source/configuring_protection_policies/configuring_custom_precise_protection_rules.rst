@@ -9,10 +9,6 @@ You can combine common HTTP fields, such as **IP**, **Path**, **Referer**, **Use
 
 A reference table can be added to a precise protection rule. The reference table takes effect for all protected domain names.
 
-.. note::
-
-   If you have enabled enterprise projects, ensure that you have all operation permissions for the project where your WAF instance locates. Then, you can select the project from the **Enterprise Project** drop-down list and configure protection policies for the domain names in the project.
-
 Prerequisites
 -------------
 
@@ -39,7 +35,7 @@ Configuring a Precise Protection Rule
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Policies**.
+#. In the navigation pane on the left, click **Policies**.
 
 #. Click the name of the target policy to go to the protection configuration page.
 
@@ -142,14 +138,14 @@ To verify WAF is protecting your website (**www.example.com**) against the rule 
 
 #. Clear the browser cache and enter the domain name in the address bar to check whether the website is accessible.
 
-   -  If the website is inaccessible, connect the website domain name to WAF by following the instructions in :ref:`Step 1: Add Your Website to WAF <waf_01_0326>`.
+   -  If the website is inaccessible, connect the website domain name to WAF by referring to :ref:`Step 1: Add Your Website to WAF <waf_01_0326>`.
    -  If the website is accessible, go to :ref:`Step 2 <waf_01_0010__li1160182620213>`.
 
 #. .. _waf_01_0010__li1160182620213:
 
    Clear the browser cache and enter **http://www.example.com/admin** (or any page containing **/admin**) in the address bar. Normally, WAF blocks the requests that meet the conditions and returns the block page.
 
-#. Return to the WAF console. In the navigation pane, choose **Events**. On the displayed page, view the event log.
+#. Return to the WAF console. In the navigation pane on the left, choose **Events**. On the displayed page, view the event log.
 
 Configuration Example - Blocking a Certain Type of Attack Requests
 ------------------------------------------------------------------
@@ -173,8 +169,9 @@ A precise rule as shown in the figure can block this type of attack.
 Configuration Example - Blocking Requests to a Certain URL
 ----------------------------------------------------------
 
-If a large number of IP addresses are accessing a URL that does not exist, configure the following protection rule to block such requests to reduce resource usage on the origin server.
+If a large number of IP addresses are accessing a URL that does not exist, configure the following protection rule to block such requests to reduce resource usage on the origin server. :ref:`Figure 4 <waf_01_0010__fig169721525916>` shows an example.
 
+.. _waf_01_0010__fig169721525916:
 
 .. figure:: /_static/images/en-us_image_0000001731889333.png
    :alt: **Figure 4** Blocking requests to a specific URL
@@ -184,8 +181,9 @@ If a large number of IP addresses are accessing a URL that does not exist, confi
 Configuration Example - Blocking Requests with null Fields
 ----------------------------------------------------------
 
-You can configure precise protection rules to block requests having null fields.
+You can configure precise protection rules to block requests having null fields. :ref:`Figure 5 <waf_01_0010__fig6135111553516>` shows an example.
 
+.. _waf_01_0010__fig6135111553516:
 
 .. figure:: /_static/images/en-us_image_0000001732014393.png
    :alt: **Figure 5** Blocking requests with empty Referer
@@ -234,7 +232,7 @@ You can configure multiple conditions in the **Condition List** field. If an acc
 
    **Figure 9** Allowing specific IP addresses to access specified URLs
 
-.. |image1| image:: /_static/images/en-us_image_0000001532904513.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340585569.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
 .. |image3| image:: /_static/images/en-us_image_0000002054495070.png
 .. |image4| image:: /_static/images/en-us_image_0000001761857181.png

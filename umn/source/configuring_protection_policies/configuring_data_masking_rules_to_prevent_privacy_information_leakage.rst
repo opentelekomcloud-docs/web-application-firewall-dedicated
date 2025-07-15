@@ -7,10 +7,6 @@ Configuring Data Masking Rules to Prevent Privacy Information Leakage
 
 This topic describes how to configure data masking rules. You can configure data masking rules to prevent sensitive data such as passwords from being displayed in event logs.
 
-.. note::
-
-   If you have enabled enterprise projects, ensure that you have all operation permissions for the project where your WAF instance locates. Then, you can select the project from the **Enterprise Project** drop-down list and configure protection policies for the domain names in the project.
-
 Prerequisites
 -------------
 
@@ -35,7 +31,7 @@ Configuring a Data Masking Rule
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Policies**.
+#. In the navigation pane on the left, click **Policies**.
 
 #. Click the name of the target policy to go to the protection configuration page.
 
@@ -61,7 +57,7 @@ Configuring a Data Masking Rule
       +-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
       | Parameter             | Description                                                                                                                                                                                           | Example Value                                                                                                                |
       +=======================+=======================================================================================================================================================================================================+==============================================================================================================================+
-      | Path                  | Part of the URL that does not include the domain name.                                                                                                                                                | **/admin/login.php**                                                                                                         |
+      | Path                  | Part of the URL that does not include the domain name.                                                                                                                                                | /admin/login.php                                                                                                             |
       |                       |                                                                                                                                                                                                       |                                                                                                                              |
       |                       | -  Prefix match: The path ending with \* indicates that the path is used as a prefix. For example, if the path to be protected is **/admin/test.php** or **/adminabc**, set **Path** to **/admin\***. | For example, if the URL to be protected is **http://www.example.com/admin/login.php**, set **Path** to **/admin/login.php**. |
       |                       | -  Exact match: The path to be entered must match the path to be protected. If the path to be protected is **/admin**, set **Path** to **/admin**.                                                    |                                                                                                                              |
@@ -125,7 +121,7 @@ To verify that WAF is protecting your domain name *www.example.com* against a da
 
       **Figure 4** Viewing events - privacy data masking
 
-.. |image1| image:: /_static/images/en-us_image_0000001481908812.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001287946362.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
 .. |image3| image:: /_static/images/en-us_image_0000002054495070.png
 .. |image4| image:: /_static/images/en-us_image_0000001761857181.png

@@ -44,13 +44,13 @@ Configuring a Timeout for Connections Between WAF and a Website Server
 #. Log in to the management console.
 #. Click |image1| in the upper left corner of the management console and select a region or project.
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
-#. In the navigation pane, choose **Website Settings**.
+#. In the navigation pane on the left, choose **Website Settings**.
 #. In the **Domain Name** column, click the website domain name to go to the basic information page.
 #. In the **Timeout Settings** row, toggle |image3| on if needed.
 #. Click |image4|, specify **WAF-to-Server connection timeout (s)**, **Read timeout (s)**, and **Write timeout (s)**, and click |image5| to save settings.
 
-.. |image1| image:: /_static/images/en-us_image_0000001845908085.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001287944330.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
 .. |image3| image:: /_static/images/en-us_image_0000001815763316.png
 .. |image4| image:: /_static/images/en-us_image_0000001282207201.png
 .. |image5| image:: /_static/images/en-us_image_0000001282406385.png

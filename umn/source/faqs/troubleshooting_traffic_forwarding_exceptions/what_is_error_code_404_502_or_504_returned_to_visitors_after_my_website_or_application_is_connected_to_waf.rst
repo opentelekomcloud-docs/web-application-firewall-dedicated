@@ -2,10 +2,10 @@
 
 .. _waf_01_0066:
 
-How Do I Troubleshoot 404/502/504 Errors?
-=========================================
+What Is Error Code 404, 502, or 504 Returned to Visitors After My Website or Application Is Connected to WAF?
+=============================================================================================================
 
-If an error, such as 404 Not Found, 502 Bad Gateway, or 504 Gateway Timeout, occurs after a website is connected to WAF, use the following methods to locate the cause and remove the error:
+If an error, such as 404 Not Found, 502 Bad Gateway, or 504 Gateway Timeout, occurs after your website or application is connected to WAF, use the following methods to locate the cause and remove the error:
 
 404 Not Found
 -------------
@@ -72,9 +72,9 @@ Possible causes are as follows:
 
    Perform the following steps to check whether the origin server configuration is correct:
 
-   #. Log in to the management console, click **Service List** in the upper part of the page, and choose **Security** > **Web Application Firewall (Dedicated)**.
+   #. Log in to the management console, click **Service List** in the upper part of the page, and choose **Security** > **Web Application Firewall (Dedicated)** to go to the WAF (dedicated) console.
 
-   #. In the navigation pane, choose **Website Settings**.
+   #. In the navigation pane on the left, choose **Website Settings**.
 
    #. In the **Domain Name** column, click the domain name. Its information is displayed.
 
@@ -125,8 +125,8 @@ The possible causes are as follows:
 
       **Method 2**: Create an ELB. Use the EIP of ELB as the IP address of the server to connect to WAF.
 
-      a. Log in to the management console, click **Service List** in the upper part of the page, and choose **Security** > **Web Application Firewall (Dedicated)**.
-      b. In the navigation pane, choose **Website Settings**.
+      a. Log in to the management console, click **Service List** in the upper part of the page, and choose **Security** > **Web Application Firewall (Dedicated)** to go to the WAF (dedicated) console.
+      b. In the navigation pane on the left, choose **Website Settings**.
       c. In the **Domain Name** column, click the domain name. Its information is displayed.
       d. In the **Server Information** area, click |image2|. On the displayed page, click **Add**.
 

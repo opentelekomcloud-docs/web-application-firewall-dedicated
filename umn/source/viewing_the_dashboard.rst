@@ -5,13 +5,13 @@
 Viewing the Dashboard
 =====================
 
-This topic describes how to view protection event logs, including attack and request statistics, event distribution, top 10 attacked domain names, top 10 attack source IP addresses, and top 10 attacked URLs in a specified time range, such as yesterday, today, past 3 days, past 7 days, or past 30 days.
+If you have connected websites to WAF, you can have a glance at their security on the **Dashboard** page. You will learn of WAF updates, protection overview, product details, as well as the security statistics of protected websites and instances you have for up to 30 days. You can also check event source statistics and bot protection statistics.
 
 Prerequisites
 -------------
 
--  You have :ref:`connected a website to WAF <waf_01_1108>`.
--  At least one protection rule has been configured for the domain name.
+-  You have connected the website you want to protect to WAF. For details, see :ref:`Connecting a Website to WAF <waf_01_1108>`.
+-  At least one protection rule has been configured for the domain name. For details, see :ref:`Configuring Protection Policies <waf_01_0007>`.
 
 Specification Limitations
 -------------------------
@@ -45,9 +45,8 @@ The QPS calculation method varies depending on the time range. For details, see 
 
    Queries Per Second (QPS) indicates the number of requests per second. For example, an HTTP GET request is also called a query. The number of requests is the total number of requests in a specific time range.
 
-
-Viewing the Dashboard
----------------------
+Checking the Overview Information
+---------------------------------
 
 #. Log in to the management console.
 
@@ -87,7 +86,7 @@ Viewing the Dashboard
    -  **Yesterday** and **Today**: Security event data is gathered every minute.
    -  **Past 3 days**: Security event data is gathered every 5 minutes.
    -  **Past 7 days**: Security event data is gathered every 10 minutes.
-   -  **Past 30 days**: Security event data is gathered every hour.
+   -  **Past 30 days**: Security data is gathered every hour.
 
 
    .. figure:: /_static/images/en-us_image_0000001683533946.png
@@ -100,17 +99,17 @@ Viewing the Dashboard
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter                         | Description                                                                                                                                                                                                                                                                                                      |
       +===================================+==================================================================================================================================================================================================================================================================================================================+
-      | Requests                          | You can view how many requests for your website as well as total attacks and attacks of each attack type.                                                                                                                                                                                                        |
+      | Requests                          | You can view how many requests to your website as well as total attacks and attacks of each attack type.                                                                                                                                                                                                         |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | QPS                               | Average number of requests per second for the domain name. For details about the values of QPS, see :ref:`How to Calculate QPS <waf_01_0021__section1588682602717>`.                                                                                                                                             |
+      | QPS                               | Average number of requests per second for the domain name. For details about QPS, see :ref:`How to Calculate QPS <waf_01_0021__section1588682602717>`.                                                                                                                                                           |
       |                                   |                                                                                                                                                                                                                                                                                                                  |
       |                                   | Queries Per Second (QPS) indicates the number of requests per second. For example, an HTTP GET request is also called a query.                                                                                                                                                                                   |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Bytes Sent/Received               | Bandwidth usage                                                                                                                                                                                                                                                                                                  |
+      | Bytes Sent/Received               | Bandwidth usage.                                                                                                                                                                                                                                                                                                 |
       |                                   |                                                                                                                                                                                                                                                                                                                  |
       |                                   | The value of sent and received bytes is calculated by adding the values of **request_length** and **upstream_bytes_received** by time, so the value is different from the network bandwidth monitored on the EIP. This value is also affected by web page compression, connection reuse, and TCP retransmission. |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Event Distribution                | Types of attack events                                                                                                                                                                                                                                                                                           |
+      | Event Distribution                | Types of attack events.                                                                                                                                                                                                                                                                                          |
       |                                   |                                                                                                                                                                                                                                                                                                                  |
       |                                   | Click an area in the **Event Distribution** area to view the type, number, and proportion of an attack.                                                                                                                                                                                                          |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -127,5 +126,5 @@ Viewing the Dashboard
       |                                   | Click **View More** to go to the **Events** page and view more protection data.                                                                                                                                                                                                                                  |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-.. |image1| image:: /_static/images/en-us_image_0210924450.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001288106346.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png

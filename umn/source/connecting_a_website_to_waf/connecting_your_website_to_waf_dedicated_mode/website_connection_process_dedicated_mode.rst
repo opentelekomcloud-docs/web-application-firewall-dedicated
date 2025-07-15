@@ -15,7 +15,7 @@ Dedicated WAF instances can protect only web applications and websites that are 
 Processes of Connecting a Website to WAF
 ----------------------------------------
 
-Before using a dedicated WAF instance, complete the required configurations by following the process shown in :ref:`Figure 1 <waf_01_5249__fig3118103718294>`.
+After you apply for a dedicated WAF instance, complete the required configurations by following the process shown in :ref:`Figure 1 <waf_01_5249__fig3118103718294>`.
 
 .. _waf_01_5249__fig3118103718294:
 
@@ -59,7 +59,7 @@ Before adding a domain name or IP address to WAF, obtain the information listed 
    +------------------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
    |                        | Server Protocol  | Protocol used by WAF to forward requests from the client (such as a browser). The options are **HTTP** and **HTTPS**.                                                                                                                 | HTTP            |
    +------------------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
-   |                        | VPC              | Select the VPC that the dedicated WAF instance belongs to.                                                                                                                                                                            | vpc-default     |
+   |                        | VPC              | Select the VPC that the dedicated WAF instance you apply for belongs to.                                                                                                                                                              | vpc-default     |
    +------------------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
    |                        | Server Address   | Private IP address of the website server.                                                                                                                                                                                             | 192.168.1.1     |
    |                        |                  |                                                                                                                                                                                                                                       |                 |

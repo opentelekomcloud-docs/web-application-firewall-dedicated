@@ -7,10 +7,6 @@ Configuring Anti-Crawler Rules
 
 You can configure website anti-crawler protection rules to protect against search engines, scanners, script tools, and other crawlers, and use JavaScript to create custom anti-crawler protection rules.
 
-.. note::
-
-   If you have enabled enterprise projects, ensure that you have all operation permissions for the project where your WAF instance locates. Then, you can select the project from the **Enterprise Project** drop-down list and configure protection policies for the domain names in the project.
-
 Prerequisites
 -------------
 
@@ -71,7 +67,7 @@ Configuring an Anti-Crawler Rule
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Policies**.
+#. In the navigation pane on the left, click **Policies**.
 
 #. Click the name of the target policy to go to the protection configuration page.
 
@@ -82,7 +78,7 @@ Configuring an Anti-Crawler Rule
    -  |image3|: enabled.
    -  |image4|: disabled.
 
-#. Select the **Feature Library** tab and enable the protection by referring to :ref:`Table 1 <waf_01_0015__table173611272418>`.
+#. Select the **Feature Library** tab and enable the protection by referring to :ref:`Table 1 <waf_01_0015__table173611272418>`. :ref:`Figure 3 <waf_01_0015__fig127337271541>` shows an example.
 
    A feature-based anti-crawler rule has two protective actions:
 
@@ -103,6 +99,7 @@ Configuring an Anti-Crawler Rule
 
    **Scanner** is enabled by default, but you can enable other protection types if needed.
 
+   .. _waf_01_0015__fig127337271541:
 
    .. figure:: /_static/images/en-us_image_0000001285803110.png
       :alt: **Figure 3** Feature Library
@@ -257,8 +254,8 @@ To allow the search engine of Baidu or Google and block the POST request of Baid
 
       **Figure 9** Blocking POST requests
 
-.. |image1| image:: /_static/images/en-us_image_0000001532628161.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340426097.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
 .. |image3| image:: /_static/images/en-us_image_0000002054495070.png
 .. |image4| image:: /_static/images/en-us_image_0000001761857181.png
 .. |image5| image:: /_static/images/en-us_image_0234013368.png

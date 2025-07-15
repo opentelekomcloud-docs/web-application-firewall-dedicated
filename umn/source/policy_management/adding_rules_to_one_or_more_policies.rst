@@ -7,10 +7,6 @@ Adding Rules to One or More Policies
 
 This topic describes how to add rules to one or more policies.
 
-.. note::
-
-   If you have enabled enterprise projects, ensure that you have all operation permissions for the project where your WAF instance locates. Then, you can select the project from the **Enterprise Project** drop-down list and configure protection policies for the domain names in batches.
-
 
 Adding Rules to One or More Policies
 ------------------------------------
@@ -21,9 +17,9 @@ Adding Rules to One or More Policies
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Policies**.
+#. In the navigation pane on the left, click **Policies**.
 
-#. In the upper left corner of the policy list, click **View All My Rules**.
+#. In the upper left corner of the policy list, click **View Rules**.
 
 
    .. figure:: /_static/images/en-us_image_0000001286529486.png
@@ -60,5 +56,5 @@ Adding Rules to One or More Policies
 
 #. Click **Confirm**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001544453213.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340586225.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png

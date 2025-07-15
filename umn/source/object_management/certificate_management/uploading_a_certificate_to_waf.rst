@@ -43,7 +43,7 @@ Uploading a Certificate to WAF
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane, choose **Objects** > **Certificates**.
+#. In the navigation pane on the left, choose **Objects** > **Certificates**.
 
 #. Click **Add Certificate**.
 
@@ -51,9 +51,9 @@ Uploading a Certificate to WAF
 
 
    .. figure:: /_static/images/en-us_image_0000001732479705.png
-      :alt: **Figure 1** **Upload Certificate**
+      :alt: **Figure 1** Uploading an international certificate
 
-      **Figure 1** **Upload Certificate**
+      **Figure 1** Uploading an international certificate
 
    Only .pem certificates can be used in WAF. If the certificate is not in .pem format, convert it into .pem locally by referring to :ref:`Table 1 <waf_01_0078__waf_01_3273_table1292125414516>` before uploading it.
 
@@ -115,6 +115,6 @@ Related Operations
 -  To delete a certificate, locate the row of the certificate and click **More** > **Delete** in the **Operation** column.
 -  To update a certificate, locate the row of the certificate and click **More** > **Update** in the **Operation** column.
 
-.. |image1| image:: /_static/images/en-us_image_0269497434.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340424693.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
 .. |image3| image:: /_static/images/en-us_image_0269115287.png

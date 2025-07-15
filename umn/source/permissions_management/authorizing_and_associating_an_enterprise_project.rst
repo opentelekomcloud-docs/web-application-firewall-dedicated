@@ -33,6 +33,6 @@ Creating an Enterprise Project and Assigning Permissions
 
    -  Add WAF instances to an enterprise project after a WAF instance is purchased.
 
-      On the **Enterprise Project Management** page, add WAF instances under your account to an enterprise project.
+      On the **Enterprise Project Management** page, add WAF instances you apply for under your account to an enterprise project.
 
       Value **default** indicates the default enterprise project. Resources that are not allocated to any enterprise projects under your account are listed in the default enterprise project.

@@ -13,20 +13,18 @@ Web Tamper Protection (WTP) supports only caching of static web pages. Perform t
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Policies**.
-
 #. Click the name of the target policy to go to the protection configuration page.
 
 #. Click the **Web Tamper Protection** configuration area and check whether this function is enabled.
 
-   -  If this function is enabled (|image3|), go to :ref:`Step 7 <waf_01_0355__li56301354192511>`.
+   -  If this function is enabled (|image3|), go to :ref:`Step 6 <waf_01_0355__li56301354192511>`.
    -  If this function is disabled (|image4|), click |image5| to enable the function. Refresh the page several minutes later.
 
 #. .. _waf_01_0355__li56301354192511:
 
    Click **Customize Rule**. On the displayed page, check whether the domain name and path are correct.
 
-   -  If they are correct, go to :ref:`Step 8 <waf_01_0355__li129561731105818>`.
+   -  If they are correct, go to :ref:`Step 7 <waf_01_0355__li129561731105818>`.
 
    -  If they are incorrect, click **Delete** in the **Operation** column to delete the rule. Then, click **Add Rule** above the rule list and configure another rule.
 

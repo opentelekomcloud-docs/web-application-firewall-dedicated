@@ -51,6 +51,6 @@ Related Operations
 -  To modify a policy name, click |image3| next to the policy name. In the dialog box displayed, enter a new policy name.
 -  To delete a rule, locate the row containing the rule. In the **Operation** column, click **Delete**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001481959198.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001288266902.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
 .. |image3| image:: /_static/images/en-us_image_0301168075.png

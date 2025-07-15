@@ -5,7 +5,7 @@
 Managing Dedicated WAF Engines
 ==============================
 
-This topic describes how to manage your dedicated WAF instances (or engines), including viewing instance information, viewing instance monitoring configurations, upgrading the instance edition, or deleting an instance.
+This topic describes how to manage your dedicated WAF instances (or engines). You can view instance information, view instance monitoring configurations, upgrade the edition of an instance, and delete an instance.
 
 .. note::
 
@@ -24,21 +24,16 @@ You can view the WAF instance version in the **Version** column of the dedicated
 
 .. table:: **Table 1** Dedicated WAF versions
 
-   +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Engine Version                    | Feature                                                                                                                                                          |
-   +===================================+==================================================================================================================================================================+
-   | 202312                            | -  A global protection whitelist rule can be set to **ignore invalid requests**.                                                                                 |
-   |                                   | -  JavaScript-based anti-crawler rules support more protective actions, including **Block**, **Log only**, and **Verification code**.                            |
-   +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | 202308                            | -  The **$remote_addr** field is added to the IP identifier, which can be directly set to the IP address of the TCP connection.                                  |
-   |                                   | -  IP addresses used in TCP connections can be identified by CC, precise protection, blacklist, and whitelist rules.                                             |
-   |                                   | -  A block duration can be set if **Protective Action** is set to **Verification code** in a CC attack protection rule.                                          |
-   +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | 202305                            | -  HTTP2 is enabled globally by default. There is no need to enable it manually.                                                                                 |
-   |                                   | -  By default, a request can pass through WAF four times before it goes to the origin server. Error code 523 will be returned if the request exceeds this limit. |
-   |                                   | -  Strict multipart format verification is supported.                                                                                                            |
-   |                                   | -  Dedicated ELB network load balancers are supported. (In earlier versions, only shared load balancers and dedicated application load balancers are supported.) |
-   +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
+   | Engine Version                    | Feature                                                                                                                               |
+   +===================================+=======================================================================================================================================+
+   | 202409                            | -  A global protection whitelist rule can be set to **ignore invalid requests**.                                                      |
+   |                                   | -  JavaScript-based anti-crawler rules support more protective actions, including **Block**, **Log only**, and **Verification code**. |
+   +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
+   | 202401                            | -  The **$remote_addr** field is added to the IP identifier, which can be directly set to the IP address of the TCP connection.       |
+   |                                   | -  IP addresses used in TCP connections can be identified by CC, precise protection, blacklist, and whitelist rules.                  |
+   |                                   | -  A block duration can be set if **Protective Action** is set to **Verification code** in a CC attack protection rule.               |
+   +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 
 Viewing Information About a Dedicated WAF Instance
 --------------------------------------------------
@@ -63,29 +58,31 @@ Viewing Information About a Dedicated WAF Instance
 
    .. table:: **Table 2** Key parameters of dedicated WAF instances
 
-      +-------------------+-------------------------------------------------------------------------+-------------------------------+
-      | Parameter         | Description                                                             | Example Value                 |
-      +===================+=========================================================================+===============================+
-      | Instance Name     | Name automatically generated when an instance is created.               | None                          |
-      +-------------------+-------------------------------------------------------------------------+-------------------------------+
-      | Protected Website | Domain name of the website protected by the instance.                   | www.example.com               |
-      +-------------------+-------------------------------------------------------------------------+-------------------------------+
-      | VPC               | VPC where the instance resides                                          | vpc-waf                       |
-      +-------------------+-------------------------------------------------------------------------+-------------------------------+
-      | Subnet            | Subnet where an instance resides                                        | subnet-62bb                   |
-      +-------------------+-------------------------------------------------------------------------+-------------------------------+
-      | IP Address        | IP address of the subnet in the VPC where the WAF instance is deployed. | 192.168.0.186                 |
-      +-------------------+-------------------------------------------------------------------------+-------------------------------+
-      | Access Status     | Connection status of the instance.                                      | Accessible                    |
-      +-------------------+-------------------------------------------------------------------------+-------------------------------+
-      | Running Status    | Status of the instance.                                                 | Running                       |
-      +-------------------+-------------------------------------------------------------------------+-------------------------------+
-      | Version           | Dedicated WAF version.                                                  | 202304                        |
-      +-------------------+-------------------------------------------------------------------------+-------------------------------+
-      | Deployment        | How the instance is deployed.                                           | Standard mode (reverse proxy) |
-      +-------------------+-------------------------------------------------------------------------+-------------------------------+
-      | Specifications    | Specifications of resources hosting the instance.                       | 8 vCPUs \| 16 GB              |
-      +-------------------+-------------------------------------------------------------------------+-------------------------------+
+      +-----------------------+-------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+      | Parameter             | Description                                                             | Example Value                                                                                             |
+      +=======================+=========================================================================+===========================================================================================================+
+      | Instance Name         | Name automatically generated when an instance is created.               | None                                                                                                      |
+      +-----------------------+-------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+      | Protected Website     | Domain name of the website protected by the instance.                   | www.example.com                                                                                           |
+      +-----------------------+-------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+      | VPC                   | VPC where the instance resides                                          | vpc-waf                                                                                                   |
+      +-----------------------+-------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+      | Subnet                | Subnet where an instance resides                                        | subnet-62bb                                                                                               |
+      +-----------------------+-------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+      | IP Address            | IP address of the subnet in the VPC where the WAF instance is deployed. | 192.168.0.186                                                                                             |
+      +-----------------------+-------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+      | Access Status         | Connection status of the instance.                                      | Accessible                                                                                                |
+      +-----------------------+-------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+      | Running Status        | Status of the instance.                                                 | Running                                                                                                   |
+      +-----------------------+-------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+      | Version               | Dedicated WAF version.                                                  | 202304                                                                                                    |
+      +-----------------------+-------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+      | Deployment            | How the instance is deployed.                                           | Standard mode (reverse proxy)                                                                             |
+      +-----------------------+-------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+      | Specifications        | Specifications of resources hosting the instance.                       | WI-500 (specifications of dedicated engine instances)                                                     |
+      |                       |                                                                         |                                                                                                           |
+      |                       |                                                                         | x1.8u.32g (Specifications of the ECS housing the dedicated engine. Specifications: x86: 8 vCPUs \| 32 GB) |
+      +-----------------------+-------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
 
 Viewing Metrics of a Dedicated WAF Instance
 -------------------------------------------
@@ -190,7 +187,11 @@ You can delete a dedicated WAF instance anytime. A deleted dedicated WAF instanc
 
       **Figure 5** Dedicated engine list
 
-#. In the row of the instance, click **More** > **Delete** in the **Operation** column.
+#. In the row containing the instance, click **More** > **Delete** in the **Operation** column.
+
+   .. note::
+
+      You can also select multiple dedicated instances and click **Delete** in the upper left corner above the list to delete them all at once.
 
 #. In the displayed dialog box, enter **DELETE** and click **Confirm**.
 
@@ -200,13 +201,13 @@ You can delete a dedicated WAF instance anytime. A deleted dedicated WAF instanc
 
       **Figure 6** Deleting an instance
 
-.. |image1| image:: /_static/images/en-us_image_0000001082065421.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001287946362.png
-.. |image3| image:: /_static/images/en-us_image_0000001082065421.jpg
-.. |image4| image:: /_static/images/en-us_image_0000001340308129.png
-.. |image5| image:: /_static/images/en-us_image_0000001081906323.jpg
-.. |image6| image:: /_static/images/en-us_image_0000001340427973.png
-.. |image7| image:: /_static/images/en-us_image_0000001240865319.jpg
-.. |image8| image:: /_static/images/en-us_image_0000001340667861.png
-.. |image9| image:: /_static/images/en-us_image_0000001081671555.jpg
-.. |image10| image:: /_static/images/en-us_image_0000001288427746.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
+.. |image3| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image4| image:: /_static/images/en-us_image_0000002194070596.png
+.. |image5| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image6| image:: /_static/images/en-us_image_0000002194070596.png
+.. |image7| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image8| image:: /_static/images/en-us_image_0000002194070596.png
+.. |image9| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image10| image:: /_static/images/en-us_image_0000002194070596.png

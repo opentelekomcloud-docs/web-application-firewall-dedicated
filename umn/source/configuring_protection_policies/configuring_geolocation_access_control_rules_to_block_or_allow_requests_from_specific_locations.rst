@@ -7,10 +7,6 @@ Configuring Geolocation Access Control Rules to Block or Allow Requests from Spe
 
 WAF can identify where a request originates. You can set geolocation access control rules in just a few clicks and let WAF block or allow requests from a certain region. A geolocation access control rule allows you to allow or block requests from IP addresses from specified countries or regions.
 
-.. note::
-
-   If you have enabled enterprise projects, ensure that you have all operation permissions for the project where your WAF instance locates. Then, you can select the project from the **Enterprise Project** drop-down list and configure protection policies for the domain names in the project.
-
 Prerequisites
 -------------
 
@@ -34,7 +30,7 @@ Configuring a Geolocation Access Control Rule
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Policies**.
+#. In the navigation pane on the left, click **Policies**.
 
 #. Click the name of the target policy to go to the protection configuration page.
 
@@ -169,9 +165,9 @@ To verify WAF is protecting your website (**www.example.com**) against a rule:
 
 #. Clear the browser cache and access **http://www.example.com**. Normally, WAF blocks such requests and returns the block page.
 
-#. Return to the WAF console. In the navigation pane, click **Events**. On the displayed page, view the event log.
+#. Return to the WAF console. In the navigation pane on the left, click **Events**. On the displayed page, view the event log.
 
-.. |image1| image:: /_static/images/en-us_image_0000001482227824.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340306233.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
 .. |image3| image:: /_static/images/en-us_image_0000002054495070.png
 .. |image4| image:: /_static/images/en-us_image_0000001761857181.png

@@ -10,14 +10,10 @@ You can add two types of information leakage prevention rules.
 -  Sensitive information filtering: prevents disclosure of sensitive information, such as ID numbers, phone numbers, and email addresses.
 -  Response code interception: blocks the specified HTTP status codes.
 
-.. note::
-
-   If you have enabled enterprise projects, ensure that you have all operation permissions for the project where your WAF instance locates. Then, you can select the project from the **Enterprise Project** drop-down list and configure protection policies for the domain names in the project.
-
 Prerequisites
 -------------
 
-You have :ref:`added your website to a policy <waf_01_0074>`.
+You have added the website you want to protect to WAF or :ref:`added a new protection policy <waf_01_0074>`.
 
 Constraints
 -----------
@@ -33,7 +29,7 @@ Configuring an Information Leakage Prevention Rule
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Policies**.
+#. In the navigation pane on the left, click **Policies**.
 
 #. Click the name of the target policy to go to the protection configuration page.
 
@@ -44,12 +40,13 @@ Configuring an Information Leakage Prevention Rule
 
 #. In the upper left corner above the **Information Leakage Prevention** rule list, click **Add Rule**.
 
-#. In the dialog box displayed, add an information leakage prevention rule by referring to :ref:`Table 1 <waf_01_0054__table242612276178>`.
+#. In the dialog box displayed, add an information leakage prevention rule by referring to :ref:`Table 1 <waf_01_0054__table242612276178>`. :ref:`Figure 1 <waf_01_0054__fig1077215502209>` and :ref:`Figure 2 <waf_01_0054__fig134221027101710>` show the examples.
 
    Information leakage prevention rules prevent sensitive information (such as ID numbers, phone numbers, and email addresses) from being disclosed. This type of rule can also block specified HTTP status codes.
 
    **Sensitive information filtering**: Configure rules to mask sensitive information, such as phone numbers and ID numbers, from web pages. For example, you can set the following protection rules to mask sensitive information, such as ID numbers, phone numbers, and email addresses:
 
+   .. _waf_01_0054__fig1077215502209:
 
    .. figure:: /_static/images/en-us_image_0000001285815180.png
       :alt: **Figure 1** Sensitive information leakage
@@ -58,6 +55,7 @@ Configuring an Information Leakage Prevention Rule
 
    **Response code interception**: An error page of a specific HTTP response code may contain sensitive information. You can configure rules to block such error pages to prevent such information from being leaked out. For example, you can set the following rule to block error pages of specified HTTP response codes 404, 502, and 503.
 
+   .. _waf_01_0054__fig134221027101710:
 
    .. figure:: /_static/images/en-us_image_0000001285975220.png
       :alt: **Figure 2** Blocking response codes
@@ -130,7 +128,7 @@ To verify that WAF is protecting your domain name *www.example.com* against an i
 
    The email address, phone number, and identity number on the returned page are masked.
 
-.. |image1| image:: /_static/images/en-us_image_0000001532748653.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340585565.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
 .. |image3| image:: /_static/images/en-us_image_0000002054495070.png
 .. |image4| image:: /_static/images/en-us_image_0000001761857181.png

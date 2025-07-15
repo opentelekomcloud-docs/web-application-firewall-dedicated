@@ -72,5 +72,5 @@ Response actions
 -  Block: The current request is blocked after a rule is matched.
 -  CAPTCHA: The system will perform human-machine verification after a rule is matched.
 -  Redirect: The system will notify you to redirect the request after a rule is matched.
--  Log: Only attack information is recorded after a rule is matched.
+-  Log: Only attack information is recorded when a rule is matched.
 -  Mask: The system will anonymize sensitive information after a rule is matched.

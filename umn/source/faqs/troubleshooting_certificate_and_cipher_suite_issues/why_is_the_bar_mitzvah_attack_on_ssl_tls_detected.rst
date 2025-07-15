@@ -5,7 +5,7 @@
 Why Is the Bar Mitzvah Attack on SSL/TLS Detected?
 ==================================================
 
-The bar mitzvah attack is an attack on SSL/TLS protocols that exploits a vulnerability in the RC4 cryptographic algorithm. This vulnerability can disclose ciphertext in SSL/TLS encrypted traffic in some cases, such as passwords, credit card data, or other privacy data, to hackers.
+The Bar Mitzvah attack is a cryptographic attack targeting SSL/TLS protocols. The attack exploits a vulnerability in the RC4 cryptographic algorithm. This vulnerability can disclose ciphertext in SSL/TLS encrypted traffic in some cases, such as passwords, credit card data, or other privacy data, to hackers.
 
 Solution
 --------

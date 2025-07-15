@@ -38,5 +38,5 @@ Changing the Protection Mode (Enabling/Suspending WAF Protection)
    -  Enabling protection: In the row containing the target domain name, click **Enable WAF** in the **Operation** column. In the displayed dialog box, click **Confirm**. If you **Enable WAF**, the **Status** of the domain name changes to **Protected**.
    -  Suspending protection: In the row containing the target domain name, click **Suspend WAF** in the **Operation** column. In the displayed dialog box, click **Confirm**. If you **Suspend WAF**, the **Status** of the domain name changes to **Unprotected**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001481372972.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001941947437.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png

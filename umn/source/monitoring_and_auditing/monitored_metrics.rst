@@ -139,7 +139,7 @@ waf_instance_id ID of the website protected with WAF
 Example of Raw Data Format of Monitored Metrics
 -----------------------------------------------
 
-.. code-block::
+::
 
    [
        {

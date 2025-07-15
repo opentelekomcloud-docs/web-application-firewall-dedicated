@@ -7,8 +7,6 @@ Why Am I Seeing Error Code 523?
 
 If a request goes through WAF over four times, WAF will block the request and return error code 523 to avoid endless loops. If error code 523 is returned for your website requests, check how many WAF instances you are using.
 
-|image1|
-
 Cause 1: A website is connected to more than four WAF instances.
 ----------------------------------------------------------------
 
@@ -69,5 +67,3 @@ If the origin server address is mistakenly set to the back-to-source IP address 
 **Solution**
 
 Check the origin server configurations and enter a correct origin server address.
-
-.. |image1| image:: /_static/images/en-us_image_0000001710527625.png

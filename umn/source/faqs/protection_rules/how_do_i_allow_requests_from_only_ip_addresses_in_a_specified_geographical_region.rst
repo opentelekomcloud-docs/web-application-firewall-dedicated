@@ -17,8 +17,6 @@ If you allow only IP addresses in a region to access the protected domain name, 
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Policies**.
-
 #. Click the name of the target policy to go to the protection configuration page.
 
 #. In the upper left corner above the **Geolocation Access Control** list, click **Add Rule**.

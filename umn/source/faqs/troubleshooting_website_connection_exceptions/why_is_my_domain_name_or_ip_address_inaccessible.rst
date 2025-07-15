@@ -52,7 +52,7 @@ Refer to :ref:`Figure 1 <waf_01_0278__fig1680743491611>` and :ref:`Table 1 <waf_
 Troubleshooting and Solutions for ELB Access Mode
 -------------------------------------------------
 
-Refer to :ref:`Figure 2 <waf_01_0278__fig153411857111619>` and :ref:`Table 2 <waf_01_0278__table12804175031614>` to fix connection failures.
+For **ELB Access**, refer to :ref:`Figure 2 <waf_01_0278__fig153411857111619>` and :ref:`Table 2 <waf_01_0278__table12804175031614>` to fix connection failures.
 
 .. _waf_01_0278__fig153411857111619:
 
@@ -63,7 +63,7 @@ Refer to :ref:`Figure 2 <waf_01_0278__fig153411857111619>` and :ref:`Table 2 <wa
 
 .. _waf_01_0278__table12804175031614:
 
-.. table:: **Table 2** Troubleshooting for website connection failure in WAF ELB access mode
+.. table:: **Table 2** Troubleshooting for website connection failure in WAF - ELB access mode
 
    +---------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
    | Possible Cause                                                                                                                                          | Solution                                                                                                |

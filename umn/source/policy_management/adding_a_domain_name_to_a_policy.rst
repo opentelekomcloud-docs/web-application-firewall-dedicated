@@ -46,5 +46,5 @@ Adding a Domain Name to a Policy
 
 #. Click **Confirm**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001493652906.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340306901.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png

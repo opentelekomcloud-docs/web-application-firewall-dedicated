@@ -8,7 +8,13 @@ Change History
 +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Released On                       | Description                                                                                                                                                                 |
 +===================================+=============================================================================================================================================================================+
-| 2025-01-17                        | This issue is the ninth official release.                                                                                                                                   |
+| 2025-04-10                        | This issue is the tenth official release.                                                                                                                                   |
+|                                   |                                                                                                                                                                             |
+|                                   | Modified the following content:                                                                                                                                             |
+|                                   |                                                                                                                                                                             |
+|                                   | :ref:`Step 2: Configure a Load Balancer for WAF <waf_01_0251>`: Added the description of enabling **IP as a Backend** for an ELB load balancer.                             |
++-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2025-02-17                        | This issue is the ninth official release.                                                                                                                                   |
 |                                   |                                                                                                                                                                             |
 |                                   | Modified the following content:                                                                                                                                             |
 |                                   |                                                                                                                                                                             |
@@ -18,7 +24,7 @@ Change History
 |                                   |                                                                                                                                                                             |
 |                                   | Added the following content:                                                                                                                                                |
 |                                   |                                                                                                                                                                             |
-|                                   | -  :ref:`Applying for a Cloud WAF Instance <en-us_topic_0000002112591942>`                                                                                                  |
+|                                   | -  :ref:`Applying for a Cloud WAF Instance <waf_01_1073>`                                                                                                                   |
 |                                   |                                                                                                                                                                             |
 |                                   | Modified the following content:                                                                                                                                             |
 |                                   |                                                                                                                                                                             |

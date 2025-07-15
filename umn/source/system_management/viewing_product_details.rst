@@ -38,5 +38,5 @@ Viewing Product Details
 
       **Figure 1** Product information
 
-.. |image1| image:: /_static/images/en-us_image_0000001133216533.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340308381.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png

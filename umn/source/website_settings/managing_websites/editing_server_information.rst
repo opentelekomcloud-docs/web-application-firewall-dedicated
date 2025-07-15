@@ -48,5 +48,5 @@ Modifying Server Information of One Website
 
 #. Click **Confirm**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001532693205.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001288264194.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png

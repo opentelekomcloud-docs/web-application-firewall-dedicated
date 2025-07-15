@@ -7,10 +7,6 @@ Configuring Basic Web Protection to Defend Against Common Web Attacks
 
 After this function is enabled, WAF can defend against common web attacks, such as SQL injections, XSS, remote overflow vulnerabilities, file inclusions, Bash vulnerabilities, remote command execution, directory traversal, sensitive file access, and command/code injections. You can also enable other checks in basic web protection, such as web shell detection, deep inspection against evasion attacks, and header inspection.
 
-.. note::
-
-   If you have enabled enterprise projects, ensure that you have all operation permissions for the project where your WAF instance locates. Then, you can select the project from the **Enterprise Project** drop-down list and configure protection policies for the domain names in the project.
-
 Prerequisites
 -------------
 
@@ -21,6 +17,7 @@ Constraints
 
 -  Basic web protection has two modes: **Block** and **Log only**.
 -  If you select **Block** for **Basic Web Protection**, you can :ref:`configure access control criteria for a known attack source <waf_01_0271>`. WAF will block requests matching the configured IP address, cookie, or params for a length of time configured as part of the rule.
+-  Currently, Shiro decryption detection is not available in regions CN East-Qingdao and AP-Manila.
 
 Enabling Basic Web Protection Rules
 -----------------------------------
@@ -31,7 +28,7 @@ Enabling Basic Web Protection Rules
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Policies**.
+#. In the navigation pane on the left, click **Policies**.
 
 #. Click the name of the target policy to go to the protection configuration page.
 
@@ -142,7 +139,7 @@ If **General Check** is enabled and **Mode** is set to **Block** for your domain
 
    Clear the browser cache and enter **http://www.example.com?id=1%27%20or%201=1** in the address box of the browser to simulate an SQL injection attack.
 
-#. Return to the WAF console. In the navigation pane, click **Events**. On the displayed page, view the event log.
+#. Return to the WAF console. In the navigation pane on the left, click **Events**. On the displayed page, view the event log.
 
 Example - Blocking SQL Injection Attacks
 ----------------------------------------
@@ -178,7 +175,7 @@ If domain name **www.example.com** has been connected to WAF, perform the follow
 
 #. Go to the WAF console. In the navigation pane on the left, choose **Events**. View the event on the **Events** page.
 
-.. |image1| image:: /_static/images/en-us_image_0000001482063812.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340426101.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
 .. |image3| image:: /_static/images/en-us_image_0000002054495070.png
 .. |image4| image:: /_static/images/en-us_image_0000001761857181.png
