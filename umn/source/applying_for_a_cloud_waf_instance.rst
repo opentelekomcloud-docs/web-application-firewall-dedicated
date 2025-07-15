@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000002112591942.html
+:original_name: waf_01_1073.html
 
-.. _en-us_topic_0000002112591942:
+.. _waf_01_1073:
 
 Applying for a Cloud WAF Instance
 =================================

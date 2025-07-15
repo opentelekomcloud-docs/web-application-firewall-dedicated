@@ -29,13 +29,13 @@ Procedure
 #. Click |image1| in the upper left corner of the management console and select a region or project.
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-4.  In the navigation pane, choose **Website Settings**.
+4.  In the navigation pane on the left, choose **Website Settings**.
 
 5.  In the upper left corner of the website list, click **Add Website**.
 
 6.  Select **Dedicated Mode** and click **Configure Now**.
 
-7.  Provide the domain name details.
+7.  Provide the domain name details. :ref:`Figure 1 <waf_01_0326__fig1625231071718>` shows an example.
 
     -  **Website Name**: (Optional) You can customize the website name.
     -  **Protected Object**: Enter the domain name of a website you want WAF to protect. You can enter a single domain name or a wildcard domain name.
@@ -48,14 +48,16 @@ Procedure
 
     -  **Website Remarks**: (Optional) You can provide remarks about your website if you want.
 
+    .. _waf_01_0326__fig1625231071718:
 
     .. figure:: /_static/images/en-us_image_0000001684305004.png
        :alt: **Figure 1** Configuring domain name details
 
        **Figure 1** Configuring domain name details
 
-8.  Configure the origin server by referring to :ref:`Table 1 <waf_01_0326__table077263255719>`.
+8.  Configure the origin server by referring to :ref:`Table 1 <waf_01_0326__table077263255719>`. :ref:`Figure 2 <waf_01_0326__fig185369267307>` shows an example.
 
+    .. _waf_01_0326__fig185369267307:
 
     .. figure:: /_static/images/en-us_image_0000001732225393.png
        :alt: **Figure 2** Origin Server Settings
@@ -87,7 +89,7 @@ Procedure
        |                       |                                                                                                                                                                                                                                        |                                 |
        |                       |    .. note::                                                                                                                                                                                                                           |                                 |
        |                       |                                                                                                                                                                                                                                        |                                 |
-       |                       |       To implement active-active services and prevent single points of failure (SPOFs), it is recommended that at least two WAF instances be configured in the same VPC.                                                               |                                 |
+       |                       |       To implement active-active services and prevent single points of failure (SPOFs), you can apply for at least two WAF instances and provision them in the same VPC.                                                               |                                 |
        |                       |                                                                                                                                                                                                                                        |                                 |
        |                       | -  **Server Address**: private IP address of the website server.                                                                                                                                                                       |                                 |
        |                       |                                                                                                                                                                                                                                        |                                 |

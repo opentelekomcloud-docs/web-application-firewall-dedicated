@@ -30,7 +30,7 @@ Your website has been connected to your dedicated WAF instances.
 Pointing Traffic to an ECS Hosting Your Website
 -----------------------------------------------
 
-If your origin server is deployed on an ECS, perform the following steps to configure a security group rule to allow only the back-to-source IP address of the dedicated instance to access the origin server.
+If your origin servers are deployed on ECSs, perform the following steps to configure a security group rule to allow only the back-to-source IP address of the dedicated instance to access the origin servers.
 
 #. Log in to the management console.
 

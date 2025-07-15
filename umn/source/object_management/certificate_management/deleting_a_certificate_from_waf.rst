@@ -34,7 +34,7 @@ Deleting a Certificate from WAF
 #. Log in to the management console.
 #. Click |image1| in the upper left corner of the management console and select a region or project.
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
-#. In the navigation pane, choose **Objects** > **Certificates**.
+#. In the navigation pane on the left, choose **Objects** > **Certificates**.
 #. In the displayed dialog box, click **Confirm**.
 
 Related Operations

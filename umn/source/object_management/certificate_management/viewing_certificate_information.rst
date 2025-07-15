@@ -21,7 +21,7 @@ Checking Certificate Details
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane, choose **Objects** > **Certificates**.
+#. In the navigation pane on the left, choose **Objects** > **Certificates**.
 
 #. View the certificate information. For details about related parameters, see :ref:`Table 1 <waf_01_0282__table42671747141413>`.
 
@@ -63,6 +63,6 @@ Related Operations
 -  To delete a certificate, locate the row of the certificate and click **More** > **Delete** in the **Operation** column.
 -  To update a certificate, locate the row of the certificate and click **More** > **Update** in the **Operation** column.
 
-.. |image1| image:: /_static/images/en-us_image_0269497434.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340425481.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
 .. |image3| image:: /_static/images/en-us_image_0269115287.png

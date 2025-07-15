@@ -9,10 +9,6 @@ This topic describes how to create a reference table to batch configure protecti
 
 When you configure a CC attack protection rule or precise protection rule, if the **Logic** field in the **Trigger** list is set to **Include any value**, **Exclude any value**, **Equal to any value**, **Not equal to any value**, **Prefix is any value**, **Prefix is not any value**, **Suffix is any value**, or **Suffix is not any value**, you can select an appropriate reference table from the **Content** drop-down list.
 
-.. note::
-
-   If you have enabled enterprise projects, ensure that you have all operation permissions for the project where your WAF instance locates. Then, you can select the project from the **Enterprise Project** drop-down list and configure protection policies for the domain names in the project.
-
 Prerequisites
 -------------
 
@@ -32,7 +28,7 @@ Creating a Reference Table
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Policies**.
+#. In the navigation pane on the left, click **Policies**.
 
 #. Click the name of the target policy to go to the protection configuration page.
 
@@ -104,5 +100,5 @@ Related Operations
 -  To modify a reference table, click **Modify** in the row containing the reference table.
 -  To delete a reference table, click **Delete** in the row containing the reference table.
 
-.. |image1| image:: /_static/images/en-us_image_0000001532745961.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001287946366.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png

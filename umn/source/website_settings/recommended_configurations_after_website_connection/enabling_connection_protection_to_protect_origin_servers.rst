@@ -28,7 +28,7 @@ Enabling Connection Protection
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane, choose **Website Settings**.
+#. In the navigation pane on the left, choose **Website Settings**.
 
 #. In the **Domain Name** column, click the website domain name to go to the basic information page.
 
@@ -76,7 +76,7 @@ Enabling Connection Protection
       -  **Breakdown Protection**: When the number of 502/504 errors returned by the protected website exceeds 1,000 and accounts for 90% or more of the total access requests of the website for the first time, the first breakdown protection is triggered. During the first breakdown protection, WAF stops forwarding client requests for 180s (that is, blocks visitors access to the website for 180s). If a second consecutive breakdown protection is triggered, WAF stops forwarding client requests for 360s (180 x 2). If a third or more consecutive breakdowns are triggered, WAF stops forwarding client requests for 540s (180s x 3). The breakdowns are counted from 0 when the total downtime duration exceeds one hour (3,600s).
       -  **Connection Protection**: When the number of read URL requests in the waiting queue exceeds 6,000, WAF stops forwarding client requests for 60 seconds and returns the maintenance page of the website to visitors.
 
-.. |image1| image:: /_static/images/en-us_image_0000001238508978.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001287944330.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
 .. |image3| image:: /_static/images/en-us_image_0000001241765756.png
 .. |image4| image:: /_static/images/en-us_image_0000001241293100.png

@@ -7,10 +7,6 @@ Configuring Web Tamper Protection Rules to Prevent Static Web Pages from Being T
 
 You can set web tamper protection rules to protect specific website pages (such as the ones contain important content) from being tampered with. If a web page protected with such a rule is requested, WAF returns the origin page it has cached based on the rule so that visitors always receive the authenticate web pages.
 
-.. note::
-
-   If you have enabled enterprise projects, ensure that you have all operation permissions for the project where your WAF instance locates. Then, you can select the project from the **Enterprise Project** drop-down list and configure protection policies for the domain names in the project.
-
 How It Works
 ------------
 
@@ -25,7 +21,7 @@ How It Works
 Prerequisites
 -------------
 
-You have :ref:`added your website to a policy <waf_01_0074>`.
+You have added the website you want to protect to WAF or :ref:`added a new protection policy <waf_01_0074>`.
 
 Constraints
 -----------
@@ -54,7 +50,7 @@ Configuring a Web Tamper Protection Rule
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Policies**.
+#. In the navigation pane on the left, click **Policies**.
 
 #. Click the name of the target policy to go to the protection configuration page.
 
@@ -130,7 +126,7 @@ To verify WAF is protecting a static page **/admin** on your website **www.examp
 
    The intact page is returned.
 
-.. |image1| image:: /_static/images/en-us_image_0000001481908820.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001288425878.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
 .. |image3| image:: /_static/images/en-us_image_0000002054495070.png
 .. |image4| image:: /_static/images/en-us_image_0000001761857181.png

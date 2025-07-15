@@ -40,7 +40,7 @@ You have performed operations in :ref:`Step 1: Add Your Website to WAF <waf_01_0
       a. Ensure that the block mode for basic web protection has been enabled in the policy used for the protected website.
 
 
-         .. figure:: /_static/images/en-us_image_0000001732411573.png
+         .. figure:: /_static/images/en-us_image_0000002155673236.png
             :alt: **Figure 1** Enabling Basic Web Protection
 
             **Figure 1** Enabling Basic Web Protection
@@ -68,7 +68,7 @@ Testing the Dedicated WAF Instance and Dedicated ELB Load Balancer
 
       curl -kv -H "Host: { protection object added to WAF}"{ELB external protocol}://{Private IP address bound to the load balancer}:{ELB listening port}
 
-   If an EIP is bound to the load balancer, any publicly accessible servers can be used for testing.
+   If an EIP has been assigned to the load balancer, any publicly accessible servers can be used for testing.
 
    .. code-block::
 
@@ -90,7 +90,7 @@ Testing the Dedicated WAF Instance and Dedicated ELB Load Balancer
    #. Ensure that the block mode for basic web protection has been enabled in the policy used for the protected website.
 
 
-      .. figure:: /_static/images/en-us_image_0000001732411573.png
+      .. figure:: /_static/images/en-us_image_0000002155673236.png
          :alt: **Figure 2** Enabling Basic Web Protection
 
          **Figure 2** Enabling Basic Web Protection

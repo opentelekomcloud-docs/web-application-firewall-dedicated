@@ -79,7 +79,7 @@ Connecting a Website to WAF in ELB Access Mode
       |                       | .. note::                                                                                                                                                                                                                                                                                                              |                                          |
       |                       |                                                                                                                                                                                                                                                                                                                        |                                          |
       |                       |    -  **Log only**: WAF only logs detected attacks instead of blocking them.                                                                                                                                                                                                                                           |                                          |
-      |                       |    -  Only the professional and platinum editions allow you to specify a custom policy for **Policy**.                                                                                                                                                                                                                 |                                          |
+      |                       |    -  Only the professional and enterprise editions allow you to specify a custom policy for **Policy**.                                                                                                                                                                                                               |                                          |
       +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------+
 
 #. Click **OK**.
@@ -89,7 +89,7 @@ Connecting a Website to WAF in ELB Access Mode
 Follow-up Operations
 --------------------
 
--  The initial **Access Status** of a website is **Unaccessed**. When a request reaches the WAF instance configured for the website, the access status automatically changes to **Accessed**. To address access failure, see
+-  The initial **Access Status** of a website is **Unaccessed**. When a request reaches the WAF instance configured for the website, the access status automatically changes to **Accessed**.
 -  :ref:`Complete Recommended Configurations <waf_01_3274>`
 -  Adjust the protection policy configured for the protected domain name based on protection requirements. For details, see :ref:`Protection Configuration Overview <waf_01_0129>`.
 

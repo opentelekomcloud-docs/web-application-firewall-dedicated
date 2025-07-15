@@ -5,7 +5,7 @@
 Configuring PCI DSS/3DS Compliance Check and TLS
 ================================================
 
-Transport Layer Security (TLS) provides confidentiality and ensures data integrity for data sent between applications over the Internet. HTTPS is a network protocol constructed based on TLS and HTTP and can be used for encrypted transmission and identity authentication. If you set **Client Protocol** to **HTTPS**, set the minimum TLS version and cipher suite (a set of multiple cryptographic algorithms) for your domain name to block requests that use a TLS version earlier than the configured one.
+Transport Layer Security (TLS) provides confidentiality and ensures data integrity for data sent between applications over the Internet. HTTPS is a network protocol constructed based on TLS and HTTP and can be used for encrypted transmission and identity authentication. If you set **Client Protocol** to **HTTPS**, set the minimum TLS version and cipher suite for your domain name, so that WAF can block requests that use a TLS version earlier than the one you configure. A cipher suite is a set of multiple cryptographic algorithms.
 
 TLS v1.0 and the cipher suite 1 are configured by default in WAF for general security. To protect your websites better, set the minimum TLS version to a later version and select a more secure cipher suite.
 
@@ -40,7 +40,7 @@ By default, the minimum TLS version configured for WAF is **TLS v1.0**. To ensur
    +==================================================================================================================+===================================+=================================================================================+
    | Websites that handle critical business data, such as sites used in banking, finance, securities, and e-commerce. | TLS v1.2                          | WAF automatically blocks website access requests that use TLS v1.0 or TLS v1.1. |
    +------------------------------------------------------------------------------------------------------------------+-----------------------------------+---------------------------------------------------------------------------------+
-   | Websites with basic security requirements, for example, small- and medium-sized enterprise websites.             | TLS v1.1                          | WAF automatically blocks website access requests that use TLS v1.0.             |
+   | Websites with basic security requirements, for example, small and medium-sized enterprise websites.              | TLS v1.1                          | WAF automatically blocks website access requests that use TLS v1.0.             |
    +------------------------------------------------------------------------------------------------------------------+-----------------------------------+---------------------------------------------------------------------------------+
    | Client applications with no special security requirements                                                        | TLS v1.0                          | Requests using any TLS protocols can access the website.                        |
    +------------------------------------------------------------------------------------------------------------------+-----------------------------------+---------------------------------------------------------------------------------+

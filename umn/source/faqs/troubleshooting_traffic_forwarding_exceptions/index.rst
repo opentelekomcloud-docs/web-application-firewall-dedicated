@@ -5,7 +5,7 @@
 Troubleshooting Traffic Forwarding Exceptions
 =============================================
 
--  :ref:`How Do I Troubleshoot 404/502/504 Errors? <waf_01_0066>`
+-  :ref:`What Is Error Code 404, 502, or 504 Returned to Visitors After My Website or Application Is Connected to WAF? <waf_01_0066>`
 -  :ref:`Why Am I Seeing Error Code 418? <waf_01_0198>`
 -  :ref:`Why Am I Seeing Error Code 523? <waf_01_0199>`
 -  :ref:`Why Was My Website Redirected So Many Times? <waf_01_0117>`
@@ -16,7 +16,7 @@ Troubleshooting Traffic Forwarding Exceptions
    :maxdepth: 1
    :hidden: 
 
-   how_do_i_troubleshoot_404_502_504_errors
+   what_is_error_code_404_502_or_504_returned_to_visitors_after_my_website_or_application_is_connected_to_waf
    why_am_i_seeing_error_code_418
    why_am_i_seeing_error_code_523
    why_was_my_website_redirected_so_many_times

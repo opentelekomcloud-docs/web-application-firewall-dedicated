@@ -44,7 +44,7 @@ Updating the Certificate Used for a Website
 
 #. .. _waf_01_0262__li5865132352711:
 
-   Click **Modify** next to the certificate name. In the **Update Certificate** dialog box, import a new certificate or select an existing certificate.
+   Click |image3| next to the certificate name. In the **Update Certificate** dialog box, import a new certificate or select an existing certificate.
 
    -  If you select **Import new certificate** for **Update Method**, enter a certificate name, and copy and paste the certificate file and private key into the corresponding text boxes.
 
@@ -107,5 +107,6 @@ Updating the Certificate Used for a Website
 
 #. Click **Confirm**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001532693109.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340663937.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
+.. |image3| image:: /_static/images/en-us_image_0000002129836992.png

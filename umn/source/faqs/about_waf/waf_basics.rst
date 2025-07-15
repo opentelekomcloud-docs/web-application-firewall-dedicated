@@ -68,7 +68,7 @@ No. You can configure a one-way SSL certificate on WAF.
 
 You are advised to use an ELB load balancer and dedicated WAF instances and then configure two-way authentication on the load balancer. The procedure is as follows:
 
-#. :ref:`Apply for a dedicated WAF instance. <waf_01_1072>`.
+#. :ref:`Apply for a dedicated WAF instance. <waf_01_1072>`
 #. Connect your website to WAF and configure ELB. For details, see :ref:`Website Connection Process (Dedicated Mode) <waf_01_5249>`.
 #. Configure two-way authentication on the ELB load balancer.
 
@@ -165,7 +165,7 @@ Can WAF Protect Multiple Domain Names That Point to the Same Origin Server?
 
 Yes. If there are multiple domain names pointing to the same origin server, you can connect these domain names to WAF for protection.
 
-WAF protects domain names or IP addresses. If multiple domain names use the same EIP to provide services, all these domain names must be connected to WAF.
+WAF protects websites over domain names or IP addresses. If multiple domain names use the same EIP to provide services, all these domain names must be connected to WAF.
 
 What Is a Protection IP Address?
 --------------------------------

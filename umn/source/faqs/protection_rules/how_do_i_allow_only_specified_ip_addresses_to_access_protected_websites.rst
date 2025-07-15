@@ -16,22 +16,22 @@ Configuring IP Address Blacklist and Whitelist Rules to Block All Source IP Addr
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Policies**.
-
 #. Click the name of the target policy to go to the protection configuration page.
 
 #. In the **Blacklist and Whitelist** configuration area, enable the protection.
 
 #. In the upper left corner of the **Blacklist and Whitelist** page, click **Add Rule**.
 
-#. In the **Add Blacklist or Whitelist Rule** dialog box, add two blacklist rules to block all source IP addresses.
+#. In the **Add Blacklist or Whitelist Rule** dialog box, add two blacklist rules to block all source IP addresses. :ref:`Figure 1 <waf_01_0312__fig14460183411462>` and :ref:`Figure 2 <waf_01_0312__fig317431353719>` show two examples.
 
+   .. _waf_01_0312__fig14460183411462:
 
    .. figure:: /_static/images/en-us_image_0000001684030226.png
       :alt: **Figure 1** Blocking IP address range 1.0.0.0/1
 
       **Figure 1** Blocking IP address range 1.0.0.0/1
 
+   .. _waf_01_0312__fig317431353719:
 
    .. figure:: /_static/images/en-us_image_0000001732030241.png
       :alt: **Figure 2** Blocking IP address range 128.0.0.0/1
@@ -48,8 +48,6 @@ Configuring a Precise Protection Rule to Block All Source IP Addresses Except th
 #. Click |image3| in the upper left corner of the management console and select a region or project.
 
 #. Click |image4| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
-
-#. In the navigation pane on the left, choose **Policies**.
 
 #. Click the name of the target policy to go to the protection configuration page.
 
@@ -69,7 +67,7 @@ Configuring a Precise Protection Rule to Block All Source IP Addresses Except th
 
    .. caution::
 
-      The priority value here must be greater than that configured in :ref:`Step 9 <waf_01_0312__li15907173419260>` because allowing access has a higher priority than blocking access and a smaller priority value indicates a higher priority.
+      The priority value here must be greater than that configured in :ref:`Step 8 <waf_01_0312__li15907173419260>` because allowing access has a higher priority than blocking access and a smaller priority value indicates a higher priority.
 
    .. _waf_01_0312__fig163451833195414:
 
@@ -86,7 +84,7 @@ Configuring a Precise Protection Rule to Block All Source IP Addresses Except th
 
    .. caution::
 
-      The priority value here must be smaller than that configured in :ref:`Step 8 <waf_01_0312__li123452332541>` because allowing access has a higher priority than blocking access and a smaller priority value indicates a higher priority.
+      The priority value here must be smaller than that configured in :ref:`Step 7 <waf_01_0312__li123452332541>` because allowing access has a higher priority than blocking access and a smaller priority value indicates a higher priority.
 
    .. _waf_01_0312__fig18908103413269:
 

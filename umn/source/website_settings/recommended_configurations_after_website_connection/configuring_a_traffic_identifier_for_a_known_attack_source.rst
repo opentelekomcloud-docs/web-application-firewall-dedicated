@@ -73,6 +73,6 @@ Traffic identifier for a known attack source
 
 #. Click **Confirm**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001481373388.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001288423818.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
 .. |image3| image:: /_static/images/en-us_image_0000002055762373.png

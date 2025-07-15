@@ -14,6 +14,10 @@ Prerequisites
 
 -  You have created a load balancer.
 
+   .. note::
+
+      When applying for a load balancer, enable **IP as a Backend**. This allows you to configure an IP address as a backend. Otherwise, the load balancer cannot be selectable when you configure a load balancer for a dedicated WAF instance.
+
 -  Related ports have been enabled in the security group to which the dedicated WAF instance belongs.
 
    You can configure your security group as follows:

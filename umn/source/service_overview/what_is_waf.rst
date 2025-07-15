@@ -31,7 +31,7 @@ The process of forwarding traffic from WAF to origin servers is called back-to-s
 How WAF Works (ELB Access Mode)
 -------------------------------
 
-If you connect a website to WAF in ELB access mode, WAF works as follows:
+If you connect a website to WAFELB access mode, WAF works as follows:
 
 -  In this mode, WAF is integrated into the gateway of an ELB load balancer through an SDK module. WAF extracts traffic through the SDK module embedded in the gateway for inspection.
 -  WAF synchronizes the inspection result to the load balancer, and the load balancer determines whether to forward client requests to the origin server based on the inspection result.

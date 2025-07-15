@@ -5,7 +5,7 @@
 Product Specifications
 ======================
 
-WAF can be used in dedicated mode or ELB access mode. The following part describes specifications.
+WAF can be used in dedicated mode or ELB access mode. The following part describes specifications under different access modes.
 
 Access Mode Description
 -----------------------

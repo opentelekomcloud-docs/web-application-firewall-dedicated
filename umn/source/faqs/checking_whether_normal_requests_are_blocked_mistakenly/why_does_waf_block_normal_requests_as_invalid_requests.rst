@@ -29,4 +29,4 @@ If any of the following cases, WAF blocks the access request as an invalid reque
 Solution
 --------
 
-If you confirm that the blocked request is a normal request, allow it by :ref:`Configuring Custom Precise Protection Rules <waf_01_0010>`.
+If you confirm that a blocked request is a normal request, allow it by referring to :ref:`Configuring Custom Precise Protection Rules <waf_01_0010>`.

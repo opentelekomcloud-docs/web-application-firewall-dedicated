@@ -7,11 +7,7 @@ Configuring a Known Attack Source Rule to Block Specific Visitors for a Specifie
 
 If WAF blocks a malicious request by IP address, Cookie, or Params, you can configure a known attack source rule to let WAF automatically block all requests from the attack source for a blocking duration set in the known attack source rule. For example, if a blocked malicious request originates from an IP address and you set the blocking duration to 500 seconds, WAF will block the IP address for 500 seconds after the known attack source rule takes effect.
 
-Known attack source rules can be used by basic web protection, precise protection, IP address blacklist, IP address whitelist, and other rules. You can use known attack source rules in basic web protection, precise protection, and IP blacklist or whitelist rules as long as you set **Protective Action** to **Block** for these rules.
-
-.. note::
-
-   If you have enabled enterprise projects, ensure that you have all operation permissions for the project where your WAF instance locates. Then, you can select the project from the **Enterprise Project** drop-down list and configure protection policies for the domain names in the project.
+Known attack source rules can be used by basic web protection, CC attack protection, precise protection, IP address blacklist, IP address whitelist, and other rules. You can use known attack source rules in basic web protection, CC attack protection, precise protection, and IP blacklist or whitelist rules as long as you set **Protective Action** to **Block** for these rules.
 
 Prerequisites
 -------------
@@ -34,7 +30,7 @@ Specification Limitations
 -------------------------
 
 -  You can configure up to six blocking types. Each type can have one known attack source rule configured.
--  The maximum time an IP address can be blocked for is 30 minutes.
+-  The maximum blocking duration can be 30 minutes.
 
 Configuring a Known Attack Source Rule
 --------------------------------------
@@ -45,7 +41,7 @@ Configuring a Known Attack Source Rule
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Policies**.
+#. In the navigation pane on the left, click **Policies**.
 
 #. Click the name of the target policy to go to the protection configuration page.
 
@@ -71,7 +67,7 @@ Configuring a Known Attack Source Rule
       +-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
       | Parameter             | Description                                                                                                                                                             | Example Value                     |
       +=======================+=========================================================================================================================================================================+===================================+
-      | Blocking Type         | Specifies the blocking type. The options are:                                                                                                                           | **Long-term IP address blocking** |
+      | Blocking Type         | The blocking type for the rule. The options are:                                                                                                                        | **Long-term IP address blocking** |
       |                       |                                                                                                                                                                         |                                   |
       |                       | -  **Long-term IP address blocking**                                                                                                                                    |                                   |
       |                       | -  **Short-term IP address blocking**                                                                                                                                   |                                   |
@@ -90,7 +86,7 @@ Configuring a Known Attack Source Rule
       |                       | -  (300, 1800] for long-term blocking                                                                                                                                   |                                   |
       |                       | -  (0, 300] for short-term blocking                                                                                                                                     |                                   |
       +-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
-      | Rule Description      | A brief description of the rule. This parameter is optional.                                                                                                            | None                              |
+      | Rule Description      | A brief description of the rule. This parameter is optional.                                                                                                            | ``-``                             |
       +-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
 
 #. Click **Confirm**. You can then view the added known attack source rule in the list.
@@ -152,7 +148,7 @@ Assume that domain name *www.example.com* has been connected to WAF and a visito
 
 #. Go to the WAF console. In the navigation pane on the left, choose **Events**. View the event on the **Events** page.
 
-.. |image1| image:: /_static/images/en-us_image_0000001482067792.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340665981.png
+.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
 .. |image3| image:: /_static/images/en-us_image_0000002054495070.png
 .. |image4| image:: /_static/images/en-us_image_0000001761857181.png
