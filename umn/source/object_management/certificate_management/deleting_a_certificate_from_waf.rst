@@ -32,7 +32,7 @@ Deleting a Certificate from WAF
 -------------------------------
 
 #. Log in to the management console.
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 #. In the navigation pane on the left, choose **Objects** > **Certificates**.
 #. In the displayed dialog box, click **Confirm**.
@@ -47,6 +47,6 @@ To unbind a certificate from a website domain name, perform the following steps:
 #. In the **Domain Name** column of the row containing the desired certificate, click the domain name to go to the basic information page.
 #. Click |image3| next to the certificate name. In the displayed dialog box, upload a new certificate or select an existing certificate.
 
-.. |image1| image:: /_static/images/en-us_image_0000001317947942.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340305633.png
-.. |image3| image:: /_static/images/en-us_image_0000002055861409.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002361496192.png

@@ -2,8 +2,8 @@
 
 .. _waf_01_3277:
 
-System Management
-=================
+Instance Management
+===================
 
 -  :ref:`Managing Dedicated WAF Engines <waf_01_0253>`
 -  :ref:`Viewing Product Details <waf_01_0319>`

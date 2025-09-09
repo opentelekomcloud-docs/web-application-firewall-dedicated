@@ -22,9 +22,9 @@ You can select a created certificate or import a new certificate. You need to im
 How Do I Convert a Certificate into PEM Format?
 -----------------------------------------------
 
-Only .pem certificates can be used in WAF. If the certificate is not in .pem format, convert it into .pem locally by referring to :ref:`Table 1 <waf_01_0313__waf_01_3273_table1292125414516>` before uploading it.
+Only .pem certificates can be used in WAF. If the certificate is not in .pem format, convert it into .pem locally by referring to :ref:`Table 1 <waf_01_0313__en-us_topic_0110861354_table1292125414516>` before uploading it.
 
-.. _waf_01_0313__waf_01_3273_table1292125414516:
+.. _waf_01_0313__en-us_topic_0110861354_table1292125414516:
 
 .. table:: **Table 1** Certificate conversion commands
 

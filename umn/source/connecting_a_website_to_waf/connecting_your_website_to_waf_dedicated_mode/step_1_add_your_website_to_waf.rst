@@ -20,7 +20,7 @@ Constraints
 -----------
 
 -  You have applied for a dedicated load balancer in Elastic Load Balance (ELB).
--  If your website has no layer-7 proxy server such as CDN and cloud acceleration service deployed in front of WAF and uses only layer-4 load balancers (or NAT), set **Proxy Configured** to **No**. Otherwise, **Proxy Configured** must be set to **Yes**. This ensures that WAF obtains real IP addresses of website visitors and takes protective actions configured in protection policies.
+-  If your website has no layer-7 proxy server such as CDN and cloud acceleration service deployed in front of WAF and uses only layer-4 load balancers (or NAT), set **Proxy Configured** to **No**. Otherwise, **Proxy Configured** must be set to **Yes**. This ensures that WAF obtains real client IP addresses of website visitors and takes protective actions configured in protection policies.
 
 Procedure
 ---------
@@ -50,7 +50,7 @@ Procedure
 
     .. _waf_01_0326__fig1625231071718:
 
-    .. figure:: /_static/images/en-us_image_0000001684305004.png
+    .. figure:: /_static/images/en-us_image_0000002395175601.png
        :alt: **Figure 1** Configuring domain name details
 
        **Figure 1** Configuring domain name details
@@ -59,7 +59,7 @@ Procedure
 
     .. _waf_01_0326__fig185369267307:
 
-    .. figure:: /_static/images/en-us_image_0000001732225393.png
+    .. figure:: /_static/images/en-us_image_0000002395335441.png
        :alt: **Figure 2** Origin Server Settings
 
        **Figure 2** Origin Server Settings
@@ -83,7 +83,7 @@ Procedure
        |                       |                                                                                                                                                                                                                                        |                                 |
        |                       |    .. note::                                                                                                                                                                                                                           | **Server Port**: **80**         |
        |                       |                                                                                                                                                                                                                                        |                                 |
-       |                       |       WAF can check WebSocket and WebSockets requests, which is enabled by default.                                                                                                                                                    |                                 |
+       |                       |       WAF can check WebSocket requests. This feature is enabled by default.                                                                                                                                                            |                                 |
        |                       |                                                                                                                                                                                                                                        |                                 |
        |                       | -  **VPC**: Select the VPC to which the dedicated WAF instance belongs.                                                                                                                                                                |                                 |
        |                       |                                                                                                                                                                                                                                        |                                 |
@@ -117,7 +117,7 @@ Procedure
 9.  Configure the advanced settings.
 
 
-    .. figure:: /_static/images/en-us_image_0000002090467873.png
+    .. figure:: /_static/images/en-us_image_0000002361495680.png
        :alt: **Figure 3** Advanced settings
 
        **Figure 3** Advanced settings
@@ -167,7 +167,7 @@ If you set **Client Protocol** to **HTTPS**, an SSL certificate is required. You
 #. Click **Import New Certificate**. In the displayed dialog box, enter a certificate name, and copy and paste the certificate file and private key to the corresponding text boxes.
 
 
-   .. figure:: /_static/images/en-us_image_0000001285728898.png
+   .. figure:: /_static/images/en-us_image_0000002361655564.png
       :alt: **Figure 4** Import New Certificate
 
       **Figure 4** Import New Certificate
@@ -176,9 +176,9 @@ If you set **Client Protocol** to **HTTPS**, an SSL certificate is required. You
 
       WAF encrypts and saves the private key to keep it safe.
 
-   Only .pem certificates can be used in WAF. If the certificate is not in .pem format, convert it into .pem locally by referring to :ref:`Table 2 <waf_01_0326__waf_01_3273_table1292125414516>` before uploading it.
+   Only .pem certificates can be used in WAF. If the certificate is not in .pem format, convert it into .pem locally by referring to :ref:`Table 2 <waf_01_0326__en-us_topic_0110861354_table1292125414516>` before uploading it.
 
-   .. _waf_01_0326__waf_01_3273_table1292125414516:
+   .. _waf_01_0326__en-us_topic_0110861354_table1292125414516:
 
    .. table:: **Table 2** Certificate conversion commands
 
@@ -217,5 +217,5 @@ If you set **Client Protocol** to **HTTPS**, an SSL certificate is required. You
 
 #. Click **Confirm**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001368128877.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001732142997.png
+.. |image1| image:: /_static/images/en-us_image_0000002395226817.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002361495660.png

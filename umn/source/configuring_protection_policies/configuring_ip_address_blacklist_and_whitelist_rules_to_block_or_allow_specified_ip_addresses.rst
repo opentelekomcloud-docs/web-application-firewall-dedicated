@@ -33,7 +33,7 @@ Configuring an IP Address Blacklist or Whitelist Rule
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
@@ -48,7 +48,7 @@ Configuring an IP Address Blacklist or Whitelist Rule
 
 #. In the upper left corner above the **Blacklist and Whitelist** list, click **Add Rule**.
 
-#. In the **Add Blacklist/Whitelist Rule** dialog box, add a blacklist or whitelist rule . For details about the parameters, see :ref:`Table 1 <waf_01_0012__table147241231818>`.
+#. In the **Add Blacklist/Whitelist Rule** dialog box, add a blacklist or whitelist rule. For details about the parameters, see :ref:`Table 1 <waf_01_0012__table147241231818>`.
 
    .. note::
 
@@ -56,7 +56,7 @@ Configuring an IP Address Blacklist or Whitelist Rule
       -  Other IP addresses are evaluated based on other configured WAF protection rules.
 
 
-   .. figure:: /_static/images/en-us_image_0000001377910101.png
+   .. figure:: /_static/images/en-us_image_0000002361655368.png
       :alt: **Figure 1** Adding a blacklist or whitelist rule
 
       **Figure 1** Adding a blacklist or whitelist rule
@@ -90,14 +90,14 @@ Configuring an IP Address Blacklist or Whitelist Rule
 
 #. Click **Confirm**. You can then view the added rule in the list of blacklist and whitelist rules.
 
-   -  To disable a rule, click **Disable** in the **Operation** column of the rule. The default **Rule Status** is **Enabled**.
-   -  To modify a rule, click **Modify** in the row containing the rule.
-   -  To delete a rule, click **Delete** in the row containing the rule.
+   -  After the configuration is complete, you can view the added rule in the protection rule list. **Rule Status** is **Enabled** by default.
+   -  If you do not want the rule to take effect, click **Disable** in the **Operation** column of the rule.
+   -  To delete or modify a rule, click **Delete** or **Modify** in the **Operation** column of the rule.
 
-Protection Effect
------------------
+Protection Verification
+-----------------------
 
-To verify WAF is protecting your website (**www.example.com**) against a rule:
+Assume that the domain name **www.example.com** has been added and the IP address blacklist and whitelist protection rules have been configured by referring to the value example in :ref:`Table 1 <waf_01_0012__table147241231818>`. Take the following steps to verify the protection effect:
 
 #. Clear the browser cache and enter the domain name in the address bar to check whether the website is accessible.
 
@@ -108,14 +108,14 @@ To verify WAF is protecting your website (**www.example.com**) against a rule:
 
    Blacklist the IP address of a client according to the instructions in :ref:`Configuring an IP Address Blacklist or Whitelist Rule <waf_01_0012__section61533550183130>`.
 
-#. Clear the browser cache and access **http://www.example.com**. Normally, WAF blocks such requests and returns the block page.
+#. Clear the browser cache and access **http://www.example.com** using configured IP address 192.168.2.3. Normally, WAF blocks the request and returns the block page.
 
-#. Return to the WAF console. In the navigation pane on the left, click **Events**. On the displayed page, view the event log.
+#. Return to the WAF console. In the navigation pane on the left, click **Events**. On the displayed page, check event logs.
 
-Example Configuration - Allowing a Specified IP Addresses
----------------------------------------------------------
+Example Configuration: Allowing a Specified IP Addresses
+--------------------------------------------------------
 
-If domain name *www.example.com* has been connected to WAF, you can perform the following steps to verify the rule takes effect:
+To verify that a specific IP address can be allowed to access your website domain name (*www.example.com*), take the following steps:
 
 #. Add a rule to block all source IP addresses.
 
@@ -123,14 +123,14 @@ If domain name *www.example.com* has been connected to WAF, you can perform the 
 
       .. _waf_01_0012__fig134723543536:
 
-      .. figure:: /_static/images/en-us_image_0000001684030226.png
+      .. figure:: /_static/images/en-us_image_0000002395335333.png
          :alt: **Figure 2** Blocking IP address range 1.0.0.0/1
 
          **Figure 2** Blocking IP address range 1.0.0.0/1
 
       .. _waf_01_0012__fig13996155195418:
 
-      .. figure:: /_static/images/en-us_image_0000001732030241.png
+      .. figure:: /_static/images/en-us_image_0000002395335317.png
          :alt: **Figure 3** Blocking IP address range 128.0.0.0/1
 
          **Figure 3** Blocking IP address range 128.0.0.0/1
@@ -139,7 +139,7 @@ If domain name *www.example.com* has been connected to WAF, you can perform the 
 
       .. _waf_01_0012__fig489116305597:
 
-      .. figure:: /_static/images/en-us_image_0000002057944613.png
+      .. figure:: /_static/images/en-us_image_0000002395335281.png
          :alt: **Figure 4** Blocking all access requests
 
          **Figure 4** Blocking all access requests
@@ -150,7 +150,7 @@ If domain name *www.example.com* has been connected to WAF, you can perform the 
 
    .. _waf_01_0012__fig5519155016115:
 
-   .. figure:: /_static/images/en-us_image_0000001732035733.png
+   .. figure:: /_static/images/en-us_image_0000002361495544.png
       :alt: **Figure 5** Allowing the access of a specified IP address
 
       **Figure 5** Allowing the access of a specified IP address
@@ -158,7 +158,7 @@ If domain name *www.example.com* has been connected to WAF, you can perform the 
 #. Enable the white and blacklist protection.
 
 
-   .. figure:: /_static/images/en-us_image_0000002091891973.png
+   .. figure:: /_static/images/en-us_image_0000002395335249.png
       :alt: **Figure 6** Blacklist and Whitelist configuration area
 
       **Figure 6** Blacklist and Whitelist configuration area
@@ -169,14 +169,14 @@ If domain name *www.example.com* has been connected to WAF, you can perform the 
 
    .. _waf_01_0012__fig11778435913:
 
-   .. figure:: /_static/images/en-us_image_0000001179033432.png
+   .. figure:: /_static/images/en-us_image_0000002361494948.png
       :alt: **Figure 7** Block page
 
       **Figure 7** Block page
 
 #. Go to the WAF console. In the navigation pane on the left, choose **Events**. View the event on the **Events** page.
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image3| image:: /_static/images/en-us_image_0000002054495070.png
-.. |image4| image:: /_static/images/en-us_image_0000001761857181.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002395174901.png
+.. |image4| image:: /_static/images/en-us_image_0000002361494960.png

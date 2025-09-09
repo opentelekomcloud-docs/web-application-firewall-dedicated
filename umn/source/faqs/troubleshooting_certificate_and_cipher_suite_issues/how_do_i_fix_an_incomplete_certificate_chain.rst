@@ -32,7 +32,7 @@ The latest Google Chrome version supports automatic verification of the trust ch
 
       .. _waf_01_0082__fig1699010397583:
 
-      .. figure:: /_static/images/en-us_image_0246109037.png
+      .. figure:: /_static/images/en-us_image_0000002395334853.png
          :alt: **Figure 1** Certificate Export Wizard
 
          **Figure 1** Certificate Export Wizard
@@ -41,11 +41,11 @@ The latest Google Chrome version supports automatic verification of the trust ch
 
    .. _waf_01_0082__fig1970017819312:
 
-   .. figure:: /_static/images/en-us_image_0000002076373921.png
+   .. figure:: /_static/images/en-us_image_0000002395175005.png
       :alt: **Figure 2** Certificate rebuilding
 
       **Figure 2** Certificate rebuilding
 
 #. Upload the certificate again.
 
-.. |image1| image:: /_static/images/en-us_image_0000001975828577.png
+.. |image1| image:: /_static/images/en-us_image_0000002361495052.png

@@ -17,7 +17,7 @@ Dedicated Web Application Firewall - User Guide
    website_settings/index
    policy_management/index
    object_management/index
-   system_management/index
+   instance_management/index
    permissions_management/index
    monitoring_and_auditing/index
    faqs/index

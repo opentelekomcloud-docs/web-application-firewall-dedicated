@@ -1,11 +1,11 @@
-:original_name: waf_01_0021.html
+:original_name: waf_01_0021_1.html
 
-.. _waf_01_0021:
+.. _waf_01_0021_1:
 
 Viewing the Dashboard
 =====================
 
-If you have connected websites to WAF, you can have a glance at their security on the **Dashboard** page. You will learn of WAF updates, protection overview, product details, as well as the security statistics of protected websites and instances you have for up to 30 days. You can also check event source statistics and bot protection statistics.
+If you have connected websites to WAF, you can have a glance at their security on the **Dashboard** page. You will learn of protection overview and the security statistics of protected websites and instances you have for up to 30 days. You can also check top event source statistics and bot protection statistics.
 
 Prerequisites
 -------------
@@ -18,14 +18,14 @@ Specification Limitations
 
 You can view the protection data of a maximum of 30 days.
 
-.. _waf_01_0021__section1588682602717:
+.. _waf_01_0021_1__section1588682602717:
 
 How to Calculate QPS
 --------------------
 
-The QPS calculation method varies depending on the time range. For details, see :ref:`Table 1 <waf_01_0021__table397244618286>`.
+The QPS calculation method varies depending on the time range. For details, see :ref:`Table 1 <waf_01_0021_1__table397244618286>`.
 
-.. _waf_01_0021__table397244618286:
+.. _waf_01_0021_1__table397244618286:
 
 .. table:: **Table 1** QPS calculation
 
@@ -61,7 +61,7 @@ Checking the Overview Information
    -  Query time: You can select **Yesterday**, **Today**, **Past 3 days**, **Past 7 days**, or **Past 30 days**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001731610061.png
+   .. figure:: /_static/images/en-us_image_0000002395335201.png
       :alt: **Figure 1** Setting search criteria
 
       **Figure 1** Setting search criteria
@@ -74,7 +74,7 @@ Checking the Overview Information
    -  You can click **Show Details** to view the details of the 10 domain names with the most requests, attacks, and basic web protection, precise protection, CC attack protection, and anti-crawler protection actions.
 
 
-   .. figure:: /_static/images/en-us_image_0000001285684556.png
+   .. figure:: /_static/images/en-us_image_0000002395175369.png
       :alt: **Figure 2** Protection action statistics
 
       **Figure 2** Protection action statistics
@@ -83,25 +83,25 @@ Checking the Overview Information
 
    **By day**: You can select this option to view the data gathered by the day. If you leave this option unselected, you have the following options:
 
-   -  **Yesterday** and **Today**: Security event data is gathered every minute.
-   -  **Past 3 days**: Security event data is gathered every 5 minutes.
-   -  **Past 7 days**: Security event data is gathered every 10 minutes.
+   -  **Yesterday** and **Today**: Security data is gathered every minute.
+   -  **Past 3 days**: Security data is gathered every 5 minutes.
+   -  **Past 7 days**: Security data is gathered every 10 minutes.
    -  **Past 30 days**: Security data is gathered every hour.
 
 
-   .. figure:: /_static/images/en-us_image_0000001683533946.png
+   .. figure:: /_static/images/en-us_image_0000002361655284.png
       :alt: **Figure 3** Security Event Statistics
 
       **Figure 3** Security Event Statistics
 
-   .. table:: **Table 2** Parameters in Security Event Statistics
+   .. table:: **Table 2** Parameters in Event Source Statistics
 
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter                         | Description                                                                                                                                                                                                                                                                                                      |
       +===================================+==================================================================================================================================================================================================================================================================================================================+
       | Requests                          | You can view how many requests to your website as well as total attacks and attacks of each attack type.                                                                                                                                                                                                         |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | QPS                               | Average number of requests per second for the domain name. For details about QPS, see :ref:`How to Calculate QPS <waf_01_0021__section1588682602717>`.                                                                                                                                                           |
+      | QPS                               | Average number of requests per second for the domain name. For details about QPS, see :ref:`How to Calculate QPS <waf_01_0021_1__section1588682602717>`.                                                                                                                                                         |
       |                                   |                                                                                                                                                                                                                                                                                                                  |
       |                                   | Queries Per Second (QPS) indicates the number of requests per second. For example, an HTTP GET request is also called a query.                                                                                                                                                                                   |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -111,20 +111,20 @@ Checking the Overview Information
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Event Distribution                | Types of attack events.                                                                                                                                                                                                                                                                                          |
       |                                   |                                                                                                                                                                                                                                                                                                                  |
-      |                                   | Click an area in the **Event Distribution** area to view the type, number, and proportion of an attack.                                                                                                                                                                                                          |
+      |                                   | You can click an area in the **Event Distribution** area to view the type, number, and proportion of an attack.                                                                                                                                                                                                  |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Top 10 Attacked Domain Names      | The ten most attacked domain names and the number of attacks on each domain name.                                                                                                                                                                                                                                |
       |                                   |                                                                                                                                                                                                                                                                                                                  |
-      |                                   | Click **View More** to go to the **Events** page and view more protection data.                                                                                                                                                                                                                                  |
+      |                                   | You can click **View More** to go to the **Events** page and view more protection details.                                                                                                                                                                                                                       |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Top 10 Attack Source IP Addresses | The ten source IP addresses with the most attacks and the number of attacks from each source IP address.                                                                                                                                                                                                         |
       |                                   |                                                                                                                                                                                                                                                                                                                  |
-      |                                   | Click **View More** to go to the **Events** page and view more protection data.                                                                                                                                                                                                                                  |
+      |                                   | You can click **View More** to go to the **Events** page and view more protection details.                                                                                                                                                                                                                       |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Top 10 Attacked URLs              | The ten most attacked URLs and the number of attacks on each URL.                                                                                                                                                                                                                                                |
       |                                   |                                                                                                                                                                                                                                                                                                                  |
-      |                                   | Click **View More** to go to the **Events** page and view more protection data.                                                                                                                                                                                                                                  |
+      |                                   | You can click **View More** to go to the **Events** page and view more protection details.                                                                                                                                                                                                                       |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
+.. |image1| image:: /_static/images/en-us_image_0000002395335189.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002395335181.png

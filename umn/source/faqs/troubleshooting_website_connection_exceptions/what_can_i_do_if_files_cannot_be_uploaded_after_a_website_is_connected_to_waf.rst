@@ -7,7 +7,7 @@ What Can I Do If Files Cannot Be Uploaded After a Website Is Connected to WAF?
 
 After your website is connected to WAF, the size of the file each time you can upload to the website is limited as follows:
 
--  Cloud mode - Load balancer access mode: 10 GB
+-  Cloud mode - Load balancer access: 10 GB
 -  Dedicated mode: 10 GB
 
 To upload a file larger than what is allowed, upload the file through any of the following:

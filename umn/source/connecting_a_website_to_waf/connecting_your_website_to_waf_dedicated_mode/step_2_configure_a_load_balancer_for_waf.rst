@@ -16,7 +16,7 @@ Prerequisites
 
    .. note::
 
-      When applying for a load balancer, enable **IP as a Backend**. This allows you to configure an IP address as a backend. Otherwise, the load balancer cannot be selectable when you configure a load balancer for a dedicated WAF instance.
+      When applying for a load balancer, enable **IP as a Backend**. This allows you to configure an IP address as a backend. Otherwise, the load balancer is not selectable when you configure a load balancer for a dedicated WAF instance.
 
 -  Related ports have been enabled in the security group to which the dedicated WAF instance belongs.
 
@@ -63,7 +63,7 @@ If **Health Check** is configured, the health check result of the dedicated inst
    -  **Frontend Protocol**: Select HTTP or HTTPS.
 
 
-   .. figure:: /_static/images/en-us_image_0000001684193230.png
+   .. figure:: /_static/images/en-us_image_0000002395335321.png
       :alt: **Figure 1** Configuring a listener
 
       **Figure 1** Configuring a listener
@@ -71,7 +71,7 @@ If **Health Check** is configured, the health check result of the dedicated inst
 #. Click **Next: Configure Request Routing Policy**. Then, configure the backend server group.
 
 
-   .. figure:: /_static/images/en-us_image_0000001733107861.png
+   .. figure:: /_static/images/en-us_image_0000002395335337.png
       :alt: **Figure 2** Configuring a backend server group
 
       **Figure 2** Configuring a backend server group
@@ -102,7 +102,7 @@ Adding WAF Instances to an ELB Load Balancer
 #. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine** to go to the dedicated WAF instance page.
 
 
-   .. figure:: /_static/images/en-us_image_0000001732567617.png
+   .. figure:: /_static/images/en-us_image_0000002361495344.png
       :alt: **Figure 3** Dedicated engine list
 
       **Figure 3** Dedicated engine list
@@ -112,7 +112,7 @@ Adding WAF Instances to an ELB Load Balancer
 #. In the **Add to ELB** dialog box, specify **ELB (Load Balancer)**, **ELB Listener**, and **Backend Server Group** based on :ref:`Adding a Listener <waf_01_0251__section15547769474>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000001684228264.png
+   .. figure:: /_static/images/en-us_image_0000002395175465.png
       :alt: **Figure 4** Add to ELB
 
       **Figure 4** Add to ELB
@@ -124,7 +124,7 @@ Adding WAF Instances to an ELB Load Balancer
 #. Click **Confirm**. Then, configure service port for the WAF instance, and **Backend Port** must be set to the port configured in :ref:`Step 1: Add Your Website to WAF <waf_01_0326>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000001685273988.png
+   .. figure:: /_static/images/en-us_image_0000002395335257.png
       :alt: **Figure 5** Configuring Backend Port
 
       **Figure 5** Configuring Backend Port
@@ -134,7 +134,7 @@ Verification
 
 If the **Health Check Result** is **Healthy**, the load balancer is configured.
 
-.. |image1| image:: /_static/images/en-us_image_0000001379513829.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001379794013.png
-.. |image3| image:: /_static/images/en-us_image_0000001379638185.jpg
-.. |image4| image:: /_static/images/en-us_image_0000001711487817.png
+.. |image1| image:: /_static/images/en-us_image_0000002395175473.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002395335289.png
+.. |image3| image:: /_static/images/en-us_image_0000002395175425.jpg
+.. |image4| image:: /_static/images/en-us_image_0000002361655364.png

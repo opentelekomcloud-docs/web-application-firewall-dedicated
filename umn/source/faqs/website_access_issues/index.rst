@@ -2,8 +2,8 @@
 
 .. _waf_01_0124:
 
-Website Connect Issues
-======================
+Website Access Issues
+=====================
 
 -  :ref:`How Does a Dedicated WAF Instance Protect Non-Standard Ports That Are Not Supported by the Dedicated Instance? <waf_01_0318>`
 -  :ref:`Do I Have to Configure the Same Port as That of the Origin Server When Adding a Website to WAF? <waf_01_0279>`

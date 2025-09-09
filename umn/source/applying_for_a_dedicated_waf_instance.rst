@@ -46,7 +46,7 @@ Procedure
 
    .. _waf_01_1072__en-us_topic_0000001337142545_en-us_topic_0110861189_fig5029231715163:
 
-   .. figure:: /_static/images/en-us_image_0000001907528589.png
+   .. figure:: /_static/images/en-us_image_0000002395174981.png
       :alt: **Figure 1** Configuring a dedicated WAF instance
 
       **Figure 1** Configuring a dedicated WAF instance
@@ -109,5 +109,5 @@ Procedure
 
    It takes about 10 minutes to create a dedicated WAF instance. If the instance is in the **Running** status, the instance has been created.
 
-.. |image1| image:: /_static/images/en-us_image_0000001336983185.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001284383208.png
+.. |image1| image:: /_static/images/en-us_image_0000002361495032.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002361654944.png

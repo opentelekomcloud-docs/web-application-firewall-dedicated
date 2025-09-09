@@ -27,7 +27,7 @@ Configuring a Data Masking Rule
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
@@ -45,7 +45,7 @@ Configuring a Data Masking Rule
 #. In the displayed dialog box, specify the parameters described in :ref:`Table 1 <waf_01_0017__table4696626918715>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000001285981628.png
+   .. figure:: /_static/images/en-us_image_0000002395175541.png
       :alt: **Figure 1** Adding a data masking rule
 
       **Figure 1** Adding a data masking rule
@@ -81,22 +81,37 @@ Configuring a Data Masking Rule
 
 #. Click **Confirm**. The added data masking rule is displayed in the list of data masking rules.
 
-Related Operations
-------------------
+   -  After the configuration is complete, you can view the added rule in the protection rule list. **Rule Status** is **Enabled** by default.
+   -  If you do not want the rule to take effect, click **Disable** in the **Operation** column of the rule.
+   -  To delete or modify a rule, click **Delete** or **Modify** in the **Operation** column of the rule.
 
--  To disable a rule, click **Disable** in the **Operation** column of the rule. The default **Rule Status** is **Enabled**.
--  To modify a rule, click **Modify** in the row containing the rule.
--  To delete a rule, click **Delete** in the row containing the rule.
+Protection Verification
+-----------------------
 
-Configuration Example - Masking the Cookie Field
-------------------------------------------------
+To verify that WAF is protecting your domain name (**www.example.com**) according to the protection rule configured by referring to example values in :ref:`Table 1 <waf_01_0017__table4696626918715>`, take the following steps:
 
-To verify that WAF is protecting your domain name *www.example.com* against a data masking rule (with **Cookie** selected for **Masked Field** and **jsessionid** entered in **Field Name**):
+#. Clear the browser cache and enter the domain name in the address bar to check whether the website is accessible.
+
+   -  If the website is inaccessible, connect the website domain name to WAF by following the instructions in :ref:`Step 1: Add Your Website to WAF <waf_01_0326>`.
+   -  If the website is accessible, go to :ref:`Step 2 <waf_01_0017__li774344585514>`.
+
+#. .. _waf_01_0017__li774344585514:
+
+   Clear the browser cache and access the **http://www.example.com/admin** page. If the configured **jsessionid** cookie field is masked in the **/admin** directory, the rule takes effect.
+
+#. Return to the WAF console. In the navigation pane on the left, click **Events**. On the displayed page, check event logs.
+
+Configuration Example: Masking the Cookie Field
+-----------------------------------------------
+
+You can take the following steps to verify that WAF is protecting your website domain name (**www.example.com**).
+
+The cookie field **jsessionid** is masked.
 
 #. Add a data masking rule.
 
 
-   .. figure:: /_static/images/en-us_image_0000001285986476.png
+   .. figure:: /_static/images/en-us_image_0000002395335373.png
       :alt: **Figure 2** Select **Cookie** for **Masked Field** and enter **jsessionid** in **Field Name**.
 
       **Figure 2** Select **Cookie** for **Masked Field** and enter **jsessionid** in **Field Name**.
@@ -104,7 +119,7 @@ To verify that WAF is protecting your domain name *www.example.com* against a da
 #. Enable data masking.
 
 
-   .. figure:: /_static/images/en-us_image_0000002090885157.png
+   .. figure:: /_static/images/en-us_image_0000002395335377.png
       :alt: **Figure 3** Data Masking configuration area
 
       **Figure 3** Data Masking configuration area
@@ -116,12 +131,12 @@ To verify that WAF is protecting your domain name *www.example.com* against a da
    Data in the **jsessionid** cookie field is masked.
 
 
-   .. figure:: /_static/images/en-us_image_0000001226442037.png
+   .. figure:: /_static/images/en-us_image_0000002361655508.png
       :alt: **Figure 4** Viewing events - privacy data masking
 
       **Figure 4** Viewing events - privacy data masking
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image3| image:: /_static/images/en-us_image_0000002054495070.png
-.. |image4| image:: /_static/images/en-us_image_0000001761857181.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002395174901.png
+.. |image4| image:: /_static/images/en-us_image_0000002361494960.png

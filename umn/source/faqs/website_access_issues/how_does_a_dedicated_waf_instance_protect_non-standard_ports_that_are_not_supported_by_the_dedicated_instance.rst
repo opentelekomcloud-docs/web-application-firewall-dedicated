@@ -50,5 +50,5 @@ Perform the following steps:
 
 #. Unbind an elastic IP address (EIP) from the origin server and bind the EIP to the load balancer configured for the dedicated WAF instance.
 
-.. |image1| image:: /_static/images/en-us_image_0000001539348353.png
-.. |image2| image:: /_static/images/en-us_image_0000001084031478.png
+.. |image1| image:: /_static/images/en-us_image_0000002395177433.png
+.. |image2| image:: /_static/images/en-us_image_0000002361495140.png

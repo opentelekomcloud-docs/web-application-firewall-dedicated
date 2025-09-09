@@ -46,7 +46,7 @@ Configuring a Web Tamper Protection Rule
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
@@ -64,54 +64,67 @@ Configuring a Web Tamper Protection Rule
 #. In the displayed dialog box, specify the parameters by referring to :ref:`Table 1 <waf_01_0014__table2046816299203>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000001285636510.png
+   .. figure:: /_static/images/en-us_image_0000002395176281.png
       :alt: **Figure 1** Adding a web tamper protection rule
 
       **Figure 1** Adding a web tamper protection rule
 
    .. _waf_01_0014__table2046816299203:
 
-   .. table:: **Table 1** Rule parameters
+   .. table:: **Table 1** Parameter description
 
-      +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Parameter             | Description                                                                                                                                         | Example Value         |
-      +=======================+=====================================================================================================================================================+=======================+
-      | Domain Name           | Domain name of the website to be protected                                                                                                          | **www.example.com**   |
-      +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Path                  | A part of the URL, not including the domain name                                                                                                    | **/admin**            |
-      |                       |                                                                                                                                                     |                       |
-      |                       | A URL is used to define the address of a web page. The basic URL format is as follows:                                                              |                       |
-      |                       |                                                                                                                                                     |                       |
-      |                       | Protocol name://Domain name or IP address[:Port]/[Path/.../File name].                                                                              |                       |
-      |                       |                                                                                                                                                     |                       |
-      |                       | For example, if the URL is **http://www.example.com/admin**, set **Path** to **/admin**.                                                            |                       |
-      |                       |                                                                                                                                                     |                       |
-      |                       | .. note::                                                                                                                                           |                       |
-      |                       |                                                                                                                                                     |                       |
-      |                       |    -  The path does not support regular expressions.                                                                                                |                       |
-      |                       |    -  The path cannot contain two or more consecutive slashes. For example, **///admin**. If you enter **///admin**, WAF converts **///** to **/**. |                       |
-      +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Rule Description      | A brief description of the rule. This parameter is optional.                                                                                        | None                  |
-      +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      +-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | Parameter             | Description                                                                                                                                                                                                                                                         | Example Value         |
+      +=======================+=====================================================================================================================================================================================================================================================================+=======================+
+      | Domain Name           | Domain name of the website to be protected                                                                                                                                                                                                                          | **www.example.com**   |
+      +-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | Path                  | Path of the URL for which you want to enable web tamper protection. A URL is the address of a web page. The common URL format is *Protocol name*://*Domain name or IP address[:Port number]/[Path name/... /File name]*, for example, http://www.example.com/admin. | **/admin**            |
+      |                       |                                                                                                                                                                                                                                                                     |                       |
+      |                       | Path configuration requirements:                                                                                                                                                                                                                                    |                       |
+      |                       |                                                                                                                                                                                                                                                                     |                       |
+      |                       | -  The path cannot contain a domain name. For example, the path in the example URL is **/admin**.                                                                                                                                                                   |                       |
+      |                       | -  Regular expressions are not supported.                                                                                                                                                                                                                           |                       |
+      |                       | -  The path cannot contain two or more consecutive slashes. For example, **///admin**. If you enter **///admin**, WAF converts **///** to **/**.                                                                                                                    |                       |
+      +-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | Rule Description      | A brief description of the rule. This parameter is optional.                                                                                                                                                                                                        | None                  |
+      +-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
 
 #. Click **Confirm**. You can view the rule in the list of web tamper protection rules.
 
-Related Operations
-------------------
+   -  After the configuration is complete, you can view the added rule in the protection rule list. **Rule Status** is **Enabled** by default.
+   -  If you do not want the rule to take effect, click **Disable** in the **Operation** column of the rule.
+   -  To delete or modify a rule, click **Delete** or **Modify** in the **Operation** column of the rule.
+   -  To update cache of a protected web page, click **Update Cache** in the row containing the corresponding web tamper protection rule. If the rule fails to be updated, WAF will return the recently cached page but not the latest page.
 
--  To disable a rule, click **Disable** in the **Operation** column of the rule. The default **Rule Status** is **Enabled**.
--  To update cache of a protected web page, click **Update Cache** in the row containing the corresponding web tamper protection rule. If the rule fails to be updated, WAF will return the recently cached page but not the latest page.
--  To delete a rule, click **Delete** in the row containing the rule.
+Protection Verification
+-----------------------
 
-Configuration Example - Static Web Page Tamper Prevention
----------------------------------------------------------
+To verify that WAF is protecting your domain name (**www.example.com**) according to the protection rule configured by referring to example values in :ref:`Table 1 <waf_01_0014__table2046816299203>`, take the following steps:
 
-To verify WAF is protecting a static page **/admin** on your website **www.example.com** from being tampered with:
+#. Clear the browser cache and enter the domain name in the address bar to check whether the website is accessible.
+
+   -  If the website is inaccessible, connect the website domain name to WAF by following the instructions in :ref:`Step 1: Add Your Website to WAF <waf_01_0326>`.
+   -  If the website is accessible, go to :ref:`Step 2 <waf_01_0014__li1184432845514>`.
+
+#. .. _waf_01_0014__li1184432845514:
+
+   Access the **http://www.example.com/admin** page. The initial page is displayed.
+
+#. Simulate the attack to tamper with the **http://www.example.com/admin** web page.
+
+#. Access the **http://www.example.com/admin** page in the browser. The initial page that is not tampered with is displayed.
+
+#. Return to the WAF console. In the navigation pane on the left, click **Events**. On the displayed page, check event logs.
+
+Configuration Example: Static Web Page Tamper Prevention
+--------------------------------------------------------
+
+To verify that WAF is protecting a static page **/admin** on your website **www.example.com** from being tampered with, take the following steps:
 
 #. Add a web tamper prevention rule to WAF.
 
 
-   .. figure:: /_static/images/en-us_image_0000001285636510.png
+   .. figure:: /_static/images/en-us_image_0000002395176281.png
       :alt: **Figure 2** Adding a web tamper protection rule
 
       **Figure 2** Adding a web tamper protection rule
@@ -122,11 +135,11 @@ To verify WAF is protecting a static page **/admin** on your website **www.examp
 
 #. Use a browser to access **http://www.example.com/admin**. WAF will cache the page.
 
-#. Access **http://www.example.com/admin** again.
+#. Access the page again.
 
    The intact page is returned.
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image3| image:: /_static/images/en-us_image_0000002054495070.png
-.. |image4| image:: /_static/images/en-us_image_0000001761857181.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002395174901.png
+.. |image4| image:: /_static/images/en-us_image_0000002361494960.png

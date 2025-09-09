@@ -34,7 +34,7 @@ How JavaScript Anti-Crawler Protection Works
 
 .. _waf_01_0015__fig0891191071116:
 
-.. figure:: /_static/images/en-us_image_0000001127096041.png
+.. figure:: /_static/images/en-us_image_0000002361655288.png
    :alt: **Figure 1** JavaScript Anti-Crawler protection process
 
    **Figure 1** JavaScript Anti-Crawler protection process
@@ -49,7 +49,7 @@ By collecting statistics on the number of JavaScript challenges and authenticati
 
 .. _waf_01_0015__fig10806185634312:
 
-.. figure:: /_static/images/en-us_image_0000001127126255.png
+.. figure:: /_static/images/en-us_image_0000002395175325.png
    :alt: **Figure 2** Parameters of a JavaScript anti-crawler protection rule
 
    **Figure 2** Parameters of a JavaScript anti-crawler protection rule
@@ -63,7 +63,7 @@ Configuring an Anti-Crawler Rule
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
@@ -101,7 +101,7 @@ Configuring an Anti-Crawler Rule
 
    .. _waf_01_0015__fig127337271541:
 
-   .. figure:: /_static/images/en-us_image_0000001285803110.png
+   .. figure:: /_static/images/en-us_image_0000002361655788.png
       :alt: **Figure 3** Feature Library
 
       **Figure 3** Feature Library
@@ -110,36 +110,36 @@ Configuring an Anti-Crawler Rule
 
    .. table:: **Table 1** Anti-crawler detection features
 
-      +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Type                  | Description                                                                                                                                                           | Remarks                                                                                                                                                                                                                                                                           |
-      +=======================+=======================================================================================================================================================================+===================================================================================================================================================================================================================================================================================+
-      | Search Engine         | This rule is used to block web crawlers, such as Googlebot and Baiduspider, from collecting content from your site.                                                   | If you enable this rule, WAF detects and blocks search engine crawlers.                                                                                                                                                                                                           |
-      |                       |                                                                                                                                                                       |                                                                                                                                                                                                                                                                                   |
-      |                       |                                                                                                                                                                       | .. note::                                                                                                                                                                                                                                                                         |
-      |                       |                                                                                                                                                                       |                                                                                                                                                                                                                                                                                   |
-      |                       |                                                                                                                                                                       |    If **Search Engine** is not enabled, WAF does not block POST requests from Googlebot or Baiduspider. If you want to block POST requests from Baiduspider, use the configuration described in :ref:`Configuration Example - Search Engine <waf_01_0015__section1110674010446>`. |
-      +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Scanner               | This rule is used to block scanners, such as OpenVAS and Nmap. A scanner scans for vulnerabilities, viruses, and other jobs.                                          | After you enable this rule, WAF detects and blocks scanner crawlers.                                                                                                                                                                                                              |
-      +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Script Tool           | This rule is used to block script tools. A script tool is often used to execute automatic tasks and program scripts, such as HttpClient, OkHttp, and Python programs. | If you enable this rule, WAF detects and blocks the execution of automatic tasks and program scripts.                                                                                                                                                                             |
-      |                       |                                                                                                                                                                       |                                                                                                                                                                                                                                                                                   |
-      |                       |                                                                                                                                                                       | .. note::                                                                                                                                                                                                                                                                         |
-      |                       |                                                                                                                                                                       |                                                                                                                                                                                                                                                                                   |
-      |                       |                                                                                                                                                                       |    If your application uses scripts such as HttpClient, OkHttp, and Python, disable **Script Tool**. Otherwise, WAF will identify such script tools as crawlers and block the application.                                                                                        |
-      +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Other                 | This rule is used to block crawlers used for other purposes, such as site monitoring, using access proxies, and web page analysis.                                    | If you enable this rule, WAF detects and blocks crawlers that are used for various purposes.                                                                                                                                                                                      |
-      |                       |                                                                                                                                                                       |                                                                                                                                                                                                                                                                                   |
-      |                       | .. note::                                                                                                                                                             |                                                                                                                                                                                                                                                                                   |
-      |                       |                                                                                                                                                                       |                                                                                                                                                                                                                                                                                   |
-      |                       |    To avoid being blocked by WAF, crawlers may use a large number of IP address proxies.                                                                              |                                                                                                                                                                                                                                                                                   |
-      +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Type                  | Description                                                                                                                                                           | Remarks                                                                                                                                                                                                                                                                          |
+      +=======================+=======================================================================================================================================================================+==================================================================================================================================================================================================================================================================================+
+      | Search Engine         | This rule is used to block web crawlers, such as Googlebot and Baiduspider, from collecting content from your site.                                                   | If you enable this rule, WAF detects and blocks search engine crawlers.                                                                                                                                                                                                          |
+      |                       |                                                                                                                                                                       |                                                                                                                                                                                                                                                                                  |
+      |                       |                                                                                                                                                                       | .. note::                                                                                                                                                                                                                                                                        |
+      |                       |                                                                                                                                                                       |                                                                                                                                                                                                                                                                                  |
+      |                       |                                                                                                                                                                       |    If **Search Engine** is not enabled, WAF does not block POST requests from Googlebot or Baiduspider. If you want to block POST requests from Baiduspider, use the configuration described in :ref:`Configuration Example: Search Engine <waf_01_0015__section1110674010446>`. |
+      +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Scanner               | This rule is used to block scanners, such as OpenVAS and Nmap. A scanner scans for vulnerabilities, viruses, and other jobs.                                          | After you enable this rule, WAF detects and blocks scanner crawlers.                                                                                                                                                                                                             |
+      +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Script Tool           | This rule is used to block script tools. A script tool is often used to execute automatic tasks and program scripts, such as HttpClient, OkHttp, and Python programs. | If you enable this rule, WAF detects and blocks the execution of automatic tasks and program scripts.                                                                                                                                                                            |
+      |                       |                                                                                                                                                                       |                                                                                                                                                                                                                                                                                  |
+      |                       |                                                                                                                                                                       | .. note::                                                                                                                                                                                                                                                                        |
+      |                       |                                                                                                                                                                       |                                                                                                                                                                                                                                                                                  |
+      |                       |                                                                                                                                                                       |    If your application uses scripts such as HttpClient, OkHttp, and Python, disable **Script Tool**. Otherwise, WAF will identify such script tools as crawlers and block the application.                                                                                       |
+      +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Other                 | This rule is used to block crawlers used for other purposes, such as site monitoring, using access proxies, and web page analysis.                                    | If you enable this rule, WAF detects and blocks crawlers that are used for various purposes.                                                                                                                                                                                     |
+      |                       |                                                                                                                                                                       |                                                                                                                                                                                                                                                                                  |
+      |                       | .. note::                                                                                                                                                             |                                                                                                                                                                                                                                                                                  |
+      |                       |                                                                                                                                                                       |                                                                                                                                                                                                                                                                                  |
+      |                       |    To avoid being blocked by WAF, crawlers may use a large number of IP address proxies.                                                                              |                                                                                                                                                                                                                                                                                  |
+      +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 #. Select the **JavaScript** tab and change **Status** if needed.
 
    **JavaScript** anti-crawler is disabled by default. To enable it, click |image5| and then click **OK** in the displayed dialog box to toggle on |image6|.
 
 
-   .. figure:: /_static/images/en-us_image_0000001684111682.png
+   .. figure:: /_static/images/en-us_image_0000002395335661.png
       :alt: **Figure 4** JavaScript
 
       **Figure 4** JavaScript
@@ -161,7 +161,7 @@ Configuring an Anti-Crawler Rule
       Set **Protection Mode** to **Protect all paths**. Then, click **Exclude Path**, configure protected paths, and click **Confirm**.
 
 
-      .. figure:: /_static/images/en-us_image_0000001732183425.png
+      .. figure:: /_static/images/en-us_image_0000002361655832.png
          :alt: **Figure 5** Exclude Rule
 
          **Figure 5** Exclude Rule
@@ -171,7 +171,7 @@ Configuring an Anti-Crawler Rule
       Set **Protection Mode** to **Protect specified requests**, click **Add Rule**, configure the request rule, and click **Confirm**.
 
 
-      .. figure:: /_static/images/en-us_image_0000001732186817.png
+      .. figure:: /_static/images/en-us_image_0000002361655836.png
          :alt: **Figure 6** Add Rule
 
          **Figure 6** Add Rule
@@ -183,7 +183,7 @@ Configuring an Anti-Crawler Rule
       +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | Parameter             | Description                                                                                                                                         | Example Value         |
       +=======================+=====================================================================================================================================================+=======================+
-      | Rule Name             | Name of the rule                                                                                                                                    | wafjs                 |
+      | Rule Name             | Name of the rule.                                                                                                                                   | wafjs                 |
       +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | Path                  | A part of the URL, not including the domain name                                                                                                    | /admin                |
       |                       |                                                                                                                                                     |                       |
@@ -205,24 +205,17 @@ Configuring an Anti-Crawler Rule
       | Effective Date        | Immediate                                                                                                                                           | Immediate             |
       +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
 
-Related Operations
-------------------
+Configuration Example: Logging Script Crawlers Only
+---------------------------------------------------
 
--  To disable a rule, click **Disable** in the **Operation** column of the rule. The default **Rule Status** is **Enabled**.
--  To modify a rule, click **Modify** in the row containing the rule.
--  To delete a rule, click **Delete** in the row containing the rule.
-
-Configuration Example - Logging Script Crawlers Only
-----------------------------------------------------
-
-To verify that WAF is protecting domain name **www.example.com** against an anti-crawler rule:
+You can take the following steps to verify that WAF is protecting your website domain name (**www.example.com**) against an anti-crawler rule.
 
 #. Execute a JavaScript tool to crawl web page content.
 
 #. On the **Feature Library** tab, enable **Script Tool** and select **Log only** for **Protective Action**. (If WAF detects an attack, it logs the attack only.)
 
 
-   .. figure:: /_static/images/en-us_image_0000001285811290.png
+   .. figure:: /_static/images/en-us_image_0000002395176221.png
       :alt: **Figure 7** Enabling Script Tool
 
       **Figure 7** Enabling Script Tool
@@ -230,7 +223,7 @@ To verify that WAF is protecting domain name **www.example.com** against an anti
 #. Enable anti-crawler protection.
 
 
-   .. figure:: /_static/images/en-us_image_0000002054803168.png
+   .. figure:: /_static/images/en-us_image_0000002361656172.png
       :alt: **Figure 8** Anti-Crawler configuration area
 
       **Figure 8** Anti-Crawler configuration area
@@ -239,8 +232,8 @@ To verify that WAF is protecting domain name **www.example.com** against an anti
 
 .. _waf_01_0015__section1110674010446:
 
-Configuration Example - Search Engine
--------------------------------------
+Configuration Example: Search Engine
+------------------------------------
 
 To allow the search engine of Baidu or Google and block the POST request of Baidu:
 
@@ -249,15 +242,15 @@ To allow the search engine of Baidu or Google and block the POST request of Baid
 #. Configure a precise protection rule by referring to :ref:`Configuring Custom Precise Protection Rules <waf_01_0010>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000001338332661.png
+   .. figure:: /_static/images/en-us_image_0000002361496296.png
       :alt: **Figure 9** Blocking POST requests
 
       **Figure 9** Blocking POST requests
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image3| image:: /_static/images/en-us_image_0000002054495070.png
-.. |image4| image:: /_static/images/en-us_image_0000001761857181.png
-.. |image5| image:: /_static/images/en-us_image_0234013368.png
-.. |image6| image:: /_static/images/en-us_image_0000001285643550.png
-.. |image7| image:: /_static/images/en-us_image_0000001746598250.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002395174901.png
+.. |image4| image:: /_static/images/en-us_image_0000002361494960.png
+.. |image5| image:: /_static/images/en-us_image_0000002361654864.png
+.. |image6| image:: /_static/images/en-us_image_0000002395335693.png
+.. |image7| image:: /_static/images/en-us_image_0000002395176237.png

@@ -9,7 +9,7 @@ How Does JavaScript Anti-Crawler Detection Work?
 
 .. _waf_01_0315__fig22129287019:
 
-.. figure:: /_static/images/en-us_image_0000001127096041.png
+.. figure:: /_static/images/en-us_image_0000002361655288.png
    :alt: **Figure 1** JavaScript Anti-Crawler protection process
 
    **Figure 1** JavaScript Anti-Crawler protection process
@@ -24,7 +24,7 @@ By collecting statistics on the number of JavaScript challenge and authenticatio
 
 .. _waf_01_0315__fig10806185634312:
 
-.. figure:: /_static/images/en-us_image_0000001127126255.png
+.. figure:: /_static/images/en-us_image_0000002395175325.png
    :alt: **Figure 2** Parameters of a JavaScript anti-crawler protection rule
 
    **Figure 2** Parameters of a JavaScript anti-crawler protection rule

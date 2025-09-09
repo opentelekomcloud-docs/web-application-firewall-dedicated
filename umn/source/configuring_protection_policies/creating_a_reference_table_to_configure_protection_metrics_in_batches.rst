@@ -5,7 +5,7 @@
 Creating a Reference Table to Configure Protection Metrics in Batches
 =====================================================================
 
-This topic describes how to create a reference table to batch configure protection metrics of a single type, such as **Path**, **User Agent**, **IP**, **Params**, **Cookie**, **Referer**, and **Header**. A reference table can be referenced by CC attack protection rules and precise protection rules.
+This topic describes how to create a reference table to batch configure protection metrics of a single type, such as **Path**, **User Agent**, **IP**, **Params**, **Cookie**, **Referer**, and **Header**. A reference table can be referenced by CC attack protection rules, and precise protection rules.
 
 When you configure a CC attack protection rule or precise protection rule, if the **Logic** field in the **Trigger** list is set to **Include any value**, **Exclude any value**, **Equal to any value**, **Not equal to any value**, **Prefix is any value**, **Prefix is not any value**, **Suffix is any value**, or **Suffix is not any value**, you can select an appropriate reference table from the **Content** drop-down list.
 
@@ -24,7 +24,7 @@ Creating a Reference Table
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
@@ -32,12 +32,12 @@ Creating a Reference Table
 
 #. Click the name of the target policy to go to the protection configuration page.
 
-#. Click the **CC Attack Protection** or **Precise Protection** configuration area.
+#. Select **CC Attack Protection** or **Precise Protection**.
 
 #. Click **Reference Table Management** in the upper left corner of the list.
 
 
-   .. figure:: /_static/images/en-us_image_0000001395970965.png
+   .. figure:: /_static/images/en-us_image_0000002361655404.png
       :alt: **Figure 1** Reference Table Management
 
       **Figure 1** Reference Table Management
@@ -45,7 +45,7 @@ Creating a Reference Table
 #. On the **Reference Table Management** page, click **Add Reference Table**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001345171226.png
+   .. figure:: /_static/images/en-us_image_0000002395175445.png
       :alt: **Figure 2** Add Reference Table
 
       **Figure 2** Add Reference Table
@@ -53,7 +53,7 @@ Creating a Reference Table
 #. In the **Add Reference Table** dialog box, specify the parameters by referring to :ref:`Table 1 <waf_01_0081__table22291637155812>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000001338298405.png
+   .. figure:: /_static/images/en-us_image_0000002361495496.png
       :alt: **Figure 3** Adding a reference table
 
       **Figure 3** Adding a reference table
@@ -94,11 +94,14 @@ Creating a Reference Table
 
 #. Click **Confirm**. You can then view the added reference table in the reference table list.
 
+   -  After the preceding configurations are complete, you can view the added reference table in the reference table list.
+   -  To delete or modify a reference table, click **Delete** or **Modify** in the **Operation** column of the reference table.
+
 Related Operations
 ------------------
 
 -  To modify a reference table, click **Modify** in the row containing the reference table.
 -  To delete a reference table, click **Delete** in the row containing the reference table.
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png

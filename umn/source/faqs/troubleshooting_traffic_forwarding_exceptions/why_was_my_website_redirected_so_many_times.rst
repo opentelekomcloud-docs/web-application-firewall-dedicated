@@ -10,7 +10,7 @@ If you configure your web server to redirect HTTP requests to HTTPS, but configu
 You can configure two pieces of server information, one from HTTP (client protocol) to HTTP (server protocol), and the other from HTTPS (client protocol) to HTTPS (server protocol). For details, see :ref:`Editing Server Information <waf_01_0001>`.
 
 
-.. figure:: /_static/images/en-us_image_0000002056026866.png
+.. figure:: /_static/images/en-us_image_0000002361495376.png
    :alt: **Figure 1** Example configuration
 
    **Figure 1** Example configuration

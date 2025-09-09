@@ -2,8 +2,8 @@
 
 .. _waf_01_0077:
 
-Downloading Events Data
-=======================
+Downloading Events
+==================
 
 This topic describes how to download events (logged and blocked events) data for the last five days. One or more CSV files containing the event data of the current day will be generated at the beginning of the next day.
 
@@ -23,19 +23,20 @@ Specification Limitations
 -  Each file can include a maximum of 5,000 events. If there are more than 5,000 events, another file is generated.
 -  Only event data for the last five days can be downloaded through the WAF console.
 
-
 Downloading Events Data
 -----------------------
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Events**.
+#. In the navigation pane on the left, click **Events**.
 
-#. Click the **Downloads** tab and download the desired protection data. :ref:`Table 1 <waf_01_0077__table117074311366>` describes the parameters.
+#. On the **Downloads** tab, click **Download** in the **Operation** column of the target protection event file to download the protection data file.
+
+   :ref:`Table 1 <waf_01_0077__table117074311366>` describes the parameters in the protection event data list.
 
    .. _waf_01_0077__table117074311366:
 
@@ -44,16 +45,20 @@ Downloading Events Data
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------+
       | Parameter                         | Description                                                                                                         |
       +===================================+=====================================================================================================================+
-      | File Name                         | The format is *file-name*.\ **csv**.                                                                                |
+      | File Name                         | Data name of the protection event. The format is *File name*.csv.                                                   |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------+
-      | Number of Events                  | Total number of blocked and logged events                                                                           |
+      | File Source                       | Data source of the protection event.                                                                                |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Number of Events                  | Total number of events, including blocked and logged-only events.                                                   |
       |                                   |                                                                                                                     |
       |                                   | .. note::                                                                                                           |
       |                                   |                                                                                                                     |
       |                                   |    Each file can include a maximum of 5,000 events. If there are more than 5,000 events, another file is generated. |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Generated                         | Time the protection event data was generated.                                                                       |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------+
 
-#. In the **Operation** column, click **Download** to download data to the local PC.
+   After the download is complete, you can obtain the downloaded file in the download list of the browser and check the events in the file.
 
 Fields in a Protection Event Data File
 --------------------------------------
@@ -71,7 +76,7 @@ Fields in a Protection Event Data File
 +------------------+---------------------------------------------------------------------------------------------------------------+----------------------------------+
 | headers          | Header of the attacker                                                                                        | N/A                              |
 +------------------+---------------------------------------------------------------------------------------------------------------+----------------------------------+
-| host             | Domain name or IP address of the protected website                                                            | www.example.com                  |
+| Host             | Domain name or IP address of the protected website                                                            | www.example.com                  |
 +------------------+---------------------------------------------------------------------------------------------------------------+----------------------------------+
 | id               | ID of the event.                                                                                              | 02-11-16-20201121060347-feb42002 |
 +------------------+---------------------------------------------------------------------------------------------------------------+----------------------------------+
@@ -81,16 +86,16 @@ Fields in a Protection Event Data File
 +------------------+---------------------------------------------------------------------------------------------------------------+----------------------------------+
 | policyid         | Policy ID.                                                                                                    | d5580c8f6cd4403ebbf85892d4bbb8e4 |
 +------------------+---------------------------------------------------------------------------------------------------------------+----------------------------------+
-| request_line     | Request line of the attack                                                                                    | GET /                            |
+| request_line     | Request line of the attack.                                                                                   | GET /                            |
 +------------------+---------------------------------------------------------------------------------------------------------------+----------------------------------+
 | rule             | ID of the rule against which the event is generated.                                                          | 81066                            |
 +------------------+---------------------------------------------------------------------------------------------------------------+----------------------------------+
-| sip              | Public IP address of the web visitor/attacker                                                                 | N/A                              |
+| sip              | Public IP address of the web visitor/attacker.                                                                | N/A                              |
 +------------------+---------------------------------------------------------------------------------------------------------------+----------------------------------+
 | time             | When the event occurred.                                                                                      | 2020/11/21 0:20:44               |
 +------------------+---------------------------------------------------------------------------------------------------------------+----------------------------------+
-| url              | URL of the protected domain name                                                                              | N/A                              |
+| url              | URL of the protected domain name.                                                                             | N/A                              |
 +------------------+---------------------------------------------------------------------------------------------------------------+----------------------------------+
 
-.. |image1| image:: /_static/images/en-us_image_0000001532750637.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340666645.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png

@@ -33,7 +33,7 @@ Using a Certificate for a Protected Website in WAF
 --------------------------------------------------
 
 #. Log in to the management console.
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 #. In the navigation pane on the left, choose **Objects** > **Certificates**.
 #. In the row containing the certificate you want to use, click **Use** in the **Operation** column.
@@ -58,6 +58,6 @@ Related Operations
 -  To delete a certificate, locate the row of the certificate and click **More** > **Delete** in the **Operation** column.
 -  To update a certificate, locate the row of the certificate and click **More** > **Update** in the **Operation** column.
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image3| image:: /_static/images/en-us_image_0269115287.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002361656020.png

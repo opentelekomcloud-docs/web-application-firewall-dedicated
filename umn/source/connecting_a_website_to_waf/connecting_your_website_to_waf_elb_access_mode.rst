@@ -27,7 +27,7 @@ Connecting a Website to WAF in ELB Access Mode
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Website Settings**.
+#. In the navigation pane on the left, click **Website Settings**.
 
 #. In the upper left corner of the website list, click **Add Website**.
 
@@ -89,9 +89,9 @@ Connecting a Website to WAF in ELB Access Mode
 Follow-up Operations
 --------------------
 
--  The initial **Access Status** of a website is **Unaccessed**. When a request reaches the WAF instance configured for the website, the access status automatically changes to **Accessed**.
+-  The initial **Access Status** of a website is **Unaccessed**. When a request reachesthe WAF instance configured for the website, the access status automaticallychanges to **Accessed**.
 -  :ref:`Complete Recommended Configurations <waf_01_3274>`
--  Adjust the protection policy configured for the protected domain name based on protection requirements. For details, see :ref:`Protection Configuration Overview <waf_01_0129>`.
+-  Adjust the protection policy configured for the protected domain name basedon protection requirements. For details, see :ref:`Protection ConfigurationOverview <waf_01_0129>`.
 
-.. |image1| image:: /_static/images/en-us_image_0000002046002725.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002009764796.png
+.. |image1| image:: /_static/images/en-us_image_0000002395337089.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png

@@ -34,5 +34,5 @@ Differences Between Projects and Enterprise Projects
 
 Both projects and enterprise projects can be managed by one or more user groups. Users who manage enterprise projects belong to user groups. After a policy is granted to a user group, users in the group can obtain the permissions defined in the policy in the project or enterprise project.
 
-.. |image1| image:: /_static/images/en-us_image_0245737543.png
-.. |image2| image:: /_static/images/en-us_image_0245737551.png
+.. |image1| image:: /_static/images/en-us_image_0000002361495368.png
+.. |image2| image:: /_static/images/en-us_image_0000002395175301.png

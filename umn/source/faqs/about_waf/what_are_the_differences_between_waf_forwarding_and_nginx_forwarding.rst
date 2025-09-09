@@ -12,7 +12,7 @@ Nginx directly forwards access requests to the origin server, while WAF detects 
    After a website is connected to WAF, all access requests pass through WAF. WAF detects HTTP(S) requests to identify and block a wide range of attacks, such as SQL injection, cross-site scripting attacks, web shell uploads, command/code injection, file inclusion, sensitive file access, third-party application vulnerability attacks, CC attacks, malicious crawlers, cross-site request forgery (CSRF) attacks. Then, WAF sends normal traffic to the origin server. In this way, security, stability, and availability of your web applications are assured.
 
 
-   .. figure:: /_static/images/en-us_image_0000001197423825.png
+   .. figure:: /_static/images/en-us_image_0000002361655880.png
       :alt: **Figure 1** How WAF Works
 
       **Figure 1** How WAF Works
@@ -24,7 +24,7 @@ Nginx directly forwards access requests to the origin server, while WAF detects 
    The reverse proxy server prevents malicious attacks from the Internet to intranet servers, caches data to reduce workloads on the intranet servers, and implements access security control and load balancing.
 
 
-   .. figure:: /_static/images/en-us_image_0000001163672451.png
+   .. figure:: /_static/images/en-us_image_0000002395175913.png
       :alt: **Figure 2** How Nginx Works
 
       **Figure 2** How Nginx Works

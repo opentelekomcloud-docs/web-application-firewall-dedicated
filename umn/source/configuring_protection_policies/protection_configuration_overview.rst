@@ -54,14 +54,14 @@ The built-in protection rules of WAF help you defend against common web applicat
 
 .. _waf_01_0129__en-us_topic_0000001271159206_en-us_topic_0199698323_fig1628214208241:
 
-.. figure:: /_static/images/en-us_image_0000001809813429.png
+.. figure:: /_static/images/en-us_image_0000002395175017.png
    :alt: **Figure 1** WAF engine work process
 
    **Figure 1** WAF engine work process
 
 .. _waf_01_0129__en-us_topic_0000001271159206_en-us_topic_0199698323_fig2084820326445:
 
-.. figure:: /_static/images/en-us_image_0000001875218941.png
+.. figure:: /_static/images/en-us_image_0000002395176313.png
    :alt: **Figure 2** Priorities of protection rules
 
    **Figure 2** Priorities of protection rules

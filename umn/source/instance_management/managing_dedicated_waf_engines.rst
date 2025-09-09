@@ -15,7 +15,7 @@ Prerequisites
 -------------
 
 -  You have applied for a dedicated WAF instance.
--  Your login account has the **IAM ReadOnly** permission.
+-  The IAM user you use for login has been granted **IAM ReadOnly** permissions.
 
 Dedicated Engine Version Iteration
 ----------------------------------
@@ -27,6 +27,9 @@ You can view the WAF instance version in the **Version** column of the dedicated
    +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
    | Engine Version                    | Feature                                                                                                                               |
    +===================================+=======================================================================================================================================+
+   | 202412                            | -  Custom response headers can be forwarded.                                                                                          |
+   |                                   | -  Known issues have been fixed.                                                                                                      |
+   +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
    | 202409                            | -  A global protection whitelist rule can be set to **ignore invalid requests**.                                                      |
    |                                   | -  JavaScript-based anti-crawler rules support more protective actions, including **Block**, **Log only**, and **Verification code**. |
    +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
@@ -38,21 +41,19 @@ You can view the WAF instance version in the **Version** column of the dedicated
 Viewing Information About a Dedicated WAF Instance
 --------------------------------------------------
 
-#. Log in to the management console.
+#. Click |image1| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image2| in the upper left corner and select a region or project.
 
-#. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
+#. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine**.
 
-#. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine** to go to the dedicated WAF instance page.
+#. On the **Dedicated Engine** page, view the details about dedicated engine instances. :ref:`Table 2 <waf_01_0253__table8106945160>` shows an example.
 
 
-   .. figure:: /_static/images/en-us_image_0000001732567617.png
+   .. figure:: /_static/images/en-us_image_0000002361495344.png
       :alt: **Figure 1** Dedicated engine list
 
       **Figure 1** Dedicated engine list
-
-#. View information about a dedicated WAF instance. :ref:`Table 2 <waf_01_0253__table8106945160>` describes parameters.
 
    .. _waf_01_0253__table8106945160:
 
@@ -89,20 +90,9 @@ Viewing Metrics of a Dedicated WAF Instance
 
 When a WAF instance is in the **Running** status, you can view the monitored metrics about the instance.
 
-#. Log in to the management console.
-
-#. Click |image3| in the upper left corner of the management console and select a region or project.
-
-#. Click |image4| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
-
-#. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine** to go to the dedicated WAF instance page.
-
-
-   .. figure:: /_static/images/en-us_image_0000001732567617.png
-      :alt: **Figure 2** Dedicated engine list
-
-      **Figure 2** Dedicated engine list
-
+#. Click |image3| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
+#. Click |image4| in the upper left corner and select a region or project.
+#. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine**.
 #. In the row of the instance, click **Cloud Eye** in the **Operation** column to go to the Cloud Eye console and view the monitoring information, such as CPU, memory, and bandwidth.
 
 .. _waf_01_0253__section38005331521:
@@ -121,19 +111,11 @@ Only dedicated WAF instances in the **Running** status can be upgraded to the la
 
    -  If you are using the latest version of WAF, the **Upgrade** button is grayed out.
 
-#. Log in to the management console.
+#. Click |image5| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. Click |image5| in the upper left corner of the management console and select a region or project.
+#. Click |image6| in the upper left corner and select a region or project.
 
-#. Click |image6| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
-
-#. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine** to go to the dedicated WAF instance page.
-
-
-   .. figure:: /_static/images/en-us_image_0000001732567617.png
-      :alt: **Figure 3** Dedicated engine list
-
-      **Figure 3** Dedicated engine list
+#. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine**.
 
 #. In the row containing the instance you want to upgrade, click **Upgrade** in the **Operation** column.
 
@@ -146,22 +128,10 @@ Change Security Group for a Dedicated WAF Instance
 
 If you select **Network Interface** for **Instance Type**, you can change the security group to which your dedicated instance belongs. After you select a security group, the WAF instance will be protected by the access rules of the security group.
 
-#. Log in to the management console.
-
-#. Click |image7| in the upper left corner of the management console and select a region or project.
-
-#. Click |image8| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
-
-#. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine** to go to the dedicated WAF instance page.
-
-
-   .. figure:: /_static/images/en-us_image_0000001732567617.png
-      :alt: **Figure 4** Dedicated engine list
-
-      **Figure 4** Dedicated engine list
-
+#. Click |image7| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
+#. Click |image8| in the upper left corner and select a region or project.
+#. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine**.
 #. In the row containing the instance, choose **More** > **Change Security Group** in the **Operation** column.
-
 #. In the dialog box displayed, select the new security group and click **Confirm**.
 
 Deleting a Dedicated WAF Instance
@@ -173,41 +143,29 @@ You can delete a dedicated WAF instance anytime. A deleted dedicated WAF instanc
 
    Resources on deleted instance are released and cannot be restored. Exercise caution when performing this operation.
 
-#. Log in to the management console.
+#. Click |image9| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. Click |image9| in the upper left corner of the management console and select a region or project.
+#. Click |image10| in the upper left corner and select a region or project.
 
-#. Click |image10| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
-
-#. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine** to go to the dedicated WAF instance page.
-
-
-   .. figure:: /_static/images/en-us_image_0000001732567617.png
-      :alt: **Figure 5** Dedicated engine list
-
-      **Figure 5** Dedicated engine list
+#. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine**.
 
 #. In the row containing the instance, click **More** > **Delete** in the **Operation** column.
-
-   .. note::
-
-      You can also select multiple dedicated instances and click **Delete** in the upper left corner above the list to delete them all at once.
 
 #. In the displayed dialog box, enter **DELETE** and click **Confirm**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001286058500.png
-      :alt: **Figure 6** Deleting an instance
+   .. figure:: /_static/images/en-us_image_0000002361495144.png
+      :alt: **Figure 2** Deleting an instance
 
-      **Figure 6** Deleting an instance
+      **Figure 2** Deleting an instance
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image3| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image4| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image5| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image6| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image7| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image8| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image9| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image10| image:: /_static/images/en-us_image_0000002194070596.png
+.. |image1| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image2| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image3| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image4| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image5| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image6| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image7| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image8| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image9| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image10| image:: /_static/images/en-us_image_0000002395174933.png
