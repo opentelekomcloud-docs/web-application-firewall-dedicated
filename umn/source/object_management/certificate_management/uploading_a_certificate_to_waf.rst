@@ -39,7 +39,7 @@ Uploading a Certificate to WAF
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
@@ -50,14 +50,14 @@ Uploading a Certificate to WAF
 #. In the displayed dialog box, enter a certificate name, and copy and paste the certificate file and private key to the corresponding text boxes.
 
 
-   .. figure:: /_static/images/en-us_image_0000001732479705.png
+   .. figure:: /_static/images/en-us_image_0000002395335993.png
       :alt: **Figure 1** Uploading an international certificate
 
       **Figure 1** Uploading an international certificate
 
-   Only .pem certificates can be used in WAF. If the certificate is not in .pem format, convert it into .pem locally by referring to :ref:`Table 1 <waf_01_0078__waf_01_3273_table1292125414516>` before uploading it.
+   Only .pem certificates can be used in WAF. If the certificate is not in .pem format, convert it into .pem locally by referring to :ref:`Table 1 <waf_01_0078__en-us_topic_0110861354_table1292125414516>` before uploading it.
 
-   .. _waf_01_0078__waf_01_3273_table1292125414516:
+   .. _waf_01_0078__en-us_topic_0110861354_table1292125414516:
 
    .. table:: **Table 1** Certificate conversion commands
 
@@ -96,11 +96,6 @@ Uploading a Certificate to WAF
 
 #. Click **Confirm**.
 
-Verification
-------------
-
-The certificate you created is displayed in the certificate list.
-
 Related Operations
 ------------------
 
@@ -115,6 +110,6 @@ Related Operations
 -  To delete a certificate, locate the row of the certificate and click **More** > **Delete** in the **Operation** column.
 -  To update a certificate, locate the row of the certificate and click **More** > **Update** in the **Operation** column.
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image3| image:: /_static/images/en-us_image_0269115287.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002361656020.png

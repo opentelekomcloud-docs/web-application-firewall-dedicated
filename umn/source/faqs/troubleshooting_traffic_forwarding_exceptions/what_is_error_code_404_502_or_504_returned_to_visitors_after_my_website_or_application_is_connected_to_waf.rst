@@ -14,7 +14,7 @@ If an error, such as 404 Not Found, 502 Bad Gateway, or 504 Gateway Timeout, occ
 
 .. _waf_01_0066__fig197965218316:
 
-.. figure:: /_static/images/en-us_image_0169130550.png
+.. figure:: /_static/images/en-us_image_0000002361494856.png
    :alt: **Figure 1** 404 page
 
    **Figure 1** 404 page
@@ -25,7 +25,7 @@ If an error, such as 404 Not Found, 502 Bad Gateway, or 504 Gateway Timeout, occ
 
    .. _waf_01_0066__fig953011674311:
 
-   .. figure:: /_static/images/en-us_image_0000001732971653.png
+   .. figure:: /_static/images/en-us_image_0000002395334777.png
       :alt: **Figure 2** Configuration of a non-standard port
 
       **Figure 2** Configuration of a non-standard port
@@ -36,7 +36,7 @@ If an error, such as 404 Not Found, 502 Bad Gateway, or 504 Gateway Timeout, occ
 
    .. _waf_01_0066__fig145761043195313:
 
-   .. figure:: /_static/images/en-us_image_0000001732975481.png
+   .. figure:: /_static/images/en-us_image_0000002395334669.png
       :alt: **Figure 3** Non-standard port not configured
 
       **Figure 3** Non-standard port not configured
@@ -147,7 +147,7 @@ The possible causes are as follows:
    -  Database queries are slow.
 
       -  Tune services to shorten the query duration and improve user experience.
-      -  Modify the request interaction mode so that the persistent connection can have some data transmitted within 60 seconds, such as ACK packets, heartbeat packets, keep-alive packets, and other packets that can keep the session alive.
+      -  Modify the request interaction mode so that the persistent connection can have some data transmitted within 60s, such as ACK packets, heartbeat packets, keep-alive packets, and other packets that can keep the session alive.
 
    -  It takes a long time to upload large files.
 
@@ -160,6 +160,10 @@ The possible causes are as follows:
 
       Check whether the origin server works properly.
 
+   -  If the problem persists, you can change the connection timeout between WAF and the origin server.
+
+      The connection timeout between WAF and the origin server includes the connection timeout, read timeout, and write timeout. To modify the connection timeout, refer to :ref:`Configuring a Timeout for Connections Between WAF and a Website Server <waf_01_1171>`.
+
 -  **Cause 5**: The bandwidth of the origin server exceeds the upper limit.
 
    **Solution**: Increase the bandwidth of the origin server.
@@ -168,5 +172,5 @@ The possible causes are as follows:
 
    **Solution**: Enable the security group ports, such as ports 80 and 443, and configure a network ACL to allow access from the origin server subnet.
 
-.. |image1| image:: /_static/images/en-us_image_0167644254.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002098463152.jpg
+.. |image1| image:: /_static/images/en-us_image_0000002395174917.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002395174869.jpg

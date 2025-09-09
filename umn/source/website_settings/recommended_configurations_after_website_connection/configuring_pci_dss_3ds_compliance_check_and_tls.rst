@@ -198,18 +198,18 @@ Configuring PCI DSS/3DS Compliance Check and TLS
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Website Settings**.
+#. In the navigation pane on the left, click **Website Settings**.
 
-#. In the **Domain Name** column, click the domain name of the website to go to the basic information page.
+#. On the **Website Settings** page, click the target website domain name.
 
 #. In the **Compliance Certification** row, you can select **PCI DSS** and/or **PCI 3DS** to allow WAF to check your website for the corresponding PCI certification compliance. In the **TLS Configuration** row, click |image3| to complete TLS configuration.
 
 
-   .. figure:: /_static/images/en-us_image_0000001732455909.png
+   .. figure:: /_static/images/en-us_image_0000002361654904.png
       :alt: **Figure 1** TLS configuration modification
 
       **Figure 1** TLS configuration modification
@@ -234,7 +234,7 @@ Configuring PCI DSS/3DS Compliance Check and TLS
 #. In the displayed **TLS Configuration** dialog box, select the minimum TLS version and cipher suite.
 
 
-   .. figure:: /_static/images/en-us_image_0000001732417057.png
+   .. figure:: /_static/images/en-us_image_0000002395334833.png
       :alt: **Figure 2** TLS Configuration
 
       **Figure 2** TLS Configuration
@@ -247,13 +247,8 @@ Configuring PCI DSS/3DS Compliance Check and TLS
 
 #. Click **Confirm**.
 
-Verification
-------------
-
-If the **Minimum TLS Version** is set to **TLS v1.2**, the website can be accessed over connections secured by TLS v1.2 or later, but cannot be accessed over connections secured by TLS v1.1 or earlier.
-
-.. |image1| image:: /_static/images/en-us_image_0000001481692844.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340304201.png
-.. |image3| image:: /_static/images/en-us_image_0000001948227049.png
-.. |image4| image:: /_static/images/en-us_image_0000001337772205.png
-.. |image5| image:: /_static/images/en-us_image_0000001337772269.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002361494992.png
+.. |image4| image:: /_static/images/en-us_image_0000002361654928.png
+.. |image5| image:: /_static/images/en-us_image_0000002361495004.png

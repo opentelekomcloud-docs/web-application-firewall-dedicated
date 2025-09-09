@@ -39,7 +39,7 @@ Configuring a Global Protection Whitelist
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
@@ -57,7 +57,7 @@ Configuring a Global Protection Whitelist
 #. Add a global whitelist rule by referring to :ref:`Table 1 <waf_01_0016__table1623195815237>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000001326802772.png
+   .. figure:: /_static/images/en-us_image_0000002361655996.png
       :alt: **Figure 1** Add Global Protection Whitelist Rule
 
       **Figure 1** Add Global Protection Whitelist Rule
@@ -76,11 +76,11 @@ Configuring a Global Protection Whitelist
       |                         |                                                                                                                                                                                                                                                                                    |                                            |
       |                         | Enter a single domain name that matches the wildcard domain name being protected by the current policy.                                                                                                                                                                            |                                            |
       +-------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+
-      | Condition List          | Click **Add** to add conditions. At least one condition needs to be added. You can add up to 30 conditions to a protection rule. If more than one condition is added, all of the conditions must be met for the rule to be applied. A condition includes the following parameters: | Path, Include, /product                    |
+      | Condition List          | Click **Add** to add conditions. At least one condition needs to be added. You can add up to 30 conditions to a protection rule. If more than one condition is added, all of the conditions must be met for the rule to be applied. A condition includes the following parameters: | **Field** is set to **Path**.              |
       |                         |                                                                                                                                                                                                                                                                                    |                                            |
-      |                         | Parameters for configuring a condition are described as follows:                                                                                                                                                                                                                   |                                            |
+      |                         | Condition parameter description:                                                                                                                                                                                                                                                   | **Logic** is set to **Include**.           |
       |                         |                                                                                                                                                                                                                                                                                    |                                            |
-      |                         | -  **Field**                                                                                                                                                                                                                                                                       |                                            |
+      |                         | -  **Field**                                                                                                                                                                                                                                                                       | **Content** is set to **/product**.        |
       |                         | -  **Subfield**: Configure this field only when **Params**, **Cookie**, or **Header** is selected for **Field**.                                                                                                                                                                   |                                            |
       |                         |                                                                                                                                                                                                                                                                                    |                                            |
       |                         |    .. important::                                                                                                                                                                                                                                                                  |                                            |
@@ -127,14 +127,27 @@ Configuring a Global Protection Whitelist
 
 #. Click **OK**.
 
-Related Operations
-------------------
+   -  After the configuration is complete, you can view the added rule in the protection rule list. **Rule Status** is **Enabled** by default.
+   -  If you do not want the rule to take effect, click **Disable** in the **Operation** column of the rule.
+   -  To delete or modify a rule, click **Delete** or **Modify** in the **Operation** column of the rule.
 
--  To disable a rule, click **Disable** in the **Operation** column of the rule. The default **Rule Status** is **Enabled**.
--  To modify a rule, click **Modify** in the row containing the rule.
--  To delete a rule, click **Delete** in the row containing the rule.
+Protection Verification
+-----------------------
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image3| image:: /_static/images/en-us_image_0000002054495070.png
-.. |image4| image:: /_static/images/en-us_image_0000001761857181.png
+To verify that WAF is protecting your domain name (**www.example.com**) according to the protection rule configured by referring to example values in :ref:`Table 1 <waf_01_0016__table1623195815237>`, take the following steps:
+
+#. Clear the browser cache and enter the domain name in the address bar to check whether the website is accessible.
+
+   -  If the website is inaccessible, connect the website domain name to WAF by following the instructions in :ref:`Step 1: Add Your Website to WAF <waf_01_0326>`.
+   -  If the website is accessible, go to :ref:`Step 2 <waf_01_0016__li16192194145518>`.
+
+#. .. _waf_01_0016__li16192194145518:
+
+   Simulate an XSS attack.
+
+#. Return to the WAF console. In the navigation pane on the left, click **Events**. On the displayed page, check event logs.
+
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002395174901.png
+.. |image4| image:: /_static/images/en-us_image_0000002361494960.png

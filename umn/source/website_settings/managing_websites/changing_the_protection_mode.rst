@@ -31,12 +31,14 @@ Changing the Protection Mode (Enabling/Suspending WAF Protection)
 -----------------------------------------------------------------
 
 #. Log in to the management console.
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
-#. In the navigation pane on the left, choose **Website Settings**.
+#. In the navigation pane on the left, click **Website Settings**.
+#. On the **Website Settings** page, click the target website domain name.
+#. Change the protection mode.
 
    -  Enabling protection: In the row containing the target domain name, click **Enable WAF** in the **Operation** column. In the displayed dialog box, click **Confirm**. If you **Enable WAF**, the **Status** of the domain name changes to **Protected**.
    -  Suspending protection: In the row containing the target domain name, click **Suspend WAF** in the **Operation** column. In the displayed dialog box, click **Confirm**. If you **Suspend WAF**, the **Status** of the domain name changes to **Unprotected**.
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png

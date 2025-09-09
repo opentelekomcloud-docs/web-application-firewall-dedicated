@@ -12,7 +12,7 @@ After a website is connected to WAF, a normal access request is blocked by WAF. 
 
 .. _waf_01_0335__fig18471757872:
 
-.. figure:: /_static/images/en-us_image_0000001162278415.png
+.. figure:: /_static/images/en-us_image_0000002361495084.png
    :alt: **Figure 1** Normal requests blocked by WAF as invalid requests
 
    **Figure 1** Normal requests blocked by WAF as invalid requests

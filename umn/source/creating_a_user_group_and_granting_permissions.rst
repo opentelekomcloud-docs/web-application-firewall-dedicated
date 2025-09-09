@@ -42,7 +42,7 @@ Process Flow
 
 .. _waf_01_0098__fig673713328586:
 
-.. figure:: /_static/images/en-us_image_0234084842.png
+.. figure:: /_static/images/en-us_image_0000002395335177.png
    :alt: **Figure 1** Process for granting permissions
 
    **Figure 1** Process for granting permissions

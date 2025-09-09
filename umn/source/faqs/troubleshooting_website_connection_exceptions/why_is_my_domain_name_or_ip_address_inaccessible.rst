@@ -10,14 +10,14 @@ Symptoms
 
 If **Access Progress/Status** for a website you have added to WAF is **Inaccessible**, the connection between WAF and the website domain name or IP address fails to be established.
 
-Troubleshooting and Solutions for Dedicated WAF
------------------------------------------------
+Troubleshooting and Solutions for WAF Dedicated Mode
+----------------------------------------------------
 
 Refer to :ref:`Figure 1 <waf_01_0278__fig1680743491611>` and :ref:`Table 1 <waf_01_0278__table439923118137>` to fix connection failures.
 
 .. _waf_01_0278__fig1680743491611:
 
-.. figure:: /_static/images/en-us_image_0000001667743969.png
+.. figure:: /_static/images/en-us_image_0000002361655044.png
    :alt: **Figure 1** Troubleshooting for dedicated mode
 
    **Figure 1** Troubleshooting for dedicated mode
@@ -29,10 +29,10 @@ Refer to :ref:`Figure 1 <waf_01_0278__fig1680743491611>` and :ref:`Table 1 <waf_
    +---------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Possible Cause                                                                                                                                          | Solution                                                                                                                                                                    |
    +=========================================================================================================================================================+=============================================================================================================================================================================+
-   | Cause 1: **Access Status** for **Domain Name/IP Address** not updated                                                                                   | In the **Access Status** column for the website, click |image1| to update the status.                                                                                       |
+   | Cause 1: **Access Status** for **Domain Name/IP Address** not updated                                                                                   | In the **Access Status** column for the protected website, click |image1| to update the status.                                                                             |
    +---------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Cause 2: Website access traffic not enough for WAF to consider the website accessible                                                                   | #. Access the protected website many times within 1 minute.                                                                                                                 |
-   |                                                                                                                                                         | #. In the **Access Status** column for the website, click |image2| to update the status.                                                                                    |
+   |                                                                                                                                                         | #. In the **Access Status** column for the protected website, click |image2| to update the status.                                                                          |
    | .. important::                                                                                                                                          |                                                                                                                                                                             |
    |                                                                                                                                                         |                                                                                                                                                                             |
    |    NOTICE:                                                                                                                                              |                                                                                                                                                                             |
@@ -56,7 +56,7 @@ For **ELB Access**, refer to :ref:`Figure 2 <waf_01_0278__fig153411857111619>` a
 
 .. _waf_01_0278__fig153411857111619:
 
-.. figure:: /_static/images/en-us_image_0000001396559941.png
+.. figure:: /_static/images/en-us_image_0000002395334977.png
    :alt: **Figure 2** Troubleshooting for ELB Access Mode
 
    **Figure 2** Troubleshooting for ELB Access Mode
@@ -68,10 +68,10 @@ For **ELB Access**, refer to :ref:`Figure 2 <waf_01_0278__fig153411857111619>` a
    +---------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
    | Possible Cause                                                                                                                                          | Solution                                                                                                |
    +=========================================================================================================================================================+=========================================================================================================+
-   | Cause 1: **Access Status** for **Domain Name/IP Address** not updated                                                                                   | In the **Access Status** column for the website, click |image3| to update the status.                   |
+   | Cause 1: **Access Status** for **Domain Name/IP Address** not updated                                                                                   | In the **Access Status** column for the protected website, click |image3| to update the status.         |
    +---------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
    | Cause 2: Website access traffic not enough for WAF to consider the website accessible                                                                   | #. Access the protected website for many times within 1 minute.                                         |
-   |                                                                                                                                                         | #. In the **Access Status** column for the website, click |image4| to update the status.                |
+   |                                                                                                                                                         | #. In the **Access Status** column for the protected website, click |image4| to update the status.      |
    | .. important::                                                                                                                                          |                                                                                                         |
    |                                                                                                                                                         |                                                                                                         |
    |    NOTICE:                                                                                                                                              |                                                                                                         |
@@ -82,7 +82,7 @@ For **ELB Access**, refer to :ref:`Figure 2 <waf_01_0278__fig153411857111619>` a
    |                                                                                                                                                         | If there are incorrect settings, remove the domain name or IP address from WAF and add it to WAF again. |
    +---------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
 
-.. |image1| image:: /_static/images/en-us_image_0000001497159614.png
-.. |image2| image:: /_static/images/en-us_image_0000001547599721.png
-.. |image3| image:: /_static/images/en-us_image_0000002039631197.png
-.. |image4| image:: /_static/images/en-us_image_0000002003392090.png
+.. |image1| image:: /_static/images/en-us_image_0000002395334973.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334945.png
+.. |image3| image:: /_static/images/en-us_image_0000002395334969.png
+.. |image4| image:: /_static/images/en-us_image_0000002395334937.png

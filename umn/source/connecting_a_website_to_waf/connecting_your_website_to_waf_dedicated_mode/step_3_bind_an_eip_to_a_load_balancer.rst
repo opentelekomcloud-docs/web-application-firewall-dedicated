@@ -31,7 +31,7 @@ Procedure
    -  Unbinding an IPv6 EIP: Locate the row that contains the load balancer configured for the origin server. Then, in the **Operation** column, click **More** > **Unbind IPv6 Address**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001344294497.png
+   .. figure:: /_static/images/en-us_image_0000002361655604.png
       :alt: **Figure 1** Unbinding an EIP
 
       **Figure 1** Unbinding an EIP
@@ -45,5 +45,5 @@ Procedure
 
 #. In the displayed dialog box, select the EIP unbound in :ref:`Step 4 <waf_01_0252__li201541213511>` and click **OK**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001379820401.jpg
-.. |image2| image:: /_static/images/en-us_image_0212852906.png
+.. |image1| image:: /_static/images/en-us_image_0000002361495716.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002361655436.png

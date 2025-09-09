@@ -8,7 +8,7 @@ Viewing CTS Traces in the Trace List
 Scenarios
 ---------
 
-After you enable CTS and the management tracker is created, CTS starts recording operations on cloud resources. Cloud Trace Service (CTS) stores operation records (traces) generated in the last seven days.
+After you enable Cloud Trace Service (CTS) and the management tracker is created, CTS starts recording operations on cloud resources. CTS stores operation records (traces) generated in the last seven days.
 
 Viewing Real-Time Traces in the Trace List
 ------------------------------------------
@@ -23,7 +23,7 @@ Viewing Real-Time Traces in the Trace List
 
    .. _waf_01_0060__en-us_topic_0179639644_fig139361441134311:
 
-   .. figure:: /_static/images/en-us_image_0000001744598325.png
+   .. figure:: /_static/images/en-us_image_0000002361495872.png
       :alt: **Figure 1** Filters
 
       **Figure 1** Filters
@@ -57,9 +57,9 @@ Viewing Real-Time Traces in the Trace List
 
 #. For details about key fields in the trace structure, see `Trace Structure <https://docs.otc.t-systems.com/cloud-trace-service/umn/user_guide/trace_references/trace_structure.html#cts-03-0010>`__\ section "Trace References" > "Trace Structure" and `Example Traces <https://docs.otc.t-systems.com/cloud-trace-service/umn/user_guide/trace_references/example_traces.html>`__\ section "Trace References" > "Example Traces" in the *CTS User Guide*.
 
-.. |image1| image:: /_static/images/en-us_image_0000001696838310.png
-.. |image2| image:: /_static/images/en-us_image_0000001696678850.png
-.. |image3| image:: /_static/images/en-us_image_0000001744678489.jpg
-.. |image4| image:: /_static/images/en-us_image_0000001942942816.png
-.. |image5| image:: /_static/images/en-us_image_0000001942777100.png
-.. |image6| image:: /_static/images/en-us_image_0000001758618249.png
+.. |image1| image:: /_static/images/en-us_image_0000002395177421.png
+.. |image2| image:: /_static/images/en-us_image_0000002361495900.png
+.. |image3| image:: /_static/images/en-us_image_0000002361655776.jpg
+.. |image4| image:: /_static/images/en-us_image_0000002361655780.png
+.. |image5| image:: /_static/images/en-us_image_0000002361655784.png
+.. |image6| image:: /_static/images/en-us_image_0000002361655768.png

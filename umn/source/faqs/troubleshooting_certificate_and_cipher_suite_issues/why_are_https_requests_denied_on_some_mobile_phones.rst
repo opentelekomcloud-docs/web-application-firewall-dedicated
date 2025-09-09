@@ -12,7 +12,7 @@ Open the browser on the mobile phone and access the protected domain name. If a 
 
 .. _waf_01_0093__fig181295331076:
 
-.. figure:: /_static/images/en-us_image_0168547060.png
+.. figure:: /_static/images/en-us_image_0000002395175941.png
    :alt: **Figure 1** Access failed
 
    **Figure 1** Access failed

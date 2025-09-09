@@ -15,7 +15,7 @@ If you want to set a timeout duration for each request between your WAF instance
 
 .. _waf_01_1171__fig1746612284428:
 
-.. figure:: /_static/images/en-us_image_0000001519222274.png
+.. figure:: /_static/images/en-us_image_0000002395335245.png
    :alt: **Figure 1** WAF forwarding requests to origin servers.
 
    **Figure 1** WAF forwarding requests to origin servers.
@@ -42,15 +42,15 @@ Configuring a Timeout for Connections Between WAF and a Website Server
 ----------------------------------------------------------------------
 
 #. Log in to the management console.
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
-#. In the navigation pane on the left, choose **Website Settings**.
-#. In the **Domain Name** column, click the website domain name to go to the basic information page.
+#. In the navigation pane on the left, click **Website Settings**.
+#. On the **Website Settings** page, click the target website domain name.
 #. In the **Timeout Settings** row, toggle |image3| on if needed.
 #. Click |image4|, specify **WAF-to-Server connection timeout (s)**, **Read timeout (s)**, and **Write timeout (s)**, and click |image5| to save settings.
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image3| image:: /_static/images/en-us_image_0000001815763316.png
-.. |image4| image:: /_static/images/en-us_image_0000001282207201.png
-.. |image5| image:: /_static/images/en-us_image_0000001282406385.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002361495468.png
+.. |image4| image:: /_static/images/en-us_image_0000002395335253.png
+.. |image5| image:: /_static/images/en-us_image_0000002361495460.png

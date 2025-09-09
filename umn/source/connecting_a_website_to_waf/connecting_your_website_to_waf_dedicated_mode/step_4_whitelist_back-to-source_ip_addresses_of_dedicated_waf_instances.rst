@@ -14,7 +14,7 @@ To let your dedicated WAF instances take effect, configure ACL rules on the orig
 Why Do I Need to Whitelist the WAF Back-to-Source IP Addresses?
 ---------------------------------------------------------------
 
-In dedicated mode, website traffic is pointed to the load balancer configured for your dedicated WAF instances and then to dedicated WAF instances. The latter will filter out malicious traffic and route only normal traffic to the origin server. In this way, the origin server only communicates with WAF back-to-source IP addresses. By doing so, WAF protects the origin server IP address from being attacked. In dedicated mode, the WAF back-to-source IP addresses are the subnet IP addresses of the dedicated WAF instances.
+In dedicated mode, website traffic is pointed to the load balancer configured for your dedicated WAF instances and then to dedicated WAF instances. The latter will filter out malicious traffic and route only normal traffic to the origin server. In this way, the origin server only communicates with WAF back-to-source IP addresses. By doing so, WAF protects origin server IP addresses from attacks. In dedicated mode, the WAF back-to-source IP addresses are the subnet IP addresses of the dedicated WAF instances.
 
 The security software on the origin server may most likely regard WAF back-to-source IP addresses as malicious and block them. Once they are blocked, the origin server will deny all WAF requests. Your website may become unavailable or respond very slowly. So, you need to configure ACL rules on the origin server to trust only the subnet IP addresses of your dedicated WAF instances.
 
@@ -38,10 +38,12 @@ If your origin servers are deployed on ECSs, perform the following steps to conf
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine** to go to the dedicated WAF instance page.
+#. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine**.
+
+#. On the **Dedicated Engine** page, view the details about dedicated engine instances.
 
 
-   .. figure:: /_static/images/en-us_image_0000001732567617.png
+   .. figure:: /_static/images/en-us_image_0000002395389761.png
       :alt: **Figure 1** Dedicated engine list
 
       **Figure 1** Dedicated engine list
@@ -71,7 +73,7 @@ If your origin servers are deployed on ECSs, perform the following steps to conf
       +===================================+=======================================================================================================================================================================================+
       | Protocol & Port                   | Protocol and port for which the security group rule takes effect. If you select **TCP (Custom ports)**, enter the origin server port number in the text box below the TCP box.        |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Source                            | Subnet IP address of each dedicated WAF instance you obtain in :ref:`Step 5 <waf_01_0343__li6801172213128>`. Configure an inbound rule for each IP address.                           |
+      | Source                            | Subnet IP address of each dedicated WAF instance you obtain in :ref:`Step 6 <waf_01_0343__li6801172213128>`. Configure an inbound rule for each IP address.                           |
       |                                   |                                                                                                                                                                                       |
       |                                   | .. note::                                                                                                                                                                             |
       |                                   |                                                                                                                                                                                       |
@@ -99,10 +101,12 @@ If your origin server uses ELB to distribute traffic, perform the following step
 
 #. Click |image5| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine** to go to the dedicated WAF instance page.
+#. In the navigation pane on the left, choose **Instance Management** > **Dedicated Engine**.
+
+#. On the **Dedicated Engine** page, view the details about dedicated engine instances.
 
 
-   .. figure:: /_static/images/en-us_image_0000001732567617.png
+   .. figure:: /_static/images/en-us_image_0000002395270729.png
       :alt: **Figure 2** Dedicated engine list
 
       **Figure 2** Dedicated engine list
@@ -116,7 +120,7 @@ If your origin server uses ELB to distribute traffic, perform the following step
 #. In the **Access Control** row of the target listener, click **Configure**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001545291713.png
+   .. figure:: /_static/images/en-us_image_0000002395175717.png
       :alt: **Figure 3** Listener list
 
       **Figure 3** Listener list
@@ -125,12 +129,12 @@ If your origin server uses ELB to distribute traffic, perform the following step
 
    a. .. _waf_01_0343__li18121331122018:
 
-      Click **Create IP Address Group** and add the IP addresses of the dedicated WAF instances into the IP address group. You can obtain these IP addresses from :ref:`Step 5 <waf_01_0343__li6801172213128>`.
+      Click **Create IP Address Group** and add the IP addresses of the dedicated WAF instances into the IP address group. You can obtain these IP addresses from :ref:`Step 6 <waf_01_0343__li6801172213128>`.
 
-   b. Select the IP address group created in :ref:`9.a <waf_01_0343__li18121331122018>` from the **IP Address Group** drop-down list.
+   b. Select the IP address group created in :ref:`10.a <waf_01_0343__li18121331122018>` from the **IP Address Group** drop-down list.
 
 
-   .. figure:: /_static/images/en-us_image_0000001732267765.png
+   .. figure:: /_static/images/en-us_image_0000002395175685.png
       :alt: **Figure 4** Configuring whitelist access control
 
       **Figure 4** Configuring whitelist access control
@@ -145,9 +149,9 @@ If your origin server uses ELB to distribute traffic, perform the following step
 
    **Telnet** *Origin server IP address* **443**
 
-.. |image1| image:: /_static/images/en-us_image_0000001532623045.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001538620681.png
-.. |image3| image:: /_static/images/en-us_image_0212852906.png
-.. |image4| image:: /_static/images/en-us_image_0000001487940018.jpg
-.. |image5| image:: /_static/images/en-us_image_0000001538620869.png
-.. |image6| image:: /_static/images/en-us_image_0000001124537874.png
+.. |image1| image:: /_static/images/en-us_image_0000002395175669.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002361495768.png
+.. |image3| image:: /_static/images/en-us_image_0000002361655436.png
+.. |image4| image:: /_static/images/en-us_image_0000002361495764.jpg
+.. |image5| image:: /_static/images/en-us_image_0000002361655656.png
+.. |image6| image:: /_static/images/en-us_image_0000002395175689.png

@@ -111,9 +111,9 @@ If the request data for calling other APIs on the web page is not included in th
 Can WAF Limit Access Through Domain Names?
 ------------------------------------------
 
-No. WAF supports the blacklist and whitelist rules to block, log only, or permit access requests from specified IP addresses or IP address segments.
+No. WAF supports the blacklist and whitelist rules to block, log only, or permit access requests from specified IP addresses or IP address ranges.
 
-You can configure blacklist and whitelist rules to block, log only, or permit access requests from the IP addresses or IP address segments corresponding to the domain names.
+You can configure blacklist and whitelist rules to block, log only, or permit access requests from the IP addresses or IP address ranges corresponding to the domain names.
 
 Does WAF Have the IPS Module?
 -----------------------------

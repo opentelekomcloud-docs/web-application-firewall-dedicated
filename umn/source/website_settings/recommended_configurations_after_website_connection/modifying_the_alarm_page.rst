@@ -27,16 +27,16 @@ Editing Response Page for Blocked Requests
 ------------------------------------------
 
 #. Log in to the management console.
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
-#. In the navigation pane on the left, choose **Website Settings**.
-#. In the **Domain Name** column, click the domain name of the website to go to the basic information page.
+#. In the navigation pane on the left, click **Website Settings**.
+#. On the **Website Settings** page, click the target website domain name.
 #. Click |image3| next to the page template name in the row of **Alarm Page**. In the displayed **Alarm Page** dialog box, specify **Page Template**.
 
    -  To use the built-in page, select **Default**. An HTTP code 418 is returned.
 
 
-      .. figure:: /_static/images/en-us_image_0000001338016357.png
+      .. figure:: /_static/images/en-us_image_0000002395335961.png
          :alt: **Figure 1** Default alarm page
 
          **Figure 1** Default alarm page
@@ -49,7 +49,7 @@ Editing Response Page for Blocked Requests
       -  **Page Content**: Configure the page content based on the selected value for **Block Page Type**.
 
 
-      .. figure:: /_static/images/en-us_image_0000001338096873.png
+      .. figure:: /_static/images/en-us_image_0000002361496164.png
          :alt: **Figure 2** Custom alarm page
 
          **Figure 2** Custom alarm page
@@ -57,7 +57,7 @@ Editing Response Page for Blocked Requests
    -  To configure a redirection URL, select **Redirection**.
 
 
-      .. figure:: /_static/images/en-us_image_0000001285737132.png
+      .. figure:: /_static/images/en-us_image_0000002395335941.png
          :alt: **Figure 3** Redirection alarm page
 
          **Figure 3** Redirection alarm page
@@ -66,6 +66,6 @@ Editing Response Page for Blocked Requests
 
 #. Click **Confirm**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001481693004.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340583529.png
-.. |image3| image:: /_static/images/en-us_image_0000002129833584.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002361656052.png

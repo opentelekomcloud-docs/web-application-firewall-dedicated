@@ -17,7 +17,7 @@ Checking Certificate Details
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
@@ -26,7 +26,7 @@ Checking Certificate Details
 #. View the certificate information. For details about related parameters, see :ref:`Table 1 <waf_01_0282__table42671747141413>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000001684444678.png
+   .. figure:: /_static/images/en-us_image_0000002395336049.png
       :alt: **Figure 1** Certificate list
 
       **Figure 1** Certificate list
@@ -63,6 +63,6 @@ Related Operations
 -  To delete a certificate, locate the row of the certificate and click **More** > **Delete** in the **Operation** column.
 -  To update a certificate, locate the row of the certificate and click **More** > **Update** in the **Operation** column.
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image3| image:: /_static/images/en-us_image_0269115287.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002361656020.png

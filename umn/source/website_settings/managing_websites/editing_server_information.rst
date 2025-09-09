@@ -36,17 +36,17 @@ Modifying Server Information of One Website
 -------------------------------------------
 
 #. Log in to the management console.
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
-#. In the navigation pane on the left, choose **Website Settings**.
-#. In the **Domain Name** column, click the domain name of the website to go to the basic information page.
+#. In the navigation pane on the left, click **Website Settings**.
+#. On the **Website Settings** page, click the target website domain name.
 #. In the **Origin Servers** area, click **Edit**.
-#. On the **Edit Server Information** page, edit the server configurations (such as client protocols and associated certificates).
+#. In the **Edit Server Information** dialog box, edit the server configurations and associated certificates as needed.
 
    -  For details about certificate, see :ref:`Updating the Certificate Used for a Website <waf_01_0262>`.
    -  WAF supports configuring of multiple backend servers. To add a backend server, click **Add**.
 
 #. Click **Confirm**.
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png

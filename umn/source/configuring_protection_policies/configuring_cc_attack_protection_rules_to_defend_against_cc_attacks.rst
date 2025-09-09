@@ -25,7 +25,7 @@ Configuring a CC Attack Protection Rule
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
@@ -44,7 +44,7 @@ Configuring a CC Attack Protection Rule
 
    .. _waf_01_0009__fig1083929152617:
 
-   .. figure:: /_static/images/en-us_image_0000001683774038.png
+   .. figure:: /_static/images/en-us_image_0000002361495640.png
       :alt: **Figure 1** Adding a CC attack protection rule
 
       **Figure 1** Adding a CC attack protection rule
@@ -76,10 +76,14 @@ Configuring a CC Attack Protection Rule
       |                       |                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                             |
       |                       | -  **Header**: Set the user-defined HTTP header you want to protect. You need to configure the HTTP header that can identify web visitors based on your website requirements.                                                                                                                                                                                                                       |                                                                                             |
       +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
-      | Trigger               | Click **Add** and add conditions. At least one condition is required, but up to 30 conditions are allowed. If you add more than one condition, the rule will only take effect when all conditions are met.                                                                                                                                                                                          | **Path** **Include** **/admin**                                                             |
+      | Trigger               | The request features to be matched by the rule. If a request matches the features, WAF handles the request according to the configured rule.                                                                                                                                                                                                                                                        | **Field**: Set to **Path**.                                                                 |
       |                       |                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                             |
-      |                       | -  **Field**                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                             |
+      |                       | -  At least one condition is required for the rule to take effect. If multiple conditions are configured, the rule takes effect only when all conditions are met.                                                                                                                                                                                                                                   | **Logic**: Set to **Include**.                                                              |
+      |                       | -  Click **Add** to add a condition. You can add up to 30 conditions.                                                                                                                                                                                                                                                                                                                               |                                                                                             |
+      |                       |                                                                                                                                                                                                                                                                                                                                                                                                     | **Content**: Set to **/admin/**.                                                            |
+      |                       | Condition parameter description:                                                                                                                                                                                                                                                                                                                                                                    |                                                                                             |
       |                       |                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                             |
+      |                       | -  **Field**: For details, see :ref:`Condition Field Description <waf_01_3271>`.                                                                                                                                                                                                                                                                                                                    |                                                                                             |
       |                       | -  **Subfield**: Configure this field only when **IPv4**, **Cookie**, **Header**, or **Params** is selected for **Field**.                                                                                                                                                                                                                                                                          |                                                                                             |
       |                       |                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                             |
       |                       |    .. important::                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                             |
@@ -94,17 +98,20 @@ Configuring a CC Attack Protection Rule
       |                       |       If you set **Logic** to **Include any value**, **Exclude any value**, **Equal to any value**, **Not equal to any value**, **Prefix is any value**, **Prefix is not any of them**, **Suffix is any value**, or **Suffix is not any of them**, select an existing reference table. For details, see :ref:`Creating a Reference Table to Configure Protection Metrics in Batches <waf_01_0081>`. |                                                                                             |
       |                       |                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                             |
       |                       | -  **Content**: Enter or select the content that matches the condition.                                                                                                                                                                                                                                                                                                                             |                                                                                             |
-      |                       |                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                             |
-      |                       |    If you enable this, the system matches the case-sensitive content. It helps the system precisely identify requests and respond to them accurately, making protection policies work better.                                                                                                                                                                                                       |                                                                                             |
       +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
       | Rate Limit            | The number of requests allowed from a website visitor in the rate limit period. If the number of requests exceeds the rate limit, WAF takes the action you configure for **Protective Action**.                                                                                                                                                                                                     | **10** requests allowed in **60** seconds                                                   |
       +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
       | Protective Action     | The action that WAF will take if the number of requests exceeds **Rate Limit** you configured. The options are as follows:                                                                                                                                                                                                                                                                          | Block                                                                                       |
       |                       |                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                             |
       |                       | -  **Verification code**: WAF allows requests that trigger the rule as long as your website visitors complete the required verification.                                                                                                                                                                                                                                                            |                                                                                             |
-      |                       | -  **Block**: WAF blocks requests that trigger the rule.                                                                                                                                                                                                                                                                                                                                            |                                                                                             |
+      |                       |                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                             |
+      |                       |    .. note::                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                             |
+      |                       |                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                             |
+      |                       |       The cloud load balancer access mode does not support this protective action.                                                                                                                                                                                                                                                                                                                  |                                                                                             |
+      |                       |                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                             |
+      |                       | -  **Block**: WAF blocks requests that trigger **Rate Limit** set in the rule.                                                                                                                                                                                                                                                                                                                      |                                                                                             |
       |                       | -  **Block dynamically**: WAF blocks requests that trigger the rule based on **Allowable Frequency**, which you configure after the first rate limit period is over.                                                                                                                                                                                                                                |                                                                                             |
-      |                       | -  **Log only**: WAF only logs requests that trigger the rule.                                                                                                                                                                                                                                                                                                                                      |                                                                                             |
+      |                       | -  **Log only**: WAF only logs requests that trigger **Rate Limit** set in the rule.                                                                                                                                                                                                                                                                                                                |                                                                                             |
       +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
       | Application Schedule  | -  **Immediate**: The rule works immediately after it is enabled.                                                                                                                                                                                                                                                                                                                                   | Immediate                                                                                   |
       |                       | -  **Custom**: You can select a time range for the rule to work.                                                                                                                                                                                                                                                                                                                                    |                                                                                             |
@@ -137,19 +144,20 @@ Configuring a CC Attack Protection Rule
 
 #. Click **Confirm**. You can then view the added CC attack protection rule in the CC rule list.
 
-   -  To disable a rule, click **Disable** in the **Operation** column of the rule. The default **Rule Status** is **Enabled**.
-   -  To modify a rule, click **Modify** in the row containing the rule.
-   -  To delete a rule, click **Delete** in the row containing the rule.
+   -  After the configuration is complete, you can view the added rule in the protection rule list. **Rule Status** is **Enabled** by default.
+   -  If you do not want the rule to take effect, click **Disable** in the **Operation** column of the rule.
+   -  To delete a rule you no longer need, click **Delete** in the **Operation** column of the rule.
+   -  To modify or copy a rule, click **More** > **Modify** or **More** > **Copy** in the **Operation** column of the target rule, respectively.
 
-Protection Effect
------------------
+Protection Verification
+-----------------------
 
-If you have configured a CC attack protection rule like :ref:`Figure 1 <waf_01_0009__fig1083929152617>` (with **Protective Action** set to **Block**) for your domain name **www.example.com**, take the following steps to verify the protection effect:
+If you have configured a CC attack protection rule as required in :ref:`Figure 1 <waf_01_0009__fig1083929152617>` (with **Protective Action** set to **Block**) by referring to :ref:`Table 1 <waf_01_0009__table480817611214>` for your domain name **www.example.com**, take the following steps to verify the protection effect:
 
 #. Clear the browser cache and enter the domain name in the address bar to check whether the website is accessible.
 
-   -  If the website is inaccessible, connect the website domain name to WAF by referring to :ref:`Step 1: Add Your Website to WAF <waf_01_0326>`.
-   -  If the website is accessible, go to :ref:`2 <waf_01_0009__li88102353919>`.
+   -  If the website is inaccessible, connect the website domain name to WAF by following the instructions in :ref:`Step 1: Add Your Website to WAF <waf_01_0326>`.
+   -  If the website is accessible, go to :ref:`Step 2 <waf_01_0009__li88102353919>`.
 
 #. .. _waf_01_0009__li88102353919:
 
@@ -158,22 +166,22 @@ If you have configured a CC attack protection rule like :ref:`Figure 1 <waf_01_0
    If you select **Verification code** for protective action, a verification code is required for visitors to continue the access if they exceed the configured rate limit.
 
 
-   .. figure:: /_static/images/en-us_image_0000002126107914.png
+   .. figure:: /_static/images/en-us_image_0000002361495644.png
       :alt: **Figure 2** Verification code
 
       **Figure 2** Verification code
 
-#. Return to the WAF console. In the navigation pane on the left, choose **Events**. On the displayed page, view the event log.
+#. Return to the WAF console. In the navigation pane on the left, click **Events**. On the displayed page, check event logs.
 
 Configuration Example - Verification Code
 -----------------------------------------
 
-If domain name **www.example.com** has been connected to WAF, perform the following steps to verify that WAF CAPTCHA verification is enabled.
+You can take the following steps to verify that CAPTCHA verification is enabled for your website (**www.example.com**) protected by WAF.
 
 #. Add a CC attack protection rule with **Protection Action** set to **Verification code**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002019512640.png
+   .. figure:: /_static/images/en-us_image_0000002361495632.png
       :alt: **Figure 3** Verification code
 
       **Figure 3** Verification code
@@ -181,7 +189,7 @@ If domain name **www.example.com** has been connected to WAF, perform the follow
 #. Enable CC attack protection.
 
 
-   .. figure:: /_static/images/en-us_image_0000002090587337.png
+   .. figure:: /_static/images/en-us_image_0000002361495652.png
       :alt: **Figure 4** Enabling CC Attack Protection
 
       **Figure 4** Enabling CC Attack Protection
@@ -191,14 +199,14 @@ If domain name **www.example.com** has been connected to WAF, perform the follow
    If you access the page 10 times within 60 seconds, a verification code is required when you attempt to access the page for the eleventh time. You need to enter the verification code to continue the access.
 
 
-   .. figure:: /_static/images/en-us_image_0000002126107914.png
+   .. figure:: /_static/images/en-us_image_0000002361495644.png
       :alt: **Figure 5** Verification code
 
       **Figure 5** Verification code
 
 #. Go to the WAF console. In the navigation pane on the left, choose **Events**. View the event on the **Events** page.
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image3| image:: /_static/images/en-us_image_0000002054495070.png
-.. |image4| image:: /_static/images/en-us_image_0000001761857181.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002395174901.png
+.. |image4| image:: /_static/images/en-us_image_0000002361494960.png

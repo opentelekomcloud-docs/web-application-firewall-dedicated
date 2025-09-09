@@ -18,16 +18,18 @@ Viewing Basic Information of a Website
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Website Settings**.
+#. In the navigation pane on the left, click **Website Settings**.
+
+#. On the **Website Settings** page, click the target website domain name.
 
 #. View the protected website list. For details about parameters, see :ref:`Table 1 <waf_01_0020__table5959193219357>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000001905693152.png
+   .. figure:: /_static/images/en-us_image_0000002395335793.png
       :alt: **Figure 1** Website list
 
       **Figure 1** Website list
@@ -73,10 +75,10 @@ Viewing Basic Information of a Website
    To modify a parameter, locate the row that contains the target parameter and click the edit icon.
 
 
-   .. figure:: /_static/images/en-us_image_0000001284850794.png
+   .. figure:: /_static/images/en-us_image_0000002395335085.png
       :alt: **Figure 2** Basic Information
 
       **Figure 2** Basic Information
 
-.. |image1| image:: /_static/images/en-us_image_0000001481851976.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001733092845.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png

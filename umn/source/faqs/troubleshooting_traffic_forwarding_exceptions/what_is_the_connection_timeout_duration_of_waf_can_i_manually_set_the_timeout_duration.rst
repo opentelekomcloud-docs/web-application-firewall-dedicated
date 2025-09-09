@@ -11,5 +11,5 @@ What Is the Connection Timeout Duration of WAF? Can I Manually Set the Timeout D
 
    On the **Basic Information** page, enable **Timeout Settings** and click |image1|. Then, specify **WAF-to-Server connection timeout (s)**, **Read timeout (s)**, and **Write timeout (s)** and click |image2| to save settings.
 
-.. |image1| image:: /_static/images/en-us_image_0000001238212390.png
-.. |image2| image:: /_static/images/en-us_image_0000001238212390.png
+.. |image1| image:: /_static/images/en-us_image_0000002395175289.png
+.. |image2| image:: /_static/images/en-us_image_0000002395175289.png

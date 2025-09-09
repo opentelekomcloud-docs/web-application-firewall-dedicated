@@ -23,11 +23,11 @@ Deleting a Protected Website from WAF
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Website Settings**.
+#. In the navigation pane on the left, click **Website Settings**.
 
 #. In the row containing the website domain name you want to delete, click **Delete** in the **Operation** column.
 
@@ -36,7 +36,7 @@ Deleting a Protected Website from WAF
    If you want to retain the policy applied to the domain name, select **Retain the policy of this domain name**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001435452489.png
+   .. figure:: /_static/images/en-us_image_0000002395335353.png
       :alt: **Figure 1** Deleting a protected domain name from WAF
 
       **Figure 1** Deleting a protected domain name from WAF
@@ -45,5 +45,5 @@ Deleting a Protected Website from WAF
 
    If **Domain name deleted successfully** is displayed in the upper right corner, the domain name of the website was deleted.
 
-.. |image1| image:: /_static/images/en-us_image_0000001544531265.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001340304197.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png

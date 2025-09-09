@@ -5,45 +5,65 @@
 Handling False Alarms
 =====================
 
-If you confirm that an attack event on the **Events** page is a false alarm, you can handle the event as false alarm by ignoring the URL and rule ID in basic web protection, or by deleting or disabling the corresponding protection rule you configured. After an attack event is handled as a false alarm, the event will not be displayed on the **Events** page anymore.
+If you are sure that a protection event is a false alarm (no malicious link or character was detected), you can handle it as a false alarm, add the client IP address to an address group that is allowed by the policy, add the client IP address to a blacklist/whitelist rule, or disable or delete the hit protection rule. Events that have been handled as false alarms will not be displayed in the event list.
 
-WAF detects attacks by using built-in basic web protection rules, built-in features in anti-crawler protection, and custom rules you configured (such as CC attack protection, precise access protection, blacklist, whitelist, and geolocation access control rules). WAF will respond to detected attacks based on the protective actions (such as **Block** and **Log only**) defined in the rules and display attack events on the **Events** page.
+Scenarios
+---------
+
+If legitimate service requests are blocked by WAF, the website may be inaccessible to some visitors. For example, after you connect a web service deployed on ECSs to WAF over its public domain name and enable basic web protection for it, if its normal traffic hits a protection rule, the access requests will be blocked. The web service becomes inaccessible over the domain name or returns errors to visitors, but it is still accessible over server IP addresses. It is more likely that the requests were blocked mistakenly, and the event is a false alarm. In this case, you need to handle the event as a false alarm.
+
+You can handle false alarms in the following ways based on how they were generated:
+
+-  For a protection event triggered by a WAF built-in rule, you can ignore the corresponding WAF protection in the global protection whitelist rule. For details, see :ref:`Handling False Alarms Triggered by Protection Rules <waf_01_0024__section1078165815512>`.
+
+   WAF built-in rules include basic web protection rules, and feature-based anti-crawler rules.
+
+-  For a protection event triggered by a custom rule, you can disable or delete the corresponding protection rule. For details, see :ref:`Handling False Alarms Triggered by Protection Rules <waf_01_0024__section1078165815512>`.
+
+   WAF custom rules include **CC attack protection rules**, **precise protection rules**, **blacklist and whitelist rules**, and **geolocation access control rules** you create.
+
+-  For a client IP address mistakenly blocked, you can add it to an address group or add it to a blacklist/whitelist rule to allow it. For details, see :ref:`Handling False Positives Based on Client IP Addresses <waf_01_0024__section12680141116438>`.
 
 Prerequisites
 -------------
 
-There is at least one false alarm event in the event list.
+A protection event has been reported and displayed on the **Events** page.
 
 Constraints
 -----------
 
--  Only attack events blocked or recorded by built-in basic web protection rules and features in anti-crawler protection can be handled as false alarms.
--  For events generated based on custom rules (such as a CC attack protection rule, precise protection rule, blacklist rule, whitelist rule, or geolocation access control rule), they cannot be handled as false alarms. To ignore such an event, delete or disable the custom rule hit by the event.
--  An attack event can only be handled as a false alarm once.
--  After an attack event is handled as a false alarm, the attack event will not be displayed on the **Events** page.
+-  A protection event can only be handled as a false alarm once.
 -  Dedicated WAF instances earlier than June 2022 do not support **All protection** for **Ignore WAF Protection**. Only **Basic web protection** can be selected.
 
-Application Scenarios
----------------------
+.. _waf_01_0024__section1078165815512:
 
-Sometimes normal service requests may be blocked by WAF. For example, suppose you deploy a web application on ECSs and then add the public domain name associated with that application to WAF. If you enable basic web protection for that application, WAF may block the access requests that match the basic web protection rules. If the website is inaccessible over its domain name but accessible over its IP address, you can handle the false alarms to allow normal access requests to the application.
+Handling False Alarms Triggered by Protection Rules
+---------------------------------------------------
 
+If you are sure that an event is a false alarm generated based on a WAF built-in rule or custom protection rule, you can handle the event as a false alarm.
 
-Handling False Alarms
----------------------
+-  WAF built-in rules include **basic web protection** **rules**, and **feature-based anti-crawler** **rules**.
+-  WAF custom rules include **CC attack protection rules**, **precise protection rules**, **blacklist and whitelist rules**, and **geolocation access control rules** you create.
 
 #. Log in to the management console.
-#. In the navigation pane on the left, choose **Events**.
-#. Click the **Search** tab. In the website or instance drop-down list, select a website to view corresponding event logs. The query time can be **Yesterday**, **Today**, **Past 3 days**, **Past 7 days**, **Past 30 days**, or a time range you configure.
-#. In the event list, handle events.
+#. Click |image1| in the upper left corner and select a region or project.
+#. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
+#. In the navigation pane on the left, click **Events**.
+#. View protection details of a specified domain name, instance, and time range.
+#. Locate the target protection event and choose **More** > **Handle as False Alarm** in the **Operation** column.
+#. In the **Handle False Alarm** dialog box, handle the event.
 
-   -  If you confirm that an event is a false alarm, locate the row containing the event. In the **Operation** column, click **More** > **Handle as False Alarm** and handle the hit rule.
+   -  **Ignore the corresponding WAF protection based on the request features hit the rule.**
+
+      If a protection event is triggered by a rule in **Basic Web Protection** or **Feature-based Anti-Crawler**, the associated request features will be displayed in the **Handle False Alarm** dialog box by default. You need to ignore the corresponding WAF protection type and click **OK**. For details about the parameters of the global whitelist rule, see :ref:`Table 1 <waf_01_0024__table15669504522>`.
 
 
-      .. figure:: /_static/images/en-us_image_0000001683743464.png
-         :alt: **Figure 1** Handling a false alarm
+      .. figure:: /_static/images/en-us_image_0000002395335841.png
+         :alt: **Figure 1** Handle False Alarm
 
-         **Figure 1** Handling a false alarm
+         **Figure 1** Handle False Alarm
+
+      .. _waf_01_0024__table15669504522:
 
       .. table:: **Table 1** Parameters
 
@@ -57,11 +77,11 @@ Handling False Alarms
          |                         |                                                                                                                                                                                                                                                                                    |                                            |
          |                         | Enter a single domain name that matches the wildcard domain name being protected by the current policy.                                                                                                                                                                            |                                            |
          +-------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+
-         | Condition List          | Click **Add** to add conditions. At least one condition needs to be added. You can add up to 30 conditions to a protection rule. If more than one condition is added, all of the conditions must be met for the rule to be applied. A condition includes the following parameters: | Path, Include, /product                    |
+         | Condition List          | Click **Add** to add conditions. At least one condition needs to be added. You can add up to 30 conditions to a protection rule. If more than one condition is added, all of the conditions must be met for the rule to be applied. A condition includes the following parameters: | **Field** is set to **Path**.              |
          |                         |                                                                                                                                                                                                                                                                                    |                                            |
-         |                         | Parameters for configuring a condition are described as follows:                                                                                                                                                                                                                   |                                            |
+         |                         | Condition parameter description:                                                                                                                                                                                                                                                   | **Logic** is set to **Include**.           |
          |                         |                                                                                                                                                                                                                                                                                    |                                            |
-         |                         | -  **Field**                                                                                                                                                                                                                                                                       |                                            |
+         |                         | -  **Field**                                                                                                                                                                                                                                                                       | **Content** is set to **/product**.        |
          |                         | -  **Subfield**: Configure this field only when **Params**, **Cookie**, or **Header** is selected for **Field**.                                                                                                                                                                   |                                            |
          |                         |                                                                                                                                                                                                                                                                                    |                                            |
          |                         |    .. important::                                                                                                                                                                                                                                                                  |                                            |
@@ -106,58 +126,104 @@ Handling False Alarms
          |                         |    If **All** is selected, WAF will not block all attack events of the selected field.                                                                                                                                                                                             |                                            |
          +-------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+
 
-   -  Add the source IP address to an address group. Locate the row containing the desired event, in the **Operation** column, click **More** > **Add to Address Group**. The source IP address triggering the event will be blocked or allowed based on the policy used for the address group.
+   -  Disabling or deleting a custom protection rule
 
-      **Add to**: You can select an existing address group or create an address group.
-
-
-      .. figure:: /_static/images/en-us_image_0000001683585920.png
-         :alt: **Figure 2** Add to Address Group
-
-         **Figure 2** Add to Address Group
-
-   -  Add the source IP address to a blacklist or whitelist rule of the corresponding protected domain name. Locate the row containing the desired event. In the **Operation** column, click **More** > **Add to Blacklist/Whitelist**. Then, the source IP address will be blocked or allowed based on the protective action configured in the blacklist or whitelist rule.
+      For a protection event triggered by a custom protection rule (such as a CC attack protection rule or precise protection rule), the custom protection rule is displayed in the **Handle False Alarm** dialog box. You can click **Handle Now** to go to the custom protection rule page. Then, click **Disable** or **Delete** in the **Operation** column of the target rule.
 
 
-      .. figure:: /_static/images/en-us_image_0000001683746324.png
-         :alt: **Figure 3** Add to Blacklist/Whitelist
+      .. figure:: /_static/images/en-us_image_0000002361655940.png
+         :alt: **Figure 2** Disabling or deleting a custom protection rule
 
-         **Figure 3** Add to Blacklist/Whitelist
+         **Figure 2** Disabling or deleting a custom protection rule
 
-      .. table:: **Table 2** Parameter descriptions
+.. _waf_01_0024__section12680141116438:
 
-         +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-         | Parameter                         | Description                                                                                                                                                                                                                                         |
-         +===================================+=====================================================================================================================================================================================================================================================+
-         | Add to                            | -  Existing rule                                                                                                                                                                                                                                    |
-         |                                   | -  New rule                                                                                                                                                                                                                                         |
-         +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-         | Rule Name                         | -  If you select **Existing rule** for **Add to**, select a rule name from the drop-down list.                                                                                                                                                      |
-         |                                   | -  If you select **New rule** for **Add to**, customize a blacklist or whitelist rule.                                                                                                                                                              |
-         +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-         | IP Address/Range/Group            | This parameter is mandatory when you select **New rule** for **Add to**.                                                                                                                                                                            |
-         |                                   |                                                                                                                                                                                                                                                     |
-         |                                   | You can select **IP address/Range** or **Address Group** to add IP addresses a blacklist or whitelist rule.                                                                                                                                         |
-         +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-         | Group Name                        | This parameter is mandatory when you select **Address group** for **IP Address/Range/Group**.                                                                                                                                                       |
-         |                                   |                                                                                                                                                                                                                                                     |
-         |                                   | Select an address group from the drop-down list.                                                                                                                                                                                                    |
-         +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-         | Protective Action                 | -  **Block**: Select **Block** if you want to blacklist an IP address or IP address range.                                                                                                                                                          |
-         |                                   | -  **Allow**: Select **Allow** if you want to whitelist an IP address or IP address range.                                                                                                                                                          |
-         |                                   | -  **Log only**: Select **Log only** if you want to observe an IP address or IP address range.                                                                                                                                                      |
-         +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-         | Known Attack Source               | If you select **Block** for **Protective Action**, you can select a blocking type of a known attack source rule. WAF will block requests matching the configured IP address, Cookie, or Params for a length of time configured as part of the rule. |
-         +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-         | Rule Description                  | A brief description of the rule. This parameter is optional.                                                                                                                                                                                        |
-         +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Handling False Positives Based on Client IP Addresses
+-----------------------------------------------------
 
-Verification
-------------
+If you are sure a client IP address is blocked mistakenly, you can **add the IP address to an address group** and **add the IP address to a blacklist/whitelist rule** to allow it.
 
-A false alarm will be deleted within about a minute after the handling configuration is done. It will no longer be displayed in the attack event details list. You can refresh the browser cache and access the page for which the global whitelist rule is configured again to check whether the configuration is successful.
+#. Log in to the management console.
+#. Click |image3| in the upper left corner and select a region or project.
+#. Click |image4| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
+#. In the navigation pane on the left, click **Events**.
+#. View protection details of a specified domain name, instance, and time range.
+#. Locate the target client IP address and click **Add to Address Group** or **Add to Blacklist/Whitelist**.
+
+   -  Adding a client IP address to an address group
+
+      a. In the **Operation** column of the target client IP address, choose **More** > **Add to Address Group**.
+
+      b. In the **Add to Address Group** dialog box, add the client IP address to an existing address group or a new address group.
+
+
+         .. figure:: /_static/images/en-us_image_0000002361496088.png
+            :alt: **Figure 3** Add to Address Group
+
+            **Figure 3** Add to Address Group
+
+      c. Associate the address group with a protection policy. If the address group has been associated with a protection policy, skip this step.
+
+         After the preceding configurations are complete, WAF blocks or allows the client IP addresses based on the protection policy associated with the address group.
+
+   -  Adding a client IP address to a blacklist or whitelist
+
+      a. In the **Operation** column of the target client IP address, choose **More** > **Add to Blacklist/Whitelist**.
+
+      b. In the **Add to Blacklist/Whitelist** dialog box, add the client IP address to an existing rule or a new rule. For more details about a blacklist/whitelist rule, see :ref:`Table 2 <waf_01_0024__table874371892619>`.
+
+
+         .. figure:: /_static/images/en-us_image_0000002395335833.png
+            :alt: **Figure 4** Add to Blacklist/Whitelist
+
+            **Figure 4** Add to Blacklist/Whitelist
+
+         .. _waf_01_0024__table874371892619:
+
+         .. table:: **Table 2** Parameter descriptions
+
+            +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+            | Parameter                         | Description                                                                                                                                                                                                                                                                                                                                                                                                        |
+            +===================================+====================================================================================================================================================================================================================================================================================================================================================================================================================+
+            | Add to                            | -  **Existing rule**: Add the client IP address to an existing blacklist or whitelist rule used for the protected domain name.                                                                                                                                                                                                                                                                                     |
+            |                                   | -  **New rule**: Create a blacklist or whitelist rule for the protected domain name and add the client IP address to the rule.                                                                                                                                                                                                                                                                                     |
+            +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+            | Rule Name                         | -  If you select **Existing rule** for **Add to**, select a rule name from the drop-down list.                                                                                                                                                                                                                                                                                                                     |
+            |                                   | -  If you select **New rule** for **Add to**, customize a blacklist or whitelist rule.                                                                                                                                                                                                                                                                                                                             |
+            +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+            | IP Address/Range/Group            | Add an IP address, IP address range, or address group. This parameter is mandatory only when you select **New rule** for **Add to**.                                                                                                                                                                                                                                                                               |
+            |                                   |                                                                                                                                                                                                                                                                                                                                                                                                                    |
+            |                                   | -  **IP address/range**: Add the client IP address to the blacklist or whitelist.                                                                                                                                                                                                                                                                                                                                  |
+            |                                   |                                                                                                                                                                                                                                                                                                                                                                                                                    |
+            |                                   | -  **Address group**: Add the client IP address to the address group associated with the blacklist or whitelist rule.                                                                                                                                                                                                                                                                                              |
+            |                                   |                                                                                                                                                                                                                                                                                                                                                                                                                    |
+            |                                   |    If you select **Address Group**, you need to select an existing address group or create a new address group.                                                                                                                                                                                                                                                                                                    |
+            +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+            | Protective Action                 | Select the protective action for the rule. This parameter is mandatory only when you select **New rule** for **Add to**.                                                                                                                                                                                                                                                                                           |
+            |                                   |                                                                                                                                                                                                                                                                                                                                                                                                                    |
+            |                                   | -  **Block**: Select **Block** if you want to black the IP address or IP address range you configure previously.                                                                                                                                                                                                                                                                                                   |
+            |                                   | -  **Allow**: Select **Allow** if you want to allow the IP address or IP address range you configure previously.                                                                                                                                                                                                                                                                                                   |
+            |                                   | -  **Log only**: Select **Log only** if you want to observe the traffic from the IP address or IP address range you configure previously.                                                                                                                                                                                                                                                                          |
+            +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+            | Known Attack Source               | If you select **Block** for **Protective Action**, you can configure a known attack source rule. Then, WAF blocks the requests matching the configured **IP**, **Cookie**, or **Params** for a period configured by the known attack source rule. For details about know attack source rules, see :ref:`Configuring a Known Attack Source Rule to Block Specific Visitors for a Specified Duration <waf_01_0271>`. |
+            +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+            | Rule Description                  | Description of the rule.                                                                                                                                                                                                                                                                                                                                                                                           |
+            +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+         After the preceding configurations are complete, WAF blocks or allows client IP addresses based on the blacklist and whitelist rule you configure.
+
+Operation Result Verification
+-----------------------------
+
+It takes about one minute for the operation works. Handled false alarms will no longer be displayed in the event list. You can refresh the browser cache, access the page for which the global whitelist rule is configured, and check whether the configuration is successful.
 
 Related Operations
 ------------------
 
-If an event is handled as a false alarm, the rule hit will be added to the global protection whitelist rule list. You can go to the **Policies** page and then switch to the **Global Protection Whitelist** page to manage the rule, including querying, disabling, deleting, and modifying the rule. For details, see :ref:`Configuring a Global Protection Whitelist Rule <waf_01_0016>`.
+-  If an event is handled as a false alarm, the rule hit will be added to the global protection whitelist rule list. You can go to the **Policies** page and then switch to the **Global Protection Whitelist** page to manage the rule, including querying, disabling, deleting, and modifying the rule. For details, see :ref:`Configuring a Global Protection Whitelist Rule <waf_01_0016>`.
+-  If the **Handle as False Alarm** button is grayed out, see
+
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image4| image:: /_static/images/en-us_image_0000002395334641.png

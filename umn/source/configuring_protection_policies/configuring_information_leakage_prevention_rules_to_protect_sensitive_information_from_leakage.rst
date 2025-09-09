@@ -25,7 +25,7 @@ Configuring an Information Leakage Prevention Rule
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
@@ -48,7 +48,7 @@ Configuring an Information Leakage Prevention Rule
 
    .. _waf_01_0054__fig1077215502209:
 
-   .. figure:: /_static/images/en-us_image_0000001285815180.png
+   .. figure:: /_static/images/en-us_image_0000002395336077.png
       :alt: **Figure 1** Sensitive information leakage
 
       **Figure 1** Sensitive information leakage
@@ -57,14 +57,14 @@ Configuring an Information Leakage Prevention Rule
 
    .. _waf_01_0054__fig134221027101710:
 
-   .. figure:: /_static/images/en-us_image_0000001285975220.png
-      :alt: **Figure 2** Blocking response codes
+   .. figure:: /_static/images/en-us_image_0000002395336113.png
+      :alt: **Figure 2** Response code interception
 
-      **Figure 2** Blocking response codes
+      **Figure 2** Response code interception
 
    .. _waf_01_0054__table242612276178:
 
-   .. table:: **Table 1** Rule parameters
+   .. table:: **Table 1** Parameter description
 
       +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------+
       | Parameter             | Description                                                                                                                                                                          | Example Value                       |
@@ -96,22 +96,35 @@ Configuring an Information Leakage Prevention Rule
 
 #. Click **Confirm**. The added information leakage prevention rule is displayed in the list of information leakage prevention rules.
 
-Related Operations
-------------------
+   -  After the configuration is complete, you can view the added rule in the protection rule list. **Rule Status** is **Enabled** by default.
+   -  If you do not want the rule to take effect, click **Disable** in the **Operation** column of the rule.
+   -  To delete or modify a rule, click **Delete** or **Modify** in the **Operation** column of the rule.
 
--  To disable a rule, click **Disable** in the **Operation** column of the rule. The default **Rule Status** is **Enabled**.
--  To modify a rule, click **Modify** in the row containing the rule.
--  To delete a rule, click **Delete** in the row containing the rule.
+Protection Verification
+-----------------------
 
-Configuration Example — Masking Sensitive Information
------------------------------------------------------
+To verify that WAF is protecting your domain name (**www.example.com**) according to the protection rule configured by referring to example values in :ref:`Table 1 <waf_01_0010__table2299936310457>`, take the following steps:
 
-To verify that WAF is protecting your domain name *www.example.com* against an information leakage prevention rule:
+#. Clear the browser cache and enter the domain name in the address bar to check whether the website is accessible.
+
+   -  If the website is inaccessible, connect the website domain name to WAF by following the instructions in :ref:`Step 1: Add Your Website to WAF <waf_01_0326>`.
+   -  If the website is accessible, go to :ref:`Step 2 <waf_01_0054__li2074473685512>`.
+
+#. .. _waf_01_0054__li2074473685512:
+
+   Clear the browser cache and access the **http://www.example.com/admin** page. If the sensitive information on the page is masked, the rule takes effect.
+
+#. Return to the WAF console. In the navigation pane on the left, click **Events**. On the displayed page, check event logs.
+
+Configuration Example: Masking Sensitive Information
+----------------------------------------------------
+
+You can take the following steps to verify that WAF is protecting your website domain name (**www.example.com**) based on the information leakage prevention rule you configure.
 
 #. Add an information leakage prevention rule.
 
 
-   .. figure:: /_static/images/en-us_image_0000001285815180.png
+   .. figure:: /_static/images/en-us_image_0000002395336077.png
       :alt: **Figure 3** Sensitive information leakage
 
       **Figure 3** Sensitive information leakage
@@ -119,7 +132,7 @@ To verify that WAF is protecting your domain name *www.example.com* against an i
 #. Enable information leakage prevention.
 
 
-   .. figure:: /_static/images/en-us_image_0000002090805301.png
+   .. figure:: /_static/images/en-us_image_0000002361496276.png
       :alt: **Figure 4** Information Leakage Prevention configuration area
 
       **Figure 4** Information Leakage Prevention configuration area
@@ -128,7 +141,7 @@ To verify that WAF is protecting your domain name *www.example.com* against an i
 
    The email address, phone number, and identity number on the returned page are masked.
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image3| image:: /_static/images/en-us_image_0000002054495070.png
-.. |image4| image:: /_static/images/en-us_image_0000001761857181.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002395174901.png
+.. |image4| image:: /_static/images/en-us_image_0000002361494960.png

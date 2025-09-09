@@ -25,23 +25,24 @@ Constraints
 
 -  Before enabling cookie- or params-based known attack source rules, configure a session or user tag for the corresponding website domain name.
 
-Traffic identifier for a known attack source
---------------------------------------------
+
+Configuring a Traffic Identifier for a Known Attack Source
+----------------------------------------------------------
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Website Settings**.
+#. In the navigation pane on the left, click **Website Settings**.
 
-#. In the **Domain Name** column, click the domain name of the target website to go to the basic information page.
+#. On the **Website Settings** page, click the target website domain name.
 
 #. In the **Traffic Identifier** area, click |image3| next to **IP Tag**, **Session Tag**, or **User Tag** and configure a traffic identifier by referring to :ref:`Table 1 <waf_01_0270__table17733717165019>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000001284861820.png
+   .. figure:: /_static/images/en-us_image_0000002361654960.png
       :alt: **Figure 1** Traffic Identifier
 
       **Figure 1** Traffic Identifier
@@ -66,13 +67,13 @@ Traffic identifier for a known attack source
       |                       |    -  If you want to use a TCP connection IP address as the client IP address, set **IP Tag** to **$remote_addr**.                                                                                                                                                                                                                                       |                       |
       |                       |    -  If WAF does not obtain the real IP address of a client from fields you configure, WAF reads the **cdn-src-ip**, **x-real-ip**, **x-forwarded-for**, and **$remote_addr** fields in sequence to read the client IP address.                                                                                                                         |                       |
       +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Session Tag           | This tag is used to block possibly malicious requests based on the cookie attributes of an attack source. Configure this parameter to block requests based on cookie attributes.                                                                                                                                                                         | jssessionid           |
+      | Session Tag           | This tag is used to block possibly malicious requests based on the cookie attributes of an attack source. Configure this parameter to block requests based on cookie attributes.                                                                                                                                                                         | sessiontest           |
       +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | User Tag              | This tag is used to block possibly malicious requests based on the Params attribute of an attack source. Configure this parameter to block requests based on the Params attributes.                                                                                                                                                                      | name                  |
+      | User Tag              | This tag is used to block possibly malicious requests based on the Params attribute of an attack source. Configure this parameter to block requests based on the Params attributes.                                                                                                                                                                      | Params                |
       +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
 
 #. Click **Confirm**.
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image3| image:: /_static/images/en-us_image_0000002055762373.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002395335153.png

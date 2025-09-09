@@ -38,5 +38,5 @@ Applying for a Pay-per-Use Cloud WAF Instance
 
       If you want to disable WAF, choose **Instance Management** > **Product Details**, and click **Disable Pay-Per-Use Billing** next to **Cloud Mode**.
 
-.. |image1| image:: /_static/images/en-us_image_0000002112641736.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001284383208.png
+.. |image1| image:: /_static/images/en-us_image_0000002361496364.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002361654944.png

@@ -34,13 +34,13 @@ Updating the Certificate Used for a Website
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
-#. In the navigation pane on the left, choose **Website Settings**.
+#. In the navigation pane on the left, click **Website Settings**.
 
-#. In the **Domain Name** column, click the domain name of the website to go to the basic information page.
+#. On the **Website Settings** page, click the target website domain name.
 
 #. .. _waf_01_0262__li5865132352711:
 
@@ -53,14 +53,14 @@ Updating the Certificate Used for a Website
          WAF encrypts and saves the private key to keep it safe.
 
 
-      .. figure:: /_static/images/en-us_image_0000001337894657.png
+      .. figure:: /_static/images/en-us_image_0000002395335805.png
          :alt: **Figure 1** Update Certificate
 
          **Figure 1** Update Certificate
 
-      Only .pem certificates can be used in WAF. If the certificate is not in .pem format, convert it into .pem locally by referring to :ref:`Table 1 <waf_01_0262__waf_01_3273_table1292125414516>` before uploading it.
+      Only .pem certificates can be used in WAF. If the certificate is not in .pem format, convert it into .pem locally by referring to :ref:`Table 1 <waf_01_0262__en-us_topic_0110861354_table1292125414516>` before uploading it.
 
-      .. _waf_01_0262__waf_01_3273_table1292125414516:
+      .. _waf_01_0262__en-us_topic_0110861354_table1292125414516:
 
       .. table:: **Table 1** Certificate conversion commands
 
@@ -100,13 +100,13 @@ Updating the Certificate Used for a Website
    -  If you select **Select existing certificate** for **Update Method**, select an existing certificate from the **Certificate** drop-down list.
 
 
-      .. figure:: /_static/images/en-us_image_0000001378108553.png
+      .. figure:: /_static/images/en-us_image_0000002395335797.png
          :alt: **Figure 2** Selecting an existing certificate
 
          **Figure 2** Selecting an existing certificate
 
 #. Click **Confirm**.
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image3| image:: /_static/images/en-us_image_0000002129836992.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002361495988.png

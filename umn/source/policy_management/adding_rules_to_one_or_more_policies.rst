@@ -13,7 +13,7 @@ Adding Rules to One or More Policies
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
@@ -22,7 +22,7 @@ Adding Rules to One or More Policies
 #. In the upper left corner of the policy list, click **View Rules**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001286529486.png
+   .. figure:: /_static/images/en-us_image_0000002395335761.png
       :alt: **Figure 1** View Rules
 
       **Figure 1** View Rules
@@ -30,7 +30,7 @@ Adding Rules to One or More Policies
 #. In the upper left corner above a list of a type of rule, click **Add Rule**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001344977541.png
+   .. figure:: /_static/images/en-us_image_0000002395175889.png
       :alt: **Figure 2** Adding a rule to one or more policies
 
       **Figure 2** Adding a rule to one or more policies
@@ -38,7 +38,7 @@ Adding Rules to One or More Policies
 #. Select one or more policies from the **Policy Name** drop-down list.
 
 
-   .. figure:: /_static/images/en-us_image_0000001732213921.png
+   .. figure:: /_static/images/en-us_image_0000002361495960.png
       :alt: **Figure 3** Adding a rule to one or more policies
 
       **Figure 3** Adding a rule to one or more policies
@@ -56,5 +56,5 @@ Adding Rules to One or More Policies
 
 #. Click **Confirm**.
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png

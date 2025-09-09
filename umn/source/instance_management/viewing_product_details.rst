@@ -22,7 +22,7 @@ Viewing Product Details
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
@@ -33,10 +33,10 @@ Viewing Product Details
    -  To view details about the WAF edition you are using, click **Details**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001286061432.png
+   .. figure:: /_static/images/en-us_image_0000002361495608.png
       :alt: **Figure 1** Product information
 
       **Figure 1** Product information
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png

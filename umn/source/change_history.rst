@@ -8,6 +8,12 @@ Change History
 +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Released On                       | Description                                                                                                                                                                 |
 +===================================+=============================================================================================================================================================================+
+| 2025-07-18                        | This issue is the eleventh official release.                                                                                                                                |
+|                                   |                                                                                                                                                                             |
+|                                   | Modified the following content:                                                                                                                                             |
+|                                   |                                                                                                                                                                             |
+|                                   | -  :ref:`Managing Dedicated WAF Engines <waf_01_0253>`: Added the records of dedicated engine versions.                                                                     |
++-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 2025-04-10                        | This issue is the tenth official release.                                                                                                                                   |
 |                                   |                                                                                                                                                                             |
 |                                   | Modified the following content:                                                                                                                                             |
@@ -84,7 +90,7 @@ Change History
 |                                   |    -  :ref:`Protection Configuration Overview <waf_01_0129>`                                                                                                                |
 |                                   |    -  :ref:`Configuring PCI DSS/3DS Certification Check and Configuring the Minimum TLS Version and Cipher Suite <waf_01_0169>`                                             |
 |                                   |    -  :ref:`Configuring CC Attack Protection Rules to Defend Against CC Attacks <waf_01_0009>`                                                                              |
-|                                   |    -  :ref:`Viewing the Dashboard <waf_01_0021>`                                                                                                                            |
+|                                   |    -  :ref:`Viewing the Dashboard <waf_01_0021_1>`                                                                                                                          |
 |                                   |    -  :ref:`Viewing Protection Events <waf_01_0018>`                                                                                                                        |
 +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 2023-03-30                        | This issue is the second official release.                                                                                                                                  |

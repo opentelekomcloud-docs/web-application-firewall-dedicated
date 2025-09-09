@@ -7,6 +7,20 @@ Configuring Basic Web Protection to Defend Against Common Web Attacks
 
 After this function is enabled, WAF can defend against common web attacks, such as SQL injections, XSS, remote overflow vulnerabilities, file inclusions, Bash vulnerabilities, remote command execution, directory traversal, sensitive file access, and command/code injections. You can also enable other checks in basic web protection, such as web shell detection, deep inspection against evasion attacks, and header inspection.
 
+Suggestions
+-----------
+
+-  If you are not clear about your service traffic characteristics, you are advised to switch to the **Log only** mode first and observe the WAF protection for a period of time. Generally, you need to observe service running for one to two weeks, and then analyze the attack logs.
+
+   -  If no record of blocking legitimate requests is found, switch to the **Block** mode.
+   -  If legitimate requests are blocked, adjust the protection level or configure global protection whitelist rules to prevent legitimate requests from being blocked.
+
+-  Note the following points in your operations:
+
+   -  Do not transfer the original SQL statement or JavaScript code in a legitimate HTTP request.
+   -  Do not use special keywords (such as UPDATE and SET) in a legitimate URL. For example, **https://www.example.com/abc/update/mod.php?set=1**.
+   -  Use Object Storage Service (OBS) or other secure methods to upload files that exceed 50 MB rather than via a web browser.
+
 Prerequisites
 -------------
 
@@ -24,7 +38,7 @@ Enabling Basic Web Protection Rules
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner of the management console and select a region or project.
+#. Click |image1| in the upper left corner and select a region or project.
 
 #. Click |image2| in the upper left corner and choose **Web Application Firewall (Dedicated)** under **Security**.
 
@@ -40,7 +54,7 @@ Enabling Basic Web Protection Rules
 #. Click the **Protection Status** tab, and enable protection types one by one by referring to :ref:`Table 2 <waf_01_0008__table1054818371898>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000001731801353.png
+   .. figure:: /_static/images/en-us_image_0000002395174837.png
       :alt: **Figure 1** Basic web protection
 
       **Figure 1** Basic web protection
@@ -111,24 +125,10 @@ Enabling Basic Web Protection Rules
          |                                   |    If you enable this function, WAF checks all header fields in the requests.                                                                                                                                                                                                                 |
          +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Suggestions
------------
+Protection Verification
+-----------------------
 
--  If you are not clear about your service traffic characteristics, you are advised to switch to the **Log only** mode first and observe the WAF protection for a period of time. Generally, you need to observe service running for one to two weeks, and then analyze the attack logs.
-
-   -  If no record of blocking legitimate requests is found, switch to the **Block** mode.
-   -  If legitimate requests are blocked, adjust the protection level or configure global protection whitelist rules to prevent legitimate requests from being blocked.
-
--  Note the following points in your operations:
-
-   -  Do not transfer the original SQL statement or JavaScript code in a legitimate HTTP request.
-   -  Do not use special keywords (such as UPDATE and SET) in a legitimate URL. For example, **https://www.example.com/abc/update/mod.php?set=1**.
-   -  Use Object Storage Service (OBS) or other secure methods to upload files that exceed 50 MB rather than via a web browser.
-
-Protection Effect
------------------
-
-If **General Check** is enabled and **Mode** is set to **Block** for your domain name, to verify WAF is protecting your website (**www.example.com**) against general check items:
+To verify that WAF is protecting your website (**www.example.com**) based on basic web protection (with **General Check** enabled and **Mode** set to **Block**), take the following steps:
 
 #. Clear the browser cache and enter the domain name in the address bar to check whether the website is accessible.
 
@@ -139,17 +139,17 @@ If **General Check** is enabled and **Mode** is set to **Block** for your domain
 
    Clear the browser cache and enter **http://www.example.com?id=1%27%20or%201=1** in the address box of the browser to simulate an SQL injection attack.
 
-#. Return to the WAF console. In the navigation pane on the left, click **Events**. On the displayed page, view the event log.
+#. Return to the WAF console. In the navigation pane on the left, click **Events**. On the displayed page, check event logs.
 
-Example - Blocking SQL Injection Attacks
-----------------------------------------
+Configuration Example - Blocking SQL Injection Attacks
+------------------------------------------------------
 
 If domain name **www.example.com** has been connected to WAF, perform the following steps to verify that WAF can block SQL injection attacks.
 
 #. Enable **General Check** in **Basic Web Protection** and set the protection mode to **Block**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001731681777.png
+   .. figure:: /_static/images/en-us_image_0000002395334729.png
       :alt: **Figure 2** Enabling General Check
 
       **Figure 2** Enabling General Check
@@ -157,7 +157,7 @@ If domain name **www.example.com** has been connected to WAF, perform the follow
 #. Enable WAF basic web protection.
 
 
-   .. figure:: /_static/images/en-us_image_0000002054505142.png
+   .. figure:: /_static/images/en-us_image_0000002395334701.png
       :alt: **Figure 3** Basic Web Protection configuration area
 
       **Figure 3** Basic Web Protection configuration area
@@ -168,14 +168,14 @@ If domain name **www.example.com** has been connected to WAF, perform the follow
 
    .. _waf_01_0008__fig4672124158:
 
-   .. figure:: /_static/images/en-us_image_0000001179033432.png
+   .. figure:: /_static/images/en-us_image_0000002361494948.png
       :alt: **Figure 4** Block page
 
       **Figure 4** Block page
 
 #. Go to the WAF console. In the navigation pane on the left, choose **Events**. View the event on the **Events** page.
 
-.. |image1| image:: /_static/images/en-us_image_0000002194533712.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002194070596.png
-.. |image3| image:: /_static/images/en-us_image_0000002054495070.png
-.. |image4| image:: /_static/images/en-us_image_0000001761857181.png
+.. |image1| image:: /_static/images/en-us_image_0000002395174933.png
+.. |image2| image:: /_static/images/en-us_image_0000002395334641.png
+.. |image3| image:: /_static/images/en-us_image_0000002395174901.png
+.. |image4| image:: /_static/images/en-us_image_0000002361494960.png

@@ -6,7 +6,7 @@ FAQs
 ====
 
 -  :ref:`About WAF <waf_01_0025>`
--  :ref:`Website Connect Issues <waf_01_0124>`
+-  :ref:`Website Access Issues <waf_01_0124>`
 -  :ref:`Protection Rules <waf_01_0063>`
 -  :ref:`Certificate Management <waf_01_0313>`
 -  :ref:`Troubleshooting Website Connection Exceptions <waf_01_0127>`
@@ -19,7 +19,7 @@ FAQs
    :hidden: 
 
    about_waf/index
-   website_connect_issues/index
+   website_access_issues/index
    protection_rules/index
    certificate_management
    troubleshooting_website_connection_exceptions/index

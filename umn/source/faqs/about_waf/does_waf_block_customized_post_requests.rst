@@ -11,7 +11,7 @@ No. WAF does not block user-defined POST requests.
 
 .. _waf_01_0193__fig2638939185219:
 
-.. figure:: /_static/images/en-us_image_0000001809813429.png
+.. figure:: /_static/images/en-us_image_0000002395175017.png
    :alt: **Figure 1** WAF engine work process
 
    **Figure 1** WAF engine work process

@@ -24,18 +24,18 @@ If you allow only IP addresses in a region to access the protected domain name, 
 #. Add a geolocation access control rule: Select **Australia** for **Geolocation** and select **Allow** for **Protective Action**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002094785580.png
-      :alt: **Figure 1** Selecting Allow for Protective Action
+   .. figure:: /_static/images/en-us_image_0000002395335561.png
+      :alt: **Figure 1** Selecting **Allow** for **Protective Action**
 
-      **Figure 1** Selecting Allow for Protective Action
+      **Figure 1** Selecting **Allow** for **Protective Action**
 
 #. In the upper left corner above the **Precise Protection** rule list, click **Add Rule**. Configure a precise protection rule to block all requests.
 
 
-   .. figure:: /_static/images/en-us_image_0000002057944613.png
+   .. figure:: /_static/images/en-us_image_0000002395335281.png
       :alt: **Figure 2** Blocking all access requests
 
       **Figure 2** Blocking all access requests
 
-.. |image1| image:: /_static/images/en-us_image_0000002094605794.jpg
-.. |image2| image:: /_static/images/en-us_image_0000002130244925.png
+.. |image1| image:: /_static/images/en-us_image_0000002361657280.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002395177353.png

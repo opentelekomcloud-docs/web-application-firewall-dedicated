@@ -9,7 +9,7 @@ After JavaScript anti-crawler is enabled, WAF returns a piece of JavaScript code
 
 .. _waf_01_0254__fig67621541143216:
 
-.. figure:: /_static/images/en-us_image_0000001126290859.png
+.. figure:: /_static/images/en-us_image_0000002361655136.png
    :alt: **Figure 1** JavaScript anti-crawler detection process
 
    **Figure 1** JavaScript anti-crawler detection process

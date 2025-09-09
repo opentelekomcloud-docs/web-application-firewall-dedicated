@@ -19,7 +19,7 @@ After you apply for a dedicated WAF instance, complete the required configuratio
 
 .. _waf_01_5249__fig3118103718294:
 
-.. figure:: /_static/images/en-us_image_0000001171626489.png
+.. figure:: /_static/images/en-us_image_0000002361655916.png
    :alt: **Figure 1** Process of connecting a website to a dedicated WAF instance
 
    **Figure 1** Process of connecting a website to a dedicated WAF instance

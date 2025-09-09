@@ -26,14 +26,14 @@ Configuring IP Address Blacklist and Whitelist Rules to Block All Source IP Addr
 
    .. _waf_01_0312__fig14460183411462:
 
-   .. figure:: /_static/images/en-us_image_0000001684030226.png
+   .. figure:: /_static/images/en-us_image_0000002395335333.png
       :alt: **Figure 1** Blocking IP address range 1.0.0.0/1
 
       **Figure 1** Blocking IP address range 1.0.0.0/1
 
    .. _waf_01_0312__fig317431353719:
 
-   .. figure:: /_static/images/en-us_image_0000001732030241.png
+   .. figure:: /_static/images/en-us_image_0000002395335317.png
       :alt: **Figure 2** Blocking IP address range 128.0.0.0/1
 
       **Figure 2** Blocking IP address range 128.0.0.0/1
@@ -54,7 +54,7 @@ Configuring a Precise Protection Rule to Block All Source IP Addresses Except th
 #. In the **Precise Protection** configuration area, enable the protection.
 
 
-   .. figure:: /_static/images/en-us_image_0000002055860514.png
+   .. figure:: /_static/images/en-us_image_0000002395175781.png
       :alt: **Figure 3** Precise Protection configuration area
 
       **Figure 3** Precise Protection configuration area
@@ -71,7 +71,7 @@ Configuring a Precise Protection Rule to Block All Source IP Addresses Except th
 
    .. _waf_01_0312__fig163451833195414:
 
-   .. figure:: /_static/images/en-us_image_0000001732020137.png
+   .. figure:: /_static/images/en-us_image_0000002361655172.png
       :alt: **Figure 4** Blocking all requests
 
       **Figure 4** Blocking all requests
@@ -88,12 +88,12 @@ Configuring a Precise Protection Rule to Block All Source IP Addresses Except th
 
    .. _waf_01_0312__fig18908103413269:
 
-   .. figure:: /_static/images/en-us_image_0000001857974760.png
+   .. figure:: /_static/images/en-us_image_0000002395335105.png
       :alt: **Figure 5** Allowing the access of a specified IP address
 
       **Figure 5** Allowing the access of a specified IP address
 
-.. |image1| image:: /_static/images/en-us_image_0000001483011470.jpg
-.. |image2| image:: /_static/images/en-us_image_0000001572891172.png
-.. |image3| image:: /_static/images/en-us_image_0000001482832030.jpg
-.. |image4| image:: /_static/images/en-us_image_0000001573330978.png
+.. |image1| image:: /_static/images/en-us_image_0000002395177737.jpg
+.. |image2| image:: /_static/images/en-us_image_0000002395177733.png
+.. |image3| image:: /_static/images/en-us_image_0000002361497788.jpg
+.. |image4| image:: /_static/images/en-us_image_0000002395337605.png
