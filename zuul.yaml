@@ -7,7 +7,6 @@
     vars:
       sphinx_pdf_files:
         - wafd-umn.pdf
-        - wafd-best-practice.pdf
         - wafd-api-ref.pdf
     check:
       jobs:
