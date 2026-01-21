@@ -2,13 +2,13 @@
 
 .. _UpdatePolicyRuleStatus:
 
-Modifying the Status of a Rule
-==============================
+Changing the Status of a Policy Rule
+====================================
 
 Function
 --------
 
-This API is used to modify the status of a rule.
+This API is used to change the status of a policy rule.
 
 URI
 ---
@@ -50,15 +50,12 @@ Request Parameters
 
 .. table:: **Table 2** Request header parameters
 
-   +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                |
-   +=================+=================+=================+============================================+
-   | X-Auth-Token    | Yes             | String          | User Token.                                |
-   +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Content-Type    | Yes             | String          | Content type                               |
-   |                 |                 |                 |                                            |
-   |                 |                 |                 | Default: **application/json;charset=utf8** |
-   +-----------------+-----------------+-----------------+--------------------------------------------+
+   ============ ========= ====== ============
+   Parameter    Mandatory Type   Description
+   ============ ========= ====== ============
+   X-Auth-Token Yes       String User Token.
+   Content-Type Yes       String Content type
+   ============ ========= ====== ============
 
 .. table:: **Table 3** Request body parameters
 
@@ -70,12 +67,6 @@ Request Parameters
    |                 |                 |                 | -  0: The rule is disabled.    |
    |                 |                 |                 |                                |
    |                 |                 |                 | -  1: The rule is enabled.     |
-   |                 |                 |                 |                                |
-   |                 |                 |                 | Enumeration values:            |
-   |                 |                 |                 |                                |
-   |                 |                 |                 | -  **0**                       |
-   |                 |                 |                 |                                |
-   |                 |                 |                 | -  **1**                       |
    +-----------------+-----------------+-----------------+--------------------------------+
 
 Response Parameters

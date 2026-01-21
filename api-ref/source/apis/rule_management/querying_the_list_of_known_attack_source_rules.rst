@@ -40,15 +40,12 @@ Request Parameters
 
 .. table:: **Table 3** Request header parameters
 
-   +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                |
-   +=================+=================+=================+============================================+
-   | X-Auth-Token    | Yes             | String          | auth token                                 |
-   +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Content-Type    | No              | String          | Content type.                              |
-   |                 |                 |                 |                                            |
-   |                 |                 |                 | Default: **application/json;charset=utf8** |
-   +-----------------+-----------------+-----------------+--------------------------------------------+
+   ============ ========= ====== =============
+   Parameter    Mandatory Type   Description
+   ============ ========= ====== =============
+   X-Auth-Token Yes       String auth token
+   Content-Type No        String Content type.
+   ============ ========= ====== =============
 
 Response Parameters
 -------------------
@@ -69,16 +66,16 @@ Response Parameters
 
 .. table:: **Table 5** PunishmentInfo
 
-   =========== ======= =====================================
+   =========== ======= ====================================
    Parameter   Type    Description
-   =========== ======= =====================================
-   id          String  Rule ID.
-   policyid    String  Policy ID.
+   =========== ======= ====================================
+   id          String  Rule ID
+   policyid    String  Policy ID
    block_time  Integer Block duration, in seconds.
-   category    String  Type of the known attack source rule.
-   description String  Rule description.
-   timestamp   Long    Timestamp the rule was created.
-   =========== ======= =====================================
+   category    String  Type of the known attack source rule
+   description String  Rule description
+   timestamp   Long    Timestamp when the rule was created.
+   =========== ======= ====================================
 
 **Status code: 400**
 

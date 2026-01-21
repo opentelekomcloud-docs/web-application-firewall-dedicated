@@ -1,51 +1,63 @@
-:original_name: ListAntileakageRules.html
+:original_name: CreateAntileakageRules.html
 
-.. _ListAntileakageRules:
+.. _CreateAntileakageRules:
 
-Querying the List of Information Leakage Prevention Rules
-=========================================================
+Creating an Information Leakage Protection Rule
+===============================================
 
 Function
 --------
 
-This API is used to query the list of information leakage prevention rules.
+This API is used to create an information leakage protection rule.
 
 URI
 ---
 
-GET /v1/{project_id}/waf/policy/{policy_id}/antileakage
+POST /v1/{project_id}/waf/policy/{policy_id}/antileakage
 
 .. table:: **Table 1** Path Parameters
 
    +------------+-----------+--------+------------------------------------------------------------------+
    | Parameter  | Mandatory | Type   | Description                                                      |
    +============+===========+========+==================================================================+
-   | project_id | Yes       | String | Project ID                                                       |
+   | project_id | Yes       | String | project_id                                                       |
    +------------+-----------+--------+------------------------------------------------------------------+
    | policy_id  | Yes       | String | Policy ID. It can be obtained by calling the **ListPolicy** API. |
    +------------+-----------+--------+------------------------------------------------------------------+
 
-.. table:: **Table 2** Query Parameters
-
-   +-----------+-----------+---------+------------------------------------------------------------------+
-   | Parameter | Mandatory | Type    | Description                                                      |
-   +===========+===========+=========+==================================================================+
-   | page      | No        | Integer | Page                                                             |
-   +-----------+-----------+---------+------------------------------------------------------------------+
-   | pagesize  | No        | Integer | Number of records on each page. The maximum value is 2147483647. |
-   +-----------+-----------+---------+------------------------------------------------------------------+
-
 Request Parameters
 ------------------
 
-.. table:: **Table 3** Request header parameters
+.. table:: **Table 2** Request header parameters
 
    ============ ========= ====== =============
    Parameter    Mandatory Type   Description
    ============ ========= ====== =============
    X-Auth-Token Yes       String auth token
-   Content-Type No        String Content type.
+   Content-Type Yes       String Content type.
    ============ ========= ====== =============
+
+.. table:: **Table 3** Request body parameters
+
+   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type             | Description                                                                                                                                                                       |
+   +=================+=================+==================+===================================================================================================================================================================================+
+   | url             | Yes             | String           | URL to which the rule applies.                                                                                                                                                    |
+   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | category        | Yes             | String           | Sensitive information type in the information leakage prevention rule.                                                                                                            |
+   |                 |                 |                  |                                                                                                                                                                                   |
+   |                 |                 |                  | -  **sensitive**: The rule masks sensitive user information, such as ID code, phone numbers, and email addresses.                                                                 |
+   |                 |                 |                  |                                                                                                                                                                                   |
+   |                 |                 |                  | -  **code**: The rule blocks response pages of specified HTTP response code.                                                                                                      |
+   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | contents        | Yes             | Array of strings | Content corresponding to the sensitive information type. Multiple options can be set.                                                                                             |
+   |                 |                 |                  |                                                                                                                                                                                   |
+   |                 |                 |                  | -  When **category** is set to **code**, the pages that contain the following HTTP response codes will be blocked: 400, 401, 402, 403, 404, 405, 500, 501, 502, 503, 504 and 507. |
+   |                 |                 |                  |                                                                                                                                                                                   |
+   |                 |                 |                  | -  When **category** is set to **sensitive**, parameters **phone**, **id_card**, and **email** can be set.                                                                        |
+   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | description     | No              | String           | Rule description                                                                                                                                                                  |
+   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Response Parameters
 -------------------
@@ -53,18 +65,6 @@ Response Parameters
 **Status code: 200**
 
 .. table:: **Table 4** Response body parameters
-
-   +-----------+------------------------------------------------------------------------------------------+----------------------------------------------------+
-   | Parameter | Type                                                                                     | Description                                        |
-   +===========+==========================================================================================+====================================================+
-   | total     | Integer                                                                                  | The number of information leakage prevention rules |
-   +-----------+------------------------------------------------------------------------------------------+----------------------------------------------------+
-   | items     | Array of :ref:`LeakageListInfo <listantileakagerules__response_leakagelistinfo>` objects | The list of information leakage prevention rules   |
-   +-----------+------------------------------------------------------------------------------------------+----------------------------------------------------+
-
-.. _listantileakagerules__response_leakagelistinfo:
-
-.. table:: **Table 5** LeakageListInfo
 
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter             | Type                  | Description                                                                                                                                                                       |
@@ -98,7 +98,7 @@ Response Parameters
 
 **Status code: 400**
 
-.. table:: **Table 6** Response body parameters
+.. table:: **Table 5** Response body parameters
 
    ========== ====== =============
    Parameter  Type   Description
@@ -109,7 +109,7 @@ Response Parameters
 
 **Status code: 401**
 
-.. table:: **Table 7** Response body parameters
+.. table:: **Table 6** Response body parameters
 
    ========== ====== =============
    Parameter  Type   Description
@@ -120,7 +120,7 @@ Response Parameters
 
 **Status code: 500**
 
-.. table:: **Table 8** Response body parameters
+.. table:: **Table 7** Response body parameters
 
    ========== ====== =============
    Parameter  Type   Description
@@ -134,7 +134,13 @@ Example Requests
 
 .. code-block:: text
 
-   GET https://{Endpoint}/v1/{project_id}/waf/policy/{policy_id}/antileakage?
+   POST https://{Endpoint}/v1/{project_id}/waf/policy/{policy_id}/antileakage?
+
+   {
+     "url" : "/attack",
+     "category" : "sensitive",
+     "contents" : [ "id_card" ]
+   }
 
 Example Responses
 -----------------
@@ -146,17 +152,14 @@ Request succeeded.
 .. code-block::
 
    {
-     "total" : 1,
-     "items" : [ {
-       "id" : "82c4f04f84fd4b2b9ba4b4ea0df8ee82",
-       "policyid" : "2fcbcb23ef0d48d99d24d7dcff00307d",
-       "timestamp" : 1668152426471,
-       "description" : "demo",
-       "status" : 1,
-       "url" : "/attack",
-       "category" : "sensitive",
-       "contents" : [ "id_card" ]
-     } ]
+     "id" : "82c4f04f84fd4b2b9ba4b4ea0df8ee82",
+     "policyid" : "2fcbcb23ef0d48d99d24d7dcff00307d",
+     "timestamp" : 1668152426471,
+     "description" : "demo",
+     "status" : 1,
+     "url" : "/attack",
+     "category" : "sensitive",
+     "contents" : [ "id_card" ]
    }
 
 Status Codes

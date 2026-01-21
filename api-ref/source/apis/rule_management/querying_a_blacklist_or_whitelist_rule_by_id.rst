@@ -2,7 +2,7 @@
 
 .. _ShowWhiteblackipRule:
 
-Querying a Blacklist or Whitelist Rule by ID
+Querying a Blacklist Or Whitelist Rule by ID
 ============================================
 
 Function
@@ -32,15 +32,12 @@ Request Parameters
 
 .. table:: **Table 2** Request header parameters
 
-   +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                |
-   +=================+=================+=================+============================================+
-   | X-Auth-Token    | Yes             | String          | auth token                                 |
-   +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Content-Type    | No              | String          | Content type                               |
-   |                 |                 |                 |                                            |
-   |                 |                 |                 | Default: **application/json;charset=utf8** |
-   +-----------------+-----------------+-----------------+--------------------------------------------+
+   ============ ========= ====== ============
+   Parameter    Mandatory Type   Description
+   ============ ========= ====== ============
+   X-Auth-Token Yes       String auth token
+   Content-Type No        String Content type
+   ============ ========= ====== ============
 
 Response Parameters
 -------------------

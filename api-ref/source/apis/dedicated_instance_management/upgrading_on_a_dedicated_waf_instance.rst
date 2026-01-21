@@ -2,13 +2,13 @@
 
 .. _UpgradeInstance:
 
-Operations on a Dedicated WAF Instance
-======================================
+Upgrading on a Dedicated WAF Instance
+=====================================
 
 Function
 --------
 
-This API is used to operate a dedicated WAF instance.
+This API is used to upgrade a dedicated WAF instance when we release a new version.
 
 URI
 ---
@@ -29,15 +29,13 @@ Request Parameters
 
 .. table:: **Table 2** Request header parameters
 
-   +-----------------+-----------------+-----------------+------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                |
-   +=================+=================+=================+============================================================+
-   | Content-Type    | Yes             | String          | Content type. Default value: application/json;charset=utf8 |
-   |                 |                 |                 |                                                            |
-   |                 |                 |                 | Default: **application/json;charset=utf8**                 |
-   +-----------------+-----------------+-----------------+------------------------------------------------------------+
-   | X-Auth-Token    | Yes             | String          | User token.                                                |
-   +-----------------+-----------------+-----------------+------------------------------------------------------------+
+   +--------------+-----------+--------+------------------------------------------------------------+
+   | Parameter    | Mandatory | Type   | Description                                                |
+   +==============+===========+========+============================================================+
+   | Content-Type | Yes       | String | Content type. Default value: application/json;charset=utf8 |
+   +--------------+-----------+--------+------------------------------------------------------------+
+   | X-Auth-Token | Yes       | String | User token.                                                |
+   +--------------+-----------+--------+------------------------------------------------------------+
 
 .. table:: **Table 3** Request body parameters
 
@@ -121,7 +119,7 @@ Response Parameters
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | data_volume_size      | Integer               | Size of the data disk, in GB.                                                                                                                                                                     |
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | res_tenant_type       | Integer               | Type of the dedicated WAF instance If the type is **Network Interface**, the value is **1**.                                                                                                      |
+   | res_tenant_type       | Integer               | Type of the dedicated WAF instance. If the type is **Network Interface**, this field is returned and its value is **1**.                                                                          |
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 **Status code: 400**

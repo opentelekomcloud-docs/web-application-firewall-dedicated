@@ -2,13 +2,13 @@
 
 .. _ShowValueList:
 
-Querying a Reference Table by ID
-================================
+Querying a Reference Table
+==========================
 
 Function
 --------
 
-This API is used to query a reference table by ID.
+This API is used to query a reference table.
 
 URI
 ---
@@ -30,15 +30,12 @@ Request Parameters
 
 .. table:: **Table 2** Request header parameters
 
-   +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                |
-   +=================+=================+=================+============================================+
-   | X-Auth-Token    | Yes             | String          | User token                                 |
-   +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Content-Type    | No              | String          | Content type                               |
-   |                 |                 |                 |                                            |
-   |                 |                 |                 | Default: **application/json;charset=utf8** |
-   +-----------------+-----------------+-----------------+--------------------------------------------+
+   ============ ========= ====== ============
+   Parameter    Mandatory Type   Description
+   ============ ========= ====== ============
+   X-Auth-Token Yes       String User token
+   Content-Type Yes       String Content type
+   ============ ========= ====== ============
 
 Response Parameters
 -------------------
@@ -80,13 +77,9 @@ Response Parameters
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
    | values                | Array of strings      | The contents of condition matching of the rules, such as CC Attack Protection Rule or Precise Protection Rule. |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
-   | description           | String                | Reference table description.                                                                                   |
+   | description           | String                | Reference table description                                                                                    |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
    | producer              | Integer               | This parameter is reserved and can be ignored currently.                                                       |
-   |                       |                       |                                                                                                                |
-   |                       |                       | Enumeration values:                                                                                            |
-   |                       |                       |                                                                                                                |
-   |                       |                       | -  **1**                                                                                                       |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
 
 **Status code: 400**

@@ -10,7 +10,7 @@ Dedicated Instance Management
 -  :ref:`Querying Details about a Dedicated WAF Engine <showinstance>`
 -  :ref:`Renaming a Dedicated WAF Engine <renameinstance>`
 -  :ref:`Deleting a Dedicated WAF Engine <deleteinstance>`
--  :ref:`Operations on a Dedicated WAF Instance <upgradeinstance>`
+-  :ref:`Upgrading on a Dedicated WAF Instance <upgradeinstance>`
 
 .. toctree::
    :maxdepth: 1
@@ -21,4 +21,4 @@ Dedicated Instance Management
    querying_details_about_a_dedicated_waf_engine
    renaming_a_dedicated_waf_engine
    deleting_a_dedicated_waf_engine
-   operations_on_a_dedicated_waf_instance
+   upgrading_on_a_dedicated_waf_instance

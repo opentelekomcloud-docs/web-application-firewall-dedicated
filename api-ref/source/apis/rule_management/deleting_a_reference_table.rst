@@ -30,15 +30,12 @@ Request Parameters
 
 .. table:: **Table 2** Request header parameters
 
-   +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                |
-   +=================+=================+=================+============================================+
-   | X-Auth-Token    | Yes             | String          | User token                                 |
-   +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Content-Type    | No              | String          | Content type                               |
-   |                 |                 |                 |                                            |
-   |                 |                 |                 | Default: **application/json;charset=utf8** |
-   +-----------------+-----------------+-----------------+--------------------------------------------+
+   ============ ========= ====== ============
+   Parameter    Mandatory Type   Description
+   ============ ========= ====== ============
+   X-Auth-Token Yes       String User token
+   Content-Type Yes       String Content type
+   ============ ========= ====== ============
 
 Response Parameters
 -------------------
