@@ -12,6 +12,7 @@ APIs
 -  :ref:`Certificate Management <topic_300000004>`
 -  :ref:`Dashboard <topic_300000005>`
 -  :ref:`Event Management <topic_300000006>`
+-  :ref:`Managing Your Subscriptions <topic_300000007>`
 
 .. toctree::
    :maxdepth: 1
@@ -24,3 +25,4 @@ APIs
    certificate_management/index
    dashboard/index
    event_management/index
+   managing_your_subscriptions/index

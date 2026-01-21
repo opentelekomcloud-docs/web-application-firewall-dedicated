@@ -32,15 +32,12 @@ Request Parameters
 
 .. table:: **Table 2** Request header parameters
 
-   +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                |
-   +=================+=================+=================+============================================+
-   | X-Auth-Token    | Yes             | String          | auth token                                 |
-   +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Content-Type    | No              | String          | Content type.                              |
-   |                 |                 |                 |                                            |
-   |                 |                 |                 | Default: **application/json;charset=utf8** |
-   +-----------------+-----------------+-----------------+--------------------------------------------+
+   ============ ========= ====== =============
+   Parameter    Mandatory Type   Description
+   ============ ========= ====== =============
+   X-Auth-Token Yes       String auth token
+   Content-Type No        String Content type.
+   ============ ========= ====== =============
 
 Response Parameters
 -------------------
@@ -49,35 +46,16 @@ Response Parameters
 
 .. table:: **Table 3** Response body parameters
 
-   +-----------------------+-----------------------+---------------------------------------+
-   | Parameter             | Type                  | Description                           |
-   +=======================+=======================+=======================================+
-   | id                    | String                | Rule ID.                              |
-   +-----------------------+-----------------------+---------------------------------------+
-   | policyid              | String                | Policy ID.                            |
-   +-----------------------+-----------------------+---------------------------------------+
-   | block_time            | Integer               | Block duration, in seconds.           |
-   +-----------------------+-----------------------+---------------------------------------+
-   | category              | String                | Type of the known attack source rule. |
-   |                       |                       |                                       |
-   |                       |                       | Enumeration values:                   |
-   |                       |                       |                                       |
-   |                       |                       | -  **long_ip_block**                  |
-   |                       |                       |                                       |
-   |                       |                       | -  **long_cookie_block**              |
-   |                       |                       |                                       |
-   |                       |                       | -  **long_params_block**              |
-   |                       |                       |                                       |
-   |                       |                       | -  **short_ip_block**                 |
-   |                       |                       |                                       |
-   |                       |                       | -  **short_cookie_block**             |
-   |                       |                       |                                       |
-   |                       |                       | -  **short_params_block**             |
-   +-----------------------+-----------------------+---------------------------------------+
-   | description           | String                | Rule description.                     |
-   +-----------------------+-----------------------+---------------------------------------+
-   | timestamp             | Long                  | Timestamp the rule was created.       |
-   +-----------------------+-----------------------+---------------------------------------+
+   =========== ======= =====================================
+   Parameter   Type    Description
+   =========== ======= =====================================
+   id          String  Rule ID
+   policyid    String  Policy ID
+   block_time  Integer Block duration, in seconds.
+   category    String  Type of the known attack source rule.
+   description String  Rule description
+   timestamp   Long    Timestamp when the rule was created.
+   =========== ======= =====================================
 
 **Status code: 400**
 

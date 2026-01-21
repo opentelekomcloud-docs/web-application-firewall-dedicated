@@ -5,41 +5,78 @@
 Change History
 ==============
 
-+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------+
-| Released On                       | Description                                                                                                                |
-+===================================+============================================================================================================================+
-| 2024-02-28                        | -  **Adding a Protected Domain Name**: Added the parameters required for adding a domain name to an ELB-mode WAF instance. |
-|                                   | -  **Querying the Certificate List**: Added the description of response body parameters.                                   |
-|                                   | -  **Querying the Reference Table List**: Added the description of response body parameters.                               |
-+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------+
-| 2023-08-07                        | Optimized descriptions of some parameters.                                                                                 |
-+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------+
-| 2023-04-23                        | Revised the document based on review comments.                                                                             |
-+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------+
-| 2023-03-30                        | -  Added "Geographical Location Codes."                                                                                    |
-|                                   | -  Revised the document based on review comments.                                                                          |
-+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------+
-| 2023-03-03                        | Revised the document based on review comments.                                                                             |
-+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------+
-| 2022-11-30                        | -  Added section "Permissions and Supported Actions".                                                                      |
-|                                   | -  Add the following APIs:                                                                                                 |
-|                                   |                                                                                                                            |
-|                                   |    -  **Querying the List of Known Attack Source Rules**                                                                   |
-|                                   |    -  **Creating a Known Attack Source Rule**                                                                              |
-|                                   |    -  **Querying a Known Attack Source Rule by ID**                                                                        |
-|                                   |    -  **Updating a Known Attack Source Rule**                                                                              |
-|                                   |    -  **Deleting a Known Attack Source Rule**                                                                              |
-|                                   |    -  **Updating the Cache for a Web Tamper Protection Rule**                                                              |
-|                                   |    -  **Querying the List of Information Leakage Prevention Rules**                                                        |
-|                                   |    -  **Creating an Information Leakage Protection Rule**                                                                  |
-|                                   |    -  **Querying an Information Leakage Prevention Rule**                                                                  |
-|                                   |    -  **Updating an Information Leakage Prevention Rule**                                                                  |
-|                                   |    -  **Deleting an Information Leakage Prevention Rule**                                                                  |
-|                                   |                                                                                                                            |
-|                                   | -  Modified the following sections:                                                                                        |
-|                                   |                                                                                                                            |
-|                                   |    -  **Rule Management**: Modified the descriptions of parameters **Content-Type** and **addr**.                          |
-|                                   |    -  **Querying Bandwidth Usage Statistics**: Modified the description of parameter **group_by**.                         |
-+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------+
-| 2022-10-30                        | This is the first official release.                                                                                        |
-+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Released On                       | Description                                                                                                                                                                               |
++===================================+===========================================================================================================================================================================================+
+| 2025-04-07                        | Modified the following APIs:                                                                                                                                                              |
+|                                   |                                                                                                                                                                                           |
+|                                   | -  Certificate Management, Creating a Certificate, Querying a Certificate, Modifying a Certificate, and Deleting a Certificate: Optimized the description of the **cert_type** parameter. |
+|                                   | -  Enabling Pay-Per-Use Billing for Cloud WAF and Disabling Pay-Per-Use Pricing for Cloud WAF: Optimized the description of the **relativeType** parameter.                               |
+|                                   | -  Disabling Pay-Per-Use Pricing for Cloud WAF: Delete the **Content-Type** parameter.                                                                                                    |
++-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2025-02-17                        | Modified the following APIs:                                                                                                                                                              |
+|                                   |                                                                                                                                                                                           |
+|                                   | -  Enabling Pay-Per-Use Billing for Cloud WAF: Optimized the description of the **type** and **resourceSize** parameters.                                                                 |
+|                                   | -  Disabling Pay-Per-Use Pricing for Cloud WAF: Optimized the description of the **type** and **resourceSize** parameters and deleted the **region** parameter.                           |
++-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2024-12-12                        | Added the following APIs:                                                                                                                                                                 |
+|                                   |                                                                                                                                                                                           |
+|                                   | -  Enabling Pay-per-Use Billing for Cloud WAF                                                                                                                                             |
+|                                   | -  Disabling Pay-per-Use Pricing for Cloud WAF                                                                                                                                            |
+|                                   |                                                                                                                                                                                           |
+|                                   | Modified the following APIs:                                                                                                                                                              |
+|                                   |                                                                                                                                                                                           |
+|                                   | -  Querying the List of Dedicated WAF Engines: Added the **latest_version** and **current_version** parameters.                                                                           |
+|                                   | -  Creating a Dedicated WAF Engine: Added the **chargemode** parameter.                                                                                                                   |
++-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2024-10-15                        | -  **Deleting a Dedicated WAF Engine**, **Querying Details about a Dedicated**, and **Querying the List of Dedicated WAF**: Updated example responses.                                    |
+|                                   | -  **Renaming a Dedicated WAF Engine**: The invalid parameters **charge_mode** and **rollbackable** were deleted.                                                                         |
++-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2024-09-25                        | -  **Adding a Protected Domain Name**:                                                                                                                                                    |
+|                                   |                                                                                                                                                                                           |
+|                                   |    -  Added the method of modifying the **flag** parameter.                                                                                                                               |
+|                                   |    -  Modified the description of the **protect_status** parameter.                                                                                                                       |
+|                                   |                                                                                                                                                                                           |
+|                                   | -  **Creating a Dedicated WAF Engine**: Changed the edition to **WI-500** when **specification** is set to **waf.instance.enterprise**.                                                   |
+|                                   | -  **Creating a Policy**: Added default values for parameters.                                                                                                                            |
+|                                   | -  **Modifying a Domain Name Protected by a Dedicated WAF Instance**: The invalid parameters **locked** and **pool_ids** were deleted.                                                    |
+|                                   | -  **Querying Domain Name Settings in Dedicated Mode**: The invalid parameters **locked** and **pool_ids** were deleted.                                                                  |
+|                                   | -  **Querying Domain Names Protected by Dedicated WAF Engines**: The invalid parameter **pool_ids** was deleted.                                                                          |
++-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2024-09-06                        | **Adding a Protected Domain Name**: Added parameters **loadbalancer_id**, **listener_id**, **protocol_port**, and **mode**.                                                               |
++-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2024-02-28                        | -  **Adding a Protected Domain Name**: Added the parameters required for adding a domain name to an ELB-mode WAF instance.                                                                |
+|                                   | -  **Querying the Certificate List**: Added the description of response body parameters.                                                                                                  |
+|                                   | -  **Querying the Reference Table List**: Added the description of response body parameters.                                                                                              |
++-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2023-08-07                        | Optimized descriptions of some parameters.                                                                                                                                                |
++-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2023-04-23                        | Revised the document based on review comments.                                                                                                                                            |
++-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2023-03-30                        | -  Added "Geographical Location Codes."                                                                                                                                                   |
+|                                   | -  Revised the document based on review comments.                                                                                                                                         |
++-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2023-03-03                        | Revised the document based on review comments.                                                                                                                                            |
++-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2022-11-30                        | -  Added section "Permissions and Supported Actions".                                                                                                                                     |
+|                                   | -  Added the following APIs:                                                                                                                                                              |
+|                                   |                                                                                                                                                                                           |
+|                                   |    -  **Querying the List of Known Attack Source Rules**                                                                                                                                  |
+|                                   |    -  **Creating a Known Attack Source Rule**                                                                                                                                             |
+|                                   |    -  **Querying a Known Attack Source Rule by ID**                                                                                                                                       |
+|                                   |    -  **Updating a Known Attack Source Rule**                                                                                                                                             |
+|                                   |    -  **Deleting a Known Attack Source Rule**                                                                                                                                             |
+|                                   |    -  **Updating the Cache for a Web Tamper Protection Rule**                                                                                                                             |
+|                                   |    -  **Querying the List of Information Leakage Prevention Rules**                                                                                                                       |
+|                                   |    -  **Creating an Information Leakage Protection Rule**                                                                                                                                 |
+|                                   |    -  **Querying an Information Leakage Prevention Rule**                                                                                                                                 |
+|                                   |    -  **Updating an Information Leakage Prevention Rule**                                                                                                                                 |
+|                                   |    -  **Deleting an Information Leakage Prevention Rule**                                                                                                                                 |
+|                                   |                                                                                                                                                                                           |
+|                                   | -  Modified the following sections:                                                                                                                                                       |
+|                                   |                                                                                                                                                                                           |
+|                                   |    -  **Rule Management**: Modified the descriptions of parameters **Content-Type** and **addr**.                                                                                         |
+|                                   |    -  **Querying Bandwidth Usage Statistics**: Modified the description of parameter **group_by**.                                                                                        |
++-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2022-10-30                        | This is the first official release.                                                                                                                                                       |
++-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

@@ -30,15 +30,13 @@ Request Parameters
 
 .. table:: **Table 2** Request header parameters
 
-   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                              |
-   +=================+=================+=================+==========================================================================================================+
-   | X-Auth-Token    | Yes             | String          | User token. It can be obtained by calling the IAM API (value of X-Subject-Token in the response header). |
-   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+
-   | Content-Type    | No              | String          | Content type. Default value: application/json;charset=utf8                                               |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 | Default: **application/json;charset=utf8**                                                               |
-   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+
+   +--------------+-----------+--------+----------------------------------------------------------------------------------------------------------+
+   | Parameter    | Mandatory | Type   | Description                                                                                              |
+   +==============+===========+========+==========================================================================================================+
+   | X-Auth-Token | Yes       | String | User token. It can be obtained by calling the IAM API (value of X-Subject-Token in the response header). |
+   +--------------+-----------+--------+----------------------------------------------------------------------------------------------------------+
+   | Content-Type | No        | String | Content type. Default value: application/json;charset=utf8                                               |
+   +--------------+-----------+--------+----------------------------------------------------------------------------------------------------------+
 
 Response Parameters
 -------------------
@@ -52,7 +50,7 @@ Response Parameters
    +=======================+======================================================================+===================================================================================================================================================================================================================================================================================================================+
    | id                    | String                                                               | Policy ID                                                                                                                                                                                                                                                                                                         |
    +-----------------------+----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | name                  | String                                                               | Array of details of policies                                                                                                                                                                                                                                                                                      |
+   | name                  | String                                                               | Protection policy name                                                                                                                                                                                                                                                                                            |
    +-----------------------+----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | action                | :ref:`PolicyAction <deletepolicy__response_policyaction>` object     | PolicyAction                                                                                                                                                                                                                                                                                                      |
    +-----------------------+----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -62,7 +60,7 @@ Response Parameters
    |                       |                                                                      |                                                                                                                                                                                                                                                                                                                   |
    |                       |                                                                      | -  **1**: WAF detects wget, cURL, and more but does not detect XSS and command injection attacks in the header, so you may miss more vulnerabilities that actually exist. If you find out that configured protection rules are affecting your services, adjust the protection level to **1**.                     |
    |                       |                                                                      |                                                                                                                                                                                                                                                                                                                   |
-   |                       |                                                                      | -  **2**: Medium. WAF detects remote file inclusion, third-party software vulnerabilities, web shell, and cp and ftp commands. This is the default value.                                                                                                                                                         |
+   |                       |                                                                      | -  **2**: WAF detects remote file inclusion, third-party software vulnerabilities, web shell and ftp commands. This is the default value.                                                                                                                                                                         |
    |                       |                                                                      |                                                                                                                                                                                                                                                                                                                   |
    |                       |                                                                      | -  **3**: If you need a stricter protection level, set this parameter to 3. This may increase the false positive rate but decrease the false negative rate, such as nc, nmap, and kill.                                                                                                                           |
    +-----------------------+----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -82,7 +80,7 @@ Response Parameters
    +-----------------------+----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | modulex_options       | :ref:`ModulexOptions <deletepolicy__response_modulexoptions>` object | Whether to enable intelligent CC protection. This parameter is reserved and can be ignored currently.                                                                                                                                                                                                             |
    +-----------------------+----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | timestamp             | Integer                                                              | Time the policy was created.                                                                                                                                                                                                                                                                                      |
+   | timestamp             | Integer                                                              | Time a policy is created                                                                                                                                                                                                                                                                                          |
    +-----------------------+----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _deletepolicy__response_policyaction:
@@ -97,12 +95,6 @@ Response Parameters
    |                       |                       | -  block: WAF blocks attacks.           |
    |                       |                       |                                         |
    |                       |                       | -  log: WAF only logs detected attacks. |
-   |                       |                       |                                         |
-   |                       |                       | Enumeration values:                     |
-   |                       |                       |                                         |
-   |                       |                       | -  **block**                            |
-   |                       |                       |                                         |
-   |                       |                       | -  **log**                              |
    +-----------------------+-----------------------+-----------------------------------------+
 
 .. _deletepolicy__response_policyoption:
@@ -124,7 +116,7 @@ Response Parameters
    |                       |                       |                                                                                                                                                                                                                                                                    |
    |                       |                       | -  false: disabled                                                                                                                                                                                                                                                 |
    +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | anticrawler           | Boolean               | Whether to enable the JavaScript anti-crawler function.                                                                                                                                                                                                            |
+   | anticrawler           | Boolean               | JavaScript anti-crawler function.                                                                                                                                                                                                                                  |
    |                       |                       |                                                                                                                                                                                                                                                                    |
    |                       |                       | -  **true**: Enabled                                                                                                                                                                                                                                               |
    |                       |                       |                                                                                                                                                                                                                                                                    |
@@ -225,12 +217,6 @@ Response Parameters
    | precise               | Boolean               | This parameter is reserved and can be ignored currently.                                                                                                                                                                                                           |
    +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | modulex_enabled       | Boolean               | This parameter is reserved and can be ignored currently.                                                                                                                                                                                                           |
-   |                       |                       |                                                                                                                                                                                                                                                                    |
-   |                       |                       | Enumeration values:                                                                                                                                                                                                                                                |
-   |                       |                       |                                                                                                                                                                                                                                                                    |
-   |                       |                       | -  **true**                                                                                                                                                                                                                                                        |
-   |                       |                       |                                                                                                                                                                                                                                                                    |
-   |                       |                       | -  **false**                                                                                                                                                                                                                                                       |
    +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _deletepolicy__response_bindhost:
@@ -259,12 +245,6 @@ Response Parameters
    |                       |                       | -  **log**: WAF only logs discovered attacks.           |
    |                       |                       |                                                         |
    |                       |                       | -  **block**: WAF blocks discovered attacks.            |
-   |                       |                       |                                                         |
-   |                       |                       | Enumeration values:                                     |
-   |                       |                       |                                                         |
-   |                       |                       | -  **log**                                              |
-   |                       |                       |                                                         |
-   |                       |                       | -  **block**                                            |
    +-----------------------+-----------------------+---------------------------------------------------------+
 
 .. _deletepolicy__response_policyextend:
@@ -280,7 +260,7 @@ Response Parameters
    |                       |                       |                                                                                                                                                                          |
    |                       |                       | -  If **check_all_headers** is set to **true**, the Header Inspection is enabled.                                                                                        |
    |                       |                       |                                                                                                                                                                          |
-   |                       |                       | -  If **deep_decode** and **check_all_headers** are set to **true**, the Deep Inspection and Header Inspection are disabled.                                             |
+   |                       |                       | -  If **deep_decode** and **check_all_headers** are set to **false**, the Deep Inspection and Header Inspection are disabled.                                            |
    +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _deletepolicy__response_modulexoptions:
@@ -296,15 +276,11 @@ Response Parameters
    |                            |                       |                                                                                                             |
    |                            |                       | -  **true**: Enabled.                                                                                       |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------+
-   | global_rate_mode           | String                | Protection mode of the global rate limiting function. WAF logs the event only.                              |
+   | global_rate_mode           | String                | Protection mode of the global rate limiting function.                                                       |
+   |                            |                       |                                                                                                             |
+   |                            |                       | -  **log**: WAF logs the event only.                                                                        |
    |                            |                       |                                                                                                             |
    |                            |                       | -  **block**: WAF blocks requests.                                                                          |
-   |                            |                       |                                                                                                             |
-   |                            |                       | Enumeration values:                                                                                         |
-   |                            |                       |                                                                                                             |
-   |                            |                       | -  **log**                                                                                                  |
-   |                            |                       |                                                                                                             |
-   |                            |                       | -  **block**                                                                                                |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------+
    | precise_rules_enabled      | Boolean               | Status of the intelligent precise protection.                                                               |
    |                            |                       |                                                                                                             |
@@ -317,28 +293,18 @@ Response Parameters
    |                            |                       | -  **log**: WAF logs the event only.                                                                        |
    |                            |                       |                                                                                                             |
    |                            |                       | -  **block**: WAF blocks requests.                                                                          |
-   |                            |                       |                                                                                                             |
-   |                            |                       | Enumeration values:                                                                                         |
-   |                            |                       |                                                                                                             |
-   |                            |                       | -  **log**                                                                                                  |
-   |                            |                       |                                                                                                             |
-   |                            |                       | -  **block**                                                                                                |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------+
    | precise_rules_managed_mode | String                | Management mode of the intelligent precise protection.                                                      |
    |                            |                       |                                                                                                             |
-   |                            |                       | -  **auto**: Automatic                                                                                      |
+   |                            |                       | -  **auto**: WAF manages automatically generated rules.                                                     |
    |                            |                       |                                                                                                             |
-   |                            |                       | Enumeration values:                                                                                         |
-   |                            |                       |                                                                                                             |
-   |                            |                       | -  **auto**                                                                                                 |
+   |                            |                       | -  **manual**: You can manage rules that are automatically generated by WAF.                                |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------+
    | precise_rules_aging_mode   | String                | Aging mode of the intelligent precise protection.                                                           |
    |                            |                       |                                                                                                             |
+   |                            |                       | -  **manual**: You can customize the maximum age of the rule.                                               |
+   |                            |                       |                                                                                                             |
    |                            |                       | -  **auto**: Automatic                                                                                      |
-   |                            |                       |                                                                                                             |
-   |                            |                       | Enumeration values:                                                                                         |
-   |                            |                       |                                                                                                             |
-   |                            |                       | -  **auto**                                                                                                 |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------+
    | precise_rules_retention    | Integer               | Maximum age of the intelligent precise protection.                                                          |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------+
@@ -353,28 +319,18 @@ Response Parameters
    |                            |                       | -  **log**: WAF logs the event only.                                                                        |
    |                            |                       |                                                                                                             |
    |                            |                       | -  **block**: WAF blocks requests.                                                                          |
-   |                            |                       |                                                                                                             |
-   |                            |                       | Enumeration values:                                                                                         |
-   |                            |                       |                                                                                                             |
-   |                            |                       | -  **log**                                                                                                  |
-   |                            |                       |                                                                                                             |
-   |                            |                       | -  **block**                                                                                                |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------+
    | cc_rules_managed_mode      | String                | Management mode of the intelligent CC attack protection.                                                    |
    |                            |                       |                                                                                                             |
-   |                            |                       | -  **auto**: Automatic                                                                                      |
+   |                            |                       | -  **auto**: WAF manages automatically generated rules.                                                     |
    |                            |                       |                                                                                                             |
-   |                            |                       | Enumeration values:                                                                                         |
-   |                            |                       |                                                                                                             |
-   |                            |                       | -  **auto**                                                                                                 |
+   |                            |                       | -  **manual**: You can manage rules that are automatically generated by WAF.                                |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------+
-   | cc_rules_aging_mode        | String                | Aging mode of the intelligent CC attack protection.                                                         |
+   | cc_rules_aging_mode        | String                | Aging mode of the intelligent CC attack protection..                                                        |
+   |                            |                       |                                                                                                             |
+   |                            |                       | -  **manual**: You can customize the maximum age of the rule.                                               |
    |                            |                       |                                                                                                             |
    |                            |                       | -  **auto**: Automatic                                                                                      |
-   |                            |                       |                                                                                                             |
-   |                            |                       | Enumeration values:                                                                                         |
-   |                            |                       |                                                                                                             |
-   |                            |                       | -  **auto**                                                                                                 |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------+
    | cc_rules_retention         | Integer               | Maximum age of the intelligent CC attack protection.                                                        |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------+

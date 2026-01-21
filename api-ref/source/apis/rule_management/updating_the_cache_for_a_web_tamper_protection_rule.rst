@@ -8,7 +8,7 @@ Updating the Cache for a Web Tamper Protection Rule
 Function
 --------
 
-This API is used to update the cache for a web tamper protection rule
+This API is used for updating the cache for a web tamper protection Rule.
 
 URI
 ---
@@ -32,15 +32,12 @@ Request Parameters
 
 .. table:: **Table 2** Request header parameters
 
-   +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                |
-   +=================+=================+=================+============================================+
-   | X-Auth-Token    | Yes             | String          | User token                                 |
-   +-----------------+-----------------+-----------------+--------------------------------------------+
-   | Content-Type    | Yes             | String          | Content type                               |
-   |                 |                 |                 |                                            |
-   |                 |                 |                 | Default: **application/json;charset=utf8** |
-   +-----------------+-----------------+-----------------+--------------------------------------------+
+   ============ ========= ====== ============
+   Parameter    Mandatory Type   Description
+   ============ ========= ====== ============
+   X-Auth-Token Yes       String User token
+   Content-Type Yes       String Content type
+   ============ ========= ====== ============
 
 Response Parameters
 -------------------

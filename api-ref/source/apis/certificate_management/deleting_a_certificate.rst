@@ -30,15 +30,13 @@ Request Parameters
 
 .. table:: **Table 2** Request header parameters
 
-   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                              |
-   +=================+=================+=================+==========================================================================================================+
-   | X-Auth-Token    | Yes             | String          | User token. It can be obtained by calling the IAM API (value of X-Subject-Token in the response header). |
-   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+
-   | Content-Type    | No              | String          | Content type. Default value: application/json;charset=utf8                                               |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 | Default: **application/json;charset=utf8**                                                               |
-   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+
+   +--------------+-----------+--------+----------------------------------------------------------------------------------------------------------+
+   | Parameter    | Mandatory | Type   | Description                                                                                              |
+   +==============+===========+========+==========================================================================================================+
+   | X-Auth-Token | Yes       | String | User token. It can be obtained by calling the IAM API (value of X-Subject-Token in the response header). |
+   +--------------+-----------+--------+----------------------------------------------------------------------------------------------------------+
+   | Content-Type | No        | String | Content type. Default value: application/json;charset=utf8                                               |
+   +--------------+-----------+--------+----------------------------------------------------------------------------------------------------------+
 
 Response Parameters
 -------------------
@@ -99,7 +97,7 @@ Example Requests
 
 .. code-block:: text
 
-   DELETE https://{Endpoint}/v1/{project_id}/waf/certificate/{certificate_id}?
+   DELETE https://{Endpoint}/v1/{project_id}/waf/certificate/{certificate_id}
 
 Example Responses
 -----------------
