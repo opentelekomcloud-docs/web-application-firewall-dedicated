@@ -7,8 +7,8 @@ Why Am I Seeing Error Code 523?
 
 If a request goes through WAF over four times, WAF will block the request and return error code 523 to avoid endless loops. If error code 523 is returned for your website requests, check how many WAF instances you are using.
 
-Cause 1: A website is connected to more than four WAF instances.
-----------------------------------------------------------------
+Cause 1: The Website Is connected to More Than Four WAF Instances
+-----------------------------------------------------------------
 
 Error code 523 will return if a website has been connected to different types of WAF instances more than four times.
 
@@ -59,7 +59,7 @@ Modify the header field in the reverse proxy request. The operations are as foll
           proxy_pass http://x.x.x.x;
       }
 
-Cause 3: Origin Server IP address Was Mistakenly Set to an IP Address of WAF or A Proxy in Front of WAF
+Cause 3: Origin Server IP Address Was Mistakenly Set to an IP Address of WAF or A Proxy in Front of WAF
 -------------------------------------------------------------------------------------------------------
 
 If the origin server address is mistakenly set to the back-to-source IP address of WAF or an IP address of the proxy in front of WAF, the website requests go to an endless loop and error code 523 is returned.

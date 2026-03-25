@@ -46,7 +46,7 @@ Disable the JavaScript anti-crawler protection by performing the following steps
    -  |image3|: enabled.
    -  |image4|: disabled.
 
-#. Click the **JavaScript** tab and disable the JavaScript anti-crawler protection..
+#. Click the **JavaScript** tab and disable the JavaScript anti-crawler protection.
 
 .. |image1| image:: /_static/images/en-us_image_0000002395174933.png
 .. |image2| image:: /_static/images/en-us_image_0000002395334641.png

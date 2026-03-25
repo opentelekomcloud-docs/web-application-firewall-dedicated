@@ -7,7 +7,7 @@ What Is WAF?
 
 Web Application Firewall (WAF) keeps web services stable and secure. It examines all HTTP and HTTPS requests to detect and block the following attacks: Structured Query Language (SQL) injection, cross-site scripting (XSS), web shells, command and code injections, file inclusion, sensitive file access, third-party vulnerability exploits, Challenge Collapsar (CC) attacks, malicious crawlers, and cross-site request forgery (CSRF).
 
-After you enable a WAF instance,you still need to add your website domain to the WAF instance on the WAF console. All public network traffic for your website then goes to WAF first. WAF identifies and filters out the illegitimate traffic, and routes only the legitimate traffic to your origin server to ensure site security.
+After you enable a WAF instance, you still need to add your website domain to the WAF instance on the WAF console. All public network traffic for your website then goes to WAF first. WAF identifies and filters out the illegitimate traffic, and routes only the legitimate traffic to your origin server to ensure site security.
 
 How WAF Works (Dedicated Mode)
 ------------------------------
@@ -31,7 +31,7 @@ The process of forwarding traffic from WAF to origin servers is called back-to-s
 How WAF Works (ELB Access Mode)
 -------------------------------
 
-If you connect a website to WAFELB access mode, WAF works as follows:
+If you connect a website to WAF ELB access mode, WAF works as follows:
 
 -  In this mode, WAF is integrated into the gateway of an ELB load balancer through an SDK module. WAF extracts traffic through the SDK module embedded in the gateway for inspection.
 -  WAF synchronizes the inspection result to the load balancer, and the load balancer determines whether to forward client requests to the origin server based on the inspection result.

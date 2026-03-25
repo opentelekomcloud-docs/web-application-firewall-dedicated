@@ -10,7 +10,7 @@ This topic describes how to view certificate details, including the certificate 
 Prerequisites
 -------------
 
-You have :ref:`uploaded certificates <waf_01_0078>` to WAF.
+You have uploaded certificates to WAF. For details, see :ref:`Uploading a Certificate to WAF <waf_01_0078>`.
 
 Checking Certificate Details
 ----------------------------
