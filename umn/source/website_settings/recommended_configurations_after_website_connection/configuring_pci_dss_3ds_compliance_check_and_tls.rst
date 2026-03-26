@@ -184,7 +184,7 @@ Impact on the System
 
 -  If you enable the PCI DSS certification check:
 
-   -  The minimum TLS version and cypher suite are automatically set to **TLS v1.2** and **EECDH+AESGCM:EDH+AESGCM**, respectively, and cannot be changed.
+   -  The minimum TLS version and cipher suite are automatically set to **TLS v1.2** and **EECDH+AESGCM:EDH+AESGCM**, respectively, and cannot be changed.
    -  To change the minimum TLS version and cipher suite, disable the check.
 
 -  If you enable the PCI 3DS certification check:
@@ -220,7 +220,7 @@ Configuring PCI DSS/3DS Compliance Check and TLS
 
       .. important::
 
-         If PCI DSS certification check is enabled, the minimum TLS version and cypher suite cannot be changed.
+         If PCI DSS certification check is enabled, the minimum TLS version and cipher suite cannot be changed.
 
    -  Select **PCI 3DS**. In the displayed **Warning** dialog box, click **OK** to enable the PCI 3DS certification check.
 
