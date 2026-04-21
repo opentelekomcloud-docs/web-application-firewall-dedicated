@@ -39,32 +39,48 @@ Request Parameters
 
 .. table:: **Table 3** Request body parameters
 
-   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type             | Description                                                                                                                                                                       |
-   +=================+=================+==================+===================================================================================================================================================================================+
-   | url             | Yes             | String           | URL to which the rule applies.                                                                                                                                                    |
-   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | category        | Yes             | String           | Sensitive information type in the information leakage prevention rule.                                                                                                            |
-   |                 |                 |                  |                                                                                                                                                                                   |
-   |                 |                 |                  | -  **sensitive**: The rule masks sensitive user information, such as ID code, phone numbers, and email addresses.                                                                 |
-   |                 |                 |                  |                                                                                                                                                                                   |
-   |                 |                 |                  | -  **code**: The rule blocks response pages of specified HTTP response code.                                                                                                      |
-   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | contents        | Yes             | Array of strings | Content corresponding to the sensitive information type. Multiple options can be set.                                                                                             |
-   |                 |                 |                  |                                                                                                                                                                                   |
-   |                 |                 |                  | -  When **category** is set to **code**, the pages that contain the following HTTP response codes will be blocked: 400, 401, 402, 403, 404, 405, 500, 501, 502, 503, 504 and 507. |
-   |                 |                 |                  |                                                                                                                                                                                   |
-   |                 |                 |                  | -  When **category** is set to **sensitive**, parameters **phone**, **id_card**, and **email** can be set.                                                                        |
-   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | description     | No              | String           | Rule description                                                                                                                                                                  |
-   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+---------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type                                                          | Description                                                                                                                                                                       |
+   +=================+=================+===============================================================+===================================================================================================================================================================================+
+   | url             | Yes             | String                                                        | URL to which the rule applies.                                                                                                                                                    |
+   +-----------------+-----------------+---------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | category        | Yes             | String                                                        | Sensitive information type in the information leakage prevention rule.                                                                                                            |
+   |                 |                 |                                                               |                                                                                                                                                                                   |
+   |                 |                 |                                                               | -  **sensitive**: The rule masks sensitive user information, such as ID code, phone numbers, and email addresses.                                                                 |
+   |                 |                 |                                                               |                                                                                                                                                                                   |
+   |                 |                 |                                                               | -  **code**: The rule blocks response pages of specified HTTP response code.                                                                                                      |
+   +-----------------+-----------------+---------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | contents        | Yes             | Array of strings                                              | Content corresponding to the sensitive information type. Multiple options can be set.                                                                                             |
+   |                 |                 |                                                               |                                                                                                                                                                                   |
+   |                 |                 |                                                               | -  When **category** is set to **code**, the pages that contain the following HTTP response codes will be blocked: 400, 401, 402, 403, 404, 405, 500, 501, 502, 503, 504 and 507. |
+   |                 |                 |                                                               |                                                                                                                                                                                   |
+   |                 |                 |                                                               | -  When **category** is set to **sensitive**, parameters **phone**, **id_card**, and **email** can be set.                                                                        |
+   +-----------------+-----------------+---------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | action          | Yes             | :ref:`action <createantileakagerules__request_action>` object | Protective action of the Antileakage rule                                                                                                                                         |
+   +-----------------+-----------------+---------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | description     | No              | String                                                        | Rule description                                                                                                                                                                  |
+   +-----------------+-----------------+---------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. _createantileakagerules__request_action:
+
+.. table:: **Table 4** action
+
+   +-----------------+-----------------+-----------------+-----------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                   |
+   +=================+=================+=================+===============================================+
+   | category        | Yes             | String          | Protection type                               |
+   |                 |                 |                 |                                               |
+   |                 |                 |                 | -  **block**: WAF blocks attacks.             |
+   |                 |                 |                 |                                               |
+   |                 |                 |                 | -  **log**: WAF only logs discovered attacks. |
+   +-----------------+-----------------+-----------------+-----------------------------------------------+
 
 Response Parameters
 -------------------
 
 **Status code: 200**
 
-.. table:: **Table 4** Response body parameters
+.. table:: **Table 5** Response body parameters
 
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter             | Type                  | Description                                                                                                                                                                       |
@@ -98,7 +114,7 @@ Response Parameters
 
 **Status code: 400**
 
-.. table:: **Table 5** Response body parameters
+.. table:: **Table 6** Response body parameters
 
    ========== ====== =============
    Parameter  Type   Description
@@ -109,7 +125,7 @@ Response Parameters
 
 **Status code: 401**
 
-.. table:: **Table 6** Response body parameters
+.. table:: **Table 7** Response body parameters
 
    ========== ====== =============
    Parameter  Type   Description
@@ -120,7 +136,7 @@ Response Parameters
 
 **Status code: 500**
 
-.. table:: **Table 7** Response body parameters
+.. table:: **Table 8** Response body parameters
 
    ========== ====== =============
    Parameter  Type   Description
@@ -139,7 +155,10 @@ Example Requests
    {
      "url" : "/attack",
      "category" : "sensitive",
-     "contents" : [ "id_card" ]
+     "contents" : [ "id_card" ],
+     "action" : {
+       "category" : "block"
+     }
    }
 
 Example Responses
@@ -159,6 +178,9 @@ Request succeeded.
      "status" : 1,
      "url" : "/attack",
      "category" : "sensitive",
+     "action" : {
+       "category" : "block"
+     },
      "contents" : [ "id_card" ]
    }
 
