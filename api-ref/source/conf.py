@@ -98,7 +98,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 
-html_title = "Dedicated Web Application Firewall - API Reference"
+html_title = "Web Application Firewall - API Reference"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -114,7 +114,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'wafd-api-ref.tex',
-    u'Dedicated Web Application Firewall - API Reference',
+    u'Web Application Firewall - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 
