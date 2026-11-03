@@ -26,7 +26,7 @@ extensions = [
 otcdocs_auto_name = False
 otcdocs_auto_version = False
 
-project = 'Dedicated Web Application Firewall'
+project = 'Web Application Firewall'
 otcdocs_repo_name = 'opentelekomcloud-docs/web-application-firewall-dedicated'
 # Those variables are required for edit/bug links
 
@@ -36,7 +36,7 @@ otcdocs_doc_link = '/web-application-firewall-dedicated/umn/'
 otcdocs_doc_title = 'User Guide'
 otcdocs_doc_type = 'umn'
 otcdocs_service_category = 'security-services'
-otcdocs_service_title = 'Dedicated Web Application Firewall'
+otcdocs_service_title = 'Web Application Firewall'
 otcdocs_service_type = 'wafd'
 otcdocs_service_environment = 'public'
 otcdocs_cloud_environment = 'eu_de'
@@ -98,7 +98,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 
-html_title = "Dedicated Web Application Firewall - User Guide"
+html_title = "Web Application Firewall - User Guide"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -114,7 +114,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'wafd-umn.tex',
-    u'Dedicated Web Application Firewall - User Guide',
+    u'Web Application Firewall - User Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 
